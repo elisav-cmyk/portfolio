@@ -1,0 +1,38 @@
+{
+  "colors": {
+    "primary": "#546524",
+    "secondary": "#e3e4d3",
+    "border": "#c6c8b8",
+    "foreground": "#1b1c15",
+    "background": "#ffffff",
+    "muted": "#6a7282"
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px"
+  },
+  "typography": {
+    "fontFamilies": {
+      "heading": "EB Garamond",
+      "body": "Spline Sans"
+    },
+    "fontSizes": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem"
+    }
+  },
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px"
+  }
+}

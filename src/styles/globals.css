@@ -1,0 +1,617 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Typography Fonts */
+  --font-heading: 'EB Garamond', serif;
+  --font-body: 'Spline Sans', sans-serif;
+  
+  /* Typography Scale - Desktop (Major Third 1.250) & Mobile (Major Second 1.125) */
+  /* Using clamp() for fluid typography between mobile and desktop */
+  --text-display-lg: clamp(2.5rem, 2rem + 3.5vmin, 4rem); /* 40px → 64px */
+  --text-display-md: clamp(2.25rem, 1.875rem + 2.6vmin, 3rem); /* 36px → 48px */
+  --text-display-sm: clamp(2rem, 1.75rem + 1.75vmin, 2.5rem); /* 32px → 40px */
+  --text-headline-lg: clamp(1.75rem, 1.625rem + 0.875vmin, 2rem); /* 28px → 32px */
+  --text-headline-md: 1.5rem; /* 24px - same for both */
+  --text-body-lg: clamp(1.125rem, 1.0625rem + 0.4375vmin, 1.25rem); /* 18px → 20px */
+  --text-body-md: 1rem; /* 16px - same for both */
+  --text-label-md: 0.875rem; /* 14px - same for both */
+  --text-label-sm: 0.75rem; /* 12px - same for both */
+  
+  /* Line Heights aligned to 4pt grid */
+  --leading-display: 1.1; /* 110% for display sizes */
+  --leading-headline: 1.25; /* 125% for headlines */
+  --leading-body: 1.5; /* 150% for body text */
+  --leading-label: 1.4; /* 140% for labels/buttons */
+  
+  /* Letter Spacing */
+  --tracking-tight: -0.02em; /* -2% for display sizes */
+  --tracking-normal: 0;
+  --tracking-wide: 0.01em; /* +1% for small text */
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Base font size */
+  --font-size: 16px;
+  
+  /* Spacing System - 4pt Baseline Grid & 8pt Component Grid */
+  /* Base unit: 16px (1rem) */
+  --space-3xs: 0.125rem; /* 2px - Border offsets, tight grouping */
+  --space-2xs: 0.25rem; /* 4px - Icon-to-text, tight inline elements */
+  --space-xs: 0.5rem; /* 8px - Mobile standard separation, button internal padding */
+  --space-sm: 0.75rem; /* 12px - Mobile container padding, card grouping */
+  --space-md: 1rem; /* 16px - Desktop standard separation, container insets */
+  --space-lg: 1.5rem; /* 24px - Section breaks (Mobile) */
+  --space-xl: 2rem; /* 32px - Section breaks (Desktop) */
+  --space-2xl: 3rem; /* 48px - Major layout divisions */
+  --space-3xl: 4rem; /* 64px - Hero/Display whitespace */
+  
+  /* Responsive Spacing Aliases - adapt to viewport */
+  --section-gap: var(--space-3xl); /* 64px desktop → 32px mobile */
+  --component-gap: var(--space-md); /* 16px desktop → 8px mobile */
+  --container-inset: var(--space-lg); /* 24px desktop → 16px mobile */
+  --card-spacing: var(--space-xl); /* 32px desktop → 16px mobile */
+  
+  /* Text Spacing - Flow */
+  --paragraph-spacing: var(--space-md); /* 16px between paragraphs */
+  --heading-spacing-above: var(--space-2xl); /* 48px above headings */
+  --heading-spacing-below: var(--space-md); /* 16px below headings */
+  
+  /* Spatial Scale - 4px Baseline Grid */
+  /* Micro spacing */
+  --space-2: 2px;
+  /* Tight relationship */
+  --space-4: 4px;
+  /* Component internal spacing */
+  --space-8: 8px;
+  /* Icon/Text spacing */
+  --space-12: 12px;
+  /* Base unit / standard inset */
+  --space-16: 16px;
+  /* Section grouping */
+  --space-24: 24px;
+  /* Loose grouping */
+  --space-32: 32px;
+  /* Section breaks */
+  --space-48: 48px;
+  /* Major section breaks */
+  --space-64: 64px;
+  /* Hero / marketing spacing */
+  --space-128: 128px;
+  
+  /* Semantic Spacing Aliases */
+  /* Buttons / inputs: vertical padding */
+  --inset-squish-y: 8px;
+  /* Buttons / inputs: horizontal padding */
+  --inset-squish-x: 16px;
+  /* Standard cards internal padding */
+  --inset-square: 16px;
+  /* Featured content: vertical padding */
+  --inset-stretch-y: 24px;
+  /* Featured content: horizontal padding */
+  --inset-stretch-x: 16px;
+  /* Labels to inputs */
+  --stack-tight: 4px;
+  /* Paragraph vertical rhythm */
+  --stack-base: 16px;
+  /* Section headers */
+  --stack-loose: 32px;
+  
+  /* Text Measures */
+  /* Approx. 65ch for body copy */
+  --measure-blog: 650px;
+  /* Full width marketing pages, can stretch */
+  --measure-marketing: 1440px;
+  
+  /* Color System - Updated to match Figma design */
+  --background: #ffffff;
+  --foreground: #1b1c15;
+  --card: #ffffff;
+  --card-foreground: #1b1c15;
+  --popover: #ffffff;
+  --popover-foreground: #1b1c15;
+  --primary: #546524;
+  --primary-foreground: #ffffff;
+  --secondary: #e3e4d3;
+  --secondary-foreground: #546524;
+  --muted: #f5f5f0;
+  --muted-foreground: #4a5565;
+  --accent: #e3e4d3;
+  --accent-foreground: #546524;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: #c6c8b8;
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --ring: #546524;
+  --surface-variant: #e9e9dd;
+  --surface-variant-card: #e3e3d7;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-surface-variant: var(--surface-variant);
+  --color-surface-variant-card: var(--surface-variant-card);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground
+  );
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(
+    --sidebar-accent-foreground
+  );
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+
+/**
+ * Base typography using the dual-scale system (Major Third for Desktop, Major Second for Mobile)
+ * EB Garamond is used for Display & Headlines (24px+)
+ * Spline Sans is used for Body text and small UI elements
+ * This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"])):not(:has([class^="text-"]))) {
+    /* Display Large - Hero/Landing pages */
+    h1 {
+      font-family: var(--font-heading);
+      font-size: var(--text-display-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--leading-display);
+      letter-spacing: var(--tracking-tight);
+    }
+
+    /* Display Medium - Page titles */
+    h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-display-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-display);
+      letter-spacing: var(--tracking-tight);
+    }
+
+    /* Headline Large - Section headers */
+    h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-headline-lg);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-headline);
+      letter-spacing: var(--tracking-normal);
+    }
+
+    /* Headline Medium - Sub-sections (minimum size for EB Garamond) */
+    h4 {
+      font-family: var(--font-heading);
+      font-size: var(--text-headline-md);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--leading-headline);
+      letter-spacing: var(--tracking-normal);
+    }
+
+    /* Body Large - For h5 when used as intro/lead paragraphs */
+    h5 {
+      font-family: var(--font-body);
+      font-size: var(--text-body-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--leading-body);
+      letter-spacing: var(--tracking-normal);
+    }
+
+    /* Body Medium - For h6 */
+    h6 {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md);
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--leading-body);
+      letter-spacing: var(--tracking-normal);
+    }
+
+    /* Body Medium - Default body text */
+    p {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-body);
+      letter-spacing: var(--tracking-normal);
+    }
+
+    /* Label - Forms */
+    label {
+      font-family: var(--font-body);
+      font-size: var(--text-label-md);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--leading-label);
+      letter-spacing: var(--tracking-wide);
+    }
+
+    /* Label - Buttons and navigation */
+    button {
+      font-family: var(--font-body);
+      font-size: var(--text-label-md);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--leading-label);
+      letter-spacing: var(--tracking-wide);
+    }
+
+    /* Body Medium - Inputs */
+    input,
+    textarea,
+    select {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-body);
+      letter-spacing: var(--tracking-normal);
+    }
+
+    /* Small text - Captions and meta information */
+    small {
+      font-family: var(--font-body);
+      font-size: var(--text-label-sm);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-label);
+      letter-spacing: var(--tracking-wide);
+    }
+
+    /* Lists */
+    ul,
+    ol {
+      font-family: var(--font-body);
+      font-size: var(--text-body-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-body);
+    }
+
+    /* Blockquotes - Use EB Garamond for elegant quotes */
+    blockquote {
+      font-family: var(--font-heading);
+      font-size: var(--text-headline-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--leading-headline);
+      font-style: italic;
+    }
+
+    /* Strong/Bold text inherits font family from parent */
+    strong,
+    b {
+      font-weight: var(--font-weight-bold);
+    }
+
+    /* Emphasis inherits font family from parent */
+    em,
+    i {
+      font-style: italic;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Utility class for intro/lead paragraphs */
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-body);
+}
+
+/* Utility class for display text when not using h1 */
+.display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Utility class for small caps (works well with EB Garamond) */
+.small-caps {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   MARKETING & BLOG TEXT STYLES
+   Base font size: 16px (1rem)
+   Brand primary font: Spline Sans
+   ============================================ */
+
+/* MARKETING TYPOGRAPHY - For Marketing pages */
+
+/* Marketing/Hero H1 - Big hero headlines */
+.marketing-hero-h1 {
+  font-family: var(--font-body);
+  font-size: clamp(3rem, 2rem + 5vw, 4.5rem); /* 48px → 72px */
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+/* Marketing/H2 */
+.marketing-h2 {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 2.5rem); /* 32px → 40px */
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Marketing/Body - Marketing page supporting copy */
+.marketing-body {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.875rem + 0.625vw, 1.125rem); /* 16px → 18px */
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* BLOG TYPOGRAPHY - For Blog / Case Study pages */
+
+/* Blog/H1 */
+.blog-h1 {
+  font-family: var(--font-body);
+  font-size: 2rem; /* 32px */
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+/* Blog/H2 */
+.blog-h2 {
+  font-family: var(--font-body);
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+/* Blog/Body - With oldstyle numerals for better data density */
+.blog-body {
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px */
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* Blog/Meta - With oldstyle numerals */
+.blog-meta {
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 0.8125rem + 0.3125vw, 1rem); /* 14px → 16px */
+  line-height: 1.45;
+  letter-spacing: 0;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* ============================================
+   LAYOUT GRIDS
+   Marketing: 12-column grid system
+   Blog: Single column centered layout
+   Baseline: 4px grid for vertical rhythm
+   ============================================ */
+
+/* MARKETING PAGE GRID - 12 columns, 1440px max */
+.marketing-grid {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-64); /* 64px */
+  padding-right: var(--space-64); /* 64px */
+}
+
+/* Marketing grid columns */
+.marketing-grid-cols {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-24); /* 24px gutter */
+}
+
+/* Responsive adjustments for marketing grid */
+@media (max-width: 1024px) {
+  .marketing-grid {
+    padding-left: var(--space-32);
+    padding-right: var(--space-32);
+  }
+}
+
+@media (max-width: 768px) {
+  .marketing-grid {
+    padding-left: var(--space-16);
+    padding-right: var(--space-16);
+  }
+  
+  .marketing-grid-cols {
+    gap: var(--space-16);
+  }
+}
+
+/* BLOG / CASE STUDY GRID - Single column, 650px max (≈65ch) */
+.blog-grid {
+  max-width: var(--measure-blog); /* 650px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+/* Full-width container for blog pages (for images, etc) */
+.blog-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+/* BASELINE GRID - 4px vertical rhythm */
+/* The 4px baseline is applied through our spacing system variables */
+/* All spacing should use multiples of 4px: space-4, space-8, space-12, etc. */
+
+/* Responsive Spacing Adjustments - Mobile Density */
+@media (max-width: 768px) {
+  :root {
+    --section-gap: var(--space-xl); /* 64px → 32px */
+    --component-gap: var(--space-xs); /* 16px → 8px */
+    --container-inset: var(--space-md); /* 24px → 16px */
+    --card-spacing: var(--space-md); /* 32px → 16px */
+  }
+}
+
+/* Flow Utility - Automatic spacing for text content */
+.flow > * + * {
+  margin-top: var(--flow-space, var(--paragraph-spacing));
+}
+
+/* Flow variants for different spacing needs */
+.flow-sm {
+  --flow-space: var(--space-xs);
+}
+
+.flow-md {
+  --flow-space: var(--space-md);
+}
+
+.flow-lg {
+  --flow-space: var(--space-lg);
+}
+
+.flow-xl {
+  --flow-space: var(--space-xl);
+}
+
+/* Heading spacing using proximity principle */
+@layer base {
+  :where(:not(:has([class*=" text-"])):not(:has([class^="text-"]))) {
+    h1, h2, h3, h4 {
+      margin-top: var(--heading-spacing-above);
+      margin-bottom: var(--heading-spacing-below);
+    }
+    
+    /* First heading in a section should have no top margin */
+    h1:first-child,
+    h2:first-child,
+    h3:first-child,
+    h4:first-child {
+      margin-top: 0;
+    }
+    
+    p {
+      margin-top: 0;
+      margin-bottom: 1.5em;
+    }
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Screen reader only - visually hidden but accessible to assistive technologies */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
