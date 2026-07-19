@@ -16,7 +16,7 @@ const MAIN_PROJECTS = [
   { id: 'ecosystem-infrastructure', title: 'Ecosystem & Design Infrastructure', company: 'JSTOR' },
   { id: 'mobile-parity', title: 'Designing for Mobile Parity', company: 'JSTOR' },
   { id: 'camera-redesign', title: 'Camera Redesign', company: 'Motorola' },
-  { id: 'teaching-service-design', title: 'Teaching Service Design', company: 'Northwestern University' },
+  { id: 'teaching-service-design', title: 'Educating the Next Generation', company: 'Northwestern University' },
 ];
 
 export const CaseStudyFooter: React.FC<CaseStudyFooterProps> = ({ currentProjectId, onNavigate }) => {
