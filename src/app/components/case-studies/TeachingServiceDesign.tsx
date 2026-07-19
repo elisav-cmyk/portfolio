@@ -123,7 +123,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
              <p>
               The 2018 DSGN 401-3 cohort produced four concepts: NeighbourFood, a volunteer delivery network for people 
-               with limited mobility; a grocery-employee donation incentive program; Bridge, a platform connecting 
+               with limited mobility; Incentivize, a grocery-employee donation incentive program; Bridge, a platform connecting 
                suppliers, volunteers, patrons, and agencies; and enRoute, a mobile locker food truck. NeighbourFood 
                received Honorable Mention in the Design Management Institute&apos;s Design Value Awards, one of 12 groups 
                recognized globally that year. Seven years later, the relationship is still active: I continue to advise 
