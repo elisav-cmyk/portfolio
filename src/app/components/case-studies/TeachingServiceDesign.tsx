@@ -86,7 +86,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </div>
           </section>
 
-          {/* Design Leadership & Approach */}
+          {/* Approach */}
           <section className="blog-grid flex flex-col gap-6">
             <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
               Approach
