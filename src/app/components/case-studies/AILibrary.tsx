@@ -152,15 +152,21 @@ export const AILibrary: React.FC<AILibraryProps> = ({
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               Product Design led the relaunch scaffolding from
               Infrastructure Services to the tiered Stewardship
-              model (Tier 1/2/3), mapping critical workflows,
-              including project creation, AI metadata generation
-              and preview, publishing, and export, and defining
-              the pricing and allowance structure engineering and
-              operations needed to build against. I hired two
-              staff-level designers to build and ship the
-              platform, giving them ownership of day-to-day
-              execution while I focused on strategic direction
-              and cross-functional alignment.
+              model (Tier 1/2/3), ensuring the tiered structure
+              and story were established across internal systems
+              and public surfaces. The design team defined the
+              end-of-Q1 &ldquo;target experience&rdquo; for
+              Stewardship, mapping critical workflows (e.g.,
+              create projects, generate/preview AI metadata,
+              publish to JSTOR, export) and ensuring consistent
+              nomenclature and brand execution.
+            </p>
+            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+              Tier definitions and rules (including
+              pricing/allowance scaffolding like storage and AV
+              hours) were supported by design to provide a
+              stable frame for engineering, operations, and
+              participant-facing teams.
             </p>
           </div>
 
@@ -172,30 +178,43 @@ export const AILibrary: React.FC<AILibraryProps> = ({
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               The core product strategy positioned JSTOR
               Seeklight, an AI-assisted metadata generation
-              service, as the cornerstone capability, using
-              multiple LLMs (GPT-4.1 and Gemini 2.5) to generate
-              item descriptions and downloadable transcripts as
-              an accelerant for speed and scale.
+              service, as the cornerstone capability. Seeklight
+              was engineered to leverage AI as an accelerant for
+              speed and scale, using multiple LLMs (like GPT-4.1
+              and Gemini 2.5) to generate quality metadata,
+              including item descriptions and downloadable
+              transcripts.
             </p>
           </div>
 
-          {/* Subsection: Community Trust and Launch Readiness */}
+          {/* Subsection: Community-Driven Productization */}
           <div className="flex flex-col gap-[var(--space-16)]">
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Community Trust and Launch Readiness
+              Community-Driven Productization
             </h3>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              To build trust around Seeklight, we launched a Tier
-              3 Charter Program, a two-year shared-learning
-              engagement where working groups tackled real
-              problems like rights, privacy and PII flagging, and
-              schema flexibility, transparency that became a
-              genuine differentiator in a crowded market. My team
-              also handled the less visible work of getting to
-              launch: setting integration guardrails and
-              partnering with Product Management and Outreach on
-              go-to-market messaging that reinforced the same
-              value proposition throughout.
+              A Tier 3 Charter Program was launched to engage
+              participants in a two-year shared learning
+              experience. This involved working groups tackling
+              complex problems, such as Rights, Privacy, and
+              Redundancy (including PII flagging) and Schema
+              Flexibility. The community engagement and
+              transparent approach were cited as unique value
+              propositions.
+            </p>
+          </div>
+
+          {/* Subsection: Operational Readiness */}
+          <div className="flex flex-col gap-[var(--space-16)]">
+            <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
+              Operational Readiness
+            </h3>
+            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+              The design team ensured integration guardrails and
+              collaborated with Product Management and Outreach
+              to formalize launch leadership, coordinating
+              go-to-market efforts (messaging and campaigns)
+              that reinforced the integrated value proposition.
             </p>
           </div>
         </div>
@@ -265,16 +284,33 @@ export const AILibrary: React.FC<AILibraryProps> = ({
             </p>
           </div>
 
-          {/* Subsection: Recognition */}
+          {/* Subsection: Accelerated Development and Recognition */}
           <div className="flex flex-col gap-[var(--space-16)]">
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Recognition
+              Accelerated Development and Recognition
             </h3>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              Stewardship, particularly the Seeklight work,
-              contributed to JSTOR winning the 2025 C.F.W. Coker
-              Award, with public launch readiness (Tiers 2 and 3
-              available) reached by April 2, 2025.
+              Stewardship, particularly the Project
+              Odyssey/Seeklight work, contributed to the broader
+              innovation ecosystem that earned the 2025 C.F.W.
+              Coker Award for JSTOR Seeklight. The fluid team
+              structure and vision alignment enabled quick
+              development, leading to the public launch
+              readiness (Tiers 2 and 3 available) by April 2,
+              2025.
+            </p>
+          </div>
+
+          {/* Subsection: Team Capacity and Alignment */}
+          <div className="flex flex-col gap-[var(--space-16)]">
+            <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
+              Team Capacity and Alignment
+            </h3>
+            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+              The prioritization and strategic hiring actions
+              (including defining roles and tying them to Q1
+              launch goals) ensured sustainable delivery
+              capacity for the launch.
             </p>
           </div>
         </div>

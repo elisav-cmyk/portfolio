@@ -81,7 +81,7 @@ export const OnePlatform: React.FC<OnePlatformProps> = ({ onBack, onNavigate }) 
               In 2023–24, JSTOR executed a major strategic initiative to complete the Artstor-JSTOR &quot;One Platform&quot; integration. This effort was required to strengthen JSTOR&apos;s position as a teaching resource, consolidate offerings for operational efficiency, and protect revenue by increasing the value of both platforms.
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              As Product Design Director, my primary role was strategic delegation, not hands-on execution. Recognizing the risk of becoming an execution bottleneck, I set the high-level experience vision and provided executive counsel, while empowering three senior design leads, Florence Lee, David Corneail, and Lori Lundy, to own the integration autonomously across four workstreams: workflow framing, cross-team engineering orchestration, design system governance, and community metadata standardization. They engaged me primarily for cross-functional roadblock resolution and stakeholder negotiation.
+              As Product Design Director at JSTOR (2022-present), I provided strategic oversight and executive counsel for this mission-critical effort. My senior design leads fully owned and executed the demanding technical and design integration, engaging me primarily when cross-functional roadblocks were encountered.
             </p>
           </section>
 
@@ -159,9 +159,10 @@ export const OnePlatform: React.FC<OnePlatformProps> = ({ onBack, onNavigate }) 
           {/* Project Overview Video */}
           <div className="w-full py-12 px-4 lg:px-8">
             <div className="max-w-[90ch] mx-auto">
-              <div className="relative w-full border-2 border-[#dfc4ba] rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+              <div className="w-full border-2 border-[#dfc4ba] rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
                 <iframe 
-                  className="absolute inset-0 w-full h-full"
+                  width="100%" 
+                  height="100%" 
                   src="https://www.youtube.com/embed/6lnD4r-0R9M?si=fRZQdFCX1QUDu7vD" 
                   title="One Platform Integration" 
                   frameBorder="0" 

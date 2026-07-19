@@ -6,15 +6,17 @@ interface CaseStudyFooterProps {
   onNavigate?: (caseStudyId: string) => void;
 }
 
-// Main case studies in navigation order (matches Work page display order exactly)
+// Main case studies in navigation order
 const MAIN_PROJECTS = [
   { id: 'ethical-ai', title: 'Ethical AI Research Tool', company: 'JSTOR' },
-  { id: 'ai-library', title: 'AI-Assisted Library Transformation', company: 'JSTOR' },
-  { id: 'one-platform', title: 'One Platform Integration', company: 'JSTOR' },
-  { id: 'ecosystem-infrastructure', title: 'Design Systems and Governance at Scale', company: 'JSTOR' },
   { id: 'razr-foldable', title: 'Android RAZR Foldable', company: 'Motorola' },
-  { id: 'educating-next-generation', title: 'Educating the Next Generation', company: 'Northwestern University' },
+  { id: 'one-platform', title: 'One Platform Integration', company: 'JSTOR' },
+  { id: 'ai-library', title: 'AI-Assisted Library Transformation', company: 'JSTOR' },
   { id: 'grubhub-direct', title: 'Grubhub Direct', company: 'Grubhub' },
+  { id: 'ecosystem-infrastructure', title: 'Ecosystem & Design Infrastructure', company: 'JSTOR' },
+  { id: 'mobile-parity', title: 'Designing for Mobile Parity', company: 'JSTOR' },
+  { id: 'camera-redesign', title: 'Camera Redesign', company: 'Motorola' },
+  { id: 'teaching-service-design', title: 'Teaching Service Design', company: 'Northwestern University' },
 ];
 
 export const CaseStudyFooter: React.FC<CaseStudyFooterProps> = ({ currentProjectId, onNavigate }) => {

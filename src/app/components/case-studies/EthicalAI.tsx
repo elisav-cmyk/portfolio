@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import { CaseStudyFooter } from "../CaseStudyFooter";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
 import governanceImage from "figma:asset/ee4f6d81e765d0d76792c9d33403e75d60ebed72.png";
-import traceableConversationsImage from "figma:asset/e8dceb4868af3e80fc0e19e2ecaee11d354c0a94.png";
 
 interface EthicalAIProps {
   onBack: () => void;
@@ -174,29 +173,27 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
                     </ul>
                   </li>
                   <li>
-                    <strong>&quot;Guide, Not Hero&quot;:</strong>{" "}
-                    Working closely with the senior designer on
-                    our agile team, I guided the interaction
-                    concepts around a single distinction: a hero
-                    tool delivers an unverified answer and
-                    encourages the user to stop reading, a guide
-                    tool prompts, clarifies, and scaffolds
-                    critical thinking, pointing the researcher
-                    back into the source text. I mapped this
-                    directly to the ACRL Framework for
-                    Information Literacy, using Traceable
-                    Conversations (October 2023) to test
-                    &quot;Authority Is Constructed and
-                    Contextual,&quot; Conversation History
-                    (January 2025) to support &quot;Research as
-                    Inquiry,&quot; and Citation-Ready Outputs
-                    (February 2025) to reinforce
-                    &quot;Scholarship as Conversation.&quot; I set
-                    new prototyping methods to stress-test the
-                    principle in front of real users, ran the
-                    design reviews that caught where it was being
-                    quietly violated, and oversaw the
-                    implementation fixes that followed.
+                    <strong>Guide, Not Hero:</strong>{" "}
+                    The research tool&apos;s interaction model
+                    reflects &quot;Be the guide, not the
+                    hero,&quot; one of five ITHAKA design
+                    principles I co-developed with Liza Pagano,
+                    Director of Brand + Creative, in 2022 to
+                    align creative decisions across brand and
+                    product design org-wide &mdash; &quot;we
+                    anticipate users&apos; needs and help them
+                    follow their own path.&quot; My team applied
+                    it directly to the research tool, tuning the
+                    interaction model to prompt, narrow, and
+                    surface, but deliberately not draft,
+                    conclude, or write on the researcher&apos;s
+                    behalf. The principle was later reinforced by
+                    mapping it against the ACRL Framework for
+                    Information Literacy, treating research as a
+                    set of behaviors &mdash; question framing,
+                    source evaluation, synthesis,
+                    argument-building &mdash; rather than a
+                    single search-and-answer transaction.
                   </li>
                 </ul>
               </div>
@@ -325,16 +322,32 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
               Outcomes & Impact
             </h2>
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Product-Market Fit
+              Strategic Business Advancement (New Revenue
+              Stream)
             </h3>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                The clearest evidence &quot;guide, not hero&quot;
-                worked wasn&apos;t in design reviews, it was in
-                the usage data. A tool that shortcut research the
-                way most AI products do would show a quick spike
-                in use followed by drop-off; instead we saw the
-                opposite:
+                Established the foundation for a new
+                AI-as-a-Service business model, allowing JSTOR
+                to monetize the platform beyond standard content
+                access. By positioning the tool as a
+                &quot;high-trust&quot; alternative to consumer
+                AI, we successfully secured buy-in for a
+                scalable SaaS offering.
+              </p>
+            </div>
+
+            <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
+              Exceptional Product-Market Fit (3× Engagement)
+            </h3>
+            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+              <p>
+                The clearest evidence &quot;guide, not
+                hero&quot; worked wasn&apos;t in design reviews
+                &mdash; it was in the usage data. A tool that
+                shortcut the research process the way most AI
+                tools do would show a quick spike in use followed
+                by drop-off; instead we saw the opposite:
               </p>
               <ul className="list-disc pl-6 space-y-4">
                 <li>3× more searches per session.</li>
@@ -344,37 +357,52 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
                   users.
                 </li>
               </ul>
-              <p>
-                Each number points the same direction, deeper
-                engagement with the research process rather than
-                faster extraction of an answer, exactly the
-                outcome the principle was designed to produce.
-                That engagement also proved the business case:
-                positioning the tool as a high-trust alternative
-                to consumer AI secured buy-in for a scalable
-                AI-as-a-service model.
+              <p className="mt-4">
+                Each number points the same direction: deeper
+                engagement with the research process, not faster
+                extraction of an answer &mdash; the outcome the
+                principle was designed to produce.
               </p>
             </div>
 
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Scale, Trust, and Recognition
+              Competitive Differentiation (Solving the Trust
+              Gap)
             </h3>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                Traceable Conversations became our clearest point
-                of differentiation from generic LLMs, directly
-                answering the academic market&apos;s biggest
-                adoption barrier, fear of hallucination, while
-                preserving JSTOR&apos;s reputation for integrity.
-                The tool scaled from a limited individual beta in
-                August 2023 to a staged broad rollout in July
-                2024, reaching roughly 1,500 subscribing
-                institutions by Q1 2025, earned the 2025 C.F.W.
-                Coker Award for innovation in archival and
-                research access, and was described by
-                institutional partners as the most polished AI
-                integration for libraries on the market.
+                Successfully differentiated JSTOR from generic
+                LLMs by implementing &quot;Traceable
+                Conversations&quot;—a design pattern that
+                grounds every AI response in verified text. This
+                feature directly addressed the academic
+                market&apos;s primary barrier to adoption (fear
+                of hallucination) and preserved the
+                platform&apos;s reputation for integrity.
               </p>
+            </div>
+
+            <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
+              Scale & Industry Recognition
+            </h3>
+            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+              <ul className="list-disc pl-6 space-y-4">
+                <li>
+                  Rapid Scale: Moved from closed beta to ~1,500
+                  institutions by Q1 2025 (Early Access).
+                </li>
+                <li>
+                  Award-Winning: Recognized with the 2025 C.F.W.
+                  Coker Award for innovation in archival and
+                  research access.
+                </li>
+                <li>
+                  User Acclaim: Described by institutional
+                  partners as the "most impressive and polished
+                  integration of AI for libraries" on the
+                  market.
+                </li>
+              </ul>
             </div>
           </section>
         </div>
