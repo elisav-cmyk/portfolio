@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 import { CaseStudyFooter } from '../CaseStudyFooter';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+import imgMobileParity from '../../../assets/jstor-mobile.png';
 
 interface MobileParityProps {
   onBack: () => void;
@@ -32,9 +33,9 @@ export const MobileParity: React.FC<MobileParityProps> = ({ onBack, onNavigate }
       {/* Hero Image - Full Width Band */}
       <div className="w-full">
         <ImageWithFallback
-          src=""
+          src={imgMobileParity}
           alt="Designing for Mobile Parity at JSTOR"
-          className="w-full h-64 md:h-[500px] object-cover"
+          className="w-full h-64 md:h-[500px] object-cover object-center"
         />
       </div>
 

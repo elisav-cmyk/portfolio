@@ -664,12 +664,12 @@ const PortfolioWireframes = () => {
                 image: aiLibraryImage,
               },
               {
-                title: "One Platform Integration",
-                subtitle: "Migrating users at scale",
-                metric: "Risk mitigation success",
-                company: "JSTOR",
-                id: "one-platform",
-                image: onePlatformImage,
+                title: "Android RAZR Foldable",
+                subtitle: "Pushing small-screen UX forward",
+                metric: "Hardware + software leadership",
+                company: "Motorola",
+                id: "razr-foldable",
+                image: razrHeroImage,
               },
             ].map((project, i) => (
               <motion.div

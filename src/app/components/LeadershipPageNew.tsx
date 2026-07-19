@@ -1,5 +1,4 @@
 import React from 'react';
-import gestureNavImage from 'figma:asset/gesture-nav.gif';
 
 export const LeadershipPageContent = () => {
   return (
@@ -95,11 +94,6 @@ export const LeadershipPageContent = () => {
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white">
                   When Android 10 released native gestures that competed with our proprietary navigation, I brought my lead designer directly into the negotiations with the Android team deliberately, to build her ability to advocate for design decisions at that level. Rather than defending our feature on instinct, we ran a data-driven trade-off analysis and let the data decide. The result: we deprecated our popular feature in favor of ecosystem compatibility, reallocating critical engineering resources to the RAZR foldable launch, while folding our usability and onboarding insights directly into Android 10&apos;s base code.
                 </p>
-                <img
-                  src={gestureNavImage}
-                  alt="Motorola gesture navigation prototype"
-                  className="mt-4 rounded-[8px] w-full max-w-[280px]"
-                />
               </div>
             </div>
           </div>

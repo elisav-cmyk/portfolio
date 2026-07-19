@@ -9,6 +9,7 @@ import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5b
 import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.png";
 import imgCameraIntro from "figma:asset/camera-intro.png";
 import imgFeedingAmericaHero from "figma:asset/feeding-america-hero.jpg";
+import imgMobileParity from "../../assets/jstor-mobile.png";
 
 interface WorkPageProps {
   pageVariants: any;
@@ -46,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <img
         src={image}
         alt={title}
-        className="w-full h-full object-cover object-top"
+        className="w-full h-full object-cover object-center"
       />
     </div>
 
@@ -114,16 +115,24 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       caseStudyId: "ai-library",
     },
     {
-      image: imgImageOnePlatformIntegration,
-      tag: "Platform Strategy",
-      year: "2023-2024",
-      title: "One Platform Integration",
-      company: "JSTOR",
-      caseStudyId: "one-platform",
+      image: imgImageAndroidRazrFoldable,
+      tag: "Hardware/Software",
+      year: "2016-2020",
+      title: "Android RAZR Foldable",
+      company: "Motorola",
+      caseStudyId: "razr-foldable",
     },
   ];
 
   const additionalProjects = [
+    {
+      image: imgMobileParity,
+      tag: "Platform Strategy",
+      year: "2021-2025",
+      title: "Designing for Mobile Parity",
+      company: "JSTOR",
+      caseStudyId: "mobile-parity",
+    },
     {
       image: imgImageEcosystemInfrastructure,
       tag: "Platform Strategy",
@@ -133,28 +142,12 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       caseStudyId: "ecosystem-infrastructure",
     },
     {
-      image: imgImageAndroidRazrFoldable,
-      tag: "Hardware/Software",
-      year: "2016-2020",
-      title: "Android RAZR Foldable",
-      company: "Motorola",
-      caseStudyId: "razr-foldable",
-    },
-    {
-      image: imgImageGrubhubDirect,
+      image: imgImageOnePlatformIntegration,
       tag: "Platform Strategy",
-      year: "2021",
-      title: "Grubhub Direct",
-      company: "Scaling A Low-code Platform",
-      caseStudyId: "grubhub-direct",
-    },
-    {
-      image: imgImageEthicalAiResearchTool,
-      tag: "Platform Strategy",
-      year: "2021-2025",
-      title: "Designing for Mobile Parity",
+      year: "2023-2024",
+      title: "One Platform Integration",
       company: "JSTOR",
-      caseStudyId: "mobile-parity",
+      caseStudyId: "one-platform",
     },
     {
       image: imgCameraIntro,
@@ -171,6 +164,14 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       title: "Teaching Service Design",
       company: "Northwestern University",
       caseStudyId: "teaching-service-design",
+    },
+    {
+      image: imgImageGrubhubDirect,
+      tag: "Platform Strategy",
+      year: "2021",
+      title: "Grubhub Direct",
+      company: "Scaling A Low-code Platform",
+      caseStudyId: "grubhub-direct",
     },
   ];
 
