@@ -44,7 +44,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
         <div className="blog-grid py-12 sm:py-16">
           <div className="flex items-center gap-3 mb-6">
             <span className="bg-primary text-primary-foreground font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] px-3 py-1 rounded-full">
-              Teaching & Mentorship
+              Teaching &amp; Mentorship
             </span>
             <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-[#1b1c15]">
               2018-Present
@@ -98,12 +98,12 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
                 capstone project teams. In 2024&ndash;2025, I co-taught Customer-Driven Opportunities within
                 Northwestern&apos;s Master of Product Design and Development Management (mpd²) program.
                 My most sustained engagement began in 2018, when I co-taught and ran the weekly design
-                critiques for DSGN 401-3, Service Design &mdash; guiding four teams of five graduate
+                critiques for DSGN 401-3, Service Design where I guided four teams of five graduate
                 students through a full service design process: interviews, pantry observation,
                 grocery-manager conversations, and direct collaboration with Feeding America&apos;s partner,
                 the Greater Chicago Food Depository. My role across all three was consistent: push each
                 team&apos;s research rigor, challenge assumptions in critique, and help them translate field
-                research into viable concepts &mdash; the same critique discipline I use with professional
+                research into viable concepts, the same critique discipline I use with professional
                 design teams.
               </p>
             </div>
@@ -120,7 +120,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
                 network for people with limited mobility; a grocery-employee donation incentive program;
                 Bridge, a platform connecting suppliers, volunteers, patrons, and agencies; and enRoute, a
                 mobile locker food truck. NeighbourFood received Honorable Mention in the Design Management
-                Institute&apos;s Design Value Awards &mdash; one of 12 groups recognized globally that year.
+                Institute&apos;s Design Value Awards (one of 12 groups recognized globally that year).
                 The course also started a mentorship relationship I&apos;ve continued for years: I still
                 advise two students from that cohort on career direction, alongside the ongoing capstone
                 and mpd² mentorship that has continued through today.
