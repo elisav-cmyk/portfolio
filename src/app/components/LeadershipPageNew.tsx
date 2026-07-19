@@ -49,14 +49,20 @@ export const LeadershipPageContent = () => {
               <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Platform Foundations (2002-present)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  My relationship with Android predates Android. From 2002 to 2005, I conducted research across 22 mobile platforms and was part of the teams that developed custom platforms for Motorola devices. I later led the team whose work became the foundation for Motorola&apos;s first Android device, the Motorola CLIQ. Across 18.5 years shipping mobile hardware and software, I worked directly and repeatedly with Google&apos;s own platform teams, including the RAZR foldable&apos;s Android UX and Comms team negotiations and the One Nav gesture-navigation collaboration.
+                  My relationship with Android predates Android. From 2002 to 2005, I conducted research across 22 mobile platforms and 
+                  was part of the teams that developed custom platforms for Motorola devices. I later led the team whose work became the 
+                  foundation for Motorola&apos;s first Android device, the Motorola CLIQ. Across 18.5 years shipping mobile hardware and 
+                  software, I worked directly and repeatedly with Google&apos;s own platform teams, including the RAZR foldable&apos;s 
+                  Android UX and Comms team negotiations and the One Nav gesture-navigation collaboration.
                 </p>
               </div>
 
               <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Global Head of UX (Motorola)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Directed a team of 33 designers across 6 global studios (US, China, Brazil). Managed the UX strategy for a 24-device portfolio within a $9.78B operational scope, coordinating across 14-hour time zones. I held global approval authority over hiring, tools, and travel budgets across the organization.
+                  Directed a team of 33 designers across 6 global studios (US, China, Brazil). Managed the UX strategy for a 24-device portfolio 
+                  within a $9.78B operational scope, coordinating across 14-hour time zones. I held global approval authority over hiring, tools, 
+                  and travel budgets across the organization.
                 </p>
               </div>
 
