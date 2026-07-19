@@ -1,0 +1,119 @@
+{
+  "$schema": "https://schemas.tokens.studio/v2.json",
+  "metadata": {
+    "tokenSetOrder": ["typography"]
+  },
+  "typography": {
+    "text-display-lg": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "EB Garamond",
+        "fontWeight": "400",
+        "lineHeight": "110%",
+        "letterSpacing": "-2%",
+        "fontSize": {
+          "mobile": "40px",
+          "desktop": "64px"
+        }
+      }
+    },
+    "text-display-md": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "EB Garamond",
+        "fontWeight": "400",
+        "lineHeight": "110%",
+        "letterSpacing": "0%",
+        "fontSize": {
+          "mobile": "36px",
+          "desktop": "48px"
+        }
+      }
+    },
+    "text-display-sm": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "EB Garamond",
+        "fontWeight": "400",
+        "lineHeight": "115%",
+        "fontSize": {
+          "mobile": "32px",
+          "desktop": "40px"
+        }
+      }
+    },
+    "text-headline-lg": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "EB Garamond",
+        "fontWeight": "400",
+        "lineHeight": "125%",
+        "fontSize": {
+          "mobile": "28px",
+          "desktop": "32px"
+        }
+      }
+    },
+    "text-headline-md": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "EB Garamond",
+        "fontWeight": "400",
+        "lineHeight": "125%",
+        "fontSize": {
+          "mobile": "24px",
+          "desktop": "24px"
+        }
+      }
+    },
+    "text-body-lg": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "Spline Sans",
+        "fontWeight": "400",
+        "lineHeight": "150%",
+        "fontSize": {
+          "mobile": "18px",
+          "desktop": "20px"
+        }
+      }
+    },
+    "text-body-md": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "Spline Sans",
+        "fontWeight": "400",
+        "lineHeight": "150%",
+        "fontSize": {
+          "mobile": "16px",
+          "desktop": "16px"
+        }
+      }
+    },
+    "text-label-md": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "Spline Sans",
+        "fontWeight": "500",
+        "letterSpacing": "1%",
+        "lineHeight": "20px",
+        "fontSize": {
+          "mobile": "14px",
+          "desktop": "14px"
+        }
+      }
+    },
+    "text-label-sm": {
+      "type": "typography",
+      "value": {
+        "fontFamily": "Spline Sans",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "fontSize": {
+          "mobile": "12px",
+          "desktop": "12px"
+        }
+      }
+    }
+  }
+}
