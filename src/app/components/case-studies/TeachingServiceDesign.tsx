@@ -34,7 +34,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
       <div className="w-full">
         <ImageWithFallback
           src={feedingAmericaHeroImage}
-          alt="Teaching Service Design at Northwestern University"
+          alt="Teaching and Mentorship at Northwestern University"
           className="w-full h-64 md:h-[500px] object-cover"
         />
       </div>
@@ -51,17 +51,18 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </span>
           </div>
           <h1 className="font-['EB_Garamond'] text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-6">
-            Teaching Service Design
+            Educating the Next Generation of Designers
           </h1>
           <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15] mb-8">
             Northwestern University, Engineering Design Innovation
           </h2>
           <div className="space-y-2">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Role:</strong> Adjunct Faculty Lecturer &amp; Advisor, Engineering Design Innovation (EDI)
+              <strong>Role:</strong> Adjunct Faculty Lecturer &amp; Gradudate Student Advisor, Segal Design Institute
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Work Partners:</strong> Feeding America, Greater Chicago Food Depository, EDI graduate capstone teams, Master of Product Design and Development Management (mpd²) program
+              <strong>Work Partners:</strong> Engineering Design Innovation (EDI) Program, Master of Product Design &amp; 
+              Development Management (mpd²) Program, Feeding America, Greater Chicago Food Depository
             </p>
           </div>
         </div>
@@ -77,11 +78,10 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                More than 41 million Americans face food insecurity, often compounded by mobility and
-                transportation barriers, while 133 billion pounds of food go to waste in the US each year.
-                That gap framed the brief for DSGN 401-3 Service Design, a 10-week graduate course that helped
-                Feeding America, the nation&apos;s third-largest nonprofit, better distribute rescued food
-                from major retailers to food-insecure communities.
+               More than 41 million Americans face food insecurity, often compounded by mobility and transportation 
+                barriers, while 133 billion pounds of food go to waste in the US each year. That gap framed the brief 
+                for DSGN 401-3 Service Design, a 10-week graduate course that helped Feeding America, the nation\&apos;s 
+                third-largest nonprofit, better distribute rescued food from major retailers to food-insecure communities.
               </p>
             </div>
           </section>
@@ -92,21 +92,26 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               Approach
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <p>
-                My relationship with Northwestern University as an Adjunct Faculty member has spanned multiple strategic 
-                roles since 2018. My engagement began when I co-lectured and ran the weekly design critiques for DSGN 401-3: Service 
-                Design guiding four graduate teams through a rigorous service design process including interviews, pantry observation, 
-                and direct collaboration with Feeding America&apos;s partner, the Greater Chicago Food Depository. This discipline 
-                paid immediate dividends: one student project, NeighbourFood, went on to receive an Honorable Mention in the Design 
-                Management Institute (DMI) Design Value Awards, one of only 12 groups recognized globally for delivering outstanding value through design.</p>
-              <p>
-                In 2024 and 2025, I co-taught MPD 416: Customer-Driven Opportunities within Northwestern&apos;s Master of Product 
-                Design and Development Management (mpd²) program. Alongside this, I have served as a Graduate Student Advisor 
-                for Engineering Design Innovation (EDI) capstone and Master&apos;s thesis projects, and have advised students at the 
-                Institute of Design. My objective across all programs is consistent: push research rigor, challenge strategic assumptions, 
-                and coach students to translate ambiguous field findings into viable product concepts utilizing the exact critique and 
-                talent-development discipline I use to scale professional design teams.
-              </p>
+              <p>  
+                My relationship with Northwestern&apos;s Segal Design Center has spanned multiple strategic roles 
+                since 2018, across two programs and three distinct types of engagement.</p>  
+              <p>  
+              *Teaching.* My engagement began in 2018 when I co-lectured and ran the weekly design critiques for 
+                DSGN 401-3: Service Design, part of the Engineering Design Innovation (EDI) program, guiding four 
+                graduate teams through a rigorous service design process including interviews, pantry observation, 
+                and direct collaboration with Feeding America\&apos;s partner, the Greater Chicago Food Depository. 
+                In 2024 and 2025, I extended that teaching relationship into the Segal Center\&apos;s other graduate 
+                program, co-teaching MPD 416: Customer-Driven Opportunities within the Master of Product Design and 
+                Development Management (mpd²) program.</p>  
+              <p>  
+              *Advising.* Alongside teaching, I have served as a Graduate Student Advisor for EDI capstone and 
+                Master\&apos;s thesis projects on an ongoing basis since 2018, a formal role distinct from classroom 
+                instruction, guiding individual student research and thesis direction to completion.\</p\>  
+              <p>  
+              *Mentorship.* Beyond formal teaching and advising, I\&apos;ve sustained individual, informal career 
+                mentorship with former students, including two from that original 2018 cohort, continuing to this day. 
+                I\&apos;ve also informally advised students at the IIT Institute of Design, a separate institution, 
+                applying the same critique and talent-development discipline I use to scale professional design teams.</p>
             </div>
           </section>
 
@@ -116,16 +121,14 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               Outcomes
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <p>
-                The 2018 DSGN 401-3 cohort produced four concepts: NeighbourFood, a volunteer delivery
-                network for people with limited mobility; a grocery-employee donation incentive program;
-                Bridge, a platform connecting suppliers, volunteers, patrons, and agencies; and enRoute, a
-                mobile locker food truck. NeighbourFood received Honorable Mention in the Design Management
-                Institute&apos;s Design Value Awards (one of 12 groups recognized globally that year).
-                The course also started a mentorship relationship I&apos;ve continued for years: I still
-                advise two students from that cohort on career direction, alongside the ongoing capstone
-                and mpd² mentorship that has continued through today.
-              </p>
+             <p>
+            The 2018 DSGN 401-3 cohort produced four concepts: NeighbourFood, a volunteer delivery network for people 
+               with limited mobility; a grocery-employee donation incentive program; Bridge, a platform connecting 
+               suppliers, volunteers, patrons, and agencies; and enRoute, a mobile locker food truck. NeighbourFood 
+               received Honorable Mention in the Design Management Institute&apos;s Design Value Awards, one of 12 groups 
+               recognized globally that year. Seven years later, the relationship is still active: I continue to advise 
+               EDI capstone students, and still mentor two students from that original 2018 cohort on career direction.</p>
+
             </div>
           </section>
         </div>
