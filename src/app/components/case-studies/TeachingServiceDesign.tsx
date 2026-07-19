@@ -51,10 +51,10 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </span>
           </div>
           <h1 className="font-['EB_Garamond'] text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-6">
-            Educating the Next Generation of Designers
+            Educating the Next Generation
           </h1>
           <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15] mb-8">
-            Northwestern University, Engineering Design Innovation
+            Northwestern University 
           </h2>
           <div className="space-y-2">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
@@ -80,7 +80,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               <p>
                More than 41 million Americans face food insecurity, often compounded by mobility and transportation 
                 barriers, while 133 billion pounds of food go to waste in the US each year. That gap framed the brief 
-                for DSGN 401-3 Service Design, a 10-week graduate course that helped Feeding America, the nation\&apos;s 
+                for DSGN 401-3 Service Design, a 10-week graduate course that helped Feeding America, the nation&apos;s 
                 third-largest nonprofit, better distribute rescued food from major retailers to food-insecure communities.
               </p>
             </div>
@@ -96,19 +96,19 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
                 My relationship with Northwestern&apos;s Segal Design Center has spanned multiple strategic roles 
                 since 2018, across two programs and three distinct types of engagement.</p>  
               <p>  
-              *Teaching.* My engagement began in 2018 when I co-lectured and ran the weekly design critiques for 
+              <b>Teaching:</b> My engagement began in 2018 when I co-lectured and ran the weekly design critiques for 
                 DSGN 401-3: Service Design, part of the Engineering Design Innovation (EDI) program, guiding four 
                 graduate teams through a rigorous service design process including interviews, pantry observation, 
-                and direct collaboration with Feeding America\&apos;s partner, the Greater Chicago Food Depository. 
-                In 2024 and 2025, I extended that teaching relationship into the Segal Center\&apos;s other graduate 
+                and direct collaboration with Feeding America&apos;s partner, the Greater Chicago Food Depository. 
+                In 2024 and 2025, I extended that teaching relationship into the Segal Center&apos;s other graduate 
                 program, co-teaching MPD 416: Customer-Driven Opportunities within the Master of Product Design and 
                 Development Management (mpd²) program.</p>  
               <p>  
-              *Advising.* Alongside teaching, I have served as a Graduate Student Advisor for EDI capstone and 
+              <b>Advising:</b> Alongside teaching, I have served as a Graduate Student Advisor for EDI capstone and 
                 Master&apos;s thesis projects on an ongoing basis since 2018, a formal role distinct from classroom 
                 instruction, guiding individual student research and thesis direction to completion.</p>  
               <p>  
-              *Mentorship.* Beyond formal teaching and advising, I\&apos;ve sustained individual, informal career 
+              <b>Mentorship:</b> Beyond formal teaching and advising, I&apos;ve sustained individual, informal career 
                 mentorship with former students, including two from that original 2018 cohort, continuing to this day. 
                 I\&apos;ve also informally advised students at the IIT Institute of Design, a separate institution, 
                 applying the same critique and talent-development discipline I use to scale professional design teams.</p>
@@ -122,9 +122,9 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
              <p>
-            The 2018 DSGN 401-3 cohort produced four concepts: NeighbourFood, a volunteer delivery network for people 
-               with limited mobility; a grocery-employee donation incentive program; Bridge, a platform connecting 
-               suppliers, volunteers, patrons, and agencies; and enRoute, a mobile locker food truck. NeighbourFood 
+              The 2018 DSGN 401-3 cohort produced four concepts: <b>NeighbourFood</b>, a volunteer delivery network for people 
+               with limited mobility; a grocery-employee donation incentive program; <b>Bridge</b>, a platform connecting 
+               suppliers, volunteers, patrons, and agencies; and <b>enRoute</b>, a mobile locker food truck. NeighbourFood 
                received Honorable Mention in the Design Management Institute&apos;s Design Value Awards, one of 12 groups 
                recognized globally that year. Seven years later, the relationship is still active: I continue to advise 
                EDI capstone students, and still mentor two students from that original 2018 cohort on career direction.</p>
