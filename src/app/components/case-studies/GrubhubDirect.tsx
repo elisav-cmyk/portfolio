@@ -251,7 +251,7 @@ export const GrubhubDirect: React.FC<GrubhubDirectProps> = ({ onBack, onNavigate
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/XxE59YEJn4k?si=rqAjwW4yKjCEgbQZ" 
+              src="https://youtu.be/ig7eN5xzPos?si=PgXyYRVImE_9lpbJ" 
               title="Grubhub Direct Platform Overview" 
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
