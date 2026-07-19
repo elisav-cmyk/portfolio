@@ -347,7 +347,6 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                 </p>
               </div>
             </div>
-          </div>
           
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 text-center">
