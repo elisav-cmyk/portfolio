@@ -29,8 +29,6 @@ import { AILibrary } from "./components/case-studies/AILibrary";
 import { GrubhubDirect } from "./components/case-studies/GrubhubDirect";
 import { EcosystemInfrastructure } from "./components/case-studies/EcosystemInfrastructure";
 import { TeachingServiceDesign } from "./components/case-studies/TeachingServiceDesign";
-import { MobileParity } from "./components/case-studies/MobileParity";
-import { CameraRedesign } from "./components/case-studies/CameraRedesign";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
 import onePlatformImage from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
 import razrHeroImage from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
@@ -664,12 +662,12 @@ const PortfolioWireframes = () => {
                 image: aiLibraryImage,
               },
               {
-                title: "Android RAZR Foldable",
-                subtitle: "Pushing small-screen UX forward",
-                metric: "Hardware + software leadership",
-                company: "Motorola",
-                id: "razr-foldable",
-                image: razrHeroImage,
+                title: "One Platform Integration",
+                subtitle: "Migrating users at scale",
+                metric: "Risk mitigation success",
+                company: "JSTOR",
+                id: "one-platform",
+                image: onePlatformImage,
               },
             ].map((project, i) => (
               <motion.div
@@ -1026,9 +1024,7 @@ const PortfolioWireframes = () => {
         "ai-library": AILibrary,
         "grubhub-direct": GrubhubDirect,
         "ecosystem-infrastructure": EcosystemInfrastructure,
-        "teaching-service-design": TeachingServiceDesign,
-        "mobile-parity": MobileParity,
-        "camera-redesign": CameraRedesign,
+        "educating-next-generation": TeachingServiceDesign,
       };
 
       const CaseStudyComponent =
@@ -1070,9 +1066,6 @@ const PortfolioWireframes = () => {
         "ai-library": AILibrary,
         "grubhub-direct": GrubhubDirect,
         "ecosystem-infrastructure": EcosystemInfrastructure,
-        "teaching-service-design": TeachingServiceDesign,
-        "mobile-parity": MobileParity,
-        "camera-redesign": CameraRedesign,
       };
 
       const CaseStudyComponent =

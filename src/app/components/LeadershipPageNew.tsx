@@ -47,16 +47,9 @@ export const LeadershipPageContent = () => {
 
             <div className="space-y-6">
               <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Platform Foundations (2002-present)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  My relationship with Android predates Android. From 2002 to 2005, I conducted research across 22 mobile platforms and was part of the teams that developed custom platforms for Motorola devices. I later led the team whose work became the foundation for Motorola&apos;s first Android device, the Motorola CLIQ. Across 18.5 years shipping mobile hardware and software, I worked directly and repeatedly with Google&apos;s own platform teams, including the RAZR foldable&apos;s Android UX and Comms team negotiations and the One Nav gesture-navigation collaboration.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Global Head of UX (Motorola)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Directed a team of 33 designers across 6 global studios (US, China, Brazil). Managed the UX strategy for a 24-device portfolio within a $9.78B operational scope, coordinating across 14-hour time zones. I held global approval authority over hiring, tools, and travel budgets across the organization.
+                  Directed a team of 33 designers across 6 global studios (US, China, Brazil). Managed the UX strategy for a 24-device portfolio within a $9.78B operational scope, coordinating across 14-hour time zones.
                 </p>
               </div>
 
@@ -92,7 +85,7 @@ export const LeadershipPageContent = () => {
               <div className="bg-primary rounded-[10px] p-6">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white mb-3">Strategic Subtraction (The &quot;One Nav&quot; Decision)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white">
-                  When Android 10 released native gestures that competed with our proprietary navigation, I brought my lead designer directly into the negotiations with the Android team deliberately, to build her ability to advocate for design decisions at that level. Rather than defending our feature on instinct, we ran a data-driven trade-off analysis and let the data decide. The result: we deprecated our popular feature in favor of ecosystem compatibility, reallocating critical engineering resources to the RAZR foldable launch, while folding our usability and onboarding insights directly into Android 10&apos;s base code.
+                  When Android 10 released native gestures that competed with our proprietary navigation, I facilitated a data-driven analysis that led to deprecating our popular feature. This decision prioritized ecosystem compatibility over fragmentation and reallocated critical engineering resources to the RAZR foldable launch.
                 </p>
               </div>
             </div>
@@ -214,13 +207,6 @@ export const LeadershipPageContent = () => {
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Design System Governance</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
                   As Executive Champion for Pharos (JSTOR), I enforced federated governance and modern tooling (Storybook, Chromatic), ensuring component consistency across multiple applications.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Design Principles (with Brand + Creative)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Co-developed ITHAKA&apos;s five design principles &mdash; including &quot;Be the guide, not the hero&quot; &mdash; with the Director of Brand + Creative to align creative decisions across brand and product design org-wide. Built as evaluative tools rather than aesthetic rules, with guiding questions and an adjustable strength per project; adopted across recruiting, social, and product surfaces, and later shaped the interaction model of JSTOR&apos;s AI research tool.
                 </p>
               </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Globe, GraduationCap, Download } from "lucide-react";
+import { Globe, GraduationCap } from "lucide-react";
 import { motion } from "motion/react";
 
 interface AboutPageProps {
@@ -334,42 +334,15 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
               <div className="space-y-2 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-secondary-foreground">
                 <p>Adjunct Faculty</p>
                 <p className="text-muted-foreground">
-                  Northwestern University &mdash; Engineering Design Innovation (EDI) graduate capstone
-                  mentor (2018-present); co-taught Customer-Driven Opportunities in the Master of Product
-                  Design and Development Management (mpd²) program (2024-2025)
+                  Northwestern University (Master of Product Design & Development Innovation, Graduate
+                  Student Advisor)
                 </p>
                 <p>Speaker/Mentor</p>
                 <p className="text-muted-foreground">Industry events and design community contributions</p>
-                <p className="text-muted-foreground mt-2">
-                  My relationship to educational assessment predates my design career: in 1997, I edited
-                  Illinois&apos;s state arts assessment recommendations for the Illinois Alliance for Arts
-                  Education.
-                </p>
-              </div>
-            </div>
-          
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 text-center">
-              <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
-                <div className="font-['EB_Garamond'] text-[2.5rem] leading-tight text-primary mb-2">
-                  20+
-                </div>
-                <div className="text-[0.875rem] text-muted-foreground">Years Experience</div>
-              </div>
-              <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
-                <div className="font-['EB_Garamond'] text-[2.5rem] leading-tight text-primary mb-2">
-                  3
-                </div>
-                <div className="text-[0.875rem] text-muted-foreground">Continents</div>
-              </div>
-              <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
-                <div className="font-['EB_Garamond'] text-[2.5rem] leading-tight text-primary mb-2">
-                  110+
-                </div>
-                <div className="text-[0.875rem] text-muted-foreground">Million Users</div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

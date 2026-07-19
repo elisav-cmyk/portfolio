@@ -7,9 +7,10 @@ import imgImageOnePlatformIntegration from "figma:asset/40bf45078ad84575a1178136
 import imgImageAILibrary from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
 import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
 import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.png";
-import imgCameraIntro from "figma:asset/camera-intro.png";
-import imgFeedingAmericaHero from "figma:asset/feeding-america-hero.jpg";
-import imgMobileParity from "../../assets/jstor-mobile.png";
+
+// Placeholder until a real photo is added (e.g. a Segal Design Center critique session)
+const imgPlaceholderEducatingNextGeneration =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='192' viewBox='0 0 400 192'%3E%3Crect width='400' height='192' fill='%23E8E4D8'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='14' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EImage needed%3C/text%3E%3C/svg%3E";
 
 interface WorkPageProps {
   pageVariants: any;
@@ -47,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <img
         src={image}
         alt={title}
-        className="w-full h-full object-cover object-center"
+        className="w-full h-full object-cover object-top"
       />
     </div>
 
@@ -115,33 +116,6 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       caseStudyId: "ai-library",
     },
     {
-      image: imgImageAndroidRazrFoldable,
-      tag: "Hardware/Software",
-      year: "2016-2020",
-      title: "Android RAZR Foldable",
-      company: "Motorola",
-      caseStudyId: "razr-foldable",
-    },
-  ];
-
-  const additionalProjects = [
-    {
-      image: imgMobileParity,
-      tag: "Platform Strategy",
-      year: "2021-2025",
-      title: "Designing for Mobile Parity",
-      company: "JSTOR",
-      caseStudyId: "mobile-parity",
-    },
-    {
-      image: imgImageEcosystemInfrastructure,
-      tag: "Platform Strategy",
-      year: "2023-2024",
-      title: "Ecosystem & Design Infrastructure",
-      company: "Pharos, One Admin, & Digital Stewardship",
-      caseStudyId: "ecosystem-infrastructure",
-    },
-    {
       image: imgImageOnePlatformIntegration,
       tag: "Platform Strategy",
       year: "2023-2024",
@@ -149,21 +123,32 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       company: "JSTOR",
       caseStudyId: "one-platform",
     },
+  ];
+
+  const additionalProjects = [
     {
-      image: imgCameraIntro,
-      tag: "Hardware/Software",
-      year: "2020",
-      title: "Camera Redesign",
-      company: "Motorola",
-      caseStudyId: "camera-redesign",
+      image: imgImageEcosystemInfrastructure,
+      tag: "Platform Strategy",
+      year: "2023-2024",
+      title: "Design Systems and Governance at Scale",
+      company: "Pharos & One Admin",
+      caseStudyId: "ecosystem-infrastructure",
     },
     {
-      image: imgFeedingAmericaHero,
-      tag: "Teaching & Mentorship",
+      image: imgImageAndroidRazrFoldable,
+      tag: "Hardware/Software",
+      year: "2016-2020",
+      title: "Android RAZR Foldable",
+      company: "Motorola",
+      caseStudyId: "razr-foldable",
+    },
+    {
+      image: imgPlaceholderEducatingNextGeneration,
+      tag: "Education",
       year: "2018-Present",
-      title: "Teaching Service Design",
-      company: "Northwestern University",
-      caseStudyId: "teaching-service-design",
+      title: "Educating the Next Generation",
+      company: "Northwestern University, Segal Design Center",
+      caseStudyId: "educating-next-generation",
     },
     {
       image: imgImageGrubhubDirect,

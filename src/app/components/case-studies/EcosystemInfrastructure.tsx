@@ -50,17 +50,17 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
             </span>
           </div>
           <h1 className="font-['EB_Garamond'] text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-6">
-            Ecosystem & Design Infrastructure
+            Design Systems and Governance at Scale
           </h1>
           <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15] mb-8">
-            Scaling Design Operations at JSTOR
+            Building Pharos as JSTOR&rsquo;s Design Infrastructure
           </h2>
           <div className="space-y-2">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <strong>Role:</strong> Product Design Director, JSTOR
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Work Partners:</strong> Product Design Team, Engineering, Product Management
+              <strong>Work Partners:</strong> Product Design Team, Engineering, Product Management, Accessibility
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
               Context
             </h2>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              To unify JSTOR&rsquo;s product ecosystem and position the platform for future growth, the organization faced critical fragmentation across its technology and tools. This necessitated strategic efforts on three fronts: establishing a modern design system for developers (Pharos), consolidating disparate administrative tools into a cohesive experience (One Admin), and building a scalable, multi-tier B2B SaaS product (Digital Stewardship Services) to establish new revenue streams. These initiatives were crucial for improving operational efficiency, addressing inconsistency, and serving our vast institutional customer base across 194 countries.
+              To unify JSTOR&rsquo;s product ecosystem and scale design quality across a fast-growing platform, the organization needed a modern, developer-integrated design system, one built to enforce consistency, absorb accessibility requirements by default, and support teams without dedicated design staff of their own. Fragmentation across tools and teams was slowing delivery and creating accessibility risk across a platform serving institutions in 194 countries.
             </p>
           </section>
 
@@ -104,37 +104,10 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
 
             <div className="flex flex-col gap-[var(--space-16)]">
               <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                Enterprise Admin and Multi-Persona UX (One Admin Portal)
+                Extending the System Beyond Fully-Staffed Teams
               </h3>
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                I provided strategic direction and leadership to the designer responsible for consolidating and unifying complex administrative interfaces.
-              </p>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Multi-Persona Design Oversight:</strong> I ensured the design strategy prioritized role-based views for four distinct, high-stakes enterprise personas: Institutions, Consortia, Contributors, and Publishers. This approach to Role-Based Access Control (RBAC) was central to consolidating functionality while addressing varied user needs.
-              </p>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Platform Consolidation:</strong> I oversaw the strategic consolidation of fragmented admin functions—reporting, user management, and access methods—into a single, cohesive user experience.
-              </p>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Enterprise Integration Guidance:</strong> Provided oversight on designing for complex system-to-system connections, such as enabling Alma Auto-Holdings to streamline institutional holdings management, demonstrating expertise in enterprise integration patterns.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-[var(--space-16)]">
-              <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                B2B SaaS Product and AI Workflows (Digital Stewardship Services - JDSS)
-              </h3>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                I oversaw the product design work for this new revenue-generating platform, defining its tiered structure and the integration of AI.
-              </p>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Tiered Product Strategy:</strong> Guided the design team responsible for defining the user experience across the JDSS suite, an integrated B2B SaaS solution offered in three tiers that scale from basic sharing to full Digital Asset Management (DAM) and AI-assisted processing.
-              </p>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>AI in Enterprise Workflow:</strong> Ensured AI-assisted processing (Seeklight) was integrated responsibly within the enterprise workflow, focusing on user-in-the-loop validation and aligning with the company&rsquo;s ethical AI standards.
-              </p>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Strategic Team Building:</strong> The successful creation and launch of JDSS was executed by two staff-level designers I hired. This demonstrates my ability to select the right talent and grant autonomy to enable new business outcomes.
+                One Admin, JSTOR&rsquo;s enterprise administration portal serving Institutions, Consortia, Contributors, and Publishers, was built by a single designer without dedicated Product Design headcount. Pharos gave that designer production-ready, role-based components to consolidate fragmented reporting, user management, and access functions into one coherent experience without designing a system from scratch, a clear example of what a mature design system should do: extend consistent, accessible quality to teams design can&rsquo;t staff directly.
               </p>
             </div>
           </section>
@@ -146,7 +119,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                 Systems Health Dashboard
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Metric 1: Accessibility */}
                 <div className="flex flex-col gap-2 p-6 bg-white border border-[#c6c8b8] rounded">
                   <div className="font-['Spline_Sans'] text-[14px] leading-[20px] tracking-[0.5px] text-[#1b1c15] uppercase mb-2">
@@ -179,23 +152,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                   </div>
                 </div>
 
-                {/* Metric 3: SaaS ARR */}
-                <div className="flex flex-col gap-2 p-6 bg-white border border-[#c6c8b8] rounded">
-                  <div className="font-['Spline_Sans'] text-[14px] leading-[20px] tracking-[0.5px] text-[#1b1c15] uppercase mb-2">
-                    Business Growth
-                  </div>
-                  <div className="font-['EB_Garamond'] text-[48px] leading-[56px] text-primary">
-                    $27.8M
-                  </div>
-                  <div className="font-['Spline_Sans'] text-[16px] leading-[20px] text-[#1b1c15] mb-1">
-                    Projected SaaS ARR
-                  </div>
-                  <div className="font-['Spline_Sans'] text-[13px] leading-[18px] text-[#1b1c15]/70 italic">
-                    (New Revenue Stream)
-                  </div>
-                </div>
-
-                {/* Metric 4: Upstream Integration */}
+                {/* Metric 3: Upstream Integration */}
                 <div className="flex flex-col gap-2 p-6 bg-white border border-[#c6c8b8] rounded">
                   <div className="font-['Spline_Sans'] text-[14px] leading-[20px] tracking-[0.5px] text-[#1b1c15] uppercase mb-2">
                     Strategic Velocity
@@ -219,7 +176,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
           {/* Outcomes & Impact */}
           <div className="blog-grid flex flex-col gap-6">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              These integrated efforts elevated product design&rsquo;s strategic positioning, improved product quality, and established new revenue pathways for the organization.
+              Building standards into the system itself, rather than relying on late-stage fixes, elevated design&rsquo;s strategic position across the organization.
             </p>
 
             <div className="flex flex-col gap-[var(--space-16)]">
@@ -248,24 +205,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                   The formalized processes and governance established helped lead to faster, more consistent product launches.
                 </li>
                 <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  Evidence shows increased upstream engagement in roadmap planning and strategy forums.
-                </li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-[var(--space-16)]">
-              <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                New Revenue and Business Capability
-              </h3>
-              <ul className="list-disc list-inside">
-                <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  The staff-level designers I hired successfully created JSTOR Digital Stewardship Services, opening new revenue streams for the organization.
-                </li>
-                <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  The integrated AI work contributed to the organization receiving the 2025 C.F.W. Coker Award.
-                </li>
-                <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  Executive communications note appreciation for design leadership and collaboration, including invitations to expand design\'s cross-organizational engagement.
+                  Evidence shows increased upstream engagement in roadmap planning and strategy forums, with executive communications noting design as a strategic partner worth expanding.
                 </li>
               </ul>
             </div>

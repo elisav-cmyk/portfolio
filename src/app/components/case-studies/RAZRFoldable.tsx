@@ -145,9 +145,12 @@ export const RAZRFoldable: React.FC<RAZRFoldableProps> = ({ onBack, onNavigate }
             <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
               Team Development & Outcomes
             </h2>
-            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15] space-y-4">
               <p>
                 In April 2020, the new razr received the coveted Red Dot: &quot;Best of the Best&quot; award, the highest distinction in the Red Dot Award Product Design category reserved for innovations with the most ground-breaking design. That year, designers and companies from 60 countries entered more than 6,500 products in the competition.
+              </p>
+              <p>
+                The industrial designer I coached through the Chicago negotiations was promoted to Senior Designer after launch and now serves as a Design Manager in Brazil, leading major innovation lines.
               </p>
             </div>
             

@@ -247,8 +247,16 @@ export const GrubhubDirect: React.FC<GrubhubDirectProps> = ({ onBack, onNavigate
       {/* Video Section - Full Width */}
       <div className="w-full py-12">
         <div className="max-w-[90ch] mx-auto px-4 lg:px-8">
-          <div className="w-full overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.12)]" style={{ aspectRatio: '16/9' }}>
-         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ig7eN5xzPos?si=PgXyYRVImE_9lpbJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div className="relative w-full overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.12)]" style={{ aspectRatio: '16/9' }}>
+            <iframe 
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/XxE59YEJn4k?si=rqAjwW4yKjCEgbQZ" 
+              title="Grubhub Direct Platform Overview" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
