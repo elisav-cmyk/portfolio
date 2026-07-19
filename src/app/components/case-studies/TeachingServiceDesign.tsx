@@ -106,7 +106,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               <p>  
               *Advising.* Alongside teaching, I have served as a Graduate Student Advisor for EDI capstone and 
                 Master\&apos;s thesis projects on an ongoing basis since 2018, a formal role distinct from classroom 
-                instruction, guiding individual student research and thesis direction to completion.\</p\>  
+                instruction, guiding individual student research and thesis direction to completion.</p>  
               <p>  
               *Mentorship.* Beyond formal teaching and advising, I\&apos;ve sustained individual, informal career 
                 mentorship with former students, including two from that original 2018 cohort, continuing to this day. 
