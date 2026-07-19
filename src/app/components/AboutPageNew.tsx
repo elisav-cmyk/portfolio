@@ -349,34 +349,6 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
             </div>
           </div>
 
-          {/* Resume Download Section */}
-          <div className="max-w-[1104px] mx-auto">
-            <h2 className="mb-8 pb-2 border-b-2 border-border font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
-              RESUME DOWNLOAD
-            </h2>
-
-            <div className="bg-secondary rounded-[10px] p-8 mb-8 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                  <h3 className="font-['Spline_Sans'] text-[1.125rem] leading-[1.5rem] text-foreground mb-2">
-                    Download Resume
-                  </h3>
-                  <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-muted-foreground">
-                    Full career details, professional experience & accomplishments.
-                  </p>
-                </div>
-                <a
-                  target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1kGqrF3s7FIiKIgagFNJGXmzk2vnL8eeMYjlFjIXY6Tg/export?format=pdf"
-              download="Elisa_Vargas_Resume.pdf"
-
-                  className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]"
-                >
-                  <Download size={20} />
-                  Download Resume
-                </a>
-              </div>
-            </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 text-center">
               <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
