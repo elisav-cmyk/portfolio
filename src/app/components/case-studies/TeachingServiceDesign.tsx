@@ -110,7 +110,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               <p>  
               <b>Mentorship:</b> Beyond formal teaching and advising, I&apos;ve sustained individual, informal career 
                 mentorship with former students, including two from that original 2018 cohort, continuing to this day. 
-                I\&apos;ve also informally advised students at the IIT Institute of Design, a separate institution, 
+                I&apos;ve also informally advised students at the IIT Institute of Design, a separate institution, 
                 applying the same critique and talent-development discipline I use to scale professional design teams.</p>
             </div>
           </section>
@@ -122,9 +122,9 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
              <p>
-              The 2018 DSGN 401-3 cohort produced four concepts: <b>NeighbourFood</b>, a volunteer delivery network for people 
-               with limited mobility; a grocery-employee donation incentive program; <b>Bridge</b>, a platform connecting 
-               suppliers, volunteers, patrons, and agencies; and <b>enRoute</b>, a mobile locker food truck. NeighbourFood 
+              The 2018 DSGN 401-3 cohort produced four concepts: NeighbourFood, a volunteer delivery network for people 
+               with limited mobility; a grocery-employee donation incentive program; Bridge, a platform connecting 
+               suppliers, volunteers, patrons, and agencies; and enRoute, a mobile locker food truck. NeighbourFood 
                received Honorable Mention in the Design Management Institute&apos;s Design Value Awards, one of 12 groups 
                recognized globally that year. Seven years later, the relationship is still active: I continue to advise 
                EDI capstone students, and still mentor two students from that original 2018 cohort on career direction.</p>
