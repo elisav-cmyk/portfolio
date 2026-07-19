@@ -161,7 +161,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       image: imgFeedingAmericaHero,
       tag: "Teaching & Mentorship",
       year: "2018-Present",
-      title: "Teaching Service Design",
+      title: "Educating the Next Generation",
       company: "Northwestern University",
       caseStudyId: "teaching-service-design",
     },
