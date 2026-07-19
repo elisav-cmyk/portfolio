@@ -340,11 +340,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                 </p>
                 <p>Speaker/Mentor</p>
                 <p className="text-muted-foreground">Industry events and design community contributions</p>
-                <p className="text-muted-foreground mt-2">
-                  My relationship to educational assessment predates my design career: in 1997, I edited
-                  Illinois&apos;s state arts assessment recommendations for the Illinois Alliance for Arts
-                  Education.
-                </p>
+      
               </div>
             </div>
           
