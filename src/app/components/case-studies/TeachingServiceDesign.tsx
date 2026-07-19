@@ -79,7 +79,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               <p>
                 More than 41 million Americans face food insecurity, often compounded by mobility and
                 transportation barriers, while 133 billion pounds of food go to waste in the US each year.
-                That gap framed the brief for DSGN 401-3, Service Design, a 10-week graduate course: help
+                That gap framed the brief for DSGN 401-3 Service Design, a 10-week graduate course that helped
                 Feeding America, the nation&apos;s third-largest nonprofit, better distribute rescued food
                 from major retailers to food-insecure communities.
               </p>
@@ -93,18 +93,19 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                My relationship with Northwestern&apos;s Engineering Design Innovation (EDI) program has
-                spanned three roles since 2018. Since 2018, I&apos;ve served as a mentor to EDI graduate
-                capstone project teams. In 2024&ndash;2025, I co-taught Customer-Driven Opportunities within
-                Northwestern&apos;s Master of Product Design and Development Management (mpd²) program.
-                My most sustained engagement began in 2018, when I co-taught and ran the weekly design
-                critiques for DSGN 401-3, Service Design where I guided four teams of five graduate
-                students through a full service design process: interviews, pantry observation,
-                grocery-manager conversations, and direct collaboration with Feeding America&apos;s partner,
-                the Greater Chicago Food Depository. My role across all three was consistent: push each
-                team&apos;s research rigor, challenge assumptions in critique, and help them translate field
-                research into viable concepts, the same critique discipline I use with professional
-                design teams.
+                My relationship with Northwestern University as an Adjunct Faculty member has spanned multiple strategic 
+                roles since 2018. My engagement began when I co-lectured and ran the weekly design critiques for DSGN 401-3: Service 
+                Design guiding four graduate teams through a rigorous service design process including interviews, pantry observation, 
+                and direct collaboration with Feeding America&apos;s partner, the Greater Chicago Food Depository. This discipline 
+                paid immediate dividends: one student project, NeighbourFood, went on to receive an Honorable Mention in the Design 
+                Management Institute (DMI) Design Value Awards, one of only 12 groups recognized globally for delivering outstanding value through design.</p>
+              <p>
+                In 2024 and 2025, I co-taught MPD 416: Customer-Driven Opportunities within Northwestern&apos;s Master of Product 
+                Design and Development Management (mpd²) program. Alongside this, I have served as a Graduate Student Advisor 
+                for Engineering Design Innovation (EDI) capstone and Master&apos;s thesis projects, and have advised students at the 
+                Institute of Design. My objective across all programs is consistent: push research rigor, challenge strategic assumptions, 
+                and coach students to translate ambiguous field findings into viable product concepts utilizing the exact critique and 
+                talent-development discipline I use to scale professional design teams.
               </p>
             </div>
           </section>
