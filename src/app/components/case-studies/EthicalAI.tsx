@@ -180,7 +180,7 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
                     principles I co-developed with Liza Pagano,
                     Director of Brand + Creative, in 2022 to
                     align creative decisions across brand and
-                    product design org-wide &mdash; &quot;we
+                    product design org-wide: &quot;we
                     anticipate users&apos; needs and help them
                     follow their own path.&quot; My team applied
                     it directly to the research tool, tuning the
@@ -190,9 +190,9 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
                     behalf. The principle was later reinforced by
                     mapping it against the ACRL Framework for
                     Information Literacy, treating research as a
-                    set of behaviors &mdash; question framing,
+                    set of behaviors: question framing,
                     source evaluation, synthesis,
-                    argument-building &mdash; rather than a
+                    argument-building, rather than a
                     single search-and-answer transaction.
                   </li>
                 </ul>
@@ -343,8 +343,8 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
                 The clearest evidence &quot;guide, not
-                hero&quot; worked wasn&apos;t in design reviews
-                &mdash; it was in the usage data. A tool that
+                hero&quot; worked wasn&apos;t in design reviews,
+                 it was in the usage data. A tool that
                 shortcut the research process the way most AI
                 tools do would show a quick spike in use followed
                 by drop-off; instead we saw the opposite:
@@ -360,7 +360,7 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
               <p className="mt-4">
                 Each number points the same direction: deeper
                 engagement with the research process, not faster
-                extraction of an answer &mdash; the outcome the
+                extraction of an answer, exactly the outcome the
                 principle was designed to produce.
               </p>
             </div>
