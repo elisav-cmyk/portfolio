@@ -73,7 +73,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
           {/* Context & Business Challenge */}
           <section className="blog-grid flex flex-col gap-6">
             <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
-              Context & Business Challenge
+              Context
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
@@ -89,7 +89,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
           {/* Design Leadership & Approach */}
           <section className="blog-grid flex flex-col gap-6">
             <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
-              Design Leadership & Approach
+              Approach
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
@@ -123,7 +123,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
                 Institute&apos;s Design Value Awards &mdash; one of 12 groups recognized globally that year.
                 The course also started a mentorship relationship I&apos;ve continued for years: I still
                 advise two students from that cohort on career direction, alongside the ongoing capstone
-                and mpd² mentorship that has continued through 2025.
+                and mpd² mentorship that has continued through today.
               </p>
             </div>
           </section>
