@@ -70,7 +70,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
       {/* Main Content */}
       <div className="w-full py-12">
         <div className="flex flex-col gap-12">
-          {/* Context & Business Challenge */}
+          {/* Context */}
           <section className="blog-grid flex flex-col gap-6">
             <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
               Context
