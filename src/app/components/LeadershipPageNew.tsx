@@ -227,8 +227,8 @@ export const LeadershipPageContent = () => {
           <Card title="Coaching a New Team Through the RAZR Relaunch (2019)">
             <p className={`${body} mb-6`}>
               For the high-stakes 2019 RAZR relaunch, I gave the work to a team new to this kind of project: an
-              industrial designer in her first year and UX and UI designers who had only worked on web, alongside a UI
-              manager. I managed them directly through launch, coaching them through hard negotiations with US product
+              industrial designer in her second year working on mobile devices and UX and UI designers who had only
+              worked on web. I managed them directly through launch, coaching them through hard negotiations with US product
               teams and executive stakeholder dynamics.
             </p>
             <div className="bg-accent rounded-[10px] p-6 space-y-2">
@@ -237,8 +237,8 @@ export const LeadershipPageContent = () => {
               </p>
               <p className={body}>
                 <strong>Careers:</strong> The UX and UI designers built deep mobile expertise over the course of the
-                project. The industrial designer, who revitalized the RAZR, was promoted to Senior. She and the UI manager
-                both became Design Managers after I left Motorola.
+                project. The industrial designer, who revitalized the RAZR, was promoted to Senior Designer. She and the UI
+                designer both became Design Managers after I left Motorola.
               </p>
             </div>
           </Card>
