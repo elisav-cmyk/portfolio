@@ -72,7 +72,7 @@ const data: CaseStudyData = {
   ],
   results: [
     "In testing, restaurants that listed their Direct site on their Google Business Profile, so it appeared on Search and Maps, received, on average, nearly 20x the orders of those that didn't.",
-    'Grubhub Direct launched in May 2021.',
+    'Grubhub Direct launched in May 2021, six months after kickoff.',
     'Restaurants kept 100% of their direct sales: no commission, platform or maintenance fees, only order processing and delivery fees.',
     'Restaurants owned their customer data, including names, email addresses, order history and lifetime spend, which they could use for loyalty and promotions.',
   ],
