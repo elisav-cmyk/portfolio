@@ -125,7 +125,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0">
                     {/* Email */}
                     <a
-                      href="mailto:elisav@gmail.com"
+                      href="mailto:elisa.vargas@gmail.com"
                       className="content-stretch flex gap-[10px] items-center relative shrink-0 hover:opacity-70 transition-opacity"
                     >
                       <p className="font-['Spline_Sans',sans-serif] font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
