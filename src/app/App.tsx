@@ -65,9 +65,13 @@ const PortfolioWireframes = () => {
   const [activeCaseStudy, setActiveCaseStudy] = useState<
     string | null
   >(initialRoute.caseStudy);
-  const [scrollTarget, setScrollTarget] = useState<
-    string | null
-  >(null);
+  // A link like /leadership#partners-say scrolls to that section once
+  // the page has loaded.
+  const [scrollTarget, setScrollTarget] = useState<string | null>(
+    initialRoute.page === "leadership" && window.location.hash.length > 1
+      ? decodeURIComponent(window.location.hash.slice(1))
+      : null,
+  );
   const [showHeaderTitle, setShowHeaderTitle] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const leadershipRef = useRef<HTMLDivElement>(null);
@@ -315,11 +319,6 @@ const PortfolioWireframes = () => {
     setActiveCaseStudy(null);
     setActivePage("leadership");
     setScrollTarget(id);
-  };
-
-  const navigateToPartnersSay = () => {
-    setActivePage("leadership");
-    setScrollTarget("partners-say");
   };
 
   // Function to scroll to a section on the current page
@@ -955,21 +954,14 @@ const PortfolioWireframes = () => {
             </div>
           </div>
           <div className="text-center">
-            <motion.button
-              onClick={() => {
-                setActivePage("leadership");
-                setTimeout(() => {
-                  const element =
-                    document.getElementById("partners-say");
-                  if (element) {
-                    element.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }
-                }, 100);
+            <motion.a
+              href="/leadership#partners-say"
+              onClick={(e: React.MouseEvent) => {
+                if (!isPlainClick(e)) return;
+                e.preventDefault();
+                navigateToLeadershipSection("partners-say");
               }}
-              className="bg-white px-7 py-3 rounded-[10px] font-['Spline_Sans'] text-[0.875rem] font-medium leading-[20px] tracking-[0.1px] text-foreground hover:bg-gray-50 cursor-pointer"
+              className="inline-block bg-white px-7 py-3 rounded-[10px] font-['Spline_Sans'] text-[0.875rem] font-medium leading-[20px] tracking-[0.1px] text-foreground hover:bg-gray-50 cursor-pointer"
               style={{
                 boxShadow:
                   "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -983,7 +975,7 @@ const PortfolioWireframes = () => {
               }}
             >
               Read All Testimonials
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </div>
