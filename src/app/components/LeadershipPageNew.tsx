@@ -197,9 +197,8 @@ export const LeadershipPageContent = () => {
 
           <Card title="Platform Foundations">
             <p className={body}>
-              From 2002 to 2005, I researched 22 mobile platforms and was part of the teams that built custom platforms
-              for Motorola devices. I later led the team whose work became the foundation for Motorola&apos;s first
-              Android device, the CLIQ. Over 18 years at Motorola, I worked on about 1 billion devices.
+              From 2002 to 2005, I was part of the teams that built Motorola&apos;s own mobile platforms. I later led
+              the team whose work became the foundation for Motorola&apos;s first Android device, the CLIQ.
             </p>
           </Card>
         </div>
