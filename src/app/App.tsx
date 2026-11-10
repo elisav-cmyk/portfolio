@@ -541,6 +541,39 @@ const PortfolioWireframes = () => {
             <p className="font-['Spline_Sans'] text-[1.25rem] leading-[1.6] tracking-normal text-foreground mb-4">
               Design leader for AI search and products people use in the real world.
             </p>
+            <p className="font-['Spline_Sans'] text-[1rem] leading-[1.6] tracking-normal text-foreground mb-4 max-w-[60ch] mx-auto">
+              I <a
+                href={caseStudyPath("ethical-ai")}
+                className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                onClick={(e: React.MouseEvent) => {
+                  if (!isPlainClick(e)) return;
+                  e.preventDefault();
+                  handleCaseStudyClick("ethical-ai");
+                }}
+              >
+                set direction from research
+              </a>, <a
+                href={caseStudyPath("razr-foldable")}
+                className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                onClick={(e: React.MouseEvent) => {
+                  if (!isPlainClick(e)) return;
+                  e.preventDefault();
+                  handleCaseStudyClick("razr-foldable");
+                }}
+              >
+                connect the people who need to agree
+              </a>, and <a
+                href={caseStudyPath("ai-library")}
+                className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                onClick={(e: React.MouseEvent) => {
+                  if (!isPlainClick(e)) return;
+                  e.preventDefault();
+                  handleCaseStudyClick("ai-library");
+                }}
+              >
+                get stalled work moving
+              </a>.
+            </p>
             <p className="font-['Spline_Sans'] text-[1rem] font-medium leading-[1.5] tracking-normal text-muted-foreground mb-8">
               Director, Product Design, JSTOR (ITHAKA)
               <br />
