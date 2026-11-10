@@ -354,12 +354,12 @@ export const LeadershipPageContent = () => {
                   ))}
                 </div>
 
-                {/* Catalyst: two quotes on a dark band */}
-                <div className="bg-primary rounded-[10px] p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Catalyst: two green cards side by side */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[catalystA, catalystB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="flex flex-col">
+                    <figure key={q.text.slice(0, 24)} className="on-dark bg-primary rounded-[10px] border-2 border-primary p-6 flex flex-col">
                       <Tag text={q.tag} dark />
-                      <blockquote className="font-['EB_Garamond'] text-[19px] leading-[28px] text-white mb-4 flex-1">
+                      <blockquote className="font-['EB_Garamond'] text-[17px] leading-[26px] text-white tracking-[0.25px] mb-4 flex-1">
                         &ldquo;{q.text}&rdquo;
                       </blockquote>
                       <Caption q={q} dark />

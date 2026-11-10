@@ -9,7 +9,7 @@ const data: CaseStudyData = {
   years: '2022-2025',
   title: 'One System, Many Products',
   subtitle: "Pharos, One Admin and accessibility across JSTOR",
-  role: 'Product Design Director, JSTOR',
+  role: 'Director, Product Design, JSTOR',
   partners: 'Product Design, Engineering, Product Management',
   context: [
     "JSTOR's products had grown apart. Teams built with different components, institutions managed their accounts through several separate admin tools, and accessibility varied from page to page. For a platform serving institutions in 194 countries, that meant slower launches, more inconsistency, and a real risk of shutting people out.",

@@ -75,9 +75,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Title */}
-      <h3 className="font-['Spline_Sans'] text-[1.375rem] leading-[2rem] text-foreground">
+      <h2 className="font-['Spline_Sans'] text-[1.375rem] leading-[2rem] font-medium text-foreground">
         {title}
-      </h3>
+      </h2>
 
       {/* Company */}
       <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">

@@ -12,7 +12,7 @@ const data: CaseStudyData = {
   years: '2022-Present',
   title: 'Unlocking Hidden Archives',
   subtitle: "JSTOR Seeklight: describing archives in hours, not weeks",
-  role: 'Product Design Director, JSTOR',
+  role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, Research, Outreach, Legal, Insights, Portico',
   context: [
     "Up to 95% of special collections in libraries and archives are unprocessed or undigitized. Staff can't describe items fast enough, so collections stay hidden from the researchers who need them, and the tools built to manage them are often expensive, hard to use and disconnected from where research starts.",

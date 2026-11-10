@@ -12,15 +12,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
     if (onScrollToTop) onScrollToTop();
   };
 
-  const handleNavigation = (page: string) => {
+  const handleNavigation = (e: React.MouseEvent, page: string) => {
+    // Let Cmd-click, Ctrl-click and middle-click open a new tab.
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
     if (onNavigate) {
+      e.preventDefault();
       onNavigate(page);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="bg-white content-stretch flex flex-col items-center pb-0 pt-[2px] px-0 relative w-full border-t-2 border-border">
+    <footer className="bg-white content-stretch flex flex-col items-center pb-0 pt-[2px] px-0 relative w-full border-t-2 border-border">
       <div className="h-auto relative shrink-0 w-full">
         <div className="flex flex-col items-center size-full">
           <div className="content-stretch flex flex-col gap-[16px] items-center px-[36px] py-[27px] relative w-full">
@@ -36,8 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                       </p>
                     </div>
                     <div className="content-stretch flex flex-col font-['Spline_Sans',sans-serif] font-normal gap-[6px] items-start leading-[20px] relative shrink-0 text-primary text-[14px] tracking-[0.25px] w-full">
-                      <p className="h-[24px] relative shrink-0 w-full text-foreground">Product Design Director</p>
-                      <p className="h-[24px] relative shrink-0 w-full text-foreground">Strategic Design Leader</p>
+                      <p className="h-[24px] relative shrink-0 w-full text-foreground">Director, Product Design</p>
                       <p className="relative shrink-0 w-full text-foreground">Adjunct Faculty, Northwestern University</p>
                     </div>
                   </div>
@@ -50,6 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                 <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0">
                   {/* Back to Top */}
                   <button
+                    type="button"
                     onClick={handleScrollToTop}
                     className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
                   >
@@ -65,35 +68,49 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                     </div>
                   </button>
 
+                  {/* Home */}
+                  <a
+                    href="/"
+                    onClick={(e) => handleNavigation(e, 'home')}
+                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                  >
+                    <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                      Home
+                    </p>
+                  </a>
+
                   {/* Work */}
-                  <button
-                    onClick={() => handleNavigation('work')}
+                  <a
+                    href="/work"
+                    onClick={(e) => handleNavigation(e, 'work')}
                     className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Work
                     </p>
-                  </button>
+                  </a>
 
-                  {/* Leadership Philosophy */}
-                  <button
-                    onClick={() => handleNavigation('leadership')}
+                  {/* Leadership */}
+                  <a
+                    href="/leadership"
+                    onClick={(e) => handleNavigation(e, 'leadership')}
                     className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
-                      Leadership Philosophy
+                      Leadership
                     </p>
-                  </button>
+                  </a>
 
                   {/* Impact */}
-                  <button
-                    onClick={() => handleNavigation('impact')}
+                  <a
+                    href="/impact"
+                    onClick={(e) => handleNavigation(e, 'impact')}
                     className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Impact
                     </p>
-                  </button>
+                  </a>
                 </div>
 
                 {/* Connect Column */}
@@ -163,6 +180,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
