@@ -13,8 +13,8 @@ All colors, spacing, and typography are defined as CSS custom properties in `src
 
 ## Development
 ```bash
-pnpm install
-pnpm dev
+npm ci
+npm run dev
 ```
 
 ## Deployment
