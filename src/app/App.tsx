@@ -42,7 +42,7 @@ import { CameraRedesign } from "./components/case-studies/CameraRedesign";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
 import onePlatformImage from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
 import razrHeroImage from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
-import aiLibraryImage from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
+import grubhubImage from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
 
 const PortfolioWireframes = () => {
   // The 404.html fallback sends unknown paths here as "/?/path".
@@ -544,24 +544,16 @@ const PortfolioWireframes = () => {
       >
         <div className="marketing-grid py-12 sm:py-16 lg:py-20 text-center">
           <div className="max-w-[75ch] mx-auto">
-            <h2 className="mb-4 font-['EB_Garamond'] text-[clamp(2rem,1.75rem+1.75vmin,2.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-foreground">
+            <h1 className="mb-4 font-['EB_Garamond'] text-[clamp(2rem,1.75rem+1.75vmin,2.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-foreground">
               ELISA VARGAS
-            </h2>
-            <p className="font-['Spline_Sans'] text-[1rem] font-medium leading-[1.5] tracking-normal text-muted-foreground mb-6">
-              Director, Product Design | AI search, recommendations &amp; LLM experiences
+            </h1>
+            <p className="font-['Spline_Sans'] text-[1.25rem] leading-[1.6] tracking-normal text-foreground mb-4">
+              Design leader for AI search and products people use in the real world.
             </p>
-            <p className="text-foreground mb-6">
-              Leading Product Design at JSTOR (ITHAKA)
+            <p className="font-['Spline_Sans'] text-[1rem] font-medium leading-[1.5] tracking-normal text-muted-foreground mb-8">
+              Director, Product Design, JSTOR (ITHAKA)
               <br />
-              111M+ annual users | 14,000 libraries | 194
-              countries
-            </p>
-            <p className="text-foreground mb-8">
-              Previously: Global UX Director, Motorola Mobility (2018–2020), 33 designers across 6 global studios
-              <br />
-              and Director, São Paulo Design Studio (2016–2017), in $9.78B operations
-              <br />
-              Director, Product Design, Grubhub Restaurant &amp; Driver (2020–2021)
+              Previously: Grubhub · Global UX Director, Motorola
             </p>
           </div>
 
@@ -705,12 +697,12 @@ const PortfolioWireframes = () => {
                 id: "ethical-ai",
               },
               {
-                title: "AI-Assisted Library Transformation",
-                subtitle: "Transforming archival workflows",
-                metric: "Strategic AI implementation",
-                company: "JSTOR",
-                id: "ai-library",
-                image: aiLibraryImage,
+                title: "Grubhub Direct",
+                subtitle: "Helping local restaurants own their orders",
+                metric: "Nearly 20x orders with Google Business Profile",
+                company: "Grubhub",
+                id: "grubhub-direct",
+                image: grubhubImage,
               },
               {
                 title: "Android RAZR Foldable",
