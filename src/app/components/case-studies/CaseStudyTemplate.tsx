@@ -40,6 +40,8 @@ export interface CaseStudyData {
   results: string[];
   resultsFigure?: { src: string; alt: string };
   why: string[];
+  /** Embedded videos shown at the end of the case study. */
+  videos?: { src: string; title: string; caption?: string }[];
 }
 
 const body = "font-['Spline_Sans'] text-[16px] leading-[26px] tracking-[0.25px] text-[#1b1c15]";
@@ -198,6 +200,26 @@ export const CaseStudyTemplate: React.FC<{
               ))}
             </div>
           </section>
+          {data.videos?.map((v) => (
+            <figure key={v.src} className="blog-grid w-full">
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
+                <iframe
+                  src={v.src}
+                  title={v.title}
+                  className="absolute inset-0 w-full h-full"
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  allowFullScreen
+                />
+              </div>
+              {v.caption && (
+                <figcaption className="font-['Spline_Sans'] text-[14px] leading-[20px] text-muted-foreground mt-2">
+                  {v.caption}
+                </figcaption>
+              )}
+            </figure>
+          ))}
         </div>
       </div>
 
