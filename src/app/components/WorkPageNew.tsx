@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
-import imgImageEthicalAiResearchTool from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
+import imgImageEthicalAiResearchTool from "../../assets/jstor-research-card.jpg";
 import imgImageAndroidRazrFoldable from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
 import imgImageOnePlatformIntegration from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
 import imgImageAILibrary from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
@@ -27,6 +27,7 @@ interface ProjectCardProps {
   title: string;
   company: string;
   caseStudyId: string;
+  imagePosition?: string;
   onCaseStudyClick: (id: string) => void;
 }
 
@@ -37,6 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   company,
   caseStudyId,
+  imagePosition,
   onCaseStudyClick,
 }) => (
   <a
@@ -54,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <img
         src={image}
         alt=""
-        className="w-full h-full object-cover object-center"
+        className={`w-full h-full object-cover ${imagePosition || "object-center"}`}
       />
     </div>
 
@@ -195,11 +197,12 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgImageGrubhubDirect,
-      tag: "Platform Strategy",
-      year: "2021",
+      tag: "Product Design Leadership",
+      year: "2020-2021",
       title: "Grubhub Direct",
-      company: "Scaling A Low-code Platform",
+      company: "Helping local restaurants own their orders",
       caseStudyId: "grubhub-direct",
+      imagePosition: "object-top",
     },
   ];
 
