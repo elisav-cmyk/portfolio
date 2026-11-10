@@ -297,7 +297,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
 
               <div className="bg-muted rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
                 <h4 className="font-['Spline_Sans'] text-[1.375rem] leading-[1.75rem] text-neutral-950 mb-4">
-                  Developer&apos;s Approach
+                  Development Approach
                 </h4>
                 <ul className="space-y-2 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
                   <li className="flex gap-2">
