@@ -42,6 +42,7 @@ import { MotoApp } from "./components/case-studies/MotoApp";
 import { MobileParity } from "./components/case-studies/MobileParity";
 import { CameraRedesign } from "./components/case-studies/CameraRedesign";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
+import researchCardImage from "../assets/jstor-research-card.jpg";
 import onePlatformImage from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
 import razrHeroImage from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
 import grubhubImage from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
@@ -655,6 +656,7 @@ const PortfolioWireframes = () => {
                 metric: "~11,400 institutions",
                 company: "JSTOR",
                 id: "ethical-ai",
+                image: researchCardImage,
               },
               {
                 title: "Grubhub Direct",
@@ -663,6 +665,8 @@ const PortfolioWireframes = () => {
                 company: "Grubhub",
                 id: "grubhub-direct",
                 image: grubhubImage,
+                // Show the top of the dashboard; crop from the bottom.
+                position: "object-top",
               },
               {
                 title: "Android RAZR Foldable",
@@ -696,7 +700,7 @@ const PortfolioWireframes = () => {
                   <img
                     src={project.image || heroImage}
                     alt=""
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${"position" in project ? project.position : "object-center"}`}
                   />
                 </div>
                 <div className="p-6">
