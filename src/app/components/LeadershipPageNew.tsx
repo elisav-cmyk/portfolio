@@ -291,9 +291,10 @@ export const LeadershipPageContent = () => {
           </Card>
           <Card title="Design System and Design-to-Code (JSTOR)">
             <p className={body}>
-              As Executive Champion for Pharos, JSTOR&apos;s design system, I set federated governance and modern tooling
-              (Storybook, Chromatic) to keep components consistent across applications. I championed AI-enabled
-              design-to-code workflows with Figma Code Connect and MCP servers to unify federated teams.
+              As executive champion for Pharos, JSTOR&rsquo;s design system, I help shape its federated stewardship
+              model, clarifying ownership, contribution pathways, and collaboration between design and engineering. I
+              advocate for shared workflows grounded in Storybook, Figma Dev Mode, and MCP to help teams evolve
+              consistent components across applications.
             </p>
           </Card>
           <Card title="One Animation Format (Motorola)">
