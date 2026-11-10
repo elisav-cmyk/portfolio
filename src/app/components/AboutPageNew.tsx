@@ -338,7 +338,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
             </div>
           
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-8 text-center">
               <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
                 <div className="font-['EB_Garamond'] text-[2.5rem] leading-tight text-primary mb-2">
                   20+
