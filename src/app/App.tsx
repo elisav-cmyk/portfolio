@@ -622,10 +622,12 @@ const PortfolioWireframes = () => {
             </motion.div>
           </motion.div>
 
-          <div className="flex gap-4 justify-center flex-wrap">
+          {/* Grid with equal columns keeps both buttons as wide as the wider one,
+              side by side or stacked. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-fit mx-auto">
             <motion.button
               onClick={() => setActivePage("work")}
-              className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
+              className="w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
               style={{
                 boxShadow:
                   "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -642,7 +644,7 @@ const PortfolioWireframes = () => {
             </motion.button>
             <motion.button
               onClick={() => setActivePage("leadership")}
-              className="px-6 sm:px-8 py-3 bg-white rounded-[10px] hover:bg-muted transition-colors"
+              className="w-full px-6 sm:px-8 py-3 bg-white rounded-[10px] hover:bg-muted transition-colors"
               style={{
                 boxShadow:
                   "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
