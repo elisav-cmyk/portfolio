@@ -15,7 +15,7 @@ const data: CaseStudyData = {
   years: '2023-2026',
   title: 'AI That Shows Its Sources',
   subtitle: "The JSTOR Research Tool: ask, discover and validate every answer",
-  role: 'Product Design Director, JSTOR',
+  role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, institutional partners',
   context: [
     "When generative AI arrived in 2023, students and faculty quickly began using consumer chatbots for research. Those tools could fabricate information and often didn't show where an answer came from, which runs against everything academic work depends on. JSTOR needed an AI tool that met scholarly standards; otherwise it risked becoming a place people skipped on the way to a chatbot. The tool was also costly to run, so it had to earn its place in a sustainable business model, not just exist as a feature.",

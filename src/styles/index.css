@@ -4,3 +4,35 @@
 @import 'tw-animate-css';
 @import './default_theme.css';
 @import './globals.css';
+
+/* Keyboard focus: one clear ring on every link, button and control. */
+:where(a, button, [tabindex]:not([tabindex="-1"]), iframe):focus-visible {
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: var(--primary);
+  outline-offset: 3px;
+}
+
+/* On dark green sections the ring turns white so it stays visible. */
+.on-dark :focus-visible {
+  outline-color: #fff;
+}
+
+/* Hidden until a keyboard user tabs to it. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  font-family: 'Spline Sans', sans-serif;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+.skip-link:focus-visible {
+  outline-color: #fff;
+}

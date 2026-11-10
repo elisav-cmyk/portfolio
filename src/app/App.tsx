@@ -389,6 +389,16 @@ const PortfolioWireframes = () => {
     },
   };
 
+  // Page links are real links: plain clicks stay in the app, while
+  // middle-click or Cmd-click opens the page in a new tab.
+  const goToPage = (e: React.MouseEvent, page: string) => {
+    if (!isPlainClick(e)) return;
+    e.preventDefault();
+    if (page === "work") setActiveCaseStudy(null);
+    setActivePage(page);
+    setMobileMenuOpen(false);
+  };
+
   const pages = [
     { id: "home", label: "Home" },
     { id: "work", label: "Work" },
@@ -397,7 +407,7 @@ const PortfolioWireframes = () => {
   ];
 
   const Navigation = () => (
-    <div
+    <header
       id="site-nav"
       className="border-b-2 border-border bg-white sticky top-0 z-50"
     >
@@ -423,22 +433,19 @@ const PortfolioWireframes = () => {
                 ELISA VARGAS
               </div>
               <div className="font-['Spline_Sans'] text-[0.875rem] font-medium leading-[20px] tracking-[0.1px] text-muted-foreground">
-                Product Design Director
+                Director, Product Design
               </div>
             </motion.div>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Main" className="hidden md:flex items-center gap-8">
             {pages.map((page) => (
-              <button
+              <a
                 key={page.id}
-                onClick={() => {
-                  if (page.id === "work") {
-                    setActiveCaseStudy(null);
-                  }
-                  setActivePage(page.id);
-                }}
+                href={pathFor(page.id, null)}
+                aria-current={activePage === page.id ? "page" : undefined}
+                onClick={(e) => goToPage(e, page.id)}
                 className={`font-['Spline_Sans'] text-[1rem] font-medium leading-[24px] tracking-[0.15px] transition-colors ${
                   activePage === page.id
                     ? "text-primary"
@@ -446,7 +453,7 @@ const PortfolioWireframes = () => {
                 }`}
               >
                 {page.label}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -465,7 +472,11 @@ const PortfolioWireframes = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            type="button"
+            className="md:hidden p-2.5 -mr-2.5"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -478,17 +489,13 @@ const PortfolioWireframes = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <nav id="mobile-menu" aria-label="Main" className="md:hidden mt-4 pb-4 space-y-3">
             {pages.map((page) => (
-              <button
+              <a
                 key={page.id}
-                onClick={() => {
-                  if (page.id === "work") {
-                    setActiveCaseStudy(null);
-                  }
-                  setActivePage(page.id);
-                  setMobileMenuOpen(false);
-                }}
+                href={pathFor(page.id, null)}
+                aria-current={activePage === page.id ? "page" : undefined}
+                onClick={(e) => goToPage(e, page.id)}
                 className={`block w-full text-left px-3 py-2 rounded-[10px] ${
                   activePage === page.id
                     ? "bg-secondary text-primary"
@@ -496,7 +503,7 @@ const PortfolioWireframes = () => {
                 }`}
               >
                 {page.label}
-              </button>
+              </a>
             ))}
             <div className="flex gap-2 pt-2">
               <a
@@ -509,10 +516,10 @@ const PortfolioWireframes = () => {
                 LinkedIn
               </a>
             </div>
-          </div>
+          </nav>
         )}
       </div>
-    </div>
+    </header>
   );
 
   const handleFooterNavigation = (page: string) => {
@@ -627,9 +634,10 @@ const PortfolioWireframes = () => {
           {/* Grid with equal columns keeps both buttons as wide as the wider one,
               side by side or stacked. */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-fit mx-auto">
-            <motion.button
-              onClick={() => setActivePage("work")}
-              className="w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
+            <motion.a
+              href={pathFor("work", null)}
+              onClick={(e: React.MouseEvent) => goToPage(e, "work")}
+              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
               style={{
                 boxShadow:
                   "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -643,10 +651,11 @@ const PortfolioWireframes = () => {
               }}
             >
               View Case Studies
-            </motion.button>
-            <motion.button
-              onClick={() => setActivePage("leadership")}
-              className="w-full px-6 sm:px-8 py-3 bg-white rounded-[10px] hover:bg-muted transition-colors"
+            </motion.a>
+            <motion.a
+              href={pathFor("leadership", null)}
+              onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
+              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-white rounded-[10px] hover:bg-muted transition-colors"
               style={{
                 boxShadow:
                   "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -660,7 +669,7 @@ const PortfolioWireframes = () => {
               }}
             >
               Leadership Approach
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </div>
@@ -757,7 +766,7 @@ const PortfolioWireframes = () => {
       </div>
 
       {/* Impact Highlight */}
-      <div className="bg-primary border-t-2 border-ring border-b-2 border-ring">
+      <div className="on-dark bg-primary border-t-2 border-ring border-b-2 border-ring">
         <div className="marketing-grid py-16 text-center">
           <h3 className="mb-12 text-white font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal">
             RESULTS
@@ -794,9 +803,10 @@ const PortfolioWireframes = () => {
               </div>
             ))}
           </div>
-          <motion.button
-            onClick={() => setActivePage("impact")}
-            className="mt-12 px-8 py-3 bg-white rounded-[10px] font-['Spline_Sans'] text-[0.875rem] font-medium leading-[1.4] tracking-[0.01em] text-primary hover:bg-white/90"
+          <motion.a
+            href={pathFor("impact", null)}
+              onClick={(e: React.MouseEvent) => goToPage(e, "impact")}
+            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[10px] font-['Spline_Sans'] text-[0.875rem] font-medium leading-[1.4] tracking-[0.01em] text-primary hover:bg-white/90"
             style={{
               boxShadow:
                 "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -810,7 +820,7 @@ const PortfolioWireframes = () => {
             }}
           >
             View All Results
-          </motion.button>
+          </motion.a>
         </div>
       </div>
 
@@ -829,11 +839,10 @@ const PortfolioWireframes = () => {
           >
             <div className="mb-6">
               <span className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                I lead through strategic clarity,
-                cross-functional influence, and team
-                empowerment, building high-performing design
-                organizations that deliver measurable business
-                outcomes at scale.
+                Three things show up in every project: I set
+                direction from research, I connect the people who
+                need to agree, and I get stalled work moving. The
+                sections below show how.
               </span>
             </div>
 
@@ -855,9 +864,10 @@ const PortfolioWireframes = () => {
             </div>
           </div>
           <div className="text-center">
-            <motion.button
-              onClick={() => setActivePage("leadership")}
-              className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
+            <motion.a
+              href={pathFor("leadership", null)}
+              onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
+              className="inline-block text-center px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{
@@ -867,7 +877,7 @@ const PortfolioWireframes = () => {
               }}
             >
               Read Full Leadership Philosophy
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </div>
@@ -901,7 +911,7 @@ const PortfolioWireframes = () => {
               <div className="flex items-start">
                 <div className="bg-secondary px-3 py-1 rounded-full">
                   <p className="font-['Spline_Sans'] text-[11px] font-medium leading-[16px] tracking-[0.5px] text-secondary-foreground">
-                    Cross-Functional Leadership
+                    Connector
                   </p>
                 </div>
               </div>
@@ -935,7 +945,7 @@ const PortfolioWireframes = () => {
               <div className="flex items-start">
                 <div className="bg-secondary px-3 py-1 rounded-full">
                   <p className="font-['Spline_Sans'] text-[11px] font-medium leading-[16px] tracking-[0.5px] text-secondary-foreground">
-                    Executive Translation
+                    Connector
                   </p>
                 </div>
               </div>
@@ -1063,20 +1073,32 @@ const PortfolioWireframes = () => {
       className="min-h-screen bg-background"
       style={{ scrollBehavior: "smooth" }}
     >
-      <Navigation />
+      <a
+        href="#main"
+        className="skip-link"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById("main")?.focus();
+        }}
+      >
+        Skip to content
+      </a>
+      {/* Called as functions, not <Components />, so a re-render (for
+          example on scroll) keeps the same DOM and keyboard focus. */}
+      {Navigation()}
 
-      <div ref={contentRef} className="w-full">
+      <main id="main" tabIndex={-1} ref={contentRef} className="w-full outline-none">
         <AnimatePresence mode="wait">
-          {activePage === "home" && <HomePage key="home" />}
-          {activePage === "work" && <WorkPage key="work" />}
+          {activePage === "home" && React.cloneElement(HomePage(), { key: "home" })}
+          {activePage === "work" && React.cloneElement(WorkPage(), { key: "work" })}
           {activePage === "leadership" && (
-            <LeadershipPage key="leadership" />
+            React.cloneElement(LeadershipPage(), { key: "leadership" })
           )}
           {activePage === "impact" && (
-            <ImpactPage key="impact" />
+            React.cloneElement(ImpactPage(), { key: "impact" })
           )}
         </AnimatePresence>
-      </div>
+      </main>
 
       <Footer onNavigate={handleFooterNavigation} />
     </div>

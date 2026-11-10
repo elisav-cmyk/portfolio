@@ -9,7 +9,7 @@ const data: CaseStudyData = {
   years: '2021-2025',
   title: 'Research on the Go',
   subtitle: "JSTOR on phones, as someone's main screen or a second one",
-  role: 'Product Design Director, JSTOR',
+  role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, Visual Resources Association library leads',
   context: [
     "Mobile had become too large a share of JSTOR's traffic to treat as an afterthought. Its share of users grew from 17% in 2018 to 34% in 2024 and 40% in 2025, but the experience hadn't kept up. Internal research showed JSTOR was losing use to poor mobile design in navigation, access flows and judging whether an article was worth reading.",
