@@ -8,7 +8,7 @@ import imgImageAILibrary from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bb
 import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
 import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.png";
 import imgCameraIntro from "figma:asset/camera-intro.png";
-import imgFeedingAmericaHero from "figma:asset/feeding-america-hero.jpg";
+import imgMotoCard from "../../assets/moto-card.jpg";
 import imgMobileParity from "../../assets/jstor-mobile.png";
 import { CASE_STUDIES, caseStudyPath, isPlainClick } from "../data/caseStudies";
 
@@ -167,7 +167,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       tag: "Platform Strategy",
       year: "2023-2024",
       title: "Ecosystem & Design Infrastructure",
-      company: "Pharos, One Admin, & Digital Stewardship",
+      company: "Pharos, One Admin & Accessibility",
       caseStudyId: "ecosystem-infrastructure",
     },
     {
@@ -187,11 +187,11 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       caseStudyId: "camera-redesign",
     },
     {
-      image: imgFeedingAmericaHero,
-      tag: "Teaching & Mentorship",
-      year: "2018-2026", title: "Educating the Next Generation",
-      company: "Northwestern University",
-      caseStudyId: "teaching-service-design",
+      image: imgMotoCard,
+      tag: "Brand & Craft",
+      year: "2016-2020", title: "Moto App",
+      company: "Motorola",
+      caseStudyId: "moto-app",
     },
     {
       image: imgImageGrubhubDirect,

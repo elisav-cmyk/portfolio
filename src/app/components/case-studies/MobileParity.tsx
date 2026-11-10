@@ -1,168 +1,67 @@
 import React from 'react';
-import { motion } from 'motion/react';
-import { CaseStudyFooter } from '../CaseStudyFooter';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
 import imgMobileParity from '../../../assets/jstor-mobile.png';
+import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
-interface MobileParityProps {
+const data: CaseStudyData = {
+  id: 'mobile-parity',
+  hero: { src: imgMobileParity, alt: 'Designing for Mobile Parity at JSTOR', position: 'object-center' },
+  tag: 'Platform Strategy',
+  years: '2021-2025',
+  title: 'Designing for Mobile Parity',
+  subtitle: 'Making JSTOR work for people who only have a phone',
+  role: 'Product Design Director, JSTOR',
+  partners: 'Product Management, Engineering, User Insights Research, Accessibility, Visual Resources Association library leads',
+  context: [
+    "Mobile had become too large a share of JSTOR's traffic to treat as an afterthought. Its share of users grew from 17% in 2018 to 34% in 2024 and 40% in 2025, but the experience hadn't kept up. Internal research showed JSTOR was losing use to poor mobile design in navigation, access flows and judging whether an article was worth reading.",
+    "The clearest example was the viewer for reading journal pages: only 63% of users were satisfied with it, and only 57% found it easy to move between pages. People couldn't search within a document, the mouse wheel zoomed instead of scrolling, and pages flipped by mistake.",
+  ],
+  moves: [
+    {
+      title: 'Set one point of view across four projects',
+      paragraphs: [
+        "We didn't write a formal standard; we agreed on a way of seeing the problem: put essential tasks first, assume short sessions, and treat mobile as an access problem, not a responsive-CSS problem.",
+      ],
+    },
+    {
+      title: 'Homepage (2021-2022)',
+      paragraphs: [
+        'A survey of 205 people told us the homepage was "busy and cluttered" and that they "just want search." We rebuilt navigation around a single menu and simplified the header and the rotating hero.',
+      ],
+    },
+    {
+      title: 'Reader (2023)',
+      paragraphs: [
+        'We replaced the page-image viewer with a PDF reader built for phones: continuous vertical scrolling, search within the document with highlighted matches, pinch-to-zoom and a distraction-free reading mode.',
+      ],
+    },
+    {
+      title: 'Audio and video (2023)',
+      paragraphs: [
+        'When Artstor content moved to JSTOR, the team designed the new media pages mobile-first from the start, with an audio player anchored at the bottom of the screen and captioned video with transcripts linked to timestamps, which we validated with Visual Resources Association library leads.',
+      ],
+    },
+    {
+      title: 'Research tool (2025)',
+      paragraphs: [
+        'A year of hardening: a launch button people could actually find, a chat sheet that no longer covered the page, and a keyboard that no longer blocked typing.',
+      ],
+    },
+  ],
+  results: [
+    'In an A/B test with more than 225,000 users, the new reader raised the share of users reading text on JSTOR by 27.9% and doubled pages viewed, with 83% more page changes.',
+    'In usability testing, reading ease for modern articles rose from 3.8 to 4.4, and skimming ease for older articles nearly doubled, from 2.1 to 3.9.',
+    'A sticky launch button raised research tool open rates from 1.6% to as high as 6%.',
+  ],
+  why: [
+    'For many students around the world, a phone is the only computer they have. In the US, students regularly use their phone as a second screen while they work. Making JSTOR work well on phones is how we keep access to knowledge open.',
+  ],
+};
+
+interface Props {
   onBack: () => void;
   onNavigate?: (caseStudyId: string) => void;
 }
 
-export const MobileParity: React.FC<MobileParityProps> = ({ onBack, onNavigate }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-      className="bg-white"
-    >
-
-      {/* Hero Image - Full Width Band */}
-      <div className="w-full">
-        <ImageWithFallback
-          src={imgMobileParity}
-          alt="Designing for Mobile Parity at JSTOR"
-          className="w-full h-64 md:h-[500px] object-cover object-center"
-        />
-      </div>
-
-      {/* Title Section - Full Width Background */}
-      <div className="w-full bg-secondary">
-        <div className="blog-grid py-12 sm:py-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-primary text-primary-foreground font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] px-3 py-1 rounded-full">
-              Platform Strategy
-            </span>
-            <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-[#1b1c15]">
-              2021-2025
-            </span>
-          </div>
-          <h1 className="font-['EB_Garamond'] text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-6">
-            Designing for Mobile Parity
-          </h1>
-          <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15] mb-8">
-            JSTOR
-          </h2>
-          <div className="space-y-2">
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Role:</strong> Product Design Director, JSTOR
-            </p>
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Work Partners:</strong> Product Management, Engineering, User Insights Research,
-              Accessibility, Visual Resource Association (VRA) library leads
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="w-full py-12">
-        <div className="flex flex-col gap-12">
-          {/* Context & Business Challenge */}
-          <section className="blog-grid flex flex-col gap-6">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
-              Context & Business Challenge
-            </h2>
-            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <p>
-                Mobile had become too large a share of JSTOR&apos;s traffic to treat as secondary. In Google Analytics, mobile&apos;s share of users grew from 17% in 2018 to 34% in 2024 and 40% in 2025. Internal research raised a direct concern: JSTOR was losing usage to poor mobile
-                optimization, especially in navigation, turnaway flows, and content evaluation. The
-                clearest example was the IIIF viewer used for reading journal text: only 63% of users were
-                satisfied with it, and only 57% found it easy to move between pages. Frustrations were
-                driven by an inability to search within documents, mouse-wheel zoom instead of scroll, and
-                frequent page-manipulation errors that eroded trust. This wasn&apos;t only a UX problem:
-                JSTOR serves 194 countries, and in some Tier 1&ndash;3 markets, mobile is the only viable
-                path to the platform meaning mobile investment directly contributes to ITHAKA&apos;s access
-                mission.
-              </p>
-            </div>
-          </section>
-
-          {/* Design Leadership & Approach */}
-          <section className="blog-grid flex flex-col gap-6">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
-              Design Leadership & Approach
-            </h2>
-            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15] mb-6">
-              <p>
-                I led design strategy across four initiatives, connected by a shared point of view rather
-                than one formal standard: prioritize essential tasks, assume short mobile sessions, treat
-                mobile as an access problem, not a responsive-CSS problem.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-[var(--space-16)] mb-6">
-              <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                Homepage (2021-2022)
-              </h3>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                A 205-response intercept survey (&quot;busy and cluttered,&quot; &quot;I just want
-                search&quot;) drove a mobile-specific round of fixes including rebuilt navigation, a global
-                hamburger menu, as well as a simplified header and hero carousel.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-[var(--space-16)] mb-6">
-              <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                PDF Reader (2023)
-              </h3>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                Replaced the IIIF page-image viewer with a PDF.js-based reader including continuous
-                vertical scroll, in-document keyword search with highlighting, pinch-zoom, and
-                distraction-reduced reading mode. Usability testing showed reading ease for modern articles
-                improved from 3.8 to 4.4, and skimming ease for older articles nearly doubled, from 2.1 to
-                3.9.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-[var(--space-16)] mb-6">
-              <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                Audio & Video (2023)
-              </h3>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                As part of the Artstor&ndash;JSTOR integration, the product design team designed the
-                item-page pattern for new media types mobile-first from inception including a
-                bottom-anchored audio player, and captioned video with timestamp-linked transcripts later
-                validated directly with Visual Resource Association library leads.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-[var(--space-16)]">
-              <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-                Research Tool Mobile (2025)
-              </h3>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                This was a year of hardening: fixing a launch button users couldn&apos;t find, shrinking an
-                oversized chat sheet, correcting keyboard behavior that blocked typing, fixing broken
-                scroll position on iOS citation modals, and resolving layout conflicts with the PDF action
-                bar.
-              </p>
-            </div>
-          </section>
-
-          {/* Outcomes */}
-          <section className="blog-grid flex flex-col gap-6">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-[#1b1c15]">
-              Outcomes
-            </h2>
-            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <p>
-                The PDF reader had the clearest measurable impact: an A/B experiment across 225,000+ users on all devices
-                showed a 27.9% increase in users engaging with text directly on JSTOR and a doubling of
-                pages viewed on-platform, with 83% more page-change events and 11% more users paging
-                through content. The research tool&apos;s mobile launch-button experiment moved open rates
-                from a 1.6% control baseline to as high as 6% with a sticky-button treatment. Mobile&apos;s share of JSTOR users grew from 17% (2018) to 34% (2024) and 40% (2025), per Google Analytics. Related to, but distinct from, the 98% accessibility improvement in the Ecosystem Infrastructure case study, the mobile
-                program built in captioning and legibility, but that ranking reflects separate, dedicated
-                accessibility work.
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <CaseStudyFooter currentProjectId="mobile-parity" onNavigate={onNavigate} />
-    </motion.div>
-  );
-};
+export const MobileParity: React.FC<Props> = ({ onNavigate }) => (
+  <CaseStudyTemplate data={data} onNavigate={onNavigate} />
+);
