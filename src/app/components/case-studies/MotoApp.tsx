@@ -53,6 +53,12 @@ const data: CaseStudyData = {
   why: [
     'This app is an example of my passion for brand, craft and design fidelity, and of how closely my team worked with research, other studios, product management and engineering.',
   ],
+  videos: [
+    {
+      src: 'https://player.vimeo.com/video/347808760?h=4418d191b2&dnt=1',
+      title: 'Moto app video',
+    },
+  ],
 };
 
 interface Props {

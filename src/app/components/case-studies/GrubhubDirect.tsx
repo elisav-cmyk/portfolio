@@ -78,6 +78,12 @@ const data: CaseStudyData = {
   why: [
     'I love hunting for the next great local restaurant. Helping those restaurants keep their customers, at a time when many were at risk of closing, was work I cared about.',
   ],
+  videos: [
+    {
+      src: 'https://www.youtube-nocookie.com/embed/ig7eN5xzPos',
+      title: 'Grubhub Direct video',
+    },
+  ],
 };
 
 interface Props {

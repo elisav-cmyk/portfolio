@@ -36,6 +36,12 @@ const data: CaseStudyData = {
       ],
     },
     {
+      title: 'Gave institutions control',
+      paragraphs: [
+        'Libraries have their own policies on AI, and they needed to decide for themselves how the tool would be used on their campuses. My team designed admin controls that let each institution turn the research tool on or off, for everyone or for specific users.',
+      ],
+    },
+    {
       title: 'Grew a designer into a leader',
       paragraphs: [
         'The lead designer has built real trust with her team and now helps shape its strategy. I coached her toward setting standards for the whole team, beyond her own projects.',
@@ -50,9 +56,10 @@ const data: CaseStudyData = {
       caption: 'Every answer links to the passage it came from.',
     },
     {
-      after: 1,
+      after: 3,
       src: governanceImage,
-      alt: 'Multi-stakeholder governance: tri-partite control framework',
+      alt: 'Governance layers around the research tool: institutional control through admin toggles, a publisher opt-out, data protections with no third-party training, and the underlying language model',
+      caption: 'Institutional controls sit at the top of the governance model.',
       width: 'wide',
     },
   ],
