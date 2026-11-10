@@ -64,7 +64,7 @@ const career = [
     org: 'Motorola Mobility',
     role: 'Director, São Paulo Design Studio',
     years: '2016–2017',
-    text: 'Moved to São Paulo in 2015 to manage the 3 UX designers, then led the multidisciplinary studio of 13 (UX, industrial design, research, surface engineering). Grew the UX/UI team to 6 designers in one year (7 hires) and delivered the DTV Mod, which sold out in Brazil.',
+    text: 'Moved to São Paulo in 2015 to manage the 3 UX designers. About a year later, I became Director and studio lead of the multidisciplinary studio of 13 (UX, industrial design, research, surface engineering). Grew the UX/UI team to 6 designers in one year (7 hires) and delivered the DTV Mod, which sold out in Brazil.',
   },
   {
     org: 'Motorola',
@@ -226,18 +226,19 @@ export const LeadershipPageContent = () => {
         <div className="space-y-6">
           <Card title="Coaching a New Team Through the RAZR Relaunch (2019)">
             <p className={`${body} mb-6`}>
-              For the high-stakes 2019 RAZR relaunch, I gave the work to a team of emerging talent: an industrial
-              designer in her first year and UX designers new to mobile. I managed them directly through launch, coaching
-              them through hard negotiations with US product teams and executive stakeholder dynamics.
+              For the high-stakes 2019 RAZR relaunch, I gave the work to a team new to this kind of project: an
+              industrial designer in her first year and UX and UI designers who had only worked on web, alongside a UI
+              manager. I managed them directly through launch, coaching them through hard negotiations with US product
+              teams and executive stakeholder dynamics.
             </p>
             <div className="bg-accent rounded-[10px] p-6 space-y-2">
               <p className={body}>
                 <strong>Award:</strong> The team earned a Red Dot &quot;Best of the Best.&quot;
               </p>
               <p className={body}>
-                <strong>Careers:</strong> The industrial designer was promoted to Senior and is now a Design Manager
-                driving innovation projects. The UI designer is now a Design Manager. The UX designer built deep mobile
-                expertise that informed later launches.
+                <strong>Careers:</strong> The UX and UI designers built deep mobile expertise over the course of the
+                project. The industrial designer, who revitalized the RAZR, was promoted to Senior. She and the UI manager
+                both became Design Managers after I left Motorola.
               </p>
             </div>
           </Card>
