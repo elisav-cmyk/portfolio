@@ -412,23 +412,6 @@ html {
   letter-spacing: 0.05em;
 }
 
-/* Container adjustments */
-.grid.grid-cols-3.gap-6.text-center {
-  width: calc(90% + 20px);
-  max-width: calc(1200px + 20px);
-  margin: 0 auto;
-  padding: 10px;
-  overflow: visible;
-}
-
-/* Card adjustments */
-.grid.grid-cols-3.gap-6.text-center > div {
-  max-width: 100%;
-  width: auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 /* ============================================
    MARKETING & BLOG TEXT STYLES
    Base font size: 16px (1rem)

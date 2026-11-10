@@ -277,7 +277,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                     <div className="font-['Spline_Sans'] text-[14px] leading-[1rem] tracking-[0.025rem] text-[rgb(61,76,13)] mb-2">
                       Staff {'→'} Senior {'→'} Manager
                     </div>
-                    <p className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] tracking-[0.025rem] text-muted-foreground">
+                    <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
                       Three-person RAZR team (all new to Motorola/mobile) led high-stakes 2019 foldable
                       relaunch. Two team members are now Design Managers: industrial designer in Brazil
                       driving innovation, UI designer leading design efforts. UX designer developed mobile
@@ -288,7 +288,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                     <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-[rgb(61,76,13)] mb-2">
                       Multiple Promotions
                     </div>
-                    <p className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] tracking-[0.025rem] text-muted-foreground">
+                    <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
                       Team members advanced into senior, staff-level and management roles across design disciplines
                     </p>
                   </div>
@@ -297,9 +297,9 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
 
               <div className="bg-muted rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
                 <h4 className="font-['Spline_Sans'] text-[1.375rem] leading-[1.75rem] text-neutral-950 mb-4">
-                  Developer&apos;s Approach
+                  Development Approach
                 </h4>
-                <ul className="space-y-2 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-secondary-foreground">
+                <ul className="space-y-2 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
                   <li className="flex gap-2">
                     <span className="flex-shrink-0">•</span>
                     <span>Created Design Career Framework defining growth paths from junior to principal</span>
@@ -338,7 +338,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
             </div>
           
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-8 text-center">
               <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
                 <div className="font-['EB_Garamond'] text-[2.5rem] leading-tight text-primary mb-2">
                   20+
