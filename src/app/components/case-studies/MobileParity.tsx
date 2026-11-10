@@ -12,7 +12,7 @@ const data: CaseStudyData = {
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, Visual Resources Association library leads',
   context: [
-    "Mobile had become too large a share of JSTOR's traffic to treat as an afterthought. Its share of users grew from 17% in 2018 to 34% in 2024 and 40% in 2025, but the experience hadn't kept up. Internal research showed JSTOR was losing use to poor mobile design in navigation, access flows and judging whether an article was worth reading.",
+    "JSTOR could no longer treat mobile as an afterthought. Between 2018 and 2025, mobile traffic grew from 17% to 40% (surpassing 34% in 2024), yet the mobile experience had failed to keep pace. Internal research showed JSTOR was losing use to poor mobile design in navigation, access flows and judging whether an article was worth reading.",
     "The clearest example was the viewer for reading journal pages: only 63% of users were satisfied with it, and only 57% found it easy to move between pages. People couldn't search within a document, the mouse wheel zoomed instead of scrolling, and pages flipped by mistake.",
   ],
   moves: [
