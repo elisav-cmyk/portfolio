@@ -1,6 +1,5 @@
 import image_a72184f5b2b8091a17608300f53e559bab83a11c from "figma:asset/a72184f5b2b8091a17608300f53e559bab83a11c.png";
 import React from "react";
-import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
 import { CaseStudyFooter } from "../CaseStudyFooter";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
@@ -23,16 +22,6 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
       transition={{ duration: 0.3 }}
       className="bg-white"
     >
-      {/* Back Button */}
-      <div className="blog-grid pt-8 pb-4">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-        >
-          <ArrowLeft size={20} />
-          Back to Work
-        </button>
-      </div>
 
       {/* Hero Image - Full Width Band */}
       <div className="w-full">

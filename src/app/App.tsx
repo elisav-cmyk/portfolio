@@ -18,6 +18,14 @@ import { motion, AnimatePresence } from "motion/react";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { LinkedinFilled } from "./components/LinkedinFilled";
 import { Footer } from "./components/Footer";
+import { CaseStudyNav } from "./components/CaseStudyNav";
+import {
+  CASE_STUDIES,
+  caseStudyPath,
+  isPlainClick,
+  parsePath,
+  pathFor,
+} from "./data/caseStudies";
 import { AboutPageContent } from "./components/AboutPageNew";
 import { ImpactPageContent } from "./components/ImpactPageNew";
 import { WorkPageContent } from "./components/WorkPageNew";
@@ -34,15 +42,27 @@ import { CameraRedesign } from "./components/case-studies/CameraRedesign";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
 import onePlatformImage from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
 import razrHeroImage from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
-import aiLibraryImage from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
+import grubhubImage from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
 
 const PortfolioWireframes = () => {
-  const [activePage, setActivePage] = useState("home");
+  // The 404.html fallback sends unknown paths here as "/?/path".
+  // Restore the real path before reading it.
+  if (window.location.search.startsWith("?/")) {
+    const restored =
+      "/" +
+      window.location.search
+        .slice(2)
+        .split("&")[0]
+        .replace(/~and~/g, "&");
+    window.history.replaceState(null, "", restored + window.location.hash);
+  }
+  const initialRoute = parsePath(window.location.pathname);
+  const [activePage, setActivePage] = useState(initialRoute.page);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [workFilter, setWorkFilter] = useState("company");
   const [activeCaseStudy, setActiveCaseStudy] = useState<
     string | null
-  >(null);
+  >(initialRoute.caseStudy);
   const [scrollTarget, setScrollTarget] = useState<
     string | null
   >(null);
@@ -62,6 +82,35 @@ const PortfolioWireframes = () => {
   const empoweringAutonomyRef = useRef<HTMLDivElement>(null);
   const buildingTeamsRef = useRef<HTMLDivElement>(null);
   const heroSectionRef = useRef<HTMLDivElement>(null);
+
+  // Keep the address bar in step with the page, so every page and case
+  // study has its own link and the browser Back button works.
+  useEffect(() => {
+    const path = pathFor(activePage, activeCaseStudy);
+    if (path !== window.location.pathname) {
+      window.history.pushState(null, "", path);
+    }
+    const study = CASE_STUDIES.find((c) => c.id === activeCaseStudy);
+    const pageLabel =
+      activePage === "home"
+        ? null
+        : activePage.charAt(0).toUpperCase() + activePage.slice(1);
+    document.title = study
+      ? `${study.title} | Elisa Vargas`
+      : pageLabel
+        ? `${pageLabel} | Elisa Vargas`
+        : "Elisa Vargas | Product Design Leader";
+  }, [activePage, activeCaseStudy]);
+
+  useEffect(() => {
+    const onPopState = () => {
+      const route = parsePath(window.location.pathname);
+      setActivePage(route.page);
+      setActiveCaseStudy(route.caseStudy);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   // Scroll detection for header title visibility on home page
   useEffect(() => {
@@ -357,7 +406,10 @@ const PortfolioWireframes = () => {
   ];
 
   const Navigation = () => (
-    <div className="border-b-2 border-border bg-white sticky top-0 z-50">
+    <div
+      id="site-nav"
+      className="border-b-2 border-border bg-white sticky top-0 z-50"
+    >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="min-w-[200px]">
@@ -492,24 +544,16 @@ const PortfolioWireframes = () => {
       >
         <div className="marketing-grid py-12 sm:py-16 lg:py-20 text-center">
           <div className="max-w-[75ch] mx-auto">
-            <h2 className="mb-4 font-['EB_Garamond'] text-[clamp(2rem,1.75rem+1.75vmin,2.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-foreground">
+            <h1 className="mb-4 font-['EB_Garamond'] text-[clamp(2rem,1.75rem+1.75vmin,2.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-foreground">
               ELISA VARGAS
-            </h2>
-            <p className="font-['Spline_Sans'] text-[1rem] font-medium leading-[1.5] tracking-normal text-muted-foreground mb-6">
-              Director, Product Design | AI search, recommendations &amp; LLM experiences
+            </h1>
+            <p className="font-['Spline_Sans'] text-[1.25rem] leading-[1.6] tracking-normal text-foreground mb-4">
+              Design leader for AI search and products people use in the real world.
             </p>
-            <p className="text-foreground mb-6">
-              Leading Product Design at JSTOR (ITHAKA)
+            <p className="font-['Spline_Sans'] text-[1rem] font-medium leading-[1.5] tracking-normal text-muted-foreground mb-8">
+              Director, Product Design, JSTOR (ITHAKA)
               <br />
-              111M+ annual users | 14,000 libraries | 194
-              countries
-            </p>
-            <p className="text-foreground mb-8">
-              Previously: Global UX Director, Motorola Mobility (2018–2020), 33 designers across 6 global studios
-              <br />
-              and Director, São Paulo Design Studio (2016–2017), in $9.78B operations
-              <br />
-              Director, Product Design, Grubhub Restaurant &amp; Driver (2020–2021)
+              Previously: Grubhub · Global UX Director, Motorola
             </p>
           </div>
 
@@ -653,12 +697,12 @@ const PortfolioWireframes = () => {
                 id: "ethical-ai",
               },
               {
-                title: "AI-Assisted Library Transformation",
-                subtitle: "Transforming archival workflows",
-                metric: "Strategic AI implementation",
-                company: "JSTOR",
-                id: "ai-library",
-                image: aiLibraryImage,
+                title: "Grubhub Direct",
+                subtitle: "Helping local restaurants own their orders",
+                metric: "Nearly 20x orders with Google Business Profile",
+                company: "Grubhub",
+                id: "grubhub-direct",
+                image: grubhubImage,
               },
               {
                 title: "Android RAZR Foldable",
@@ -669,10 +713,15 @@ const PortfolioWireframes = () => {
                 image: razrHeroImage,
               },
             ].map((project, i) => (
-              <motion.div
-                key={i}
-                onClick={() => handleCaseStudyClick(project.id)}
-                className="bg-white rounded-[10px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              <motion.a
+                key={project.id}
+                href={caseStudyPath(project.id)}
+                onClick={(e: React.MouseEvent) => {
+                  if (!isPlainClick(e)) return;
+                  e.preventDefault();
+                  handleCaseStudyClick(project.id);
+                }}
+                className="block bg-white rounded-[10px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
                 style={{
                   boxShadow:
                     "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -686,7 +735,7 @@ const PortfolioWireframes = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src={project.image || heroImage}
-                    alt={project.title}
+                    alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -704,7 +753,7 @@ const PortfolioWireframes = () => {
                     {project.metric}
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </div>
@@ -1026,11 +1075,17 @@ const PortfolioWireframes = () => {
         caseStudyComponents[activeCaseStudy];
       if (CaseStudyComponent) {
         caseStudyComponent = (
-          <CaseStudyComponent
-            key={activeCaseStudy}
-            onBack={handleBackToWork}
-            onNavigate={handleCaseStudyClick}
-          />
+          <>
+            <CaseStudyNav
+              currentProjectId={activeCaseStudy}
+              onNavigate={handleCaseStudyClick}
+            />
+            <CaseStudyComponent
+              key={activeCaseStudy}
+              onBack={handleBackToWork}
+              onNavigate={handleCaseStudyClick}
+            />
+          </>
         );
       }
     }

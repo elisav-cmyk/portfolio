@@ -72,7 +72,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
               {/* 20 Card */}
               <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
                 <div className="font-['EB_Garamond'] text-[2.8125rem] leading-[3.25rem] text-secondary-foreground mb-2">
-                  20
+                  20+
                 </div>
                 <div className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-muted-foreground mb-2">
                   Years Experience
