@@ -1,12 +1,16 @@
 import React from 'react';
-import heroImage from 'figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png';
+import heroImage from '../../../assets/jstor-dynamic-search.jpg';
 import traceableImage from 'figma:asset/a72184f5b2b8091a17608300f53e559bab83a11c.png';
 import governanceImage from '../../../assets/governance-layered.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
   id: 'ethical-ai',
-  hero: { src: heroImage, alt: 'Research and academic work' },
+  hero: {
+    src: heroImage,
+    alt: 'JSTOR search results in Dynamic mode, with AI search suggestions, an explanation of why each result matches, and a results overview with themes',
+    position: 'object-top',
+  },
   tag: 'AI Ethics',
   years: '2023-2026',
   title: 'JSTOR Research Tool',
