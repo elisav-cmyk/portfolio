@@ -293,7 +293,7 @@ export const LeadershipPageContent = () => {
             <p className={body}>
               As executive champion for Pharos, JSTOR&rsquo;s design system, I help shape its federated stewardship
               model, clarifying ownership, contribution pathways, and collaboration between design and engineering. I
-              advocate for shared workflows grounded in Storybook, Figma Dev Mode, and MCP to help teams evolve
+              advocate for shared workflows grounded in Storybook, Figma and MCP to help teams evolve
               consistent components across applications.
             </p>
           </Card>
