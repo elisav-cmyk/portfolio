@@ -839,9 +839,8 @@ const PortfolioWireframes = () => {
           >
             <div className="mb-6">
               <span className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                How I build teams, work with Google and other
-                partners, and keep quality high as the work grows,
-                with examples from JSTOR, Grubhub and Motorola.
+                How I hire, grow and run design teams, and what
+                partners say about working with me.
               </span>
             </div>
 
