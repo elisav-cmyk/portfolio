@@ -167,7 +167,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
             <div className="content-stretch flex items-center justify-center pb-0 pt-[9px] px-0 relative shrink-0 w-full max-w-[976px]">
               <div aria-hidden="true" className="absolute border-border border-[1px_0px_0px] border-solid inset-0 pointer-events-none" />
               <p className="font-['Spline_Sans',sans-serif] font-medium leading-[16px] relative shrink-0 text-text-dark text-[12px] text-center tracking-[0.5px] w-fit whitespace-nowrap">
-                © 2025 Elisa Vargas
+                © {new Date().getFullYear()} Elisa Vargas
               </p>
             </div>
           </div>

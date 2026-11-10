@@ -78,9 +78,7 @@ export const MobileParity: React.FC<MobileParityProps> = ({ onBack, onNavigate }
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                By 2021, mobile had become too large a share of JSTOR&apos;s traffic to treat it as
-                secondary: 38% of users, 26% of sessions, 19% of pageviews, and climbing toward 40% by
-                mid-2023. Internal research raised a direct concern: JSTOR was losing usage to poor mobile
+                Mobile had become too large a share of JSTOR&apos;s traffic to treat as secondary. In Google Analytics, mobile&apos;s share of users grew from 17% in 2018 to 34% in 2024 and 40% in 2025. Internal research raised a direct concern: JSTOR was losing usage to poor mobile
                 optimization, especially in navigation, turnaway flows, and content evaluation. The
                 clearest example was the IIIF viewer used for reading journal text: only 63% of users were
                 satisfied with it, and only 57% found it easy to move between pages. Frustrations were
@@ -162,14 +160,11 @@ export const MobileParity: React.FC<MobileParityProps> = ({ onBack, onNavigate }
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                The PDF reader had the clearest measurable impact: an A/B experiment across 225,000+ users
+                The PDF reader had the clearest measurable impact: an A/B experiment across 225,000+ users on all devices
                 showed a 27.9% increase in users engaging with text directly on JSTOR and a doubling of
                 pages viewed on-platform, with 83% more page-change events and 11% more users paging
                 through content. The research tool&apos;s mobile launch-button experiment moved open rates
-                from a 1.6% control baseline to as high as 6% with a sticky-button treatment. Mobile share
-                of JSTOR traffic grew from roughly 38% of users in 2021 to about 40% by 2023, holding
-                steady as the research tool scaled. Related to, but distinct from, the 98% WAVE
-                accessibility improvement in the Ecosystem Infrastructure case study, the mobile
+                from a 1.6% control baseline to as high as 6% with a sticky-button treatment. Mobile&apos;s share of JSTOR users grew from 17% (2018) to 34% (2024) and 40% (2025), per Google Analytics. Related to, but distinct from, the 98% accessibility improvement in the Ecosystem Infrastructure case study, the mobile
                 program built in captioning and legibility, but that ranking reflects separate, dedicated
                 accessibility work.
               </p>

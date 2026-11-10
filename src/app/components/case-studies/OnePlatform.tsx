@@ -81,7 +81,7 @@ export const OnePlatform: React.FC<OnePlatformProps> = ({ onBack, onNavigate }) 
               In 2023–24, JSTOR executed a major strategic initiative to complete the Artstor-JSTOR &quot;One Platform&quot; integration. This effort was required to strengthen JSTOR&apos;s position as a teaching resource, consolidate offerings for operational efficiency, and protect revenue by increasing the value of both platforms.
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              As Product Design Director at JSTOR (2022-present), I provided strategic oversight and executive counsel for this mission-critical effort. My senior design leads fully owned and executed the demanding technical and design integration, engaging me primarily when cross-functional roadblocks were encountered.
+              As Product Design Director at JSTOR (2021-present), I provided strategic oversight and executive counsel for this mission-critical effort. My senior design leads fully owned and executed the demanding technical and design integration, engaging me primarily when cross-functional roadblocks were encountered.
             </p>
           </section>
 

@@ -113,7 +113,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                 <strong>Multi-Persona Design Oversight:</strong> I ensured the design strategy prioritized role-based views for four distinct, high-stakes enterprise personas: Institutions, Consortia, Contributors, and Publishers. This approach to Role-Based Access Control (RBAC) was central to consolidating functionality while addressing varied user needs.
               </p>
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Platform Consolidation:</strong> I oversaw the strategic consolidation of fragmented admin functions—reporting, user management, and access methods—into a single, cohesive user experience.
+                <strong>Platform Consolidation:</strong> I oversaw the strategic consolidation of fragmented admin functions (reporting, user management, and access methods) into a single, cohesive user experience.
               </p>
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
                 <strong>Enterprise Integration Guidance:</strong> Provided oversight on designing for complex system-to-system connections, such as enabling Alma Auto-Holdings to streamline institutional holdings management, demonstrating expertise in enterprise integration patterns.
@@ -134,7 +134,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                 <strong>AI in Enterprise Workflow:</strong> Ensured AI-assisted processing (Seeklight) was integrated responsibly within the enterprise workflow, focusing on user-in-the-loop validation and aligning with the company&rsquo;s ethical AI standards.
               </p>
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Strategic Team Building:</strong> The successful creation and launch of JDSS was executed by two staff-level designers I hired. This demonstrates my ability to select the right talent and grant autonomy to enable new business outcomes.
+                <strong>Strategic Team Building:</strong> Two Designer II hires I made led the design of JDSS through launch; one is now moving to Senior Designer. This demonstrates my ability to select the right talent and grant autonomy to enable new business outcomes.
               </p>
             </div>
           </section>
@@ -159,7 +159,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                     Accessibility Improvement
                   </div>
                   <div className="font-['Spline_Sans'] text-[13px] leading-[18px] text-[#1b1c15]/70 italic">
-                    (Top 1% WAVE Ranking)
+                    (Top 1% in the WebAIM Million)
                   </div>
                 </div>
 
@@ -185,10 +185,10 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
                     Business Growth
                   </div>
                   <div className="font-['EB_Garamond'] text-[48px] leading-[56px] text-primary">
-                    $27.8M
-                  </div>
+                    30+
+                </div>
                   <div className="font-['Spline_Sans'] text-[16px] leading-[20px] text-[#1b1c15] mb-1">
-                    Projected SaaS ARR
+                    Charter Institutions
                   </div>
                   <div className="font-['Spline_Sans'] text-[13px] leading-[18px] text-[#1b1c15]/70 italic">
                     (New Revenue Stream)
@@ -228,10 +228,10 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
               </h3>
               <ul className="list-disc list-inside">
                 <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  Achieved a monumental 98% improvement in accessibility, earning JSTOR a Top 1% WAVE ranking across the platform.
+                  Achieved a 98% improvement in accessibility errors, placing JSTOR in the Top 1% of the WebAIM Million homepage evaluation.
                 </li>
                 <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  This transformation was driven by the strategic hiring of a specialized accessibility lead and implementing a "shift-left" approach that integrated standards directly into the design system.
+                  This transformation was driven by the accessibility lead I hired in 2021 and by running a dedicated accessibility program of automated checks, manual audits and early designer collaboration.
                 </li>
               </ul>
             </div>
@@ -259,7 +259,7 @@ export const EcosystemInfrastructure: React.FC<EcosystemInfrastructureProps> = (
               </h3>
               <ul className="list-disc list-inside">
                 <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                  The staff-level designers I hired successfully created JSTOR Digital Stewardship Services, opening new revenue streams for the organization.
+                  The two designers I hired led the design of JSTOR Digital Stewardship Services, opening new revenue streams for the organization.
                 </li>
                 <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
                   The integrated AI work contributed to the organization receiving the 2025 C.F.W. Coker Award.

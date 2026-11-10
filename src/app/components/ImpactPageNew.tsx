@@ -113,10 +113,10 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-secondary-foreground">
-                    UX team growth (Brazil Studio)
+                    UX/UI team growth (Brazil Studio)
                   </span>
                   <span className="font-['Spline_Sans'] text-primary">
-                    3×
+                    6 in 1 year
                   </span>
                 </div>
               </div>
@@ -136,10 +136,10 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
               <div className="space-y-3 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem]">
                 <div className="flex justify-between items-center">
                   <span className="text-secondary-foreground">
-                    AI Tool engagement increase
+                    AI research tool institutions
                   </span>
                   <span className="font-['Spline_Sans'] text-primary">
-                    3×
+                    ~11,400
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -208,7 +208,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
               <div className="space-y-3 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem]">
                 <div className="flex justify-between items-center">
                   <span className="text-secondary-foreground">
-                    WAVE accessibility ranking
+                    WebAIM Million accessibility ranking
                   </span>
                   <span className="font-['Spline_Sans'] text-primary">
                     Top 1%
@@ -236,46 +236,42 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Subscription Revenue Card */}
+              {/* Individual Subscriptions Card */}
               <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
                 <div className="font-['EB_Garamond'] text-[2.8125rem] leading-[3.25rem] text-secondary-foreground mb-2">
-                  45% → 50%
+                  +35.2%
                 </div>
                 <div className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-muted-foreground mb-2">
-                  Subscription Revenue
+                  Individual Subscriptions
                 </div>
                 <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-foreground">
-                  Increased JPASS checkout conversion rates
+                  JPASS sales year over year, with net revenue up 25%
                 </div>
               </div>
 
-              {/* Access Efficiency Card */}
+              {/* Login Success Card */}
               <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
                 <div className="font-['EB_Garamond'] text-[2.8125rem] leading-[3.25rem] text-secondary-foreground mb-2">
                   40% → 63%
                 </div>
                 <div className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-muted-foreground mb-2">
-                  Access Efficiency
+                  Login Success
                 </div>
                 <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-foreground">
-                  Optimized institutional authentication rates
-                  removing critical friction for high-value B2B
-                  accounts
+                  Clearer login error messages raised sign-in success, removing friction for institutional users
                 </div>
               </div>
 
-              {/* Retention Economy Card */}
+              {/* AI-Assisted Search Card */}
               <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
                 <div className="font-['EB_Garamond'] text-[2.8125rem] leading-[3.25rem] text-secondary-foreground mb-2">
-                  11% → 17%
+                  52% vs 39%
                 </div>
                 <div className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-muted-foreground mb-2">
-                  Retention Economy
+                  AI-Assisted Search
                 </div>
                 <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-foreground">
-                  Drove a statistically significant lift in
-                  monthly auto-renewals directly reducing churn
-                  and support costs
+                  Share of Dynamic Search queries that led people to content, versus keyword search
                 </div>
               </div>
             </div>
@@ -297,7 +293,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
                   &quot;Best of the Best&quot; for Android RAZR
-                  foldable—highest recognition in product
+                  foldable, the highest recognition in product
                   design. Led design team from concept through
                   launch.
                 </p>
@@ -305,12 +301,10 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
 
               <div className="bg-white rounded-[10px] p-6">
                 <h4 className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-primary mb-2">
-                  WAVE Accessibility Excellence
+                  Accessibility Excellence
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
-                  Achieved Top 1% WAVE ranking through strategic
-                  hiring and team empowerment. 98% improvement
-                  in accessibility errors.
+                  Top 1% in the WebAIM Million homepage evaluation, with zero automated errors, through a dedicated accessibility program of automated checks and manual audits. 98% improvement in accessibility errors.
                 </p>
               </div>
 
@@ -319,10 +313,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                   AI Ethics Leadership
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
-                  Leading industry conversations on ethical AI
-                  in academic research. Speaking at conferences
-                  and guiding product strategy to balance
-                  innovation with academic integrity.
+                  Set the ethical design principles for JSTOR&apos;s AI research tool: answers link to their source text, and the tool guides research rather than writing for the researcher.
                 </p>
               </div>
 
@@ -331,10 +322,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                   Platform Alignment Excellence
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
-                  Collaborated with Google on Android gesture
-                  navigation patterns. Influenced foldable
-                  framework standards through RAZR development
-                  work.
+                  Shared Motorola&apos;s gesture research with Google and adopted the Android 10 standard. Our razr cover-screen model shaped Google&apos;s patterns for small foldable screens.
                 </p>
               </div>
             </div>
@@ -359,8 +347,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                   specific skills. At JSTOR: hired accessibility
                   lead to drive 98% error reduction and
                   empowered them to institute shift-left
-                  accessibility practices that earned a Top 1%
-                  WAVE ranking.
+                  accessibility practices that earned a Top 1% ranking in the WebAIM Million.
                 </p>
               </div>
 
@@ -369,12 +356,9 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                   Accessibility Transformation (JSTOR)
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
-                  Led accessibility transformation by hiring
-                  specialist technical lead. Empowered him to
-                  institute shift-left testing, achieving 98%
-                  error improvement. Project demonstrates
+                  Led accessibility transformation by hiring a specialist accessibility lead in 2021. Empowered him to institute shift-left testing, achieving 98% error improvement. When he moved on in 2026, secured a higher-level backfill and hired a Senior Accessibility Manager. Project demonstrates
                   strategic hiring and team empowerment
-                  approach—I identify capability gaps, hire
+                  approach: I identify capability gaps, hire
                   expertise, then empower teams to execute with
                   autonomy.
                 </p>
@@ -385,8 +369,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                   UX/UI Expansion (Brazil Studio)
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
-                  Tripled UX/UI team from 2 to 6 designers in 12
-                  months through strategic hiring. Led team to
+                  Grew the UX/UI team to 6 designers in 12 months (7 hires). Led team to
                   deliver DTV Mod (sold out in Brazil market)
                   and concepts that influenced the global
                   product portfolio.
@@ -425,7 +408,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                 I&apos;ve demonstrated leadership effectiveness
                 and design excellence across consumer products,
                 platform strategy, and global team
-                coordination—managing teams from 5 to 33
+                coordination, managing teams from 5 to 33
                 designers delivering products used by millions.
               </p>
             </div>
@@ -475,13 +458,8 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
               Large-scale Historical Example
             </h4>
             <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
-              As Head of UX at Motorola (2017-2020): Led 33
-              designers across 6 global studios (Chicago,
-              Beijing, São Paulo, others) within $9.78B
-              operations. Directed design for 24-device
-              portfolio serving 23M+ users. Led iconic RAZR
-              foldable launch and collaborated with Google on
-              Android framework standards.
+              As Global UX Director at Motorola (2018–2020): Led 33 designers across 6 global studios (Chicago, São Paulo, Beijing, Shanghai, Shenzhen, Nanjing) within $9.78B operations. Directed design for a 24-device portfolio. Led iconic RAZR
+              foldable launch and worked with Google on foldable framework changes.
             </p>
           </div>
 
@@ -501,10 +479,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
                 </h4>
                 <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
                   Adjunct Faculty at Northwestern University
-                  (Master of Product Design & Development
-                  Innovation, Engineering Design Innovation).
-                  Currently Graduate Student Advisor in EDI
-                  program.
+                  (Master of Product Design and Development Management, Engineering Design Innovation). Graduate Student Advisor in the EDI program, 2018–2026.
                 </p>
               </div>
 
