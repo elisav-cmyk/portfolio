@@ -9,15 +9,15 @@ export interface CaseStudyMeta {
 }
 
 export const CASE_STUDIES: CaseStudyMeta[] = [
-  { id: "ethical-ai", title: "Ethical AI Research Tool", company: "JSTOR" },
-  { id: "grubhub-direct", title: "Grubhub Direct", company: "Grubhub" },
-  { id: "razr-foldable", title: "Android RAZR Foldable", company: "Motorola" },
-  { id: "mobile-parity", title: "Designing for Mobile Parity", company: "JSTOR" },
-  { id: "ai-library", title: "AI-Assisted Library Transformation", company: "JSTOR" },
-  { id: "camera-redesign", title: "Camera Redesign", company: "Motorola" },
-  { id: "one-platform", title: "One Platform Integration", company: "JSTOR" },
-  { id: "ecosystem-infrastructure", title: "Ecosystem & Design Infrastructure", company: "JSTOR" },
-  { id: "moto-app", title: "Moto App", company: "Motorola" },
+  { id: "ethical-ai", title: "AI That Shows Its Sources", company: "JSTOR" },
+  { id: "grubhub-direct", title: "Restaurants Own Their Orders", company: "Grubhub" },
+  { id: "razr-foldable", title: "Bringing Back the RAZR", company: "Motorola" },
+  { id: "mobile-parity", title: "Research on the Go", company: "JSTOR" },
+  { id: "ai-library", title: "Unlocking Hidden Archives", company: "JSTOR" },
+  { id: "camera-redesign", title: "Starting the Camera Over", company: "Motorola" },
+  { id: "one-platform", title: "Integrating Artstor into JSTOR", company: "JSTOR" },
+  { id: "ecosystem-infrastructure", title: "One System, Many Products", company: "JSTOR" },
+  { id: "moto-app", title: "Turning Hidden Features into Daily Habits", company: "Motorola" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;

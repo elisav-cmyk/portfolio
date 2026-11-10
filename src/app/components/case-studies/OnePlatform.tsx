@@ -7,8 +7,8 @@ const data: CaseStudyData = {
   hero: { src: onePlatformImage, alt: 'JSTOR platform integration' },
   tag: 'Platform Integration',
   years: '2023-2024',
-  title: 'One Platform Integration',
-  subtitle: "Moving Artstor's teaching tools into JSTOR without losing faculty",
+  title: 'Integrating Artstor into JSTOR',
+  subtitle: "Keeping faculty's teaching workflows intact through the move",
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Research, Marketing, Visual Resources Association librarians',
   context: [

@@ -1,5 +1,6 @@
 import React from 'react';
-import heroImage from '../../../assets/jstor-dynamic-search.jpg';
+import heroImage from '../../../assets/jstor-research-banner.jpg';
+import dynamicSearchImage from '../../../assets/jstor-dynamic-search.jpg';
 import traceableImage from 'figma:asset/a72184f5b2b8091a17608300f53e559bab83a11c.png';
 import governanceImage from '../../../assets/governance-layered.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
@@ -8,13 +9,12 @@ const data: CaseStudyData = {
   id: 'ethical-ai',
   hero: {
     src: heroImage,
-    alt: 'JSTOR search results in Dynamic mode, with AI search suggestions, an explanation of why each result matches, and a results overview with themes',
-    position: 'object-top',
+    alt: 'A student working with the JSTOR research tool on a laptop and phone in a library',
   },
   tag: 'AI Ethics',
   years: '2023-2026',
-  title: 'JSTOR Research Tool',
-  subtitle: 'AI that researchers can validate',
+  title: 'AI That Shows Its Sources',
+  subtitle: 'Ask research questions, find scholarly sources, and validate every answer with the JSTOR Research Tool.',
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, institutional partners',
   context: [
@@ -64,6 +64,13 @@ const data: CaseStudyData = {
       src: governanceImage,
       alt: 'Governance layers around the research tool: institutional control through admin toggles, a publisher opt-out, data protections with no third-party training, and the underlying language model',
       caption: 'Institutional controls sit at the top of the governance model.',
+      width: 'wide',
+    },
+    {
+      after: 4,
+      src: dynamicSearchImage,
+      alt: 'JSTOR search results in Dynamic mode, with AI search suggestions, an explanation of why each result matches, and a results overview with themes',
+      caption: 'Dynamic Search: AI suggestions, a reason each result matches, and an overview of themes.',
       width: 'wide',
     },
   ],

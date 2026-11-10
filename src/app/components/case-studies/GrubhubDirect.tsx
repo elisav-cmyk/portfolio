@@ -17,8 +17,8 @@ const data: CaseStudyData = {
   },
   tag: 'Product Design Leadership',
   years: '2020-2021',
-  title: 'Grubhub Direct',
-  subtitle: 'Helping local restaurants own their orders',
+  title: 'Restaurants Own Their Orders',
+  subtitle: 'Grubhub Direct: commission-free ordering for local restaurants',
   role: 'Director, Product Design, Grubhub',
   partners: 'Product Management, Engineering, Research, restaurant operators',
   context: [

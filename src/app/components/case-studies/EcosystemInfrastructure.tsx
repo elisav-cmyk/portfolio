@@ -7,7 +7,7 @@ const data: CaseStudyData = {
   hero: { src: ecosystemHeroImage, alt: 'Design system and infrastructure', position: 'object-top' },
   tag: 'Design Systems',
   years: '2022-2025',
-  title: 'Ecosystem & Design Infrastructure',
+  title: 'One System, Many Products',
   subtitle: 'The systems that keep quality high across JSTOR',
   role: 'Product Design Director, JSTOR',
   partners: 'Product Design, Engineering, Product Management',
