@@ -14,7 +14,7 @@ const data: CaseStudyData = {
   partners: 'Industrial Design, Research, Engineering (HW/SW), Product Management (HW/SW), Marketing',
   extra: [{ label: 'Award', value: 'Red Dot "Best of the Best" 2020' }],
   context: [
-    "Whenever I told people I worked at Motorola, I'd hear stories about their first phones, and years after we'd moved to Android, people still wanted to talk about their flip phones and the RAZR in particular. Motorola was strong in mid-tier phones, but it had struggled to ship a premium device since its Droid partnership with Verizon ended. To return to the high end, Motorola decided to bring back the RAZR as a foldable Android phone.",
+    "Whenever I told people I worked at Motorola, I'd hear stories about their first phones, and years after we'd moved to Android, people still wanted to talk about their flip phones and the RAZR in particular. Motorola was strong in mid-tier phones, but it had struggled to ship a premium device after its Droid partnership with Verizon ended. To return to the high end, Motorola decided to bring back the RAZR as a foldable Android phone.",
   ],
   moves: [
     {
