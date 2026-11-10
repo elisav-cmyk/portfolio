@@ -659,7 +659,7 @@ const PortfolioWireframes = () => {
                 image: researchCardImage,
               },
               {
-                title: "Giving Restaurants Their Customers Back",
+                title: "Restaurants Own Their Orders",
                 subtitle: "Grubhub Direct, commission-free ordering",
                 metric: "Nearly 20x orders with Google Business Profile",
                 company: "Grubhub",

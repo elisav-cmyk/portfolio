@@ -11,12 +11,13 @@ const data: CaseStudyData = {
   },
   tag: 'Brand & Craft',
   years: '2016-2020',
-  title: 'Teaching People What Their Phone Can Do',
+  title: 'Turning Hidden Features into Daily Habits',
   subtitle: 'The Moto app turned a list of settings into a reason to explore',
   role: 'Design Director, then Global UX Director, Motorola Mobility',
   partners: 'Product Management, Engineering, Research, Marketing',
   context: [
     'Motorola phones ran a mostly "pure" version of Android, so people rarely noticed the features unique to Moto phones, or understood what those features could do for them. The Moto app, where those features lived, was mostly a collection of settings.',
+    'Yet the features that people did find became daily habits: Moto Display, which let them screen notifications at a glance without getting pulled into their phone; chopping twice to turn on the flashlight; and twisting the wrist to open the camera. The challenge was helping more people discover them.',
   ],
   moves: [
     {

@@ -10,14 +10,14 @@ export interface CaseStudyMeta {
 
 export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "ethical-ai", title: "AI That Shows Its Sources", company: "JSTOR" },
-  { id: "grubhub-direct", title: "Giving Restaurants Their Customers Back", company: "Grubhub" },
+  { id: "grubhub-direct", title: "Restaurants Own Their Orders", company: "Grubhub" },
   { id: "razr-foldable", title: "Bringing Back the RAZR", company: "Motorola" },
   { id: "mobile-parity", title: "Research on the Go", company: "JSTOR" },
   { id: "ai-library", title: "Unlocking Hidden Archives", company: "JSTOR" },
   { id: "camera-redesign", title: "Starting the Camera Over", company: "Motorola" },
   { id: "one-platform", title: "Integrating Artstor into JSTOR", company: "JSTOR" },
-  { id: "ecosystem-infrastructure", title: "Quality That Outlasts Any Project", company: "JSTOR" },
-  { id: "moto-app", title: "Teaching People What Their Phone Can Do", company: "Motorola" },
+  { id: "ecosystem-infrastructure", title: "One System, Many Products", company: "JSTOR" },
+  { id: "moto-app", title: "Turning Hidden Features into Daily Habits", company: "Motorola" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;
