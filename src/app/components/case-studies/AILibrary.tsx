@@ -38,9 +38,9 @@ const data: CaseStudyData = {
       ],
     },
     {
-      title: 'Put the right designers on it',
+      title: 'Put the right designer on it',
       paragraphs: [
-        "When the project lost its designer, I moved one of my designers onto it. When Seeklight needed a dedicated designer, I turned a 6-month contract into a full-time role and hired for it. That designer still leads Seeklight's design today.",
+        "When Seeklight needed a dedicated designer, I turned a 6-month contract into a full-time role and hired for it. That designer still leads Seeklight's design today.",
       ],
     },
   ],
