@@ -38,9 +38,9 @@ const data: CaseStudyData = {
       ],
     },
     {
-      title: 'Put the right designers on it',
+      title: 'Put the right designer on it',
       paragraphs: [
-        'Both designers on Stewardship are people I hired as Designer IIs. After I restructured my team, I moved one of them onto Stewardship. I then made the case for turning a contract role into a full-time position, and hired the second specifically for Seeklight.',
+        "When Seeklight needed a dedicated designer, I turned a 6-month contract into a full-time role and hired for it. That designer still leads Seeklight's design today.",
       ],
     },
   ],
