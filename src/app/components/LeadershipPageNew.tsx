@@ -309,23 +309,55 @@ export const LeadershipPageContent = () => {
             <p className="font-['Spline_Sans'] text-[14px] leading-[20px] italic text-muted-foreground mb-8">
               From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
             </p>
-          <div className="grid grid-cols-1 gap-6">
-            {quotes.map((q) => (
-              <figure key={q.tag} className="bg-white rounded-[10px] border-2 border-border p-8">
-                <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
-                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-secondary-foreground">
-                    {q.tag}
-                  </span>
+          {(() => {
+            const [feature, left, right, closing] = quotes;
+            const Tag = ({ text, dark, onAccent }: { text: string; dark?: boolean; onAccent?: boolean }) => (
+              <div className={`${dark ? 'bg-white/15' : onAccent ? 'bg-white' : 'bg-secondary'} rounded-full px-3 py-1 inline-block self-start mb-4`}>
+                <span className={`font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] ${dark ? 'text-white' : 'text-secondary-foreground'}`}>
+                  {text}
+                </span>
+              </div>
+            );
+            const Caption = ({ q, dark }: { q: typeof quotes[number]; dark?: boolean }) => (
+              <figcaption className={`font-['Spline_Sans'] text-[14px] leading-[20px] tracking-[0.25px] ${dark ? 'text-white/85' : 'text-secondary-foreground'}`}>
+                <strong>{q.source}</strong>, {q.detail}
+              </figcaption>
+            );
+            return (
+              <div className="space-y-8">
+                {/* Featured pull quote: large type, no card */}
+                <figure className="border-l-4 border-primary pl-6 py-2">
+                  <Tag text={feature.tag} onAccent />
+                  <blockquote className="font-['EB_Garamond'] text-[24px] leading-[34px] sm:text-[28px] sm:leading-[38px] text-foreground mb-4">
+                    &ldquo;{feature.text}&rdquo;
+                  </blockquote>
+                  <Caption q={feature} />
+                </figure>
+
+                {/* Two cards side by side */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[left, right].map((q) => (
+                    <figure key={q.tag} className="bg-white rounded-[10px] border-2 border-border p-6 flex flex-col">
+                      <Tag text={q.tag} />
+                      <blockquote className="font-['EB_Garamond'] text-[17px] leading-[26px] text-secondary-foreground tracking-[0.25px] mb-4 flex-1">
+                        &ldquo;{q.text}&rdquo;
+                      </blockquote>
+                      <Caption q={q} />
+                    </figure>
+                  ))}
                 </div>
-                <blockquote className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
-                  &quot;{q.text}&quot;
-                </blockquote>
-                <figcaption className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
-                  <strong>{q.source}</strong>, {q.detail}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+
+                {/* Closing quote on a dark band */}
+                <figure className="bg-primary rounded-[10px] p-8">
+                  <Tag text={closing.tag} dark />
+                  <blockquote className="font-['EB_Garamond'] text-[20px] leading-[30px] text-white mb-4">
+                    &ldquo;{closing.text}&rdquo;
+                  </blockquote>
+                  <Caption q={closing} dark />
+                </figure>
+              </div>
+            );
+          })()}
           </div>
         </div>
       </section>
