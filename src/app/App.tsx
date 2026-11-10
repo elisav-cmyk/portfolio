@@ -26,10 +26,12 @@ import {
   parsePath,
   pathFor,
 } from "./data/caseStudies";
-import { AboutPageContent } from "./components/AboutPageNew";
 import { ImpactPageContent } from "./components/ImpactPageNew";
 import { WorkPageContent } from "./components/WorkPageNew";
-import { LeadershipPageContent } from "./components/LeadershipPageNew";
+import {
+  LeadershipPageContent,
+  LEADERSHIP_SECTIONS,
+} from "./components/LeadershipPageNew";
 import { EthicalAI } from "./components/case-studies/EthicalAI";
 import { RAZRFoldable } from "./components/case-studies/RAZRFoldable";
 import { OnePlatform } from "./components/case-studies/OnePlatform";
@@ -264,8 +266,22 @@ const PortfolioWireframes = () => {
       }
     };
 
-    // Delay to ensure the page has rendered
-    const timer = setTimeout(scrollToSection, 100);
+    // The page fades in after the old one fades out, so the target may
+    // not exist yet. Keep checking for up to 2 seconds.
+    let tries = 0;
+    let timer: ReturnType<typeof setTimeout>;
+    const attempt = () => {
+      const ready =
+        activePage === "leadership"
+          ? document.getElementById(scrollTarget)
+          : true;
+      if (ready) {
+        scrollToSection();
+      } else if (tries++ < 20) {
+        timer = setTimeout(attempt, 100);
+      }
+    };
+    timer = setTimeout(attempt, 100);
     return () => clearTimeout(timer);
   }, [scrollTarget, activePage]);
 
@@ -295,34 +311,10 @@ const PortfolioWireframes = () => {
     setScrollTarget("featured-projects");
   };
 
-  const navigateToEmpoweringAutonomy = () => {
+  const navigateToLeadershipSection = (id: string) => {
+    setActiveCaseStudy(null);
     setActivePage("leadership");
-    setScrollTarget("developing-leaders");
-  };
-
-  const navigateToStrategicDecision = () => {
-    setActivePage("leadership");
-    setScrollTarget("strategic-decision");
-  };
-
-  const navigateToBuildingTeams = () => {
-    setActivePage("leadership");
-    setScrollTarget("global-operations");
-  };
-
-  const navigateToCrossFunctional = () => {
-    setActivePage("leadership");
-    setScrollTarget("cross-functional");
-  };
-
-  const navigateToTranslatingLevels = () => {
-    setActivePage("leadership");
-    setScrollTarget("translating");
-  };
-
-  const navigateToOperationalExcellence = () => {
-    setActivePage("leadership");
-    setScrollTarget("operational-excellence");
+    setScrollTarget(id);
   };
 
   const navigateToPartnersSay = () => {
@@ -402,7 +394,6 @@ const PortfolioWireframes = () => {
     { id: "work", label: "Work" },
     { id: "leadership", label: "Leadership" },
     { id: "impact", label: "Impact" },
-    { id: "about", label: "About" },
   ];
 
   const Navigation = () => (
@@ -844,70 +835,20 @@ const PortfolioWireframes = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-              <div className="flex flex-col gap-1">
+              {LEADERSHIP_SECTIONS.map((section) => (
                 <a
-                  href="#strategic-decision"
+                  key={section.id}
+                  href={`/leadership#${section.id}`}
                   className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
                   onClick={(e) => {
+                    if (!isPlainClick(e)) return;
                     e.preventDefault();
-                    navigateToStrategicDecision();
+                    navigateToLeadershipSection(section.id);
                   }}
                 >
-                  {"→"} Strategic Decision-Making
+                  {"→"} {section.label}
                 </a>
-                <a
-                  href="#global-operations"
-                  className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateToBuildingTeams();
-                  }}
-                >
-                  {"→"} Building & Scaling Teams
-                </a>
-                <a
-                  href="#developing-leaders"
-                  className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateToEmpoweringAutonomy();
-                  }}
-                >
-                  {"→"} Empowering Through Autonomy
-                </a>
-              </div>
-              <div className="flex flex-col gap-1">
-                <a
-                  href="#cross-functional"
-                  className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateToCrossFunctional();
-                  }}
-                >
-                  {"→"} Cross-Functional Influence
-                </a>
-                <a
-                  href="#translating"
-                  className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateToTranslatingLevels();
-                  }}
-                >
-                  {"→"} Translating Between Levels
-                </a>
-                <a
-                  href="#operational-excellence"
-                  className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateToOperationalExcellence();
-                  }}
-                >
-                  {"→"} Operational Excellence
-                </a>
-              </div>
+              ))}
             </div>
           </div>
           <div className="text-center">
@@ -1121,13 +1062,6 @@ const PortfolioWireframes = () => {
     />
   );
 
-  const AboutPage = () => (
-    <AboutPageContent
-      pageVariants={pageVariants}
-      pageTransition={pageTransition}
-    />
-  );
-
   return (
     <div
       className="min-h-screen bg-background"
@@ -1145,7 +1079,6 @@ const PortfolioWireframes = () => {
           {activePage === "impact" && (
             <ImpactPage key="impact" />
           )}
-          {activePage === "about" && <AboutPage key="about" />}
         </AnimatePresence>
       </div>
 

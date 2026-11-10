@@ -19,7 +19,6 @@ const routes = [
   { path: "work", title: "Work | Elisa Vargas" },
   { path: "leadership", title: "Leadership | Elisa Vargas" },
   { path: "impact", title: "Impact | Elisa Vargas" },
-  { path: "about", title: "About | Elisa Vargas" },
   ...studies.map((s) => ({
     path: `work/${s.id}`,
     title: `${s.title} | Elisa Vargas`,

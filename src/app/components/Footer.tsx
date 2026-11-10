@@ -94,16 +94,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                       Impact
                     </p>
                   </button>
-
-                  {/* About */}
-                  <button
-                    onClick={() => handleNavigation('about')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
-                  >
-                    <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
-                      About
-                    </p>
-                  </button>
                 </div>
 
                 {/* Connect Column */}
