@@ -1,7 +1,7 @@
 import React from 'react';
 import heroImage from 'figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png';
 import traceableImage from 'figma:asset/a72184f5b2b8091a17608300f53e559bab83a11c.png';
-import governanceImage from 'figma:asset/ee4f6d81e765d0d76792c9d33403e75d60ebed72.png';
+import governanceImage from '../../../assets/governance-layered.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
