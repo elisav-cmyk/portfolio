@@ -40,6 +40,12 @@ const data: CaseStudyData = {
     'In 2024, the first full year on JSTOR, Artstor use rose about 35%, from about 2.22 million to 3 million uses.',
   ],
   why: ['My job here was to trust my leads, stay close, and move fast when they hit a wall. They delivered early.'],
+  videos: [
+    {
+      src: 'https://www.youtube-nocookie.com/embed/6lnD4r-0R9M',
+      title: 'Artstor on JSTOR video',
+    },
+  ],
 };
 
 interface Props {
