@@ -19,7 +19,7 @@ const numbers: Stat[] = [
   { value: "~11,400", label: "Institutions", detail: "Where JSTOR's AI research tool rolled out" },
   { value: "33", label: "Designers Led", detail: "6 studios in the US, China and Brazil, within $9.78B operations" },
   { value: "20+", label: "Designers Hired", detail: "Across my Director roles" },
-  { value: "~1B", label: "Devices", detail: "Worked on over 18 years at Motorola" },
+  { value: "~1B", label: "Devices", detail: "Motorola phones from 2002–2020 that my work touched, as a researcher, carrier negotiator, designer and design leader" },
   { value: "23M+", label: "Moto App Active Users", detail: "Motorola" },
 ];
 
