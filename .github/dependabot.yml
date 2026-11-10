@@ -10,6 +10,9 @@ updates:
       # Vite 7+ needs newer Tailwind and React plugins. Upgrade them together by hand.
       - dependency-name: "vite"
         update-types: ["version-update:semver-major"]
+      # plugin-react 6+ requires Vite 8. Upgrade it with Vite, by hand.
+      - dependency-name: "@vitejs/plugin-react"
+        versions: [">=6.0.0"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
