@@ -309,8 +309,7 @@ export const LeadershipPageContent = () => {
             <p className="font-['Spline_Sans'] text-[14px] leading-[20px] italic text-muted-foreground mb-8">
               From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
             </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+          <div className="grid grid-cols-1 gap-6">
             {quotes.map((q) => (
               <figure key={q.tag} className="bg-white rounded-[10px] border-2 border-border p-8">
                 <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
@@ -326,6 +325,7 @@ export const LeadershipPageContent = () => {
                 </figcaption>
               </figure>
             ))}
+          </div>
           </div>
         </div>
       </section>
