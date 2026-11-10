@@ -839,10 +839,9 @@ const PortfolioWireframes = () => {
           >
             <div className="mb-6">
               <span className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                Three things show up in every project: I set
-                direction from research, I connect the people who
-                need to agree, and I get stalled work moving. The
-                sections below show how.
+                How I build teams, work with Google and other
+                partners, and keep quality high as the work grows,
+                with examples from JSTOR, Grubhub and Motorola.
               </span>
             </div>
 
