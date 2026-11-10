@@ -302,7 +302,13 @@ export const LeadershipPageContent = () => {
       <section id="partners-say" className="bg-accent w-full scroll-mt-24">
         <div className="marketing-grid pt-12 lg:pt-16 pb-12 lg:pb-16">
           <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">WHAT PARTNERS SAY</h2>
+            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-4">WHAT PARTNERS SAY</h2>
+            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-1">
+              What direct reports, peers and managers say when I don&apos;t know who&apos;s speaking.
+            </p>
+            <p className="font-['Spline_Sans'] text-[14px] leading-[20px] italic text-muted-foreground mb-8">
+              From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
+            </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             {quotes.map((q) => (
