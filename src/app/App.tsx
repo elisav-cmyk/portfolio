@@ -558,67 +558,34 @@ const PortfolioWireframes = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
+            {/* Three scope numbers, each with a plain line saying what it means */}
             <motion.div
-              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 text-center"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col gap-2"
-              >
-                <div className="font-['EB_Garamond'] text-3xl sm:text-4xl lg:text-[45px] leading-tight text-primary">
-                  20+
-                </div>
-                <div className="text-xs font-medium text-primary tracking-wide">
-                  Years of Experience
-                </div>
-              </motion.div>
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col gap-2"
-              >
-                <div className="font-['EB_Garamond'] text-3xl sm:text-4xl lg:text-[45px] leading-tight text-primary">
-                  111M+
-                </div>
-                <div className="text-xs font-medium text-primary tracking-wide">
-                  Annual Users
-                </div>
-              </motion.div>
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col gap-2"
-              >
-                <div className="font-['EB_Garamond'] text-3xl sm:text-4xl lg:text-[45px] leading-tight text-primary">
-                  6
-                </div>
-                <div className="text-xs font-medium text-primary tracking-wide">
-                  Global Studios
-                </div>
-              </motion.div>
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col gap-2"
-              >
-                <div className="font-['EB_Garamond'] text-3xl sm:text-4xl lg:text-[45px] leading-tight text-primary">
-                  ~1B
-                </div>
-                <div className="text-xs font-medium text-primary tracking-wide">
-                  Devices Shipped
-                </div>
-              </motion.div>
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col gap-2 col-span-2 sm:col-span-1"
-              >
-                <div className="font-['EB_Garamond'] text-3xl sm:text-4xl lg:text-[45px] leading-tight text-primary">
-                  Top 1%
-                </div>
-                <div className="text-xs font-medium text-primary tracking-wide">
-                  Accessibility
-                </div>
-              </motion.div>
+              {[
+                { value: "20+", label: "Years in design", detail: "Leading teams since 2006" },
+                { value: "33", label: "Designers led", detail: "6 studios in the US, Brazil and China" },
+                { value: "111M+", label: "People a year", detail: "Use the JSTOR products my team designs" },
+              ].map((stat) => (
+                <motion.div
+                  key={stat.label}
+                  variants={itemVariants}
+                  className="flex flex-col gap-1"
+                >
+                  <div className="font-['EB_Garamond'] text-4xl lg:text-[45px] leading-tight text-primary">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-primary tracking-wide">
+                    {stat.label}
+                  </div>
+                  <div className="text-xs text-foreground">
+                    {stat.detail}
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
           </motion.div>
 
@@ -755,42 +722,39 @@ const PortfolioWireframes = () => {
       <div className="bg-primary border-t-2 border-ring border-b-2 border-ring">
         <div className="marketing-grid py-16 text-center">
           <h3 className="mb-12 text-white font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal">
-            IMPACT AT SCALE
+            RESULTS
           </h3>
+          {/* Outcomes my teams drove, each explained in a case study or on Leadership */}
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="flex flex-col gap-2 items-center">
-              <p className="font-['EB_Garamond'] text-[clamp(2.5rem,2rem+3.5vmin,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white mb-2">
-                98%
-              </p>
-              <p className="font-['Spline_Sans'] text-[1rem] font-normal leading-[1.5] tracking-normal text-primary-foreground">
-                Accessibility improvement
-              </p>
-              <p className="font-['Spline_Sans'] text-[0.875rem] font-normal leading-[1.4] tracking-[0.01em] text-white mt-2">
-                Top 1% in the WebAIM Million, through a dedicated accessibility program
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 items-center">
-              <p className="font-['EB_Garamond'] text-[clamp(2.5rem,2rem+3.5vmin,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white mb-2">
-                33
-              </p>
-              <p className="font-['Spline_Sans'] text-[1rem] font-normal leading-[1.5] tracking-normal text-primary-foreground">
-                Global designers led
-              </p>
-              <p className="font-['Spline_Sans'] text-[0.875rem] font-normal leading-[1.4] tracking-[0.01em] text-white mt-2">
-                6 studios across US, China, Brazil
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 items-center">
-              <p className="font-['EB_Garamond'] text-[clamp(2.5rem,2rem+3.5vmin,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white mb-2">
-                $9.78B
-              </p>
-              <p className="font-['Spline_Sans'] text-[1rem] font-normal leading-[1.5] tracking-normal text-primary-foreground">
-                Revenue scale
-              </p>
-              <p className="font-['Spline_Sans'] text-[0.875rem] font-normal leading-[1.4] tracking-[0.01em] text-white mt-2">
-                Motorola operations
-              </p>
-            </div>
+            {[
+              {
+                value: "52% vs 39%",
+                label: "AI-assisted search",
+                detail: "JSTOR Dynamic Search queries that led people to content, versus keyword search",
+              },
+              {
+                value: "+80%",
+                label: "Primary source use",
+                detail: "Year over year, after my team moved JSTOR recommendations inline and above the fold",
+              },
+              {
+                value: "Top 1%",
+                label: "Accessibility",
+                detail: "JSTOR in the WebAIM Million, with a 98% drop in accessibility errors",
+              },
+            ].map((r) => (
+              <div key={r.label} className="flex flex-col gap-2 items-center">
+                <p className="font-['EB_Garamond'] text-[clamp(2.5rem,2rem+3.5vmin,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white mb-2">
+                  {r.value}
+                </p>
+                <p className="font-['Spline_Sans'] text-[1rem] font-normal leading-[1.5] tracking-normal text-primary-foreground">
+                  {r.label}
+                </p>
+                <p className="font-['Spline_Sans'] text-[0.875rem] font-normal leading-[1.4] tracking-[0.01em] text-white mt-2">
+                  {r.detail}
+                </p>
+              </div>
+            ))}
           </div>
           <motion.button
             onClick={() => setActivePage("impact")}
@@ -807,7 +771,7 @@ const PortfolioWireframes = () => {
               damping: 17,
             }}
           >
-            View All Impact Metrics
+            View All Results
           </motion.button>
         </div>
       </div>
