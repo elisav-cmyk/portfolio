@@ -558,9 +558,9 @@ const PortfolioWireframes = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            {/* Three scope numbers, each with a plain line saying what it means */}
+            {/* Four scope numbers, each with a plain line saying what it means */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center"
+              className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 sm:gap-6 text-center"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -569,6 +569,7 @@ const PortfolioWireframes = () => {
                 { value: "20+", label: "Years in design", detail: "Leading teams since 2006" },
                 { value: "33", label: "Designers led", detail: "6 studios in the US, Brazil and China" },
                 { value: "111M+", label: "People a year", detail: "Use the JSTOR products my team designs" },
+                { value: "~1B", label: "Devices my work touched", detail: "Motorola, 2002–2020, from research to design leadership" },
               ].map((stat) => (
                 <motion.div
                   key={stat.label}
