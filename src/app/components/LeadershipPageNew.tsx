@@ -228,7 +228,7 @@ export const LeadershipPageContent = () => {
       <Section
         id="building-teams"
         title="BUILDING TEAMS AND LEADERS"
-        intro="I've hired 20+ designers and design leaders across my Director roles. My approach is simple: hire for the gap, then give people the space to lead. That is how individual contributors on my teams have grown into design managers and staff-level roles."
+        intro="I've led nearly every discipline a design organization needs: UX, UI, product, graphic and motion design; industrial design; user research; content strategy and copywriting; and web accessibility, along with outside specialists such as sound designers. Across my Director roles, I've hired 20+ designers and design leaders. My approach is simple: hire for the gap, then give people the space to lead. That is how individual contributors on my teams have grown into design managers and staff-level roles."
       >
         <div className="space-y-6">
           <Card title="Coaching a New Team Through the RAZR Relaunch (2019)">

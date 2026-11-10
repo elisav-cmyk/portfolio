@@ -23,6 +23,7 @@ const data: CaseStudyData = {
   partners: 'Product Management, Engineering, Research, restaurant operators',
   context: [
     "During the pandemic, independent restaurants were fighting to stay open, and the delivery apps they relied on charged commissions that could top 40% of revenue. The apps also kept the customer data, so a restaurant couldn't build its own relationship with the people who ordered from it most. Grubhub set out to give independent restaurants and small chains (up to about 25 locations) the kind of branded, commission-free ordering site that only large chains with dedicated technology budgets had been able to build.",
+    'A big part of the plan was meeting diners where they already look for a place to eat: Google Search and Maps. A restaurant\'s own site only works if people can find it, so connecting Direct easily to Google was part of how restaurants would get started.',
   ],
   moves: [
     {
@@ -70,10 +71,10 @@ const data: CaseStudyData = {
     },
   ],
   results: [
+    "In testing, restaurants that listed their Direct site on their Google Business Profile, so it appeared on Search and Maps, received, on average, nearly 20x the orders of those that didn't.",
     'Grubhub Direct launched in May 2021.',
     'Restaurants kept 100% of their direct sales: no commission, platform or maintenance fees, only order processing and delivery fees.',
     'Restaurants owned their customer data, including names, email addresses, order history and lifetime spend, which they could use for loyalty and promotions.',
-    "Direct connected to Google Search and Maps. In testing, restaurants that listed their Direct site on their Google Business Profile received, on average, nearly 20x the orders of those that didn't.",
   ],
   why: [
     'I love hunting for the next great local restaurant. Helping those restaurants keep their customers, at a time when many were at risk of closing, was work I cared about.',
