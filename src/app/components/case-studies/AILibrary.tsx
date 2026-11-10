@@ -11,7 +11,7 @@ const data: CaseStudyData = {
   tag: 'AI Strategy',
   years: '2022-Present',
   title: 'Unlocking Hidden Archives',
-  subtitle: 'JSTOR Seeklight helps archives describe collections in hours, not weeks',
+  subtitle: "JSTOR Seeklight: describing archives in hours, not weeks",
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Engineering, Research, Outreach, Legal, Insights, Portico',
   context: [

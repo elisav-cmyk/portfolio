@@ -9,7 +9,7 @@ const data: CaseStudyData = {
   tag: 'Hardware/Software',
   years: '2016-2020',
   title: 'Bringing Back the RAZR',
-  subtitle: 'Reimagining an icon for the age of smartphones',
+  subtitle: "The Android RAZR: reimagining an icon for the smartphone age",
   role: 'Director, São Paulo Design Studio, then Global UX Director, Motorola Mobility',
   partners: 'Industrial Design, Research, Engineering (HW/SW), Product Management (HW/SW), Marketing',
   extra: [{ label: 'Award', value: 'Red Dot "Best of the Best" 2020' }],
