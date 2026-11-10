@@ -197,10 +197,10 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgImageGrubhubDirect,
-      tag: "Platform Strategy",
-      year: "2021",
+      tag: "Product Design Leadership",
+      year: "2020-2021",
       title: "Grubhub Direct",
-      company: "Scaling A Low-code Platform",
+      company: "Helping local restaurants own their orders",
       caseStudyId: "grubhub-direct",
       imagePosition: "object-top",
     },
