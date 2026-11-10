@@ -8,7 +8,7 @@ const data: CaseStudyData = {
   tag: 'Design Systems',
   years: '2022-2025',
   title: 'One System, Many Products',
-  subtitle: 'The systems that keep quality high across JSTOR',
+  subtitle: "Pharos, One Admin and accessibility across JSTOR",
   role: 'Product Design Director, JSTOR',
   partners: 'Product Design, Engineering, Product Management',
   context: [

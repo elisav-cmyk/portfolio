@@ -8,7 +8,7 @@ const data: CaseStudyData = {
   tag: 'Hardware/Software',
   years: '2019-2020',
   title: 'Starting the Camera Over',
-  subtitle: "Rebuilding Motorola's Camera app so it could grow",
+  subtitle: "Motorola's Camera app, rebuilt so it could grow",
   role: 'Global UX Director, Motorola Mobility',
   partners: 'Product Marketing, Product Management, Engineering, User Insights Research',
   extra: [{ label: 'Core team', value: '3 designers' }],

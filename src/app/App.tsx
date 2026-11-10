@@ -652,7 +652,7 @@ const PortfolioWireframes = () => {
             {[
               {
                 title: "AI That Shows Its Sources",
-                subtitle: "Building Trust in AI",
+                subtitle: "The JSTOR Research Tool: ask, discover and validate every answer",
                 metric: "~11,400 institutions",
                 company: "JSTOR",
                 id: "ethical-ai",
@@ -660,7 +660,7 @@ const PortfolioWireframes = () => {
               },
               {
                 title: "Restaurants Own Their Orders",
-                subtitle: "Grubhub Direct, commission-free ordering",
+                subtitle: "Grubhub Direct: commission-free ordering for local restaurants",
                 metric: "Nearly 20x orders with Google Business Profile",
                 company: "Grubhub",
                 id: "grubhub-direct",
@@ -670,7 +670,7 @@ const PortfolioWireframes = () => {
               },
               {
                 title: "Bringing Back the RAZR",
-                subtitle: "Pushing small-screen UX forward",
+                subtitle: "The Android RAZR: reimagining an icon for the smartphone age",
                 metric: "Hardware + software leadership",
                 company: "Motorola",
                 id: "razr-foldable",

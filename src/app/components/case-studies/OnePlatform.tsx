@@ -8,7 +8,7 @@ const data: CaseStudyData = {
   tag: 'Platform Integration',
   years: '2023-2024',
   title: 'Integrating Artstor into JSTOR',
-  subtitle: "Keeping faculty's teaching workflows intact through the move",
+  subtitle: "Moving faculty's teaching workflows without losing them",
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Research, Marketing, Visual Resources Association librarians',
   context: [

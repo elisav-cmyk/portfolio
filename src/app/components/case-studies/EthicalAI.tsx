@@ -14,7 +14,7 @@ const data: CaseStudyData = {
   tag: 'AI Ethics',
   years: '2023-2026',
   title: 'AI That Shows Its Sources',
-  subtitle: 'Ask research questions, find scholarly sources, and validate every answer with the JSTOR Research Tool.',
+  subtitle: "The JSTOR Research Tool: ask, discover and validate every answer",
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, institutional partners',
   context: [

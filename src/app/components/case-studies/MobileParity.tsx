@@ -8,7 +8,7 @@ const data: CaseStudyData = {
   tag: 'Platform Strategy',
   years: '2021-2025',
   title: 'Research on the Go',
-  subtitle: "Making JSTOR work well on phones, whether it's someone's main screen or a second one",
+  subtitle: "JSTOR on phones, as someone's main screen or a second one",
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, Visual Resources Association library leads',
   context: [

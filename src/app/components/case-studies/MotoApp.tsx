@@ -12,7 +12,7 @@ const data: CaseStudyData = {
   tag: 'Brand & Craft',
   years: '2016-2020',
   title: 'Turning Hidden Features into Daily Habits',
-  subtitle: 'The Moto app turned a list of settings into a reason to explore',
+  subtitle: "The Moto app: from a list of settings to a reason to explore",
   role: 'Design Director, then Global UX Director, Motorola Mobility',
   partners: 'Product Management, Engineering, Research, Marketing',
   context: [
