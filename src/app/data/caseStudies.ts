@@ -20,7 +20,7 @@ export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "teaching-service-design", title: "Educating the Next Generation", company: "Northwestern University" },
 ];
 
-export const PAGES = ["home", "work", "leadership", "impact", "about"] as const;
+export const PAGES = ["home", "work", "leadership", "impact"] as const;
 
 export const caseStudyPath = (id: string) => `/work/${id}`;
 
@@ -34,7 +34,8 @@ export const parsePath = (
   pathname: string,
 ): { page: string; caseStudy: string | null } => {
   const parts = pathname.split("/").filter(Boolean);
-  const page = parts[0] || "home";
+  // About was merged into Leadership. Old /about links land there.
+  const page = parts[0] === "about" ? "leadership" : parts[0] || "home";
   if (!(PAGES as readonly string[]).includes(page)) {
     return { page: "home", caseStudy: null };
   }

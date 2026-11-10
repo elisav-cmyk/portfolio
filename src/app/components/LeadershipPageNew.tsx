@@ -1,319 +1,317 @@
 import React from 'react';
 
+// Leadership and About combined. Each story appears once.
+// Section ids are used by the "How I Lead" links on the Home page.
+export const LEADERSHIP_SECTIONS = [
+  { id: 'career', label: 'Career at a Glance' },
+  { id: 'working-with-google', label: 'Working with Google' },
+  { id: 'influence', label: 'Influence Across Functions and Levels' },
+  { id: 'building-teams', label: 'Building Teams and Leaders' },
+  { id: 'systems', label: 'Systems That Scale Quality' },
+  { id: 'partners-say', label: 'What Partners Say' },
+];
+
+const card =
+  "bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8";
+const body = "font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground";
+const cardTitle = "font-['Spline_Sans'] text-[16px] leading-[24px] font-medium text-foreground mb-3";
+
+const Section: React.FC<{ id: string; title: string; intro?: string; last?: boolean; children: React.ReactNode }> = ({
+  id,
+  title,
+  intro,
+  last,
+  children,
+}) => (
+  <section id={id} className="bg-accent w-full scroll-mt-24">
+    <div className={`marketing-grid pt-12 lg:pt-16 ${last ? 'pb-12 lg:pb-16' : 'pb-0'}`}>
+      <div className="max-w-[75ch] mx-auto">
+        <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">{title}</h2>
+        {intro && <p className={`${body} mb-8`}>{intro}</p>}
+        {children}
+      </div>
+    </div>
+  </section>
+);
+
+const Card: React.FC<{ title?: string; children: React.ReactNode }> = ({ title, children }) => (
+  <div className={card}>
+    {title && <h3 className={cardTitle}>{title}</h3>}
+    {children}
+  </div>
+);
+
+const career = [
+  {
+    org: 'JSTOR / ITHAKA',
+    role: 'Director, Product Design',
+    years: '2021–present',
+    text: 'Lead product design for the JSTOR AI research tool, Dynamic Search (hybrid LLM, semantic and keyword search), platform integration and accessibility. I manage the product designers and a Senior Accessibility Manager.',
+  },
+  {
+    org: 'Grubhub',
+    role: 'Director, Product Design, Restaurant & Driver',
+    years: '2020–2021',
+    text: 'Led design for restaurant and driver products, including Grubhub Direct. Hired 5 people in one year (1 design manager, 3 senior designers, 1 content strategist).',
+  },
+  {
+    org: 'Motorola Mobility',
+    role: 'Global UX Director',
+    years: '2018–2020',
+    text: 'Led all UX at Motorola: 33 designers across 6 studios (Chicago, São Paulo, Beijing, Shanghai, Shenzhen, Nanjing) within $9.78B operations. Directed design for a 24-device portfolio across a 13-hour time difference, with global approval authority over hiring, tools and travel budgets.',
+  },
+  {
+    org: 'Motorola Mobility',
+    role: 'Director, São Paulo Design Studio',
+    years: '2016–2017',
+    text: 'Moved to São Paulo in 2015 to manage the 3 UX designers, then led the multidisciplinary studio of 13 (UX, industrial design, research, surface engineering). Grew the UX/UI team to 6 designers in one year (7 hires) and delivered the DTV Mod, which sold out in Brazil.',
+  },
+  {
+    org: 'Motorola',
+    role: 'Research to Senior Design Manager, UX',
+    years: '2002–2015',
+    text: 'Researched 22 mobile platforms, then led the team whose work became the foundation for Motorola’s first Android device, the CLIQ. Leading teams since 2006.',
+  },
+];
+
+const quotes = [
+  {
+    tag: 'Team Empowerment',
+    text: "Elisa's best asset is giving the people who report to her the space to take leadership over our work, while still being supportive. She guides when needed and gives autonomy when wanted.",
+    source: 'Direct Report',
+    detail: 'Leadership Circle Profile assessment, 2024',
+  },
+  {
+    tag: 'Executive Translation',
+    text: 'Elisa\'s greatest leadership asset is her collaboration skills. She has the ability to work across various levels and departments. She is able to understand needs from the C-suite and translate them into actionable goals.',
+    source: 'Senior Partner/Executive',
+    detail: 'Leadership Circle Profile assessment, 2024',
+  },
+  {
+    tag: 'Strategic Clarity',
+    text: 'Her knowledge and ability to balance business and customer needs are impressive. Her rational and decision-making process is clear, there is no guesswork with her.',
+    source: 'Product/Engineering Partner',
+    detail: 'Linkage Institute, Advancing Women Leaders 360 Assessment, 2019',
+  },
+  {
+    tag: 'Cross-Functional Leadership',
+    text: "Elisa is so good at collaborating with customers and with the engineering team she is working with to achieve the best design that fulfills goals and is able to be implemented within the technical capabilities and the time constraints. She knows how to be firm when it matters and to give when it doesn't matter.",
+    source: 'Product/Engineering Partner',
+    detail: 'Linkage Institute, Advancing Women Leaders 360 Assessment, 2019',
+  },
+];
+
 export const LeadershipPageContent = () => {
   return (
     <div className="w-full bg-background">
-      {/* LEADERSHIP Section - Purple */}
+      {/* Intro */}
       <section className="bg-accent w-full">
         <div className="marketing-grid pt-12 lg:pt-16 pb-0">
           <div className="max-w-[75ch] mx-auto">
             <h1 className="font-['EB_Garamond'] text-foreground text-[40px] leading-[44px] tracking-[-0.8px] mb-12">LEADERSHIP</h1>
-            
-            {/* Combined Intro Card */}
+
             <div className="bg-white rounded-[10px] p-8">
-              <div className="mb-6">
-                <span className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  <strong>TLDR;</strong> I am a bridge-builder who closes the gap between complex engineering constraints and human-centered experiences. I don&apos;t just manage design; I translate business risk into design strategy.
-                </span>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                <div className="flex flex-col gap-1">
-                  <a href="#global-operations" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ Global Operations & Scale</a>
-                  <a href="#strategic-decision" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ Strategic Decision-Making</a>
-                  <a href="#cross-functional" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ Cross-Functional Influence</a>
-                  <a href="#translating" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ Translating Between Levels</a>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <a href="#developing-leaders" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ Developing Future Leaders</a>
-                  <a href="#operational-excellence" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ Operational Excellence & Systems</a>
-                  <a href="#partners-say" className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline">→ What Partners Say</a>
-                </div>
-              </div>
+              <p className={`${body} mb-4`}>
+                I build design teams and solve hard problems at scale. I&apos;ve led design for the Android RAZR foldable
+                (Red Dot &quot;Best of the Best&quot;), an LLM research tool rolled out to about 11,400 institutions, and
+                hybrid AI search for a platform serving 111M+ users.
+              </p>
+              <p className={`${body} mb-6`}>
+                I bridge customer needs and engineering constraints with clear decisions, and I give senior leads the
+                room to do their best work.
+              </p>
+
+              <nav aria-label="On this page" className="grid grid-cols-1 md:grid-cols-2 gap-1">
+                {LEADERSHIP_SECTIONS.map((s) => (
+                  <a
+                    key={s.id}
+                    href={`#${s.id}`}
+                    className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline"
+                  >
+                    → {s.label}
+                  </a>
+                ))}
+              </nav>
             </div>
           </div>
         </div>
       </section>
 
-      {/* GLOBAL OPERATIONS & SCALE Section - Beige */}
-      <section id="global-operations" className="bg-accent w-full">
-        <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">GLOBAL OPERATIONS & SCALE</h2>
-            
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-              I have led design organizations across vastly different operating contexts: global consumer electronics and institutional B2B platforms.
+      <Section id="career" title="CAREER AT A GLANCE">
+        <ol className="space-y-6">
+          {career.map((c) => (
+            <li key={c.role} className={card}>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-3">
+                <h3 className="font-['Spline_Sans'] text-[16px] leading-[24px] font-medium text-foreground">
+                  {c.role}, {c.org}
+                </h3>
+                <span className="font-['Spline_Sans'] text-[14px] leading-[20px] text-muted-foreground">{c.years}</span>
+              </div>
+              <p className={body}>{c.text}</p>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section
+        id="working-with-google"
+        title="WORKING WITH GOOGLE"
+        intro="My work with Android predates Android. Across 18.5 years shipping mobile hardware and software, I worked directly and repeatedly with Google's platform teams."
+      >
+        <div className="space-y-6">
+          <div className="bg-primary rounded-[10px] p-8">
+            <h3 className="font-['Spline_Sans'] text-[16px] leading-[24px] font-medium text-white mb-3">
+              Strategic Subtraction: the &quot;One Nav&quot; Decision
+            </h3>
+            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white">
+              When Android 10 released native gestures that competed with our own navigation, I brought my lead designer
+              into the negotiations with the Android team, to build her ability to advocate for design at that level.
+              Rather than defend our feature on instinct, we ran a trade-off analysis and let the data decide. We retired
+              our popular feature in favor of ecosystem compatibility, moved engineering effort to the RAZR foldable
+              launch, and shared our usability and onboarding research with the Android team as it finalized Android 10
+              gestures.
             </p>
-
-            <div className="space-y-6">
-              <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Platform Foundations (2002-present)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  My relationship with Android predates Android. From 2002 to 2005, I conducted research across 22 mobile platforms and 
-                  was part of the teams that developed custom platforms for Motorola devices. I later led the team whose work became the 
-                  foundation for Motorola&apos;s first Android device, the Motorola CLIQ. Across 18.5 years shipping mobile hardware and 
-                  software, I worked directly and repeatedly with Google&apos;s own platform teams, including the RAZR foldable&apos;s 
-                  Android UX and Comms team negotiations and the One Nav gesture-navigation collaboration.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Global Head of UX (Motorola)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Directed a team of 33 designers across 6 global studios (US, China, Brazil). Managed the UX strategy for a 24-device portfolio 
-                  within a $9.78B operational scope, coordinating across a 13-hour time difference. I held global approval authority over hiring, tools, 
-                  and travel budgets across the organization.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Studio Director (Brazil)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Led a multidisciplinary studio of 13 professionals (UX, ID, Research, Surface Engineering). I grew the UX/UI team to 6 designers in one year (7 hires) and integrated the team with local R&D and factory engineering partners.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Talent Pipeline</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Hired 20+ designers and design leaders across my Director roles. My &quot;hire-and-empower&quot; model has successfully grown individual contributors into design managers and staff-level roles.
-                </p>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
 
-      {/* STRATEGIC DECISION-MAKING Section - Light Cream */}
-      <section id="strategic-decision" className="bg-accent w-full">
-        <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">STRATEGIC DECISION-MAKING</h2>
-            
-            <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-                My superpower is bridging the gap between customer demands and platform constraints. I don&apos;t just advocate for design; I translate business risk into strategy.
-              </p>
-
-              <div className="bg-primary rounded-[10px] p-6">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white mb-3">Strategic Subtraction (The &quot;One Nav&quot; Decision)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white">
-                  When Android 10 released native gestures that competed with our proprietary navigation, I brought my lead designer directly into the negotiations with the Android team deliberately, to build her ability to advocate for design decisions at that level. Rather than defending our feature on instinct, we ran a data-driven trade-off analysis and let the data decide. The result: we deprecated our popular feature in favor of ecosystem compatibility, reallocating critical engineering resources to the RAZR foldable launch, while sharing our usability and onboarding research with the Android team as it finalized Android 10 gestures.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CROSS-FUNCTIONAL INFLUENCE Section - Purple */}
-      <section id="cross-functional" className="bg-accent w-full">
-        <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">CROSS-FUNCTIONAL INFLUENCE</h2>
-            
-            <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8 mb-6">
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                I excel at &quot;skillful smooth negotiation through influence&quot;: adapting communication style to audiences, building consensus across functions, and driving decisions that stick.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Engineering Partnerships</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Initiated software feasibility discussions while RAZR hardware was still conceptual. Coordinated first-of-its-kind hardware/software alignment process that became template for future foldables.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Legal &amp; Privacy Negotiation</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Secured legal and security approval to adopt the Lottie animation format across Motorola software. Negotiated privacy and data-use terms with legal for HelloU, and limited how often users heard from us.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Platform Partnerships</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Represented design in Android framework discussions. Influenced Google&apos;s GMS Calling app roadmap for foldable support.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TRANSLATING BETWEEN LEVELS Section - Beige */}
-      <section id="translating" className="bg-accent w-full">
-        <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">TRANSLATING BETWEEN LEVELS</h2>
-            
-            <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-                One of my key strengths is the ability to move fluidly between strategic executive conversations and tactical execution details, translating vision into action and surfacing insights upward.
-              </p>
-
-              <div className="bg-accent rounded-[10px] p-6">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Example: Executive Strategy to Team Action</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  When JSTOR leadership decided to integrate multiple platforms, I translated the high-level business strategy into concrete design initiatives, identified risks, created migration plans, and empowered teams to execute, while keeping executives informed of progress and challenges.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DEVELOPING FUTURE LEADERS Section - Light Cream */}
-      <section id="developing-leaders" className="bg-accent w-full">
-        <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">DEVELOPING FUTURE LEADERS</h2>
-            
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-              I am committed to growing the next generation of design leaders through mentorship, high-visibility assignments, and seeing their potential and growth.
+          <Card title="Foldables and the Android Framework">
+            <p className={body}>
+              I directed the UX for the Android RAZR foldable as a partner to the Android team. Our three-part
+              cover-screen model shaped Google&apos;s patterns for small foldable screens. My team reviewed our Phone app
+              changes with the Android Comms team so Google&apos;s GMS Calling app could support foldables.
             </p>
+          </Card>
 
-            <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-              <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Example: Coaching a Novice Team (RAZR 2019)</h6>
-              <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-                For the high-stakes 2019 RAZR relaunch, I entrusted the work to a team of emerging talent, including an industrial designer in her first year and UX designers new to mobile. I directly managed them through the launch, coaching them through difficult negotiations with US product teams who didn&apos;t understand software constraints and helping them navigate executive stakeholder dynamics.
-              </p>
-
-              <div className="bg-accent rounded-[10px] p-6">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Outcomes:</h6>
-                <div className="space-y-2">
-                  <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                    <strong>Award-Winning:</strong> The team delivered a Red Dot &quot;Best of the Best&quot; award.
-                  </p>
-                  <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                    <strong>Career Growth:</strong> The industrial designer was promoted to Senior and is now a Design Manager driving innovation projects; the UX/UI designers developed deep mobile expertise that informed subsequent product launches.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* OPERATIONAL EXCELLENCE & SYSTEMS Section - Purple */}
-      <section id="operational-excellence" className="bg-accent w-full">
-        <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">OPERATIONAL EXCELLENCE & SYSTEMS</h2>
-            
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-              I move teams from &quot;hero-based&quot; effort to &quot;system-based&quot; consistency. I build the infrastructure that allows design quality to scale without bottlenecks.
+          <Card title="Platform Foundations">
+            <p className={body}>
+              From 2002 to 2005, I researched 22 mobile platforms and was part of the teams that built custom platforms
+              for Motorola devices. I later led the team whose work became the foundation for Motorola&apos;s first
+              Android device, the CLIQ. Over 18 years at Motorola, I worked on about 1 billion devices.
             </p>
-
-            <div className="space-y-6">
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Technical Platform Innovation</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Identified and drove the adoption of the Lottie animation framework at Motorola. I negotiated security approvals and core integration, giving all 6 global studios one shared animation format.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Design System Governance</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  As Executive Champion for Pharos (JSTOR), I enforced federated governance and modern tooling (Storybook, Chromatic), ensuring component consistency across multiple applications.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Design Principles (with Brand + Creative)</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Co-developed ITHAKA&apos;s five design principles, including &quot;Be the guide, not the hero,&quot; with the Director of Brand + Creative to align creative decisions across brand and product design org-wide. Built as evaluative tools rather than aesthetic rules, with guiding questions and an adjustable strength per project; adopted across recruiting, social, and product surfaces, and later shaped the interaction model of JSTOR&apos;s AI research tool.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Institutionalizing Quality</h6>
-                <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Transformed accessibility from a compliance risk to a competitive advantage. By hiring a specialized accessibility lead in 2021 and instituting &quot;shift-left&quot; testing, we achieved a 98% improvement in accessibility errors and a Top 1% ranking in the WebAIM Million. When he left for a bigger role in 2026, I made the case for a higher-level backfill and hired a Senior Accessibility Manager.
-                </p>
-              </div>
-            </div>
-          </div>
+          </Card>
         </div>
-      </section>
+      </Section>
 
-      {/* WHAT PARTNERS SAY Section - Beige */}
-      <section id="partners-say" className="bg-accent w-full">
+      <Section
+        id="influence"
+        title="INFLUENCE ACROSS FUNCTIONS AND LEVELS"
+        intro="I adapt how I communicate to each audience, build agreement across functions, and drive decisions that hold. I move between executive strategy and execution details, and bring what I learn back up."
+      >
+        <div className="space-y-6">
+          <Card title="Executive Strategy to Team Action (JSTOR)">
+            <p className={body}>
+              When JSTOR leadership decided to integrate multiple platforms, I turned the business strategy into concrete
+              design initiatives, identified risks, created migration plans and gave teams room to execute, while keeping
+              executives informed of progress and challenges.
+            </p>
+          </Card>
+          <Card title="Engineering Partnerships (RAZR)">
+            <p className={body}>
+              Started software feasibility discussions while the RAZR hardware was still a concept. Coordinated a new
+              hardware and software alignment process that became the template for future foldables.
+            </p>
+          </Card>
+          <Card title="Privacy and Legal">
+            <p className={body}>
+              Negotiated privacy and data-use terms with legal for HelloU, and limited how often users heard from us.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section
+        id="building-teams"
+        title="BUILDING TEAMS AND LEADERS"
+        intro="I've hired 20+ designers and design leaders across my Director roles. I hire for the gaps, then give people the space to lead, and I've grown individual contributors into design managers and staff-level roles."
+      >
+        <div className="space-y-6">
+          <Card title="Coaching a New Team Through the RAZR Relaunch (2019)">
+            <p className={`${body} mb-6`}>
+              For the high-stakes 2019 RAZR relaunch, I gave the work to a team of emerging talent: an industrial
+              designer in her first year and UX designers new to mobile. I managed them directly through launch, coaching
+              them through hard negotiations with US product teams and executive stakeholder dynamics.
+            </p>
+            <div className="bg-accent rounded-[10px] p-6 space-y-2">
+              <p className={body}>
+                <strong>Award:</strong> The team earned a Red Dot &quot;Best of the Best.&quot;
+              </p>
+              <p className={body}>
+                <strong>Careers:</strong> The industrial designer was promoted to Senior and is now a Design Manager
+                driving innovation projects. The UI designer is now a Design Manager. The UX designer built deep mobile
+                expertise that informed later launches.
+              </p>
+            </div>
+          </Card>
+
+          <Card title="Hiring for a Capability Gap: Accessibility (JSTOR)">
+            <p className={body}>
+              I hired a specialist accessibility lead in 2021 and gave him room to build &quot;shift-left&quot; testing
+              into how teams work. The result: a 98% improvement in accessibility errors and a Top 1% ranking in the
+              WebAIM Million. When he left for a bigger role in 2026, I made the case for a higher-level backfill and
+              hired a Senior Accessibility Manager.
+            </p>
+          </Card>
+
+          <Card title="Teaching and Mentorship">
+            <p className={body}>
+              Adjunct Faculty at Northwestern University: graduate capstone and thesis advisor in Engineering Design
+              Innovation (2018–2026), and co-taught Customer-Driven Opportunities in the Master of Product Design and
+              Development Management program (2024–2025). Founding board member of the InsideOut design leader community.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section
+        id="systems"
+        title="SYSTEMS THAT SCALE QUALITY"
+        intro="I build the systems that let design quality scale without depending on heroics."
+      >
+        <div className="space-y-6">
+          <Card title="Design Principles (JSTOR)">
+            <p className={body}>
+              Co-developed ITHAKA&apos;s five design principles, including &quot;Be the guide, not the hero,&quot; with
+              the Director of Brand + Creative. We built them as tools for evaluating work, with guiding questions and an
+              adjustable strength per project. They were adopted across recruiting, social and product, and later shaped
+              the interaction model of JSTOR&apos;s AI research tool.
+            </p>
+          </Card>
+          <Card title="Design System and Design-to-Code (JSTOR)">
+            <p className={body}>
+              As Executive Champion for Pharos, JSTOR&apos;s design system, I set federated governance and modern tooling
+              (Storybook, Chromatic) to keep components consistent across applications. I championed AI-enabled
+              design-to-code workflows with Figma Code Connect and MCP servers to unify federated teams.
+            </p>
+          </Card>
+          <Card title="One Animation Format (Motorola)">
+            <p className={body}>
+              Drove adoption of the Lottie animation framework at Motorola. I secured legal and security approval and
+              core integration, so all 6 global studios shared one animation format.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      <section id="partners-say" className="bg-accent w-full scroll-mt-24">
         <div className="marketing-grid pt-12 lg:pt-16 pb-12 lg:pb-16">
           <div className="max-w-[75ch] mx-auto">
             <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">WHAT PARTNERS SAY</h2>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-            {/* Column 1 */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-[10px] border-2 border-border p-8">
+            {quotes.map((q) => (
+              <figure key={q.tag} className="bg-white rounded-[10px] border-2 border-border p-8">
                 <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
-                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-secondary-foreground">Team Empowerment</span>
+                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-secondary-foreground">
+                    {q.tag}
+                  </span>
                 </div>
-                <p className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
-                  &quot;Elisa&apos;s best asset is giving the people who report to her the space to take leadership over our work, while still being supportive. She guides when needed and gives autonomy when wanted.&quot;
-                </p>
-                <p className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
-                  <strong>— Direct Report</strong>, Leadership Circle Profile assessment, 2024
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border p-8">
-                <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
-                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-accent-foreground">Executive Translation</span>
-                </div>
-                <p className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
-                  &quot;Elisa&apos;s greatest leadership asset is her collaboration skills. She has the ability to work across various levels and departments. She is able to understand needs from the C-suite and translate them into actionable goals.&quot;
-                </p>
-                <p className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
-                  <strong>— Senior Partner/Executive</strong>, Leadership Circle Profile assessment, 2024
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border p-8">
-                <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
-                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-accent-foreground">Strategic Clarity</span>
-                </div>
-                <p className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
-                  &quot;Her knowledge and ability to balance business and customer needs are impressive. Her rational and decision-making process is clear, there is no guesswork with her.&quot;
-                </p>
-                <p className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
-                  <strong>— Product/Engineering Partner</strong>, Linkage Institute, Advancing Women Leaders 360 Assessment, 2019
-                </p>
-              </div>
-            </div>
-
-            {/* Column 2 */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-[10px] border-2 border-border p-8">
-                <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
-                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-accent-foreground">Problem-Solving</span>
-                </div>
-                <p className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
-                  &quot;Elisa&apos;s super power is her ability to move ideas forward and help teams hone in on the best solution when we get stuck. She does this working iteratively and collaboratively.&quot;
-                </p>
-                <p className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
-                  <strong>— Peer/Partner</strong>, Leadership Circle Profile assessment, 2024
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[10px] border-2 border-border p-8">
-                <div className="bg-secondary rounded-full px-3 py-1 inline-block mb-4">
-                  <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-accent-foreground">Cross-Functional Leadership</span>
-                </div>
-                <p className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
-                  &quot;Elisa is so good at collaborating with customers and with the engineering team she is working with to achieve the best design that fulfills goals and is able to be implemented within the technical capabilities and the time constraints. She knows how to be firm when it matters and to give when it doesn&apos;t matter.&quot;
-                </p>
-                <p className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
-                  <strong>— Product/Engineering Partner</strong>, Linkage Institute, Advancing Women Leaders 360 Assessment, 2019
-                </p>
-              </div>
-            </div>
+                <blockquote className="font-['EB_Garamond'] text-[16px] leading-[24px] text-secondary-foreground tracking-[0.5px] mb-4">
+                  &quot;{q.text}&quot;
+                </blockquote>
+                <figcaption className="font-['Spline_Sans'] text-[14px] leading-[20px] text-secondary-foreground tracking-[0.25px]">
+                  <strong>{q.source}</strong>, {q.detail}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
