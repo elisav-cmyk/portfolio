@@ -46,7 +46,7 @@ const career = [
     org: 'JSTOR / ITHAKA',
     role: 'Director, Product Design',
     years: '2021–present',
-    text: 'Lead product design for the JSTOR AI research tool, Dynamic Search (hybrid LLM, semantic and keyword search), platform integration and accessibility. I manage the product designers and a Senior Accessibility Manager.',
+    text: 'Lead product design for the JSTOR AI research tool, Dynamic Search (hybrid LLM, semantic and keyword search), platform integration and accessibility, for institutions ranging from major research universities to small colleges in 194 countries. I manage the product designers and a Senior Accessibility Manager.',
   },
   {
     org: 'Grubhub',
@@ -58,7 +58,7 @@ const career = [
     org: 'Motorola Mobility',
     role: 'Global UX Director',
     years: '2018–2020',
-    text: 'Led all UX at Motorola: 33 designers across 6 studios (Chicago, São Paulo, Beijing, Shanghai, Shenzhen, Nanjing) within $9.78B operations. Directed design for a 24-device portfolio across a 13-hour time difference, with global approval authority over hiring, tools and travel budgets.',
+    text: 'Led all UX at Motorola: 33 designers across 6 studios (Chicago, São Paulo, Beijing, Shanghai, Shenzhen, Nanjing) within $9.78B operations. When Motorola\u2019s Asia Pacific design organization joined the global team, I took on the Beijing, Shanghai, Shenzhen and Nanjing studios. Directed design for a 24-device portfolio across a 13-hour time difference, with global approval authority over hiring, tools and travel budgets.',
   },
   {
     org: 'Motorola Mobility',
@@ -112,13 +112,20 @@ export const LeadershipPageContent = () => {
 
             <div className="bg-white rounded-[10px] p-8">
               <p className={`${body} mb-4`}>
-                I build design teams and solve hard problems at scale. I&apos;ve led design for the Android RAZR foldable
-                (Red Dot &quot;Best of the Best&quot;), an LLM research tool rolled out to about 11,400 institutions, and
-                hybrid AI search for a platform serving 111M+ users.
+                I build design teams and take on hard problems at scale. That has meant the Android RAZR foldable,
+                which earned a Red Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400
+                institutions; and hybrid AI search for a platform that serves 111M+ people a year.
+              </p>
+              <p className={`${body} mb-4`}>
+                I&apos;m drawn to work where the stakes are real: research that people rely on, devices they carry
+                everywhere, and platforms where one decision reaches millions. My job is to connect what customers need
+                with what engineering can build, make the call clearly, and then give senior leads the room to do their
+                best work. As one partner put it, I &quot;know how to be firm when it matters and give when it
+                doesn&apos;t.&quot;
               </p>
               <p className={`${body} mb-6`}>
-                I bridge customer needs and engineering constraints with clear decisions, and I give senior leads the
-                room to do their best work.
+                I&apos;ve built and led teams on three continents, living in São Paulo for two and a half years and
+                running the China studios across a 13-hour time difference and different business practices.
               </p>
 
               <nav aria-label="On this page" className="grid grid-cols-1 md:grid-cols-2 gap-1">
@@ -156,7 +163,7 @@ export const LeadershipPageContent = () => {
       <Section
         id="working-with-google"
         title="WORKING WITH GOOGLE"
-        intro="My work with Android predates Android. Across 18.5 years shipping mobile hardware and software, I worked directly and repeatedly with Google's platform teams."
+        intro="My work with Android started before Android did. Across 18.5 years shipping mobile hardware and software, I worked with Google's platform teams again and again, sometimes as a partner and sometimes across a negotiating table."
       >
         <div className="space-y-6">
           <div className="bg-primary rounded-[10px] p-8">
@@ -194,7 +201,7 @@ export const LeadershipPageContent = () => {
       <Section
         id="influence"
         title="INFLUENCE ACROSS FUNCTIONS AND LEVELS"
-        intro="I adapt how I communicate to each audience, build agreement across functions, and drive decisions that hold. I move between executive strategy and execution details, and bring what I learn back up."
+        intro="Most of my influence comes from how I work with people rather than from my title. I adapt how I communicate to each audience, build agreement across functions, and drive decisions that hold; I move between executive strategy and the details of execution, and I bring what I learn back up."
       >
         <div className="space-y-6">
           <Card title="Executive Strategy to Team Action (JSTOR)">
@@ -221,7 +228,7 @@ export const LeadershipPageContent = () => {
       <Section
         id="building-teams"
         title="BUILDING TEAMS AND LEADERS"
-        intro="I've hired 20+ designers and design leaders across my Director roles. I hire for the gaps, then give people the space to lead, and I've grown individual contributors into design managers and staff-level roles."
+        intro="I've hired 20+ designers and design leaders across my Director roles. My approach is simple: hire for the gap, then give people the space to lead. That is how individual contributors on my teams have grown into design managers and staff-level roles."
       >
         <div className="space-y-6">
           <Card title="Coaching a New Team Through the RAZR Relaunch (2019)">
@@ -265,7 +272,7 @@ export const LeadershipPageContent = () => {
       <Section
         id="systems"
         title="SYSTEMS THAT SCALE QUALITY"
-        intro="I build the systems that let design quality scale without depending on heroics."
+        intro="I build the systems that let design quality scale, so good work doesn't depend on a few heroes."
       >
         <div className="space-y-6">
           <Card title="Design Principles (JSTOR)">
