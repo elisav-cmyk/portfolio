@@ -153,7 +153,7 @@ export const GrubhubDirect: React.FC<GrubhubDirectProps> = ({ onBack, onNavigate
                 Platform Vision & Integration Strategy
               </h3>
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-                <strong>Architecting a Multi-Persona Ecosystem</strong> Leveraging enterprise technology from the LevelUp acquisition, I directed the vision to integrate proven enterprise capabilities with Grubhub's self-service platform. I designed a scalable configuration engine serving the full technical spectrum:
+                <strong>Designing a Multi-Persona Ecosystem</strong> Leveraging enterprise technology from the LevelUp acquisition, I directed the vision to integrate proven enterprise capabilities with Grubhub's self-service platform. My team designed a scalable configuration engine serving the full technical spectrum:
               </p>
               <ul className="list-disc pl-6">
                 <li className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">

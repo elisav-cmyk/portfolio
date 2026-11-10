@@ -61,7 +61,7 @@ export const LeadershipPageContent = () => {
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Global Head of UX (Motorola)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
                   Directed a team of 33 designers across 6 global studios (US, China, Brazil). Managed the UX strategy for a 24-device portfolio 
-                  within a $9.78B operational scope, coordinating across 14-hour time zones. I held global approval authority over hiring, tools, 
+                  within a $9.78B operational scope, coordinating across a 13-hour time difference. I held global approval authority over hiring, tools, 
                   and travel budgets across the organization.
                 </p>
               </div>
@@ -69,14 +69,14 @@ export const LeadershipPageContent = () => {
               <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Studio Director (Brazil)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Established and scaled a multidisciplinary studio of 15 professionals (UX, ID, Research, Surface Engineering). I tripled the local UX capacity (from 2 to 6 designers) in one year through strategic hiring and integrated the team with local R&D and factory engineering partners.
+                  Led a multidisciplinary studio of 13 professionals (UX, ID, Research, Surface Engineering). I grew the UX/UI team to 6 designers in one year (7 hires) and integrated the team with local R&D and factory engineering partners.
                 </p>
               </div>
 
               <div className="bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Talent Pipeline</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Personally hired ~30 designers across Director roles. My &quot;hire-and-empower&quot; model has successfully grown individual contributors into Design Managers and Principal leads.
+                  Hired 20+ designers and design leaders across my Director roles. My &quot;hire-and-empower&quot; model has successfully grown individual contributors into design managers and staff-level roles.
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export const LeadershipPageContent = () => {
               <div className="bg-primary rounded-[10px] p-6">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white mb-3">Strategic Subtraction (The &quot;One Nav&quot; Decision)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white">
-                  When Android 10 released native gestures that competed with our proprietary navigation, I brought my lead designer directly into the negotiations with the Android team deliberately, to build her ability to advocate for design decisions at that level. Rather than defending our feature on instinct, we ran a data-driven trade-off analysis and let the data decide. The result: we deprecated our popular feature in favor of ecosystem compatibility, reallocating critical engineering resources to the RAZR foldable launch, while folding our usability and onboarding insights directly into Android 10&apos;s base code.
+                  When Android 10 released native gestures that competed with our proprietary navigation, I brought my lead designer directly into the negotiations with the Android team deliberately, to build her ability to advocate for design decisions at that level. Rather than defending our feature on instinct, we ran a data-driven trade-off analysis and let the data decide. The result: we deprecated our popular feature in favor of ecosystem compatibility, reallocating critical engineering resources to the RAZR foldable launch, while sharing our usability and onboarding research with the Android team as it finalized Android 10 gestures.
                 </p>
               </div>
             </div>
@@ -114,7 +114,7 @@ export const LeadershipPageContent = () => {
             
             <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8 mb-6">
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                I excel at &quot;skillful smooth negotiation through influence&quot;—adapting communication style to audiences, building consensus across functions, and driving decisions that stick.
+                I excel at &quot;skillful smooth negotiation through influence&quot;: adapting communication style to audiences, building consensus across functions, and driving decisions that stick.
               </p>
             </div>
 
@@ -127,9 +127,9 @@ export const LeadershipPageContent = () => {
               </div>
 
               <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
-                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Legal/Security Negotiation</h6>
+                <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Legal &amp; Privacy Negotiation</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Represented design in Android framework discussions; Influenced Google&apos;s GMS Calling app roadmap for foldable support. Collaborated with Visual Resource Association on JSTOR metadata standards.
+                  Secured legal and security approval to adopt the Lottie animation format across Motorola software. Negotiated privacy and data-use terms with legal for HelloU, and limited how often users heard from us.
                 </p>
               </div>
 
@@ -152,13 +152,13 @@ export const LeadershipPageContent = () => {
             
             <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
               <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-8">
-                One of my key strengths is the ability to move fluidly between strategic executive conversations and tactical execution details—translating vision into action and surfacing insights upward.
+                One of my key strengths is the ability to move fluidly between strategic executive conversations and tactical execution details, translating vision into action and surfacing insights upward.
               </p>
 
               <div className="bg-accent rounded-[10px] p-6">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Example: Executive Strategy to Team Action</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  When JSTOR leadership decided to integrate multiple platforms, I translated the high-level business strategy into concrete design initiatives, identified risks, created migration plans, and empowered teams to execute—while keeping executives informed of progress and challenges.
+                  When JSTOR leadership decided to integrate multiple platforms, I translated the high-level business strategy into concrete design initiatives, identified risks, created migration plans, and empowered teams to execute, while keeping executives informed of progress and challenges.
                 </p>
               </div>
             </div>
@@ -212,7 +212,7 @@ export const LeadershipPageContent = () => {
               <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Technical Platform Innovation</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Identified and drove the adoption of the Lottie animation framework at Motorola. I negotiated security approvals and core integration, resulting in 10× efficiency gains in animation workflows across all 6 global studios.
+                  Identified and drove the adoption of the Lottie animation framework at Motorola. I negotiated security approvals and core integration, giving all 6 global studios one shared animation format.
                 </p>
               </div>
 
@@ -226,14 +226,14 @@ export const LeadershipPageContent = () => {
               <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Design Principles (with Brand + Creative)</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Co-developed ITHAKA&apos;s five design principles &mdash; including &quot;Be the guide, not the hero&quot; &mdash; with the Director of Brand + Creative to align creative decisions across brand and product design org-wide. Built as evaluative tools rather than aesthetic rules, with guiding questions and an adjustable strength per project; adopted across recruiting, social, and product surfaces, and later shaped the interaction model of JSTOR&apos;s AI research tool.
+                  Co-developed ITHAKA&apos;s five design principles, including &quot;Be the guide, not the hero,&quot; with the Director of Brand + Creative to align creative decisions across brand and product design org-wide. Built as evaluative tools rather than aesthetic rules, with guiding questions and an adjustable strength per project; adopted across recruiting, social, and product surfaces, and later shaped the interaction model of JSTOR&apos;s AI research tool.
                 </p>
               </div>
 
               <div className="bg-white rounded-[10px] border-2 border-border shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8">
                 <h6 className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-3">Institutionalizing Quality</h6>
                 <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground">
-                  Transformed accessibility from a compliance risk to a competitive advantage. By hiring a specialized technical lead and instituting &quot;shift-left&quot; testing, we achieved a 98% improvement in accessibility errors and a Top 1% WAVE ranking.
+                  Transformed accessibility from a compliance risk to a competitive advantage. By hiring a specialized accessibility lead in 2021 and instituting &quot;shift-left&quot; testing, we achieved a 98% improvement in accessibility errors and a Top 1% ranking in the WebAIM Million. When he left for a bigger role in 2026, I made the case for a higher-level backfill and hired a Senior Accessibility Manager.
                 </p>
               </div>
             </div>

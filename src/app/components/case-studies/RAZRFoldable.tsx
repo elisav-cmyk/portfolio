@@ -59,7 +59,7 @@ export const RAZRFoldable: React.FC<RAZRFoldableProps> = ({ onBack, onNavigate }
           </h2>
           <div className="space-y-2">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Role:</strong> Studio/Design Director, Motorola Mobility (Brazil Design Studio)
+              <strong>Role:</strong> Director, São Paulo Design Studio, then Global UX Director, Motorola Mobility
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <strong>Work Partners:</strong> Industrial Design, Research, Engineering (HW/SW), Product Management (HW/SW), Marketing
@@ -81,7 +81,7 @@ export const RAZRFoldable: React.FC<RAZRFoldableProps> = ({ onBack, onNavigate }
             </h2>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15] space-y-4">
               <p>
-                During my tenure as Studio Director, I led a multidisciplinary team within a division that supported Motorola Mobility&apos;s $9.78 billion revenue base. I initially formed a team of 3 designers during the concept phase of the 2019 razr; later the project included the global design team when I became Head of Design, Motorola Mobility (UX, visual & copywriting, ~30 designers).
+                During my tenure as Studio Director, I led a multidisciplinary team within a division that supported Motorola Mobility&apos;s $9.78 billion revenue base. I initially formed a team of 3 designers during the concept phase of the 2019 razr; later the project included the global design team when I became Global UX Director (UX, visual and copywriting, 33 designers).
               </p>
               <p>
                 Motorola has maintained a strong foothold in the mid-tier smartphone market, however it struggled to develop a high-tier device after it ended the exclusive &quot;Droid&quot; partnership with Verizon. In order to re-enter the high-tier market, Motorola determined that it would build upon Lenovo&apos;s foldable prototypes and re-introduce its iconic phone: the razr.

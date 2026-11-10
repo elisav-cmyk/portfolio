@@ -47,7 +47,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               Teaching &amp; Mentorship
             </span>
             <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-[#1b1c15]">
-              2018-Present
+              2018-2026
             </span>
           </div>
           <h1 className="font-['EB_Garamond'] text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-6">
@@ -58,7 +58,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
           </h2>
           <div className="space-y-2">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Role:</strong> Adjunct Faculty Lecturer &amp; Gradudate Student Advisor, Segal Design Institute
+              <strong>Role:</strong> Adjunct Faculty Lecturer &amp; Graduate Student Advisor, Segal Design Institute
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <strong>Work Partners:</strong> Engineering Design Innovation (EDI) Program, Master of Product Design &amp; 
@@ -80,8 +80,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
               <p>
                More than 41 million Americans face food insecurity, often compounded by mobility and transportation 
                 barriers, while 133 billion pounds of food go to waste in the US each year. That gap framed the brief 
-                for DSGN 401-3 Service Design, a 10-week graduate course that helped Feeding America, the nation&apos;s 
-                third-largest nonprofit, better distribute rescued food from major retailers to food-insecure communities.
+                for DSGN 401-3 Service Design, a 10-week graduate course that helped Feeding America, the nation&apos;s largest hunger-relief organization, better distribute rescued food from major retailers to food-insecure communities.
               </p>
             </div>
           </section>
@@ -105,7 +104,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
                 Development Management (mpd²) program.</p>  
               <p>  
               <b>Advising:</b> Alongside teaching, I have served as a Graduate Student Advisor for EDI capstone and 
-                Master&apos;s thesis projects on an ongoing basis since 2018, a formal role distinct from classroom 
+                Master&apos;s thesis projects from 2018 to 2026, a formal role distinct from classroom 
                 instruction, guiding individual student research and thesis direction to completion.</p>  
               <p>  
               <b>Mentorship:</b> Beyond formal teaching and advising, I&apos;ve sustained individual, informal career 
@@ -126,8 +125,7 @@ export const TeachingServiceDesign: React.FC<TeachingServiceDesignProps> = ({ on
                with limited mobility; Incentivize, a grocery-employee donation incentive program; Bridge, a platform connecting 
                suppliers, volunteers, patrons, and agencies; and enRoute, a mobile locker food truck. NeighbourFood 
                received Honorable Mention in the Design Management Institute&apos;s Design Value Awards, one of 12 groups 
-               recognized globally that year. Seven years later, the relationship is still active: I continue to advise 
-               EDI capstone students, and still mentor two students from that original 2018 cohort on career direction.</p>
+               recognized globally that year. I advised EDI capstone students through 2026, and I still mentor two students from that original 2018 cohort on career direction.</p>
 
             </div>
           </section>

@@ -44,13 +44,12 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                 <p>Product Design Director who builds teams and solves hard problems at scale.</p>
                 <p>
                   I lead design teams creating products that push boundaries: the Android RAZR foldable
-                  (Red Dot &quot;Best of the Best&quot;), ethical AI research tools (3× engagement
-                  increase), platform integrations serving 111M+ users. At Motorola, I directed 33
+                  (Red Dot &quot;Best of the Best&quot;), an LLM research tool rolled out to about 11,400 institutions, and hybrid AI search for a platform serving 111M+ users. At Motorola, I directed 33
                   designers across 6 global studios within $9.78B operations. At JSTOR, I&apos;m shaping
                   how AI serves academic research with integrity.
                 </p>
                 <p>
-                  What drives me: solving complex problems on products with real impact—academic research
+                  What drives me: solving complex problems on products with real impact: academic research
                   tools, hardware/software integration, platform-scale experiences. I bridge customer
                   needs and engineering constraints through strategic clarity, empowering senior leads to
                   deliver exceptional work. At Motorola, I led the Brazil Design Studio to deliver
@@ -76,10 +75,10 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                     Android Ecosystem & Platform Standards
                   </div>
                   <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
-                    As a strategic partner to the Google Android team, I directed the UX for the Android RAZR foldable, directly influencing Android framework standards for small-screen foldables. My team collaborated with Google to define gesture navigation patterns and GMS Calling app integrations, ensuring OEM customization aligned with core OS evolution.
+                    As a strategic partner to the Google Android team, I directed the UX for the Android RAZR foldable, directly influencing Android framework standards for small-screen foldables. My team shared Motorola&apos;s gesture research with Google, adopted the Android 10 gesture standard in place of our own, and reviewed our Phone app changes with the Android Comms team so GMS Calling could support foldables.
                   </div>
                   <ul className="mt-2 ml-4 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
-                    <li>• Impact: Influenced the Android OS roadmap for foldables and shipped ~1 billion devices across the Android ecosystem.</li>
+                    <li>• Impact: Our three-part cover-screen model shaped Google&apos;s patterns for small foldable screens. Over 18 years at Motorola, I worked on about 1 billion devices.</li>
                   </ul>
                 </div>
                 <div>
@@ -87,7 +86,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                     Enterprise Design Systems & Developer Velocity
                   </div>
                   <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
-                    I bridge the gap between design and engineering by championing &quot;Code Connect&quot; workflows. At JSTOR, I pioneered AI-enabled design-to-code pipelines using Figma and MCP servers to unify federated teams. Previously at Motorola, I drove the platform-level integration of the Lottie animation framework, negotiating security approvals to deliver 10x efficiency gains across global studios.
+                    I bridge the gap between design and engineering by championing &quot;Code Connect&quot; workflows. At JSTOR, I pioneered AI-enabled design-to-code pipelines using Figma and MCP servers to unify federated teams. Previously at Motorola, I drove the platform-level integration of the Lottie animation framework, securing legal and security approval so all six studios shared one animation format.
                   </div>
                 </div>
                 <div>
@@ -159,7 +158,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                     Motorola Mobility (2002-2020)
                   </div>
                   <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
-                    Head of UX leading 33 designers across 6 global studios within $9.78B operations.
+                    Global UX Director (Head of UX) leading 33 designers across 6 global studios within $9.78B operations.
                     Directed product design for 24-device portfolio. Led iconic RAZR foldable launch and
                     influenced Android framework standards.
                   </div>
@@ -198,13 +197,11 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                       🇧🇷 Brazil
                     </h4>
                     <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-secondary-foreground mb-4">
-                      Led Motorola&apos;s 13-person Brazil design studio. Rapidly scaled UX/UI team from 2
-                      to 6 designers in one year through strategic hiring. Led localized product development
+                      Managed the UX designers, then led Motorola&apos;s 13-person São Paulo design studio, growing the UX/UI team to 6 designers in one year (7 hires). Led localized product development
                       including DTV Mod (sold out) and regional customizations for Latin American markets.
                     </p>
                     <p className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] tracking-[0.025rem] text-muted-foreground">
-                      São Paulo Studio, 2016-2017 | Studio Director leading 13-person multidisciplinary
-                      team; tripled UX capacity through strategic hiring
+                      São Paulo, 2015–2017 | Director, São Paulo Design Studio (2016–2017), leading a 13-person multidisciplinary team
                     </p>
                   </div>
 
@@ -213,11 +210,10 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                       🇨🇳 China
                     </h4>
                     <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-secondary-foreground mb-4">
-                      Managed design teams in Beijing and collaborated on products for Chinese market.
-                      Coordinated across 12-hour time zones and navigated cultural business practices.
+                      Led the design studios in Beijing, Shanghai, Shenzhen and Nanjing after Motorola&apos;s Asia Pacific design organization joined the global team. Coordinated across a 13-hour time difference and different business practices.
                     </p>
                     <p className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] tracking-[0.025rem] text-muted-foreground">
-                      Beijing Studio, 2014-2020
+                      China studios, 2018–2020
                     </p>
                   </div>
 
@@ -226,12 +222,10 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                       🇺🇸 United States
                     </h4>
                     <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-secondary-foreground mb-4">
-                      Led design organizations in Chicago serving global markets. Managed distributed teams
-                      across US locations including Chicago, San Francisco, and satellite offices.
+                      Led design organizations in Chicago serving global markets, including the Americas studios in the US and Brazil.
                     </p>
                     <p className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] tracking-[0.025rem] text-muted-foreground">
-                      Led design teams in Chicago serving global markets. Managed globally distributed team
-                      of 30+ across 6 studios. Chicago HQ, 2017-2020
+                      Led a globally distributed team of 33 across 6 studios. Chicago HQ, 2017–2020
                     </p>
                   </div>
                 </div>
@@ -295,7 +289,7 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
                       Multiple Promotions
                     </div>
                     <p className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] tracking-[0.025rem] text-muted-foreground">
-                      Team members advanced to senior and principal roles across design disciplines
+                      Team members advanced into senior, staff-level and management roles across design disciplines
                     </p>
                   </div>
                 </div>
@@ -334,12 +328,11 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
               <div className="space-y-2 font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-secondary-foreground">
                 <p>Adjunct Faculty</p>
                 <p className="text-muted-foreground">
-                  Northwestern University &mdash; Engineering Design Innovation (EDI) graduate capstone
-                  mentor (2018-present); co-taught Customer-Driven Opportunities in the Master of Product
-                  Design and Development Management (mpd²) program (2024-2025)
+                  Northwestern University: Engineering Design Innovation (EDI) graduate capstone and thesis advisor (2018–2026); co-taught Customer-Driven Opportunities in the Master of Product
+                  Design and Development Management (mpd²) program (2024–2025)
                 </p>
-                <p>Speaker/Mentor</p>
-                <p className="text-muted-foreground">Industry events and design community contributions</p>
+                <p>Mentor</p>
+                <p className="text-muted-foreground">Founding board member, InsideOut design leader community; ongoing mentor to former team members and students</p>
       
               </div>
             </div>
@@ -360,9 +353,9 @@ export const AboutPageContent: React.FC<AboutPageProps> = ({
               </div>
               <div className="bg-white rounded-[10px] p-6 shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
                 <div className="font-['EB_Garamond'] text-[2.5rem] leading-tight text-primary mb-2">
-                  110+
+                  111M+
                 </div>
-                <div className="text-[0.875rem] text-muted-foreground">Million Users</div>
+                <div className="text-[0.875rem] text-muted-foreground">Annual JSTOR Users</div>
               </div>
             </div>
           </div>

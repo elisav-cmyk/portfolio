@@ -101,8 +101,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     {
       image: imgImageEthicalAiResearchTool,
       tag: "AI & Ethics",
-      year: "2023-2025",
-      title: "Ethical AI Research Tool",
+      year: "2023-2026", title: "Ethical AI Research Tool",
       company: "JSTOR",
       caseStudyId: "ethical-ai",
     },
@@ -160,8 +159,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     {
       image: imgFeedingAmericaHero,
       tag: "Teaching & Mentorship",
-      year: "2018-Present",
-      title: "Educating the Next Generation",
+      year: "2018-2026", title: "Educating the Next Generation",
       company: "Northwestern University",
       caseStudyId: "teaching-service-design",
     },

@@ -58,7 +58,7 @@ export const CameraRedesign: React.FC<CameraRedesignProps> = ({ onBack, onNaviga
           </h2>
           <div className="space-y-2">
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              <strong>Role:</strong> Design Director, Motorola Mobility
+              <strong>Role:</strong> Global UX Director, Motorola Mobility
             </p>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <strong>Work Partners:</strong> Product Management, Engineering, User Insights Research
@@ -79,8 +79,7 @@ export const CameraRedesign: React.FC<CameraRedesignProps> = ({ onBack, onNaviga
               <p>
                 Motorola&apos;s preloaded Camera app had been significantly redesigned in 2017 to support a
                 flexible framework across many devices and capabilities. By late 2019, the interface had
-                grown visually dated, and increasingly varied aspect ratios and lens configurations &mdash;
-                from wide-angle and macro to quattro-lens setups &mdash; were compromising the app&apos;s
+                grown visually dated, and increasingly varied aspect ratios and lens configurations (from wide-angle and macro to quattro-lens setups) were compromising the app&apos;s
                 usability and visual hierarchy, even as it continued to functionally deliver.
               </p>
             </div>
@@ -98,7 +97,7 @@ export const CameraRedesign: React.FC<CameraRedesignProps> = ({ onBack, onNaviga
                 and diverse device configurations without a redesign every cycle. The team ran a feature
                 inventory and user/business needs assessment to shape guiding design principles and success
                 criteria, then pursued four parallel design directions in early exploration, narrowing and
-                expanding based on three rounds of user research &mdash; a process that continued through
+                expanding based on three rounds of user research, a process that continued through
                 the early COVID-19 lockdowns using ProtoPie prototypes tested remotely with friends and
                 family of Motorola employees. Because several designers on the team had never led a
                 redesign at this scale, I paired a UX lead to mentor the group, deliberately cultivating
@@ -119,8 +118,7 @@ export const CameraRedesign: React.FC<CameraRedesignProps> = ({ onBack, onNaviga
                 non-blocking tutorials and tips, improved mode switching, a user-customizable mode
                 carousel, a new zoom model built to accommodate the portfolio&apos;s varied lens
                 configurations, and a swipeable control panel for high-priority controls. The interaction
-                patterns the team created &mdash; particularly the non-interrupting tutorial and tip style
-                &mdash; were adopted by designers on other Motorola apps. The redesign also became a
+                patterns the team created, particularly the non-interrupting tutorial and tip style, were adopted by designers on other Motorola apps. The redesign also became a
                 proving ground for first-time design leads on the team.
               </p>
             </div>

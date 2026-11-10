@@ -51,7 +51,7 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
               AI Ethics
             </span>
             <span className="font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] text-[#1b1c15]">
-              2023-2025
+              2023-2026
             </span>
           </div>
           <h1 className="font-['EB_Garamond'] text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-6">
@@ -294,7 +294,7 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
                       lead designer successfully covered a
                       colleague&apos;s family leave, taking on
                       additional product scope and demonstrating
-                      delivery under ambiguity—evidence of
+                      delivery under ambiguity, evidence of
                       growth through intentional stretch
                       assignments.
                     </li>
@@ -338,31 +338,32 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
             </div>
 
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Exceptional Product-Market Fit (3× Engagement)
+              Measured Honestly: Adoption and Trust
             </h3>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
-                The clearest evidence &quot;guide, not
-                hero&quot; worked wasn&apos;t in design reviews,
-                 it was in the usage data. A tool that
-                shortcut the research process the way most AI
-                tools do would show a quick spike in use followed
-                by drop-off; instead we saw the opposite:
+                Research tool users searched far more than other
+                JSTOR users, but a matched before-and-after
+                study showed much of that gap reflected who
+                chose the tool. We reported that plainly and
+                focused on what the tool could own: trust,
+                adoption, and helping people reach the right
+                content.
               </p>
-              <ul className="list-disc pl-6 space-y-4">
-                <li>3× more searches per session.</li>
-                <li>2× more item requests.</li>
+              <ul className="list-disc pl-6 space-y-4 mt-4">
                 <li>
-                  4.1× increase in monthly return rate for beta
-                  users.
+                  Adoption: from a limited beta in August 2023
+                  to 14 beta institutions, 272 early-access
+                  institutions by the end of 2024, about 1,500
+                  by March 2025, and about 11,400 by July 2025.
+                  Only 39 institutions opted out.
+                </li>
+                <li>
+                  Lasting research value: users can save,
+                  revisit and cite conversations, and analyze up
+                  to 25 items at once.
                 </li>
               </ul>
-              <p className="mt-4">
-                Each number points the same direction: deeper
-                engagement with the research process, not faster
-                extraction of an answer, exactly the outcome the
-                principle was designed to produce.
-              </p>
             </div>
 
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
@@ -372,8 +373,7 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <p>
                 Successfully differentiated JSTOR from generic
-                LLMs by implementing &quot;Traceable
-                Conversations&quot;—a design pattern that
+                LLMs by implementing &quot;Traceable Conversations,&quot; a design pattern that
                 grounds every AI response in verified text. This
                 feature directly addressed the academic
                 market&apos;s primary barrier to adoption (fear
@@ -383,18 +383,41 @@ export const EthicalAI: React.FC<EthicalAIProps> = ({
             </div>
 
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Scale & Industry Recognition
+              Beyond Chat: Assistive Search and Recommendations
+            </h3>
+            <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+              <p>
+                The same grounded approach now shapes search.
+                My team led the design of Dynamic Search, a
+                hybrid of LLM query interpretation, semantic
+                retrieval and keyword search. From Oct. 7 to
+                Nov. 5, 2026, 52% of Dynamic Search queries led
+                people to open, read or save content, versus 39%
+                for keyword search, with fewer searches per
+                session (2.69 vs. 3.11).
+              </p>
+              <p className="mt-4">
+                Recommendations follow the same logic. After we
+                found that 80% of users never saw them, moving
+                recommendations inline and above the fold raised
+                primary source usage 80%, book usage 48% and
+                journal usage 15% year over year (Q1 2023).
+                Merging semantic and citation-based
+                recommendations later raised recommender use
+                10%. When the research tool began crowding
+                recommendations out, we redesigned the item page
+                to keep both in view.
+              </p>
+            </div>
+
+            <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
+              Scale
             </h3>
             <div className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
               <ul className="list-disc pl-6 space-y-4">
                 <li>
-                  Rapid Scale: Moved from closed beta to ~1,500
-                  institutions by Q1 2025 (Early Access).
-                </li>
-                <li>
-                  Award-Winning: Recognized with the 2025 C.F.W.
-                  Coker Award for innovation in archival and
-                  research access.
+                  Rapid Scale: about 11,400 institutions by July
+                  2025, two years after a limited beta.
                 </li>
                 <li>
                   User Acclaim: Described by institutional

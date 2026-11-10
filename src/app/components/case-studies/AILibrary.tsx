@@ -227,7 +227,7 @@ export const AILibrary: React.FC<AILibraryProps> = ({
             Outcomes
           </h2>
           <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-            Stewardship successfully launched in Q1 2025,
+            Stewardship launched publicly on April 2, 2025,
             positioning ITHAKA to diversify revenue and lead the
             digital stewardship market with a mission-aligned
             SaaS solution.
@@ -245,9 +245,7 @@ export const AILibrary: React.FC<AILibraryProps> = ({
               weeks by hand can now reach an initial level of
               processing in less than 2 hours using the tool.
               Early beta use resulted in the generation of ~1800
-              items and ~20,000 metadata terms using AI. One
-              institution demonstrated processing over 1,000
-              items within 15 days.
+              items and ~20,000 metadata terms using AI. Charter participant University of Manitoba processed over 1,000 items within 15 days.
             </p>
           </div>
 
@@ -268,19 +266,13 @@ export const AILibrary: React.FC<AILibraryProps> = ({
             </p>
           </div>
 
-          {/* Subsection: Revenue Generation and Sustainability */}
+          {/* Subsection: Adoption and Recognition */}
           <div className="flex flex-col gap-[var(--space-16)]">
             <h3 className="font-['EB_Garamond'] text-[24px] leading-[32px] text-[#1b1c15]">
-              Revenue Generation and Sustainability
+              Adoption and Recognition
             </h3>
             <p className="font-['Spline_Sans'] text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
-              Stewardship targets a Total Addressable Market of
-              $97 million globally (with $48 million initially
-              targeted in English-speaking higher education).
-              Financial forecast project Stewardship revenue
-              will outweigh expenses in 2026 and will reach
-              $27.8 million in Annual Recurring Revenue (ARR) by
-              2029, exceeding fully loaded costs.
+              By November 2025, more than 30 institutions had joined the Tier 3 Charter Program. JSTOR Seeklight won the 2025 C.F.W. Coker Award for Description from the Society of American Archivists and a 2025 Anthem Award (Bronze, Best Use of AI in Education, Art &amp; Culture).
             </p>
           </div>
 
