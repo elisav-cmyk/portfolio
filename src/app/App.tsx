@@ -677,14 +677,14 @@ const PortfolioWireframes = () => {
       {/* Featured Work */}
       <div className="bg-surface-variant">
         <div className="marketing-grid py-16">
-          <motion.h3
+          <motion.h2
             className="text-center mb-12 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             SIGNATURE WORK
-          </motion.h3>
+          </motion.h2>
           <motion.div
             className="grid md:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -768,9 +768,9 @@ const PortfolioWireframes = () => {
       {/* Impact Highlight */}
       <div className="on-dark bg-primary border-t-2 border-ring border-b-2 border-ring">
         <div className="marketing-grid py-16 text-center">
-          <h3 className="mb-12 text-white font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal">
+          <h2 className="mb-12 text-white font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal">
             RESULTS
-          </h3>
+          </h2>
           {/* Outcomes my teams drove, each explained in a case study or on Leadership */}
           <div className="grid md:grid-cols-3 gap-12">
             {[
@@ -827,9 +827,9 @@ const PortfolioWireframes = () => {
       {/* Leadership Teaser */}
       <div className="bg-surface-variant">
         <div className="marketing-grid py-16">
-          <h3 className="text-center mb-8 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
+          <h2 className="text-center mb-8 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
             HOW I LEAD
-          </h3>
+          </h2>
           <div
             className="bg-white rounded-[10px] p-8 mb-8 max-w-[75ch] mx-auto"
             style={{
@@ -884,9 +884,9 @@ const PortfolioWireframes = () => {
 
       {/* What I'm Looking For */}
       <div className="max-w-5xl mx-auto px-6 py-16">
-        <h3 className="text-center mb-8 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
+        <h2 className="text-center mb-8 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
           WHAT I&apos;M LOOKING FOR
-        </h3>
+        </h2>
         <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
           <div className="text-foreground leading-relaxed max-w-3xl mx-auto">
             Director and Senior Director design leadership roles in AI, search and consumer platforms, where grounded AI, recommendations and assistive experiences help people find what matters and act on it, online and in the real world.
@@ -897,9 +897,9 @@ const PortfolioWireframes = () => {
       {/* Testimonials */}
       <div className="bg-secondary border-t-2 border-secondary">
         <div className="max-w-5xl mx-auto px-6 py-16">
-          <h3 className="text-center mb-12 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
+          <h2 className="text-center mb-12 font-['EB_Garamond'] text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
             WHAT PARTNERS SAY
-          </h3>
+          </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div
               className="bg-white rounded-[10px] px-8 pt-5 pb-5 flex flex-col gap-3"
