@@ -8,7 +8,7 @@ import imgImageAILibrary from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bb
 import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
 import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.png";
 import imgCameraIntro from "figma:asset/camera-intro.png";
-import imgMotoCard from "../../assets/moto-card.jpg";
+import imgMotoCard from "../../assets/moto-app.jpg";
 import imgMobileParity from "../../assets/jstor-mobile.png";
 import { CASE_STUDIES, caseStudyPath, isPlainClick } from "../data/caseStudies";
 

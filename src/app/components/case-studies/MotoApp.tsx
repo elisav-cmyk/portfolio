@@ -1,10 +1,14 @@
 import React from 'react';
-import motoHeroImage from '../../../assets/moto-hero.jpg';
+import motoHeroImage from '../../../assets/moto-app.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
   id: 'moto-app',
-  hero: { src: motoHeroImage, alt: 'The redesigned Moto app on Motorola phones' },
+  hero: {
+    src: motoHeroImage,
+    alt: 'Screens from the redesigned Moto app, with its illustrated welcome screen, Moto Actions and tips',
+    position: 'object-top',
+  },
   tag: 'Brand & Craft',
   years: '2016-2020',
   title: 'Moto App',
