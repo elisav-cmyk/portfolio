@@ -10,6 +10,7 @@ import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef78
 import imgCameraIntro from "figma:asset/camera-intro.png";
 import imgFeedingAmericaHero from "figma:asset/feeding-america-hero.jpg";
 import imgMobileParity from "../../assets/jstor-mobile.png";
+import { CASE_STUDIES, caseStudyPath, isPlainClick } from "../data/caseStudies";
 
 interface WorkPageProps {
   pageVariants: any;
@@ -38,15 +39,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   caseStudyId,
   onCaseStudyClick,
 }) => (
-  <div
-    onClick={() => onCaseStudyClick(caseStudyId)}
-    className="bg-card rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] overflow-hidden flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
+  <a
+    href={caseStudyPath(caseStudyId)}
+    data-case-card
+    onClick={(e) => {
+      if (!isPlainClick(e)) return;
+      e.preventDefault();
+      onCaseStudyClick(caseStudyId);
+    }}
+    className="bg-card rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] overflow-hidden flex flex-col cursor-pointer hover:shadow-lg transition-shadow focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
   >
     {/* Image */}
     <div className="h-[192px] overflow-hidden">
       <img
         src={image}
-        alt={title}
+        alt=""
         className="w-full h-full object-cover object-center"
       />
     </div>
@@ -80,11 +87,37 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <span className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-primary group-hover:underline">
           View Case Study
         </span>
-        <ChevronRight className="text-primary" size={16} />
+        <ChevronRight className="text-primary" size={16} aria-hidden="true" />
       </div>
     </div>
-  </div>
+  </a>
 );
+
+// Arrow keys move focus between cards in reading order. Up and Down jump a
+// full row. Home and End go to the first and last card. Tab still works too.
+const handleGridKeys = (e: React.KeyboardEvent<HTMLDivElement>) => {
+  const keys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"];
+  if (!keys.includes(e.key)) return;
+  const cards = Array.from(
+    e.currentTarget.querySelectorAll<HTMLAnchorElement>("[data-case-card]"),
+  );
+  const index = cards.indexOf(document.activeElement as HTMLAnchorElement);
+  if (index === -1) return;
+  const firstRowTop = cards[0].offsetTop;
+  const columns = Math.max(1, cards.filter((c) => c.offsetTop === firstRowTop).length);
+  const moves: Record<string, number> = {
+    ArrowLeft: index - 1,
+    ArrowRight: index + 1,
+    ArrowUp: index - columns,
+    ArrowDown: index + columns,
+    Home: 0,
+    End: cards.length - 1,
+  };
+  const target = moves[e.key];
+  if (target < 0 || target >= cards.length) return;
+  e.preventDefault();
+  cards[target].focus();
+};
 
 export const WorkPageContent: React.FC<WorkPageProps> = ({
   pageVariants,
@@ -97,7 +130,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     return <>{caseStudyComponent}</>;
   }
 
-  const featuredProjects = [
+  const projectDetails = [
     {
       image: imgImageEthicalAiResearchTool,
       tag: "AI & Ethics",
@@ -121,9 +154,6 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       company: "Motorola",
       caseStudyId: "razr-foldable",
     },
-  ];
-
-  const additionalProjects = [
     {
       image: imgMobileParity,
       tag: "Platform Strategy",
@@ -173,6 +203,13 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
   ];
 
+  // Order comes from CASE_STUDIES, strongest first. The first row is featured.
+  const orderedProjects = CASE_STUDIES.map(
+    (c) => projectDetails.find((p) => p.caseStudyId === c.id)!,
+  ).filter(Boolean);
+  const featuredProjects = orderedProjects.slice(0, 3);
+  const additionalProjects = orderedProjects.slice(3);
+
   return (
     <motion.div
       className="bg-background marketing-grid"
@@ -193,12 +230,13 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
           </p>
         </div>
 
+        <div onKeyDown={handleGridKeys}>
         {/* Featured Projects */}
         <div className="mb-16">
           <div className="grid md:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
               <ProjectCard
-                key={index}
+                key={project.caseStudyId}
                 {...project}
                 onCaseStudyClick={onCaseStudyClick}
               />
@@ -211,12 +249,13 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
           <div className="grid md:grid-cols-3 gap-8">
             {additionalProjects.map((project, index) => (
               <ProjectCard
-                key={index}
+                key={project.caseStudyId}
                 {...project}
                 onCaseStudyClick={onCaseStudyClick}
               />
             ))}
           </div>
+        </div>
         </div>
       </div>
     </motion.div>

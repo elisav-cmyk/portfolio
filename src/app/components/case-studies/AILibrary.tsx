@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
 import { CaseStudyFooter } from "../CaseStudyFooter";
 import aiLibraryHeroImage from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
@@ -21,16 +20,6 @@ export const AILibrary: React.FC<AILibraryProps> = ({
       transition={{ duration: 0.3 }}
       className="bg-white"
     >
-      {/* Back Button */}
-      <div className="blog-grid pt-8 pb-4">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-        >
-          <ArrowLeft size={20} />
-          Back to Work
-        </button>
-      </div>
 
       {/* Hero Image - Full Width Band */}
       <div className="w-full">
