@@ -1,7 +1,7 @@
 import React from 'react';
 import heroImage from '../../../assets/jstor-research-banner.jpg';
 import dynamicSearchImage from '../../../assets/jstor-dynamic-search.jpg';
-import traceableImage from 'figma:asset/a72184f5b2b8091a17608300f53e559bab83a11c.png';
+import traceableImage from '../../../assets/jstor-traceable-answers.jpg';
 import governanceImage from '../../../assets/governance-layered.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
@@ -56,8 +56,9 @@ const data: CaseStudyData = {
     {
       after: 0,
       src: traceableImage,
-      alt: 'Research tool answer with links to the exact passages in the source text',
-      caption: 'Every answer links to the passage it came from.',
+      alt: 'An article open in JSTOR beside the research tool. The answer cites page numbers, and hovering over p. 53 shows the exact passage it came from.',
+      caption: 'Every answer cites its pages. Hovering over a citation shows the exact passage.',
+      width: 'wide',
     },
     {
       after: 3,
