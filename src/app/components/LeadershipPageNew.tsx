@@ -74,30 +74,37 @@ const career = [
   },
 ];
 
+// Grouped by strength: Strategic, Connector, Catalyst.
 const quotes = [
   {
-    tag: 'Team Empowerment',
-    text: "Elisa's best asset is giving the people who report to her the space to take leadership over our work, while still being supportive. She guides when needed and gives autonomy when wanted.",
-    source: 'Direct Report',
-    detail: 'Leadership Circle Profile assessment, 2024',
-  },
-  {
-    tag: 'Executive Translation',
-    text: 'Elisa\'s greatest leadership asset is her collaboration skills. She has the ability to work across various levels and departments. She is able to understand needs from the C-suite and translate them into actionable goals.',
-    source: 'Senior Partner/Executive',
-    detail: 'Leadership Circle Profile assessment, 2024',
-  },
-  {
-    tag: 'Strategic Clarity',
+    tag: 'Strategic',
     text: 'Her knowledge and ability to balance business and customer needs are impressive. Her rational and decision-making process is clear, there is no guesswork with her.',
     source: 'Product/Engineering Partner',
     detail: 'Linkage Institute, Advancing Women Leaders 360 Assessment, 2019',
   },
   {
-    tag: 'Cross-Functional Leadership',
+    tag: 'Connector',
+    text: "Elisa's greatest leadership asset is her collaboration skills. She has the ability to work across various levels and departments. She is able to understand needs from the C-suite and translate them into actionable goals.",
+    source: 'Senior Partner/Executive',
+    detail: 'Leadership Circle Profile assessment, 2024',
+  },
+  {
+    tag: 'Connector',
     text: "Elisa is so good at collaborating with customers and with the engineering team she is working with to achieve the best design that fulfills goals and is able to be implemented within the technical capabilities and the time constraints. She knows how to be firm when it matters and to give when it doesn't matter.",
     source: 'Product/Engineering Partner',
     detail: 'Linkage Institute, Advancing Women Leaders 360 Assessment, 2019',
+  },
+  {
+    tag: 'Catalyst',
+    text: "Elisa's super power is her ability to move ideas forward and help teams hone in on the best solution when we get stuck. She does this working iteratively and collaboratively.",
+    source: 'Peer/Partner',
+    detail: 'Leadership Circle Profile assessment, 2024',
+  },
+  {
+    tag: 'Catalyst',
+    text: "Elisa's best asset is giving the people who report to her the space to take leadership over our work, while still being supportive. She guides when needed and gives autonomy when wanted.",
+    source: 'Direct Report',
+    detail: 'Leadership Circle Profile assessment, 2024',
   },
 ];
 
@@ -310,7 +317,7 @@ export const LeadershipPageContent = () => {
               From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
             </p>
           {(() => {
-            const [feature, left, right, closing] = quotes;
+            const [feature, connectorA, connectorB, catalystA, catalystB] = quotes;
             const Tag = ({ text, dark, onAccent }: { text: string; dark?: boolean; onAccent?: boolean }) => (
               <div className={`${dark ? 'bg-white/15' : onAccent ? 'bg-white' : 'bg-secondary'} rounded-full px-3 py-1 inline-block self-start mb-4`}>
                 <span className={`font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] ${dark ? 'text-white' : 'text-secondary-foreground'}`}>
@@ -334,10 +341,10 @@ export const LeadershipPageContent = () => {
                   <Caption q={feature} />
                 </figure>
 
-                {/* Two cards side by side */}
+                {/* Connector: two cards side by side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[left, right].map((q) => (
-                    <figure key={q.tag} className="bg-white rounded-[10px] border-2 border-border p-6 flex flex-col">
+                  {[connectorA, connectorB].map((q) => (
+                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[10px] border-2 border-border p-6 flex flex-col">
                       <Tag text={q.tag} />
                       <blockquote className="font-['EB_Garamond'] text-[17px] leading-[26px] text-secondary-foreground tracking-[0.25px] mb-4 flex-1">
                         &ldquo;{q.text}&rdquo;
@@ -347,14 +354,18 @@ export const LeadershipPageContent = () => {
                   ))}
                 </div>
 
-                {/* Closing quote on a dark band */}
-                <figure className="bg-primary rounded-[10px] p-8">
-                  <Tag text={closing.tag} dark />
-                  <blockquote className="font-['EB_Garamond'] text-[20px] leading-[30px] text-white mb-4">
-                    &ldquo;{closing.text}&rdquo;
-                  </blockquote>
-                  <Caption q={closing} dark />
-                </figure>
+                {/* Catalyst: two quotes on a dark band */}
+                <div className="bg-primary rounded-[10px] p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {[catalystA, catalystB].map((q) => (
+                    <figure key={q.text.slice(0, 24)} className="flex flex-col">
+                      <Tag text={q.tag} dark />
+                      <blockquote className="font-['EB_Garamond'] text-[19px] leading-[28px] text-white mb-4 flex-1">
+                        &ldquo;{q.text}&rdquo;
+                      </blockquote>
+                      <Caption q={q} dark />
+                    </figure>
+                  ))}
+                </div>
               </div>
             );
           })()}
