@@ -269,7 +269,7 @@ export const LeadershipPageContent = () => {
             <p className={body}>
               Adjunct Faculty at Northwestern University: graduate capstone and thesis advisor in Engineering Design
               Innovation (2018–2026), and co-taught Customer-Driven Opportunities in the Master of Product Design and
-              Development Management program (2024–2025). Founding board member of the InsideOut design leader community.
+              Development Management program (2024–2025).
             </p>
           </Card>
         </div>
