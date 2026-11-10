@@ -11,8 +11,8 @@ const data: CaseStudyData = {
   },
   tag: 'Brand & Craft',
   years: '2016-2020',
-  title: 'Moto App',
-  subtitle: 'Turning a list of settings into a reason to explore your phone',
+  title: 'Teaching People What Their Phone Can Do',
+  subtitle: 'The Moto app turned a list of settings into a reason to explore',
   role: 'Design Director, then Global UX Director, Motorola Mobility',
   partners: 'Product Management, Engineering, Research, Marketing',
   context: [

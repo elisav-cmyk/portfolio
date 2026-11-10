@@ -7,7 +7,7 @@ const data: CaseStudyData = {
   hero: { src: imgMobileParity, alt: 'Designing for Mobile Parity at JSTOR', position: 'object-center' },
   tag: 'Platform Strategy',
   years: '2021-2025',
-  title: 'Designing for Mobile Parity',
+  title: 'When a Phone Is the Only Screen',
   subtitle: 'Making JSTOR work for people who only have a phone',
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, Visual Resources Association library leads',

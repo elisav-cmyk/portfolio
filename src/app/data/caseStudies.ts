@@ -9,15 +9,15 @@ export interface CaseStudyMeta {
 }
 
 export const CASE_STUDIES: CaseStudyMeta[] = [
-  { id: "ethical-ai", title: "Ethical AI Research Tool", company: "JSTOR" },
-  { id: "grubhub-direct", title: "Grubhub Direct", company: "Grubhub" },
-  { id: "razr-foldable", title: "Android RAZR Foldable", company: "Motorola" },
-  { id: "mobile-parity", title: "Designing for Mobile Parity", company: "JSTOR" },
-  { id: "ai-library", title: "AI-Assisted Library Transformation", company: "JSTOR" },
-  { id: "camera-redesign", title: "Camera Redesign", company: "Motorola" },
-  { id: "one-platform", title: "One Platform Integration", company: "JSTOR" },
-  { id: "ecosystem-infrastructure", title: "Ecosystem & Design Infrastructure", company: "JSTOR" },
-  { id: "moto-app", title: "Moto App", company: "Motorola" },
+  { id: "ethical-ai", title: "AI That Shows Its Sources", company: "JSTOR" },
+  { id: "grubhub-direct", title: "Giving Restaurants Their Customers Back", company: "Grubhub" },
+  { id: "razr-foldable", title: "Bringing Back the RAZR", company: "Motorola" },
+  { id: "mobile-parity", title: "When a Phone Is the Only Screen", company: "JSTOR" },
+  { id: "ai-library", title: "Unlocking Hidden Archives", company: "JSTOR" },
+  { id: "camera-redesign", title: "Starting the Camera Over", company: "Motorola" },
+  { id: "one-platform", title: "Moving Artstor Without Losing Faculty", company: "JSTOR" },
+  { id: "ecosystem-infrastructure", title: "Quality That Outlasts Any Project", company: "JSTOR" },
+  { id: "moto-app", title: "Teaching People What Their Phone Can Do", company: "Motorola" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;

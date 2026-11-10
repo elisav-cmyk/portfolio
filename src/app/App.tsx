@@ -651,7 +651,7 @@ const PortfolioWireframes = () => {
           >
             {[
               {
-                title: "Ethical AI Research Tool",
+                title: "AI That Shows Its Sources",
                 subtitle: "Building Trust in AI",
                 metric: "~11,400 institutions",
                 company: "JSTOR",
@@ -659,8 +659,8 @@ const PortfolioWireframes = () => {
                 image: researchCardImage,
               },
               {
-                title: "Grubhub Direct",
-                subtitle: "Helping local restaurants own their orders",
+                title: "Giving Restaurants Their Customers Back",
+                subtitle: "Grubhub Direct, commission-free ordering",
                 metric: "Nearly 20x orders with Google Business Profile",
                 company: "Grubhub",
                 id: "grubhub-direct",
@@ -669,7 +669,7 @@ const PortfolioWireframes = () => {
                 position: "object-top",
               },
               {
-                title: "Android RAZR Foldable",
+                title: "Bringing Back the RAZR",
                 subtitle: "Pushing small-screen UX forward",
                 metric: "Hardware + software leadership",
                 company: "Motorola",

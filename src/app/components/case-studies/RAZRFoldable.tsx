@@ -8,7 +8,7 @@ const data: CaseStudyData = {
   hero: { src: razrHeroImage, alt: 'Android RAZR Foldable' },
   tag: 'Hardware/Software',
   years: '2016-2020',
-  title: 'Android RAZR Foldable',
+  title: 'Bringing Back the RAZR',
   subtitle: 'Reimagining an icon for the age of smartphones',
   role: 'Director, São Paulo Design Studio, then Global UX Director, Motorola Mobility',
   partners: 'Industrial Design, Research, Engineering (HW/SW), Product Management (HW/SW), Marketing',

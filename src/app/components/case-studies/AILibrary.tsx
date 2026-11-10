@@ -10,8 +10,8 @@ const data: CaseStudyData = {
   },
   tag: 'AI Strategy',
   years: '2022-Present',
-  title: 'AI-Assisted Library Transformation',
-  subtitle: 'Helping archives describe collections in hours, not weeks',
+  title: 'Unlocking Hidden Archives',
+  subtitle: 'JSTOR Seeklight helps archives describe collections in hours, not weeks',
   role: 'Product Design Director, JSTOR',
   partners: 'Product Management, Engineering, Research, Outreach, Legal, Insights, Portico',
   context: [
