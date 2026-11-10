@@ -18,7 +18,7 @@ const data: CaseStudyData = {
     {
       title: 'Kept the design system alive',
       paragraphs: [
-        'When the core team behind Pharos, JSTOR\'s design system, was dissolved, I joined its cross-functional guild (the "Pharos Wickies") and became its executive champion. I made the case for modern tooling: a component library documented in Storybook, distributed as an npm package and checked by visual regression testing in Chromatic. More recently, I\'ve championed Figma Code Connect and MCP servers to turn design tokens into production code automatically.',
+        'When the core team behind Pharos, JSTOR\'s design system, was dissolved, I joined its cross-functional guild (the "Pharos Wickies") and became its executive champion. I help shape its federated stewardship model, clarifying ownership, contribution pathways and collaboration between design and engineering. I advocate for shared workflows grounded in Storybook, Figma Dev Mode and MCP to help teams evolve consistent components across applications.',
       ],
     },
     {
