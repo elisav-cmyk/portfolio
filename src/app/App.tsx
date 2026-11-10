@@ -38,7 +38,7 @@ import { OnePlatform } from "./components/case-studies/OnePlatform";
 import { AILibrary } from "./components/case-studies/AILibrary";
 import { GrubhubDirect } from "./components/case-studies/GrubhubDirect";
 import { EcosystemInfrastructure } from "./components/case-studies/EcosystemInfrastructure";
-import { TeachingServiceDesign } from "./components/case-studies/TeachingServiceDesign";
+import { MotoApp } from "./components/case-studies/MotoApp";
 import { MobileParity } from "./components/case-studies/MobileParity";
 import { CameraRedesign } from "./components/case-studies/CameraRedesign";
 import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
@@ -966,7 +966,7 @@ const PortfolioWireframes = () => {
         "ai-library": AILibrary,
         "grubhub-direct": GrubhubDirect,
         "ecosystem-infrastructure": EcosystemInfrastructure,
-        "teaching-service-design": TeachingServiceDesign,
+        "moto-app": MotoApp,
         "mobile-parity": MobileParity,
         "camera-redesign": CameraRedesign,
       };

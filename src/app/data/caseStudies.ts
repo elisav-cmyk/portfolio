@@ -17,7 +17,7 @@ export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "camera-redesign", title: "Camera Redesign", company: "Motorola" },
   { id: "one-platform", title: "One Platform Integration", company: "JSTOR" },
   { id: "ecosystem-infrastructure", title: "Ecosystem & Design Infrastructure", company: "JSTOR" },
-  { id: "teaching-service-design", title: "Educating the Next Generation", company: "Northwestern University" },
+  { id: "moto-app", title: "Moto App", company: "Motorola" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;
