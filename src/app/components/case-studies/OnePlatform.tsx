@@ -25,7 +25,7 @@ const data: CaseStudyData = {
     {
       title: 'Protected how faculty teach',
       paragraphs: [
-        "The team rebuilt Artstor's image groups as JSTOR Workspace folders, so faculty kept the image collections they had built. In April 2024 they launched Personal Uploads, so faculty could combine their own images with licensed ones in one place.",
+        "The team rebuilt Artstor's image groups as JSTOR Workspace folders, so faculty kept the image collections they had built. In April 2024 they launched Personal Uploads, so faculty could combine their own images with licensed ones in one place. They also designed the tools for teaching from a folder: comparing up to four images side by side, presenting in class, and exporting a folder as a handout or slideshow.",
       ],
     },
     {
@@ -39,6 +39,7 @@ const data: CaseStudyData = {
     'Audio and video support went live in December 2023.',
     "The integration was completed in June 2024, ahead of Artstor's August 1 retirement date.",
     'In 2024, the first full year on JSTOR, Artstor use rose about 35%, from about 2.22 million to 3 million uses.',
+    "In October 2026, School Library Journal's review called the Workspace features \u201cpowerful ways to collect, organize, present and share images.\u201d",
   ],
   why: ['My job here was to trust my leads, stay close, and move fast when they hit a wall. They delivered early.'],
   videos: [
