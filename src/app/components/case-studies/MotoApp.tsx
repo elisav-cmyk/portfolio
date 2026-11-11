@@ -15,36 +15,13 @@ const data: CaseStudyData = {
   subtitle: "The Moto app: from a list of settings to a reason to explore",
   role: 'Design Director, then Global UX Director, Motorola Mobility',
   partners: 'Product Management, Engineering, Research, Marketing',
-  context: [
-    'Motorola phones ran a mostly "pure" version of Android, so people rarely noticed the features unique to Moto phones, or understood what those features could do for them. The Moto app, where those features lived, was mostly a collection of settings.',
-    'Yet the features that people did find became daily habits: Moto Display, which let them screen notifications at a glance without getting pulled into their phone; chopping twice to turn on the flashlight; and twisting the wrist to open the camera. The challenge was helping more people discover them.',
-  ],
+  glance: "Led the redesign of the Moto app from a list of settings into an editorial app that helped 23M+ active users discover features like Moto Display.",
+  context: ["Motorola phones ran a mostly \"pure\" version of Android, so people rarely noticed the features unique to Moto phones. Yet the ones people found became daily habits: Moto Display, which let them screen notifications at a glance without getting pulled into their phone; chopping twice to turn on the flashlight; and twisting the wrist to open the camera. The Moto app, where those features lived, was mostly a collection of settings."],
   moves: [
-    {
-      title: 'Set the vision',
-      paragraphs: [
-        'I drove the vision of the Moto app as an educational, brand-building app, which meant coordinating across several product management and software teams. The redesign, launched on the Moto G7, turned a list of settings into a visual, editorial-style app with quick tips and tutorials for the features that mattered most.',
-      ],
-    },
-    {
-      title: 'Gave writing a bigger role',
-      paragraphs: [
-        "I encouraged my copywriter to take a larger role in setting the app's direction: defining the content strategy and a roadmap for new categories, such as Tips and Personalize, which gave people more reasons to come back and explore their phones.",
-      ],
-    },
-    {
-      title: 'Built a shared illustration system',
-      paragraphs: [
-        "My creative lead and a senior designer in Chicago created a mix-and-match library of illustrated people, objects and settings, so designers in any studio could build new illustrations quickly. It raised the look of the Moto app and gave Motorola's experiences a more consistent feel.",
-      ],
-    },
-    {
-      title: 'Made animation work everywhere',
-      paragraphs: [
-        "My visual designers wanted to use Lottie animations, but earlier attempts had run into technical conflicts. I set up a proof of concept with developers in Brazil, personally drove security approval with the legal team, and negotiated Lottie's integration into Motorola's framework so it could be used in core features, not just apps.",
-        "Moving from video files to Lottie's lightweight animation files fixed problems with different screen shapes and display colors, and saved significant space, even after dark mode was added.",
-      ],
-    },
+    { title: "Set the vision", paragraphs: ["I drove the vision of the Moto app as an educational, brand-building app, coordinating several product management and software teams. The redesign, launched on the Moto G7, turned a list of settings into quick tips and tutorials for the features that mattered most."] },
+    { title: "Gave writing a bigger role", paragraphs: ["I encouraged my copywriter to set the content strategy and a roadmap for new categories, such as Tips and Personalize, which gave people more reasons to come back and explore their phones."] },
+    { title: "Built a shared illustration system", paragraphs: ["My creative lead and a senior designer in Chicago created a mix-and-match illustration library, so designers in any studio could build new illustrations quickly."] },
+    { title: "Made animation work everywhere", paragraphs: ["Earlier attempts to use Lottie animations had run into technical conflicts. I set up a proof of concept with developers in Brazil, drove security approval with legal, and negotiated Lottie's integration into Motorola's framework, which fixed problems with different screen shapes and saved significant space."] },
   ],
   results: [
     "Two 2019 Brazil Design Awards: People's Choice and Application Design.",

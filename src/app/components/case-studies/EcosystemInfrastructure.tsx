@@ -11,6 +11,7 @@ const data: CaseStudyData = {
   subtitle: "Pharos, One Admin and accessibility across JSTOR",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Design, Engineering, Product Management',
+  glance: "Kept JSTOR's design system going as its executive champion, built an accessibility program that cut errors 98%, and guided one admin experience in place of several.",
   context: [
     "JSTOR's products had grown apart. Teams built with different components, institutions managed their accounts through several separate admin tools, and accessibility varied from page to page. For a platform serving institutions in 194 countries, that meant slower launches, more inconsistency, and a real risk of shutting people out.",
   ],
