@@ -8,7 +8,7 @@ const data: CaseStudyData = {
     src: aiLibraryHeroImage,
     alt: 'Library archival stacks showing the scale of physical materials waiting to be described and digitized',
   },
-  tag: 'AI Strategy',
+  tag: 'AI Tools',
   years: '2022-Present',
   title: 'Unlocking Hidden Archives',
   subtitle: "JSTOR Seeklight: describing archives in hours, not weeks",

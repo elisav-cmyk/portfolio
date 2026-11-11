@@ -65,28 +65,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Tag and Year */}
       <div className="flex items-center justify-between">
         <div className="bg-secondary px-3 py-1 rounded-full">
-          <span className="font-['Spline_Sans'] font-medium text-[0.6875rem] leading-[1rem] tracking-[0.03125rem] text-secondary-foreground">
+          <span className="font-body font-medium text-[0.6875rem] leading-[1rem] tracking-[0.03125rem] text-secondary-foreground">
             {tag}
           </span>
         </div>
-        <span className="font-['Spline_Sans'] text-[0.75rem] leading-[1rem] text-muted-foreground">
+        <span className="font-body text-[0.75rem] leading-[1rem] text-muted-foreground">
           {year}
         </span>
       </div>
 
       {/* Title */}
-      <h2 className="font-['Spline_Sans'] text-[1.375rem] leading-[2rem] font-medium text-foreground">
+      <h2 className="font-body text-[1.375rem] leading-[2rem] font-medium text-foreground">
         {title}
       </h2>
 
       {/* Company */}
-      <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
+      <p className="font-body text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
         {company}
       </p>
 
       {/* View Case Study Link */}
       <div className="flex items-center justify-between w-full group">
-        <span className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-primary group-hover:underline">
+        <span className="font-body text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-primary group-hover:underline">
           View Case Study
         </span>
         <ChevronRight className="text-primary" size={16} aria-hidden="true" />
@@ -135,14 +135,14 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
   const projectDetails = [
     {
       image: imgImageEthicalAiResearchTool,
-      tag: "AI Ethics",
+      tag: "AI Search",
       year: "2023-2026", title: "AI That Shows Its Sources",
       company: "The JSTOR Research Tool: ask, discover and validate every answer",
       caseStudyId: "ethical-ai",
     },
     {
       image: imgImageAILibrary,
-      tag: "AI Strategy",
+      tag: "AI Tools",
       year: "2022-Present",
       title: "Unlocking Hidden Archives",
       company: "JSTOR Seeklight: describing archives in hours, not weeks",
@@ -150,7 +150,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgImageAndroidRazrFoldable,
-      tag: "Hardware/Software",
+      tag: "Devices",
       year: "2016-2020",
       title: "Bringing Back the RAZR",
       company: "The Android RAZR: reimagining an icon for the smartphone age",
@@ -158,7 +158,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgMobileParity,
-      tag: "Platform Strategy",
+      tag: "Mobile",
       year: "2021-2025",
       title: "Research on the Go",
       company: "JSTOR on phones, as someone's main screen or a second one",
@@ -175,7 +175,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgImageOnePlatformIntegration,
-      tag: "Platform Integration",
+      tag: "Platform",
       year: "2023-2024",
       title: "Integrating Artstor into JSTOR",
       company: "Moving faculty's teaching workflows without losing them",
@@ -183,7 +183,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgCameraIntro,
-      tag: "Hardware/Software",
+      tag: "Camera",
       year: "2019-2020",
       title: "Starting the Camera Over",
       company: "Motorola's Camera app, rebuilt so it could grow",
@@ -191,14 +191,14 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     },
     {
       image: imgMotoCard,
-      tag: "Brand & Craft",
+      tag: "Devices",
       year: "2016-2020", title: "Turning Hidden Features into Daily Habits",
       company: "The Moto app: from a list of settings to a reason to explore",
       caseStudyId: "moto-app",
     },
     {
       image: imgImageGrubhubDirect,
-      tag: "Product Design Leadership",
+      tag: "Local Commerce",
       year: "2020-2021",
       title: "Restaurants Own Their Orders",
       company: "Grubhub Direct: commission-free ordering for local restaurants",
@@ -226,11 +226,11 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       <div className="py-16">
         {/* Header */}
         <div className="mb-12 max-w-[75ch]">
-          <h1 className="mb-2 font-['EB_Garamond'] text-[2rem] leading-[2.5rem] text-foreground">
+          <h1 className="mb-2 font-heading text-[2rem] leading-[2.5rem] text-foreground">
             WORK
           </h1>
-          <p className="font-['Spline_Sans'] text-[1.25rem] leading-[1.75rem] text-muted-foreground">
-            Selected case studies showcasing leadership in product design, team building, and strategic innovation
+          <p className="font-body text-[1.25rem] leading-[1.75rem] text-muted-foreground">
+            Nine projects across JSTOR, Grubhub and Motorola. Each opens with one line on what my team did and what changed.
           </p>
         </div>
 

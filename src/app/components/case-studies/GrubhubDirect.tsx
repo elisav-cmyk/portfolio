@@ -15,7 +15,7 @@ const data: CaseStudyData = {
     alt: 'Grubhub Direct dashboard showing restaurant analytics for La Cocina, including total sales, orders and average order size',
     position: 'object-top',
   },
-  tag: 'Product Design Leadership',
+  tag: 'Local Commerce',
   years: '2020-2021',
   title: 'Restaurants Own Their Orders',
   subtitle: "Grubhub Direct: commission-free ordering for local restaurants",

@@ -6,7 +6,7 @@ import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 const data: CaseStudyData = {
   id: 'razr-foldable',
   hero: { src: razrHeroImage, alt: 'Android RAZR Foldable' },
-  tag: 'Hardware/Software',
+  tag: 'Devices',
   years: '2016-2020',
   title: 'Bringing Back the RAZR',
   subtitle: "The Android RAZR: reimagining an icon for the smartphone age",

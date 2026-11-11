@@ -11,8 +11,8 @@ export const LEADERSHIP_SECTIONS = [
 
 const card =
   "bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8";
-const body = "font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground";
-const cardTitle = "font-['Spline_Sans'] text-[16px] leading-[24px] font-medium text-foreground mb-3";
+const body = "font-body text-[16px] leading-[24px] text-foreground";
+const cardTitle = "font-body text-[16px] leading-[24px] font-medium text-foreground mb-3";
 
 const Section: React.FC<{ id: string; title: string; intro?: string; last?: boolean; children: React.ReactNode }> = ({
   id,
@@ -24,7 +24,7 @@ const Section: React.FC<{ id: string; title: string; intro?: string; last?: bool
   <section id={id} className="bg-accent w-full scroll-mt-24">
     <div className={`marketing-grid pt-12 lg:pt-16 ${last ? 'pb-12 lg:pb-16' : 'pb-0'}`}>
       <div className="max-w-[75ch] mx-auto">
-        <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-8">{title}</h2>
+        <h2 className="font-heading text-[32px] leading-[40px] text-foreground mb-8">{title}</h2>
         {intro && <p className={`${body} mb-8`}>{intro}</p>}
         {children}
       </div>
@@ -113,7 +113,7 @@ export const LeadershipPageContent = () => {
       <section className="bg-accent w-full">
         <div className="marketing-grid pt-12 lg:pt-16 pb-0">
           <div className="max-w-[75ch] mx-auto">
-            <h1 className="font-['EB_Garamond'] text-foreground text-[40px] leading-[44px] tracking-[-0.8px] mb-12">LEADERSHIP</h1>
+            <h1 className="font-heading text-foreground text-[40px] leading-[44px] tracking-[-0.8px] mb-12">LEADERSHIP</h1>
 
             <div className="bg-white rounded-[10px] p-8">
               <p className={`${body} mb-4`}>
@@ -132,7 +132,7 @@ export const LeadershipPageContent = () => {
                   <a
                     key={s.id}
                     href={`#${s.id}`}
-                    className="font-['Spline_Sans'] text-[16px] leading-[24px] text-primary hover:underline"
+                    className="font-body text-[16px] leading-[24px] text-primary hover:underline"
                   >
                     → {s.label}
                   </a>
@@ -148,10 +148,10 @@ export const LeadershipPageContent = () => {
           {career.map((c) => (
             <li key={c.role} className={card}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-2">
-                <h3 className="font-['Spline_Sans'] text-[16px] leading-[24px] font-medium text-foreground">
+                <h3 className="font-body text-[16px] leading-[24px] font-medium text-foreground">
                   {c.role}, {c.org}
                 </h3>
-                <span className="font-['Spline_Sans'] text-[14px] leading-[20px] text-muted-foreground">{c.years}</span>
+                <span className="font-body text-[14px] leading-[20px] text-muted-foreground">{c.years}</span>
               </div>
               <p className={body}>{c.text}</p>
             </li>
@@ -166,10 +166,10 @@ export const LeadershipPageContent = () => {
       >
         <div className="space-y-6">
           <div className="bg-primary rounded-[10px] p-8">
-            <h3 className="font-['Spline_Sans'] text-[16px] leading-[24px] font-medium text-white mb-3">
+            <h3 className="font-body text-[16px] leading-[24px] font-medium text-white mb-3">
               Strategic Subtraction: the &quot;One Nav&quot; Decision
             </h3>
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-white">
+            <p className="font-body text-[16px] leading-[24px] text-white">
               When Android 10 introduced native gestures that competed with our own navigation, I brought my lead
               designer into the negotiations with the Android team. We ran a trade-off analysis, retired our popular
               feature for ecosystem compatibility, moved the effort to the RAZR launch, and shared our gesture research
@@ -229,24 +229,24 @@ export const LeadershipPageContent = () => {
       <section id="partners-say" className="bg-accent w-full scroll-mt-24">
         <div className="marketing-grid pt-12 lg:pt-16 pb-12 lg:pb-16">
           <div className="max-w-[75ch] mx-auto">
-            <h2 className="font-['EB_Garamond'] text-[32px] leading-[40px] text-foreground mb-4">WHAT PARTNERS SAY</h2>
-            <p className="font-['Spline_Sans'] text-[16px] leading-[24px] text-foreground mb-1">
+            <h2 className="font-heading text-[32px] leading-[40px] text-foreground mb-4">WHAT PARTNERS SAY</h2>
+            <p className="font-body text-[16px] leading-[24px] text-foreground mb-1">
               What direct reports, peers and managers say when I don&apos;t know who&apos;s speaking.
             </p>
-            <p className="font-['Spline_Sans'] text-[14px] leading-[20px] italic text-muted-foreground mb-8">
+            <p className="font-body text-[14px] leading-[20px] italic text-muted-foreground mb-8">
               From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
             </p>
           {(() => {
             const [feature, connectorA, connectorB, catalystA, catalystB] = quotes;
             const Tag = ({ text, dark, onAccent }: { text: string; dark?: boolean; onAccent?: boolean }) => (
               <div className={`${dark ? 'bg-white/15' : onAccent ? 'bg-white' : 'bg-secondary'} rounded-full px-3 py-1 inline-block self-start mb-4`}>
-                <span className={`font-['Spline_Sans'] text-[11px] leading-[16.5px] tracking-[0.5px] ${dark ? 'text-white' : 'text-secondary-foreground'}`}>
+                <span className={`font-body text-[11px] leading-[16.5px] tracking-[0.5px] ${dark ? 'text-white' : 'text-secondary-foreground'}`}>
                   {text}
                 </span>
               </div>
             );
             const Caption = ({ q, dark }: { q: typeof quotes[number]; dark?: boolean }) => (
-              <figcaption className={`font-['Spline_Sans'] text-[14px] leading-[20px] tracking-[0.25px] ${dark ? 'text-white/85' : 'text-secondary-foreground'}`}>
+              <figcaption className={`font-body text-[14px] leading-[20px] tracking-[0.25px] ${dark ? 'text-white/85' : 'text-secondary-foreground'}`}>
                 <strong>{q.source}</strong>, {q.detail}
               </figcaption>
             );
@@ -255,7 +255,7 @@ export const LeadershipPageContent = () => {
                 {/* Featured pull quote: large type, no card */}
                 <figure className="border-l-4 border-primary pl-6 py-2">
                   <Tag text={feature.tag} onAccent />
-                  <blockquote className="font-['EB_Garamond'] text-[24px] leading-[34px] sm:text-[28px] sm:leading-[38px] text-foreground mb-4">
+                  <blockquote className="font-heading text-[24px] leading-[34px] sm:text-[28px] sm:leading-[38px] text-foreground mb-4">
                     &ldquo;{feature.text}&rdquo;
                   </blockquote>
                   <Caption q={feature} />
@@ -266,7 +266,7 @@ export const LeadershipPageContent = () => {
                   {[connectorA, connectorB].map((q) => (
                     <figure key={q.text.slice(0, 24)} className="bg-white rounded-[10px] border-2 border-border p-6 flex flex-col">
                       <Tag text={q.tag} />
-                      <blockquote className="font-['EB_Garamond'] text-[17px] leading-[26px] text-secondary-foreground tracking-[0.25px] mb-4 flex-1">
+                      <blockquote className="font-heading text-[17px] leading-[26px] text-secondary-foreground tracking-[0.25px] mb-4 flex-1">
                         &ldquo;{q.text}&rdquo;
                       </blockquote>
                       <Caption q={q} />
@@ -279,7 +279,7 @@ export const LeadershipPageContent = () => {
                   {[catalystA, catalystB].map((q) => (
                     <figure key={q.text.slice(0, 24)} className="on-dark bg-primary rounded-[10px] border-2 border-primary p-6 flex flex-col">
                       <Tag text={q.tag} dark />
-                      <blockquote className="font-['EB_Garamond'] text-[17px] leading-[26px] text-white tracking-[0.25px] mb-4 flex-1">
+                      <blockquote className="font-heading text-[17px] leading-[26px] text-white tracking-[0.25px] mb-4 flex-1">
                         &ldquo;{q.text}&rdquo;
                       </blockquote>
                       <Caption q={q} dark />

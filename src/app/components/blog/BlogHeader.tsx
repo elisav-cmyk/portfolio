@@ -43,7 +43,7 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({
     <header className={`flex flex-col gap-[var(--stack-base)] blog-grid ${className}`}>
       {/* Title - Blog/H1 */}
       {typeof title === 'string' ? (
-        <h1 className="font-['EB_Garamond'] text-[2.5rem] leading-[3rem] text-[#1b1c15]">
+        <h1 className="font-heading text-[2.5rem] leading-[3rem] text-[#1b1c15]">
           {title}
         </h1>
       ) : (
@@ -53,7 +53,7 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({
       {/* Subtitle */}
       {subtitle && (
         typeof subtitle === 'string' ? (
-          <p className="font-['Spline_Sans'] text-[1.25rem] leading-[1.75rem] text-[#4a5565]">
+          <p className="font-body text-[1.25rem] leading-[1.75rem] text-[#4a5565]">
             {subtitle}
           </p>
         ) : (

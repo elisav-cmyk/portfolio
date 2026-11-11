@@ -39,7 +39,7 @@ export const BlogList: React.FC<BlogListProps> = ({
 
   return (
     <ListTag 
-      className={`flex flex-col gap-[var(--space-8)] ${listClass} font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-[#1b1c15] ${className}`}
+      className={`flex flex-col gap-[var(--space-8)] ${listClass} font-body text-[1rem] leading-[1.5rem] text-[#1b1c15] ${className}`}
       style={{
         fontVariantNumeric: type === 'ordered' ? 'oldstyle-nums' : 'normal',
       }}

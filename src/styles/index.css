@@ -28,7 +28,7 @@
   background: var(--primary);
   color: #fff;
   border-radius: 10px;
-  font-family: 'Spline Sans', sans-serif;
+  font-family: var(--font-body);
 }
 .skip-link:focus {
   top: 1rem;

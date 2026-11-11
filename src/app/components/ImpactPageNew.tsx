@@ -71,7 +71,7 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 }) => (
   <h2
     id={id}
-    className="mb-8 pb-2 border-b-2 border-white font-['EB_Garamond'] text-[1.75rem] leading-[2.25rem] text-white"
+    className="mb-8 pb-2 border-b-2 border-white font-heading text-[1.75rem] leading-[2.25rem] text-white"
   >
     {children}
   </h2>
@@ -80,16 +80,16 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 const StatCard: React.FC<Stat & { large?: boolean }> = ({ value, label, detail, large }) => (
   <div className="bg-secondary border-2 border-border rounded-[10px] p-6 text-center flex flex-col gap-2">
     <div
-      className={`font-['EB_Garamond'] text-secondary-foreground ${
+      className={`font-heading text-secondary-foreground ${
         large ? "text-[2.8125rem] leading-[3.25rem]" : "text-[2.25rem] leading-[2.75rem]"
       }`}
     >
       {value}
     </div>
-    <div className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-muted-foreground">
+    <div className="font-body text-[1rem] leading-[1.5rem] text-muted-foreground">
       {label}
     </div>
-    <div className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-foreground">
+    <div className="font-body text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-foreground">
       {detail}
     </div>
   </div>
@@ -110,10 +110,10 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
       <div className="marketing-grid py-16">
         <div className="max-w-[75ch] mx-auto">
           <div className="mb-12">
-            <h1 className="mb-4 font-['EB_Garamond'] text-[2rem] leading-[2.5rem] text-white">
+            <h1 className="mb-4 font-heading text-[2rem] leading-[2.5rem] text-white">
               IMPACT
             </h1>
-            <p className="font-['Spline_Sans'] text-[1.25rem] leading-[1.75rem] text-white">
+            <p className="font-body text-[1.25rem] leading-[1.75rem] text-white">
               Results from AI search, local commerce, mobile platforms and the teams behind them
             </p>
           </div>
@@ -141,10 +141,10 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
             <div className="grid md:grid-cols-2 gap-6">
               {recognition.map((r) => (
                 <div key={r.title} className="bg-white rounded-[10px] p-6">
-                  <h3 className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-primary mb-2">
+                  <h3 className="font-body text-[1rem] leading-[1.5rem] text-primary mb-2">
                     {r.title}
                   </h3>
-                  <p className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
+                  <p className="font-body text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
                     {r.text}
                   </p>
                 </div>

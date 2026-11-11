@@ -36,7 +36,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
       {/* Section Heading - Blog/H2 */}
       {heading && (
         typeof heading === 'string' ? (
-          <h2 className="font-['EB_Garamond'] text-[1.5rem] leading-[2rem] text-[#1b1c15]">
+          <h2 className="font-heading text-[1.5rem] leading-[2rem] text-[#1b1c15]">
             {heading}
           </h2>
         ) : (

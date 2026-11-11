@@ -62,7 +62,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     >
       {/* Title - Blog/H2 */}
       {typeof title === 'string' ? (
-        <h2 className="font-['EB_Garamond'] text-[1.5rem] leading-[2rem] text-[#1b1c15]">
+        <h2 className="font-heading text-[1.5rem] leading-[2rem] text-[#1b1c15]">
           {title}
         </h2>
       ) : (
@@ -72,7 +72,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
       {/* Body - Blog/Body */}
       {body && (
         typeof body === 'string' ? (
-          <p className="font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-[#1b1c15]">
+          <p className="font-body text-[1rem] leading-[1.5rem] text-[#1b1c15]">
             {body}
           </p>
         ) : (

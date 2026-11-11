@@ -1,9 +1,14 @@
 @custom-variant dark (&:is(.dark *));
 
+/* Font tokens. Change a family here and it updates everywhere.
+   Tailwind turns these into the font-heading and font-body classes,
+   and plain CSS can use var(--font-heading) and var(--font-body). */
+@theme {
+  --font-heading: 'EB Garamond', Georgia, serif;
+  --font-body: 'Spline Sans', system-ui, sans-serif;
+}
+
 :root {
-  /* Typography Fonts */
-  --font-heading: 'EB Garamond', serif;
-  --font-body: 'Spline Sans', sans-serif;
   
   /* Typography Scale - Desktop (Major Third 1.250) & Mobile (Major Second 1.125) */
   /* Using clamp() for fluid typography between mobile and desktop */

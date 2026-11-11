@@ -5,7 +5,7 @@ import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 const data: CaseStudyData = {
   id: 'mobile-parity',
   hero: { src: imgMobileParity, alt: 'Designing for Mobile Parity at JSTOR', position: 'object-center' },
-  tag: 'Platform Strategy',
+  tag: 'Mobile',
   years: '2021-2025',
   title: 'Research on the Go',
   subtitle: "JSTOR on phones, as someone's main screen or a second one",

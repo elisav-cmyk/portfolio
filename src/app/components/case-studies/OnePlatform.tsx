@@ -5,7 +5,7 @@ import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 const data: CaseStudyData = {
   id: 'one-platform',
   hero: { src: onePlatformImage, alt: 'JSTOR platform integration' },
-  tag: 'Platform Integration',
+  tag: 'Platform',
   years: '2023-2024',
   title: 'Integrating Artstor into JSTOR',
   subtitle: "Moving faculty's teaching workflows without losing them",
