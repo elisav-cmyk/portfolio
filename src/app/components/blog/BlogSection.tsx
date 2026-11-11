@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 
 export interface BlogSectionProps {
@@ -36,7 +39,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
       {/* Section Heading - Blog/H2 */}
       {heading && (
         typeof heading === 'string' ? (
-          <h2 className="font-heading text-[1.5rem] leading-[2rem] text-[#1b1c15]">
+          <h2 className="font-heading text-foreground text-h2">
             {heading}
           </h2>
         ) : (

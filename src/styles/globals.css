@@ -40,22 +40,23 @@
 
 :root {
   
-  /* Typography Scale - Desktop (Major Third 1.250) & Mobile (Major Second 1.125) */
-  /* Using clamp() for fluid typography between mobile and desktop */
-  --text-display-lg: clamp(2.5rem, 2rem + 3.5vmin, 4rem); /* 40px → 64px */
-  --text-display-md: clamp(2.25rem, 1.875rem + 2.6vmin, 3rem); /* 36px → 48px */
-  --text-display-sm: clamp(2rem, 1.75rem + 1.75vmin, 2.5rem); /* 32px → 40px */
-  --text-headline-lg: clamp(1.75rem, 1.625rem + 0.875vmin, 2rem); /* 28px → 32px */
-  --text-headline-md: 1.5rem; /* 24px - same for both */
-  --text-body-lg: clamp(1.125rem, 1.0625rem + 0.4375vmin, 1.25rem); /* 18px → 20px */
-  --text-body-md: 1rem; /* 16px - same for both */
-  --text-label-md: 0.875rem; /* 14px - same for both */
-  --text-label-sm: 0.75rem; /* 12px - same for both */
+  /* Legacy type scale from Figma Make. Each name now points at a token in
+     the @theme block above, so older styles and the blog components match
+     the site. Use the text-* tokens in new work. */
+  --text-display-lg: var(--text-display); /* legacy name: use text-display */
+  --text-display-md: var(--text-stat); /* legacy name: use text-stat */
+  --text-display-sm: var(--text-display); /* legacy name: use text-display */
+  --text-headline-lg: var(--text-h2); /* legacy name: use text-h2 */
+  --text-headline-md: var(--text-h3); /* legacy name: use text-h3 */
+  --text-body-lg: var(--text-lead); /* legacy name: use text-lead */
+  --text-body-md: var(--text-body); /* legacy name: use text-body */
+  --text-label-md: var(--text-small); /* legacy name: use text-small */
+  --text-label-sm: var(--text-label); /* legacy name: use text-label */
   
   /* Line Heights aligned to 4pt grid */
   --leading-display: 1.1; /* 110% for display sizes */
   --leading-headline: 1.25; /* 125% for headlines */
-  --leading-body: 1.5; /* 150% for body text */
+  --leading-body: 1.625; /* matches text-body */
   --leading-label: 1.4; /* 140% for labels/buttons */
   
   /* Letter Spacing */
@@ -294,7 +295,7 @@
     /* Display Medium - Page titles */
     h2 {
       font-family: var(--font-heading);
-      font-size: var(--text-display-md);
+      font-size: var(--text-h2);
       font-weight: var(--font-weight-normal);
       line-height: var(--leading-display);
       letter-spacing: var(--tracking-tight);
@@ -303,7 +304,7 @@
     /* Headline Large - Section headers */
     h3 {
       font-family: var(--font-heading);
-      font-size: var(--text-headline-lg);
+      font-size: var(--text-h3);
       font-weight: var(--font-weight-normal);
       line-height: var(--leading-headline);
       letter-spacing: var(--tracking-normal);
@@ -312,7 +313,7 @@
     /* Headline Medium - Sub-sections (minimum size for EB Garamond) */
     h4 {
       font-family: var(--font-heading);
-      font-size: var(--text-headline-md);
+      font-size: var(--text-title);
       font-weight: var(--font-weight-medium);
       line-height: var(--leading-headline);
       letter-spacing: var(--tracking-normal);
@@ -395,7 +396,7 @@
     /* Blockquotes - Use EB Garamond for elegant quotes */
     blockquote {
       font-family: var(--font-heading);
-      font-size: var(--text-headline-md);
+      font-size: var(--text-quote);
       font-weight: var(--font-weight-normal);
       line-height: var(--leading-headline);
       font-style: italic;
@@ -457,25 +458,25 @@ html {
 
 /* Marketing/Hero H1 - Big hero headlines */
 .marketing-hero-h1 {
-  font-family: var(--font-body);
-  font-size: clamp(3rem, 2rem + 5vw, 4.5rem); /* 48px → 72px */
-  line-height: 1.1;
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  line-height: var(--text-display--line-height);
   letter-spacing: 0;
 }
 
 /* Marketing/H2 */
 .marketing-h2 {
-  font-family: var(--font-body);
-  font-size: clamp(2rem, 1.5rem + 2.5vw, 2.5rem); /* 32px → 40px */
-  line-height: 1.2;
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--text-h2--line-height);
   letter-spacing: 0;
 }
 
 /* Marketing/Body - Marketing page supporting copy */
 .marketing-body {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 0.875rem + 0.625vw, 1.125rem); /* 16px → 18px */
-  line-height: 1.5;
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
   letter-spacing: 0;
 }
 
@@ -483,25 +484,25 @@ html {
 
 /* Blog/H1 */
 .blog-h1 {
-  font-family: var(--font-body);
-  font-size: 2rem; /* 32px */
-  line-height: 1.3;
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  line-height: var(--text-display--line-height);
   letter-spacing: 0;
 }
 
 /* Blog/H2 */
 .blog-h2 {
-  font-family: var(--font-body);
-  font-size: 1.5rem; /* 24px */
-  line-height: 1.3;
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--text-h2--line-height);
   letter-spacing: 0;
 }
 
 /* Blog/Body - With oldstyle numerals for better data density */
 .blog-body {
   font-family: var(--font-body);
-  font-size: 1rem; /* 16px */
-  line-height: 1.5;
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
   letter-spacing: 0;
   font-variant-numeric: oldstyle-nums;
 }
@@ -509,8 +510,8 @@ html {
 /* Blog/Meta - With oldstyle numerals */
 .blog-meta {
   font-family: var(--font-body);
-  font-size: clamp(0.875rem, 0.8125rem + 0.3125vw, 1rem); /* 14px → 16px */
-  line-height: 1.45;
+  font-size: var(--text-small);
+  line-height: var(--text-small--line-height);
   letter-spacing: 0;
   font-variant-numeric: oldstyle-nums;
 }

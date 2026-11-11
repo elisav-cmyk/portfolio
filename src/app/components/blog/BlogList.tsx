@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 
 export interface BlogListProps {
@@ -39,7 +42,7 @@ export const BlogList: React.FC<BlogListProps> = ({
 
   return (
     <ListTag 
-      className={`flex flex-col gap-[var(--space-8)] ${listClass} font-body text-[1rem] leading-[1.5rem] text-[#1b1c15] ${className}`}
+      className={`flex flex-col gap-[var(--space-8)] ${listClass} font-body text-foreground ${className} text-body`}
       style={{
         fontVariantNumeric: type === 'ordered' ? 'oldstyle-nums' : 'normal',
       }}

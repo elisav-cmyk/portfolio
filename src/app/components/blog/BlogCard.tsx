@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 import { BlogMetaRow } from './BlogMetaRow';
 
@@ -62,7 +65,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     >
       {/* Title - Blog/H2 */}
       {typeof title === 'string' ? (
-        <h2 className="font-heading text-[1.5rem] leading-[2rem] text-[#1b1c15]">
+        <h2 className="font-heading text-foreground text-h3">
           {title}
         </h2>
       ) : (
@@ -72,7 +75,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
       {/* Body - Blog/Body */}
       {body && (
         typeof body === 'string' ? (
-          <p className="font-body text-[1rem] leading-[1.5rem] text-[#1b1c15]">
+          <p className="font-body text-foreground text-body">
             {body}
           </p>
         ) : (
