@@ -1,5 +1,9 @@
 import React from 'react';
 import cameraIntroImage from 'figma:asset/camera-intro.png';
+import cameraResearch from '../../../assets/camera-research-zoom.jpg';
+import cameraFinal from '../../../assets/camera-final.jpg';
+import cameraPanel from '../../../assets/camera-panel.jpg';
+import cameraTip from '../../../assets/camera-tip.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
@@ -20,6 +24,24 @@ const data: CaseStudyData = {
     { title: "Coached the coach", paragraphs: ["Two of the designers were new, so I paired them with a UX mentor I was coaching to become a design manager. She led an audit that sorted every camera feature by how often people used it, and the team updated its design principles to test every decision."] },
     { title: "Rethought how the camera talks to people", paragraphs: ["An audit found Motorola phones were saying too much. People received about 60 notifications a day and dismissed 80 to 85% of feature-discovery notifications. The camera app alone used seven ways to show a message, so the team matched each message to one clear pattern."] },
     { title: "Let research settle the debates", paragraphs: ["When testing didn't settle taps versus swipes, I drew on my own years as a researcher and encouraged them to support both. In the final design, you can swipe along the bottom to change modes, or tap a mode to switch."] },
+  ],
+  figures: [
+    {
+      after: 1,
+      src: cameraResearch,
+      alt: 'Research summary: a lens toggle at the bottom of the viewfinder, shown at 1x and while dragging to 1.4x zoom, with notes from testing',
+      caption: 'From the research summary: people found both zoom controls easily, tapping to switch lenses and holding and dragging for finer control.',
+      width: 'wide',
+    },
+    {
+      after: 4,
+      caption: 'The final design: the viewfinder with modes along the bottom, the mode panel, and a tip that appears only for a feature you haven\'t tried.',
+      gallery: [
+        { src: cameraFinal, alt: 'The redesigned camera with Photo and Video modes and a shutter button along the bottom' },
+        { src: cameraPanel, alt: 'The camera mode panel listing photo and video modes as icons' },
+        { src: cameraTip, alt: 'A Change cameras tip card explaining how to switch back to the standard camera' },
+      ],
+    },
   ],
   results: ["Only the essentials stay on screen. Controls moved to a panel you open with one swipe up from the bottom, so you can reach them with one hand.", "Photo and Video are the only modes shown by default. You can drag others into the carousel to build your own set.", "Short animated tips introduce a feature only after a delay, and only if you haven't tried it. Designers on other Motorola apps adopted the pattern.", "The design principles gave product marketing a shared way to describe what improved, from development to launch."],
   why: ["What I'm most proud of is that the designers took the analysis to heart and checked every round of feedback against the principles they set. Seeing their patterns show up in other apps was a bonus."],
