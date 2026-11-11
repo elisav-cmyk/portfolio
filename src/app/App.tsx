@@ -429,10 +429,10 @@ const PortfolioWireframes = () => {
                   : "none",
               }}
             >
-              <div className="font-heading text-[clamp(1.5rem,1.5rem,1.5rem)] font-normal leading-[32px] tracking-normal text-foreground">
-                ELISA VARGAS
+              <div className="font-heading font-normal text-foreground text-h3 uppercase tracking-caps">
+                Elisa Vargas
               </div>
-              <div className="font-body text-[0.875rem] font-medium leading-[20px] tracking-[0.1px] text-muted-foreground">
+              <div className="font-body font-medium text-muted-foreground text-small">
                 Director, Product Design
               </div>
             </motion.div>
@@ -446,7 +446,7 @@ const PortfolioWireframes = () => {
                 href={pathFor(page.id, null)}
                 aria-current={activePage === page.id ? "page" : undefined}
                 onClick={(e) => goToPage(e, page.id)}
-                className={`font-body text-[1rem] font-medium leading-[24px] tracking-[0.15px] transition-colors ${
+                className={`font-body text-body font-medium transition-colors ${
                   activePage === page.id
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
@@ -463,7 +463,7 @@ const PortfolioWireframes = () => {
               href="https://linkedin.com/in/elisavargas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-2 font-body text-[0.875rem] font-medium leading-[20px] tracking-[0.1px] border-2 border-border rounded-[10px] hover:bg-muted transition-colors"
+              className="flex items-center gap-2 px-3 py-2 font-body font-medium border-2 border-border rounded-[10px] hover:bg-muted transition-colors text-small"
             >
               <LinkedinFilled size={16} />
               LinkedIn
@@ -542,13 +542,13 @@ const PortfolioWireframes = () => {
       >
         <div className="marketing-grid py-12 sm:py-16 lg:py-20 text-center">
           <div className="max-w-[75ch] mx-auto">
-            <h1 className="mb-4 font-heading text-[clamp(2rem,1.75rem+1.75vmin,2.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-foreground">
-              ELISA VARGAS
+            <h1 className="mb-4 font-heading font-normal text-foreground text-display uppercase tracking-caps">
+              Elisa Vargas
             </h1>
-            <p className="font-body text-[1.25rem] leading-[1.6] tracking-normal text-foreground mb-4">
+            <p className="font-body text-foreground mb-4 text-lead">
               Design leader for AI search and products people use in the real world.
             </p>
-            <p className="font-body text-[1rem] leading-[1.6] tracking-normal text-foreground mb-4 max-w-[60ch] mx-auto">
+            <p className="font-body text-foreground mb-4 max-w-[60ch] mx-auto text-body">
               I <a
                 href={caseStudyPath("ethical-ai")}
                 className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
@@ -581,7 +581,7 @@ const PortfolioWireframes = () => {
                 get stalled work moving
               </a>.
             </p>
-            <p className="font-body text-[1rem] font-medium leading-[1.5] tracking-normal text-muted-foreground mb-8">
+            <p className="font-body font-medium text-muted-foreground mb-8 text-body">
               Director, Product Design, JSTOR (ITHAKA)
               <br />
               Previously: Grubhub · Global UX Director, Motorola
@@ -617,7 +617,7 @@ const PortfolioWireframes = () => {
                   variants={itemVariants}
                   className="flex flex-col gap-1"
                 >
-                  <div className="font-heading text-4xl lg:text-[45px] leading-tight text-primary">
+                  <div className="font-heading text-stat text-primary">
                     {stat.value}
                   </div>
                   <div className="text-sm font-medium text-primary tracking-wide">
@@ -678,12 +678,12 @@ const PortfolioWireframes = () => {
       <div className="bg-surface-variant">
         <div className="marketing-grid py-16">
           <motion.h2
-            className="text-center mb-12 font-heading text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground"
+            className="text-center mb-12 font-heading font-normal text-foreground text-h2 uppercase tracking-caps"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            SIGNATURE WORK
+            Signature Work
           </motion.h2>
           <motion.div
             className="grid md:grid-cols-3 gap-8"
@@ -768,8 +768,8 @@ const PortfolioWireframes = () => {
       {/* Impact Highlight */}
       <div className="on-dark bg-primary border-t-2 border-ring border-b-2 border-ring">
         <div className="marketing-grid py-16 text-center">
-          <h2 className="mb-12 text-white font-heading text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal">
-            RESULTS
+          <h2 className="mb-12 text-white font-heading font-normal text-h2 uppercase tracking-caps">
+            Results
           </h2>
           {/* Outcomes my teams drove, each explained in a case study or on Leadership */}
           <div className="grid md:grid-cols-3 gap-12">
@@ -791,13 +791,13 @@ const PortfolioWireframes = () => {
               },
             ].map((r) => (
               <div key={r.label} className="flex flex-col gap-2 items-center">
-                <p className="font-heading text-[clamp(2.5rem,2rem+3.5vmin,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white mb-2">
+                <p className="font-heading font-normal text-white mb-2 text-stat">
                   {r.value}
                 </p>
-                <p className="font-body text-[1rem] font-normal leading-[1.5] tracking-normal text-primary-foreground">
+                <p className="font-body font-normal text-primary-foreground text-body">
                   {r.label}
                 </p>
-                <p className="font-body text-[0.875rem] font-normal leading-[1.4] tracking-[0.01em] text-white mt-2">
+                <p className="font-body font-normal text-white mt-2 text-small">
                   {r.detail}
                 </p>
               </div>
@@ -806,7 +806,7 @@ const PortfolioWireframes = () => {
           <motion.a
             href={pathFor("impact", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "impact")}
-            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[10px] font-body text-[0.875rem] font-medium leading-[1.4] tracking-[0.01em] text-primary hover:bg-white/90"
+            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[10px] font-body font-medium text-primary hover:bg-white/90 text-small"
             style={{
               boxShadow:
                 "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
@@ -827,8 +827,8 @@ const PortfolioWireframes = () => {
       {/* Leadership Teaser */}
       <div className="bg-surface-variant">
         <div className="marketing-grid py-16">
-          <h2 className="text-center mb-8 font-heading text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
-            HOW I LEAD
+          <h2 className="text-center mb-8 font-heading font-normal text-foreground text-h2 uppercase tracking-caps">
+            How I Lead
           </h2>
           <div
             className="bg-white rounded-[10px] p-8 mb-8 max-w-[75ch] mx-auto"
@@ -838,7 +838,7 @@ const PortfolioWireframes = () => {
             }}
           >
             <div className="mb-6">
-              <span className="font-body text-[16px] leading-[24px] text-foreground">
+              <span className="font-body text-foreground text-body">
                 How I hire, grow and run design teams, and what
                 partners say about working with me.
               </span>
@@ -849,7 +849,7 @@ const PortfolioWireframes = () => {
                 <a
                   key={section.id}
                   href={`/leadership#${section.id}`}
-                  className="font-body text-[16px] leading-[24px] text-primary hover:underline cursor-pointer"
+                  className="font-body text-primary hover:underline cursor-pointer text-body"
                   onClick={(e) => {
                     if (!isPlainClick(e)) return;
                     e.preventDefault();
@@ -882,8 +882,8 @@ const PortfolioWireframes = () => {
 
       {/* What I'm Looking For */}
       <div className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-center mb-8 font-heading text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
-          WHAT I&apos;M LOOKING FOR
+        <h2 className="text-center mb-8 font-heading font-normal text-foreground text-h2 uppercase tracking-caps">
+          What I&rsquo;m Looking For
         </h2>
         <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
           <div className="text-foreground leading-relaxed max-w-3xl mx-auto">
@@ -895,8 +895,8 @@ const PortfolioWireframes = () => {
       {/* Testimonials */}
       <div className="bg-secondary border-t-2 border-secondary">
         <div className="max-w-5xl mx-auto px-6 py-16">
-          <h2 className="text-center mb-12 font-heading text-[clamp(1.75rem,1.625rem+0.875vmin,2rem)] font-normal leading-[1.25] tracking-normal text-foreground">
-            WHAT PARTNERS SAY
+          <h2 className="text-center mb-12 font-heading font-normal text-foreground text-h2 uppercase tracking-caps">
+            What Partners Say
           </h2>
           {/* One Strategic and one Catalyst quote; Leadership shows all five. */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -909,18 +909,18 @@ const PortfolioWireframes = () => {
             >
               <div className="flex items-start">
                 <div className="bg-secondary px-3 py-1 rounded-full">
-                  <p className="font-body text-[11px] font-medium leading-[16px] tracking-[0.5px] text-secondary-foreground">
+                  <p className="font-body font-medium text-secondary-foreground text-label">
                     Strategic
                   </p>
                 </div>
               </div>
               <div>
-                <p className="font-heading text-[1rem] font-normal italic leading-[26px] text-muted-foreground">
-                  "Her knowledge and ability to balance business and customer needs are impressive. Her rational and decision-making process is clear, there is no guesswork with her."
+                <p className="font-heading font-normal italic text-muted-foreground text-quote">
+                  &ldquo;Her knowledge and ability to balance business and customer needs are impressive. Her rational and decision-making process is clear, there is no guesswork with her.&rdquo;
                 </p>
               </div>
               <div>
-                <p className="font-body text-[0.875rem] font-normal leading-[20px] tracking-[0.25px] text-muted-foreground">
+                <p className="font-body font-normal text-muted-foreground text-small">
                   — Product/Engineering Partner, Linkage Institute, Advancing Women Leaders 360 Assessment, 2019
                 </p>
               </div>
@@ -934,18 +934,18 @@ const PortfolioWireframes = () => {
             >
               <div className="flex items-start">
                 <div className="bg-secondary px-3 py-1 rounded-full">
-                  <p className="font-body text-[11px] font-medium leading-[16px] tracking-[0.5px] text-secondary-foreground">
+                  <p className="font-body font-medium text-secondary-foreground text-label">
                     Catalyst
                   </p>
                 </div>
               </div>
               <div>
-                <p className="font-heading text-[1rem] font-normal italic leading-[26px] text-muted-foreground">
-                  "Elisa&apos;s super power is her ability to move ideas forward and help teams hone in on the best solution when we get stuck. She does this working iteratively and collaboratively."
+                <p className="font-heading font-normal italic text-muted-foreground text-quote">
+                  &ldquo;Elisa&rsquo;s super power is her ability to move ideas forward and help teams hone in on the best solution when we get stuck. She does this working iteratively and collaboratively.&rdquo;
                 </p>
               </div>
               <div>
-                <p className="font-body text-[0.875rem] font-normal leading-[20px] tracking-[0.25px] text-muted-foreground">
+                <p className="font-body font-normal text-muted-foreground text-small">
                   — Peer/Partner, Leadership Circle Profile assessment, 2024
                 </p>
               </div>
@@ -959,7 +959,7 @@ const PortfolioWireframes = () => {
                 e.preventDefault();
                 navigateToLeadershipSection("partners-say");
               }}
-              className="inline-block bg-white px-7 py-3 rounded-[10px] font-body text-[0.875rem] font-medium leading-[20px] tracking-[0.1px] text-foreground hover:bg-gray-50 cursor-pointer"
+              className="inline-block bg-white px-7 py-3 rounded-[10px] font-body font-medium text-foreground hover:bg-gray-50 cursor-pointer text-small"
               style={{
                 boxShadow:
                   "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",

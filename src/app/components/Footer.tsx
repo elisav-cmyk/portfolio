@@ -34,11 +34,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                 <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
                   <div className="content-stretch flex flex-col gap-[6px] items-start relative shrink-0 w-full md:w-[284px]">
                     <div className="h-[24px] relative shrink-0 w-full">
-                      <p className="absolute font-heading font-normal leading-[32px] left-0 text-text-dark text-[24px] text-nowrap top-0 whitespace-pre">
-                        ELISA VARGAS
+                      <p className="absolute font-heading font-normal left-0 text-text-dark text-nowrap top-0 whitespace-pre text-h3 uppercase tracking-caps">
+                        Elisa Vargas
                       </p>
                     </div>
-                    <div className="content-stretch flex flex-col font-body font-normal gap-[6px] items-start leading-[20px] relative shrink-0 text-primary text-[14px] tracking-[0.25px] w-full">
+                    <div className="content-stretch flex flex-col font-body font-normal gap-[6px] items-start relative shrink-0 text-primary w-full text-small">
                       <p className="h-[24px] relative shrink-0 w-full text-foreground">Director, Product Design</p>
                       <p className="relative shrink-0 w-full text-foreground">Adjunct Faculty, Northwestern University</p>
                     </div>
@@ -54,9 +54,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <button
                     type="button"
                     onClick={handleScrollToTop}
-                    className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
-                    <p className="font-body font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                    <p className="font-body font-normal relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                       Back to the top
                     </p>
                     <div className="h-[23px] relative shrink-0 w-[24px]">
@@ -72,9 +72,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/"
                     onClick={(e) => handleNavigation(e, 'home')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
-                    <p className="font-body font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                    <p className="font-body font-semibold relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                       Home
                     </p>
                   </a>
@@ -83,9 +83,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/work"
                     onClick={(e) => handleNavigation(e, 'work')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
-                    <p className="font-body font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                    <p className="font-body font-semibold relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                       Work
                     </p>
                   </a>
@@ -94,9 +94,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/leadership"
                     onClick={(e) => handleNavigation(e, 'leadership')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
-                    <p className="font-body font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                    <p className="font-body font-semibold relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                       Leadership
                     </p>
                   </a>
@@ -105,9 +105,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/impact"
                     onClick={(e) => handleNavigation(e, 'impact')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
-                    <p className="font-body font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                    <p className="font-body font-semibold relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                       Impact
                     </p>
                   </a>
@@ -117,7 +117,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                 <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0">
                   {/* Connect Header */}
                   <div className="content-stretch flex items-start relative shrink-0">
-                    <p className="font-body font-semibold leading-[20px] relative shrink-0 text-text-dark text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                    <p className="font-body font-semibold relative shrink-0 text-text-dark text-nowrap whitespace-pre text-small">
                       Connect
                     </p>
                   </div>
@@ -126,9 +126,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                     {/* Email */}
                     <a
                       href="mailto:elisa.vargas@gmail.com"
-                      className="content-stretch flex gap-[10px] items-center relative shrink-0 hover:opacity-70 transition-opacity"
+                      className="content-stretch flex gap-[10px] items-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity"
                     >
-                      <p className="font-body font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                      <p className="font-body font-normal relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                         Email
                       </p>
                       <div className="relative shrink-0 size-[20px]">
@@ -145,9 +145,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                       href="https://linkedin.com/in/elisavargas/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="content-stretch flex gap-[10px] items-center relative shrink-0 hover:opacity-70 transition-opacity"
+                      className="content-stretch flex gap-[10px] items-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity"
                     >
-                      <p className="font-body font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                      <p className="font-body font-normal relative shrink-0 text-primary text-nowrap whitespace-pre text-small">
                         LinkedIn
                       </p>
                       <div className="relative shrink-0 size-[20px]">
@@ -161,7 +161,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
 
                     {/* Location */}
                     <div className="content-stretch flex items-start relative shrink-0">
-                      <p className="font-body font-normal leading-[20px] relative shrink-0 text-text-dark text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
+                      <p className="font-body font-normal relative shrink-0 text-text-dark text-nowrap whitespace-pre text-small">
                         Chicago, Illinois
                       </p>
                     </div>
@@ -173,7 +173,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
             {/* Copyright */}
             <div className="content-stretch flex items-center justify-center pb-0 pt-[9px] px-0 relative shrink-0 w-full max-w-[976px]">
               <div aria-hidden="true" className="absolute border-border border-[1px_0px_0px] border-solid inset-0 pointer-events-none" />
-              <p className="font-body font-medium leading-[16px] relative shrink-0 text-text-dark text-[12px] text-center tracking-[0.5px] w-fit whitespace-nowrap">
+              <p className="font-body font-medium relative shrink-0 text-text-dark text-center w-fit whitespace-nowrap text-label">
                 © {new Date().getFullYear()} Elisa Vargas
               </p>
             </div>

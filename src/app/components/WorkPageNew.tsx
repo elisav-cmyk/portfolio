@@ -65,28 +65,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Tag and Year */}
       <div className="flex items-center justify-between">
         <div className="bg-secondary px-3 py-1 rounded-full">
-          <span className="font-body font-medium text-[0.6875rem] leading-[1rem] tracking-[0.03125rem] text-secondary-foreground">
+          <span className="font-body font-medium text-secondary-foreground text-label">
             {tag}
           </span>
         </div>
-        <span className="font-body text-[0.75rem] leading-[1rem] text-muted-foreground">
+        <span className="font-body text-muted-foreground text-label">
           {year}
         </span>
       </div>
 
       {/* Title */}
-      <h2 className="font-body text-[1.375rem] leading-[2rem] font-medium text-foreground">
+      <h2 className="font-body font-medium text-foreground text-title">
         {title}
       </h2>
 
       {/* Company */}
-      <p className="font-body text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-muted-foreground">
+      <p className="font-body text-muted-foreground text-small">
         {company}
       </p>
 
       {/* View Case Study Link */}
       <div className="flex items-center justify-between w-full group">
-        <span className="font-body text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-primary group-hover:underline">
+        <span className="font-body text-primary group-hover:underline text-small">
           View Case Study
         </span>
         <ChevronRight className="text-primary" size={16} aria-hidden="true" />
@@ -226,17 +226,17 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       <div className="py-16">
         {/* Header */}
         <div className="mb-12 max-w-[75ch]">
-          <h1 className="mb-2 font-heading text-[2rem] leading-[2.5rem] text-foreground">
-            WORK
+          <h1 className="mb-2 font-heading text-foreground text-display uppercase tracking-caps">
+            Work
           </h1>
-          <p className="font-body text-[1.25rem] leading-[1.75rem] text-muted-foreground">
+          <p className="font-body text-muted-foreground text-lead">
             Nine projects across JSTOR, Grubhub and Motorola. Each opens with one line on what my team did and what changed.
           </p>
         </div>
 
         <div onKeyDown={handleGridKeys}>
         {/* Featured Projects */}
-        <div className="mb-16">
+        <div className="mb-8">
           <div className="grid md:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
               <ProjectCard

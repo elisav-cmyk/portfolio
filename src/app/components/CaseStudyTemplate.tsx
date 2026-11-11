@@ -51,44 +51,44 @@ export const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 {tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="bg-[#546524] text-white font-body text-[11px] leading-[16.5px] tracking-[0.5px] px-3 py-1 rounded-full"
+                    className="bg-[#546524] text-white font-body px-3 py-1 rounded-full text-label"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
             )}
-            <h1 className="font-heading text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15]">
+            <h1 className="font-heading text-[#1b1c15] text-display">
               {title}
             </h1>
-            <h2 className="font-heading text-[32px] leading-[40px] text-[#1b1c15]">
+            <h2 className="font-heading text-[#1b1c15] text-h2">
               {subtitle}
             </h2>
           </div>
 
           {/* Context & Business Challenge */}
           <div className="flex flex-col gap-[24px]">
-            <h2 className="font-heading text-[32px] leading-[40px] text-[#1b1c15]">
+            <h2 className="font-heading text-[#1b1c15] text-h2">
               {context.title}
             </h2>
-            <div className="font-body text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+            <div className="font-body text-[#1b1c15] text-body">
               {context.content}
             </div>
           </div>
 
           {/* Design Leadership & Approach */}
           <div className="flex flex-col gap-[24px]">
-            <h2 className="font-heading text-[32px] leading-[40px] text-[#1b1c15]">
+            <h2 className="font-heading text-[#1b1c15] text-h2">
               {leadership.title}
             </h2>
             
             <div className="flex flex-col gap-[24px]">
               {leadership.sections.map((section, index) => (
                 <div key={index} className="flex flex-col gap-[12px]">
-                  <h3 className="font-heading text-[24px] leading-[32px] text-[#1b1c15]">
+                  <h3 className="font-heading text-[#1b1c15] text-h3">
                     {section.heading}
                   </h3>
-                  <div className="font-body text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+                  <div className="font-body text-[#1b1c15] text-body">
                     {section.content}
                   </div>
                 </div>
@@ -98,10 +98,10 @@ export const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
 
           {/* Outcomes & Impact */}
           <div className="flex flex-col gap-[18px]">
-            <h2 className="font-heading text-[32px] leading-[40px] text-[#1b1c15]">
+            <h2 className="font-heading text-[#1b1c15] text-h2">
               {outcomes.title}
             </h2>
-            <div className="font-body text-[16px] leading-[24px] tracking-[0.5px] text-[#1b1c15]">
+            <div className="font-body text-[#1b1c15] text-body">
               {outcomes.content}
             </div>
           </div>

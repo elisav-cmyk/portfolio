@@ -38,7 +38,7 @@ export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, on
       className="sticky z-40 bg-white/95 backdrop-blur border-b-2 border-border"
       style={{ top }}
     >
-      <div className="blog-grid py-3 flex items-center justify-between gap-6 font-body text-[0.875rem] leading-[1.25rem]">
+      <div className="blog-grid py-3 flex items-center justify-between gap-6 font-body text-small">
         <a href={caseStudyPath(previous.id)} onClick={go(previous.id)} className={linkClass}>
           <ChevronLeft size={18} className="shrink-0" aria-hidden="true" />
           <span className="text-muted-foreground shrink-0">Previous</span>

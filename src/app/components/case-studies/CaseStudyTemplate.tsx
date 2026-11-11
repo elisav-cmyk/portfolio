@@ -46,8 +46,8 @@ export interface CaseStudyData {
   videos?: { src: string; title: string; caption?: string }[];
 }
 
-const body = "font-body text-[16px] leading-[26px] tracking-[0.25px] text-[#1b1c15]";
-const h2 = "font-heading text-[32px] leading-[40px] text-[#1b1c15]";
+const body = "font-body text-[#1b1c15] text-body";
+const h2 = "font-heading text-[#1b1c15] text-h2";
 
 const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
   if (figure.gallery) {
@@ -68,7 +68,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
           ))}
         </div>
         {figure.caption && (
-          <figcaption className="font-body text-[14px] leading-[20px] text-muted-foreground mt-2">
+          <figcaption className="font-body text-muted-foreground mt-2 text-small">
             {figure.caption}
           </figcaption>
         )}
@@ -85,7 +85,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
       />
       {figure.caption && (
         <figcaption
-          className={`font-body text-[14px] leading-[20px] text-muted-foreground mt-2 ${wide ? 'text-center' : ''}`}
+          className={`font-body text-muted-foreground mt-2 ${wide ? 'text-center' : ''} text-small`}
         >
           {figure.caption}
         </figcaption>
@@ -120,20 +120,20 @@ export const CaseStudyTemplate: React.FC<{
       <div className="w-full bg-secondary">
         <div className="blog-grid py-12 sm:py-16">
           <div className="flex items-center gap-3 mb-6">
-            <span className="bg-primary text-primary-foreground font-body text-[11px] leading-[16.5px] tracking-[0.5px] px-3 py-1 rounded-full">
+            <span className="bg-primary text-primary-foreground font-body px-3 py-1 rounded-full text-label">
               {data.tag}
             </span>
-            <span className="font-body text-[11px] leading-[16.5px] tracking-[0.5px] text-[#1b1c15]">
+            <span className="font-body text-[#1b1c15] text-label">
               {data.years}
             </span>
           </div>
-          <h1 className="font-heading text-[40px] leading-[44px] tracking-[-0.8px] text-[#1b1c15] mb-4">
+          <h1 className="font-heading text-[#1b1c15] mb-4 text-display">
             {data.title}
           </h1>
-          <p className="font-heading text-[26px] leading-[34px] sm:text-[32px] sm:leading-[40px] text-[#1b1c15] mb-8">
+          <p className="font-heading text-[#1b1c15] mb-8 text-h3">
             {data.subtitle}
           </p>
-          <dl className="space-y-2 font-body text-[16px] leading-[24px] tracking-[0.25px] text-[#1b1c15]">
+          <dl className="space-y-2 font-body text-[#1b1c15] text-body">
             {[{ label: 'Role', value: data.role }, { label: 'Work Partners', value: data.partners }, ...(data.extra || [])].map(
               (row) => (
                 <div key={row.label}>
@@ -144,8 +144,8 @@ export const CaseStudyTemplate: React.FC<{
             )}
           </dl>
           {data.glance && (
-            <p className="mt-8 bg-white rounded-[10px] border-l-4 border-primary px-6 py-4 font-body text-[18px] leading-[28px] text-[#1b1c15]">
-              <strong className="block text-[12px] leading-[16px] tracking-[0.5px] uppercase text-primary mb-1">At a glance</strong>
+            <p className="mt-8 bg-white rounded-[10px] border-l-4 border-primary px-6 py-4 font-body text-[#1b1c15] text-lead">
+              <strong className="block uppercase text-primary mb-1 text-label">At a glance</strong>
               {data.glance}
             </p>
           )}
@@ -168,7 +168,7 @@ export const CaseStudyTemplate: React.FC<{
             <React.Fragment key={move.title}>
               <section className={`blog-grid flex flex-col gap-3 ${i > 0 ? '-mt-6' : ''}`}>
                 {i === 0 && <h2 className={`${h2} mb-3`}>{data.movesHeading || 'What we did'}</h2>}
-                <h3 className="font-heading text-[24px] leading-[32px] text-[#1b1c15]">{move.title}</h3>
+                <h3 className="font-heading text-[#1b1c15] text-h3">{move.title}</h3>
                 {move.paragraphs.map((p, k) => (
                   <p key={k} className={body}>
                     {p}
@@ -195,13 +195,13 @@ export const CaseStudyTemplate: React.FC<{
 
           <section className="blog-grid">
             <div className="bg-accent border-l-4 border-primary rounded-[10px] p-6 sm:p-8">
-              <h2 className="font-body text-[14px] leading-[20px] tracking-[0.5px] uppercase text-primary mb-3">
+              <h2 className="font-body uppercase text-primary mb-3 text-small">
                 Why it mattered to me
               </h2>
               {data.why.map((p, i) => (
                 <p
                   key={i}
-                  className="font-heading text-[22px] leading-[32px] text-[#1b1c15] mb-2 last:mb-0"
+                  className="font-heading text-[#1b1c15] mb-2 last:mb-0 text-h3"
                 >
                   {p}
                 </p>
@@ -222,7 +222,7 @@ export const CaseStudyTemplate: React.FC<{
                 />
               </div>
               {v.caption && (
-                <figcaption className="font-body text-[14px] leading-[20px] text-muted-foreground mt-2">
+                <figcaption className="font-body text-muted-foreground mt-2 text-small">
                   {v.caption}
                 </figcaption>
               )}
