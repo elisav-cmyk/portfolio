@@ -71,7 +71,7 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 }) => (
   <h2
     id={id}
-    className="mb-8 pb-2 border-b-2 border-white font-heading text-[1.75rem] leading-[2.25rem] text-white"
+    className="mb-8 pb-2 border-b-2 border-white font-heading text-white text-h2 uppercase tracking-caps"
   >
     {children}
   </h2>
@@ -80,16 +80,14 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 const StatCard: React.FC<Stat & { large?: boolean }> = ({ value, label, detail, large }) => (
   <div className="bg-secondary border-2 border-border rounded-[10px] p-6 text-center flex flex-col gap-2">
     <div
-      className={`font-heading text-secondary-foreground ${
-        large ? "text-[2.8125rem] leading-[3.25rem]" : "text-[2.25rem] leading-[2.75rem]"
-      }`}
+      className="font-heading text-secondary-foreground text-stat"
     >
       {value}
     </div>
-    <div className="font-body text-[1rem] leading-[1.5rem] text-muted-foreground">
+    <div className="font-body text-muted-foreground text-body">
       {label}
     </div>
-    <div className="font-body text-[0.875rem] leading-[1.25rem] tracking-[0.015625rem] text-foreground">
+    <div className="font-body text-foreground text-small">
       {detail}
     </div>
   </div>
@@ -110,16 +108,16 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
       <div className="marketing-grid py-16">
         <div className="max-w-[75ch] mx-auto">
           <div className="mb-12">
-            <h1 className="mb-4 font-heading text-[2rem] leading-[2.5rem] text-white">
-              IMPACT
+            <h1 className="mb-4 font-heading text-white text-display uppercase tracking-caps">
+              Impact
             </h1>
-            <p className="font-body text-[1.25rem] leading-[1.75rem] text-white">
+            <p className="font-body text-white text-lead">
               Results from AI search, local commerce, mobile platforms and the teams behind them
             </p>
           </div>
 
           <section className="mb-12">
-            <SectionHeading id="results">BUSINESS RESULTS</SectionHeading>
+            <SectionHeading id="results">Business Results</SectionHeading>
             <div className="grid sm:grid-cols-2 gap-6">
               {results.map((s) => (
                 <StatCard key={s.label} {...s} large />
@@ -128,7 +126,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
           </section>
 
           <section className="mb-12">
-            <SectionHeading id="by-the-numbers">BY THE NUMBERS</SectionHeading>
+            <SectionHeading id="by-the-numbers">By the Numbers</SectionHeading>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {numbers.map((s) => (
                 <StatCard key={s.label} {...s} />
@@ -137,14 +135,14 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
           </section>
 
           <section>
-            <SectionHeading id="industry-recognition">RECOGNITION</SectionHeading>
+            <SectionHeading id="industry-recognition">Recognition</SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               {recognition.map((r) => (
                 <div key={r.title} className="bg-white rounded-[10px] p-6">
-                  <h3 className="font-body text-[1rem] leading-[1.5rem] text-primary mb-2">
+                  <h3 className="font-body text-primary mb-2 text-body">
                     {r.title}
                   </h3>
-                  <p className="font-body text-[0.875rem] leading-[1.25rem] text-secondary-foreground">
+                  <p className="font-body text-secondary-foreground text-small">
                     {r.text}
                   </p>
                 </div>

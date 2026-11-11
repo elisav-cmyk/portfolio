@@ -6,6 +6,36 @@
 @theme {
   --font-heading: 'EB Garamond', Georgia, serif;
   --font-body: 'Spline Sans', system-ui, sans-serif;
+
+  /* Type scale. Each token sets size and line height together.
+     Tailwind turns them into text-display, text-stat and so on.
+     Sizes with clamp() grow from phone to desktop. */
+  --text-display: clamp(2rem, 1.6rem + 1.6vw, 2.5rem);          /* 32 → 40 px: page titles, your name */
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.01em;
+  --text-stat: clamp(2.25rem, 1.8rem + 1.8vw, 3rem);            /* 36 → 48 px: all big numbers */
+  --text-stat--line-height: 1.1;
+  --text-h2: clamp(1.75rem, 1.6rem + 0.6vw, 2rem);              /* 28 → 32 px: section titles */
+  --text-h2--line-height: 1.25;
+  --text-h3: 1.5rem;                                            /* 24 px: serif card and move titles */
+  --text-h3--line-height: 1.33;
+  --text-quote-lg: clamp(1.5rem, 1.3rem + 0.8vw, 1.75rem);      /* 24 → 28 px: featured quote */
+  --text-quote-lg--line-height: 1.4;
+  --text-quote: clamp(1.1875rem, 1.15rem + 0.15vw, 1.25rem);    /* 19 → 20 px: testimonials */
+  --text-quote--line-height: 1.5;
+  --text-title: 1.25rem;                                        /* 20 px: sans card titles */
+  --text-title--line-height: 1.4;
+  --text-lead: clamp(1.125rem, 1.07rem + 0.25vw, 1.25rem);      /* 18 → 20 px: intros, At a glance */
+  --text-lead--line-height: 1.5;
+  --text-body: 1rem;                                            /* 16 px: paragraphs */
+  --text-body--line-height: 1.625;
+  --text-small: 0.875rem;                                       /* 14 px: captions, credits, nav */
+  --text-small--line-height: 1.43;
+  --text-label: 0.8125rem;                                      /* 13 px: tags, years, labels */
+  --text-label--line-height: 1.38;
+
+  /* Letter spacing for headings set in capitals */
+  --tracking-caps: 0.02em;
 }
 
 :root {
