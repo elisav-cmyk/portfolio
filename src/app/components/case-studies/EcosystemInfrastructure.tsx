@@ -26,6 +26,7 @@ const data: CaseStudyData = {
       title: 'Built accessibility into the work',
       paragraphs: [
         'I hired an accessibility lead in 2021 and gave him room to build a program of automated checks, manual audits and early reviews with designers, so problems were caught before they shipped instead of after.',
+        'The team also designed an Alt text button on JSTOR images that generates AI-written alt text. School Library Journal reported in 2026 that it meets WCAG 2.0 Level A and AA.',
       ],
     },
     {
