@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 
 export interface BlogImageProps {
@@ -57,7 +60,7 @@ export const BlogImage: React.FC<BlogImageProps> = ({
         />
         
         {caption && (
-          <figcaption className="blog-grid font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282] text-center">
+          <figcaption className="blog-grid font-body text-muted-foreground text-center text-small">
             {caption}
           </figcaption>
         )}
@@ -81,7 +84,7 @@ export const BlogImage: React.FC<BlogImageProps> = ({
       />
       
       {caption && (
-        <figcaption className="font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282] text-center">
+        <figcaption className="font-body text-muted-foreground text-center text-small">
           {caption}
         </figcaption>
       )}

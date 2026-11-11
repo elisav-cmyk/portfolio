@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 
 export interface BlogTextProps {
@@ -34,9 +37,9 @@ export const BlogText: React.FC<BlogTextProps> = ({
   className = '',
 }) => {
   const variantClass = {
-    body: "font-body text-[1rem] leading-[1.5rem] text-[#1b1c15]",
-    lead: "font-body text-[1.25rem] leading-[1.75rem] text-[#1b1c15]",
-    small: "font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282]",
+    body: "font-body text-foreground text-body",
+    lead: "font-body text-foreground text-lead",
+    small: "font-body text-muted-foreground text-small",
   }[variant];
 
   return (

@@ -1,3 +1,4 @@
+// Reference example only; not on the site. Uses the site's tokens.
 import React from 'react';
 import { 
   getCompleteTypographyStyles, 

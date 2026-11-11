@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 
 export interface BlogDividerProps {
@@ -33,7 +36,7 @@ export const BlogDivider: React.FC<BlogDividerProps> = ({
 
   if (variant === 'dots') {
     return (
-      <div className={`blog-grid flex items-center justify-center gap-[var(--space-8)] text-[#c6c8b8] ${className}`}>
+      <div className={`blog-grid flex items-center justify-center gap-[var(--space-8)] text-border ${className}`}>
         <span>•</span>
         <span>•</span>
         <span>•</span>
@@ -43,6 +46,6 @@ export const BlogDivider: React.FC<BlogDividerProps> = ({
 
   // Default: line
   return (
-    <hr className={`blog-grid border-0 border-t-2 border-[#c6c8b8] ${className}`} />
+    <hr className={`blog-grid border-0 border-t-2 border-border ${className}`} />
   );
 };

@@ -1,3 +1,6 @@
+// Not on the site yet. Kept for future blog or article pages.
+// Styled with the site's tokens (font-heading, font-body, text-*, colors),
+// so it matches the portfolio if you use it.
 import React from 'react';
 
 export interface BlogContentWrapperProps {
