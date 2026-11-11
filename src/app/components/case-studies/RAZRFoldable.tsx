@@ -12,7 +12,7 @@ const data: CaseStudyData = {
   subtitle: "The Android RAZR: reimagining an icon for the smartphone age",
   role: 'Director, São Paulo Design Studio, then Global UX Director, Motorola Mobility',
   partners: 'Industrial Design, Research, Engineering (HW/SW), Product Management (HW/SW), Marketing',
-  glance: "Led the design team that brought back the RAZR as a foldable Android phone. Its cover-screen model shaped Google's patterns for small foldable screens and won a Red Dot \"Best of the Best.\"",
+  glance: "Led the design team that brought back the RAZR as a foldable Android phone, working with Google's Android team. Its glanceable cover screen shaped Google's patterns for small foldable screens and won a Red Dot \"Best of the Best.\"",
   extra: [{ label: 'Award', value: 'Red Dot "Best of the Best" 2020' }],
   context: ["Motorola was strong in mid-tier phones, but it had struggled to ship a premium device after its Droid partnership with Verizon ended. People still told me stories about their RAZR flip phones, so Motorola decided to bring it back as a foldable Android phone."],
   moves: [
