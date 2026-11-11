@@ -71,7 +71,7 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 }) => (
   <h2
     id={id}
-    className="mb-8 pb-2 border-b-2 border-white font-heading text-white text-h2 uppercase tracking-caps"
+    className="mb-8 font-heading text-white text-h2 uppercase tracking-caps"
   >
     {children}
   </h2>
