@@ -236,7 +236,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
 
         <div onKeyDown={handleGridKeys}>
         {/* Featured Projects */}
-        <div className="mb-16">
+        <div className="mb-8">
           <div className="grid md:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
               <ProjectCard

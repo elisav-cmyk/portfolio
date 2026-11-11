@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <button
                     type="button"
                     onClick={handleScrollToTop}
-                    className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Back to the top
@@ -72,7 +72,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/"
                     onClick={(e) => handleNavigation(e, 'home')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Home
@@ -83,7 +83,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/work"
                     onClick={(e) => handleNavigation(e, 'work')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Work
@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/leadership"
                     onClick={(e) => handleNavigation(e, 'leadership')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Leadership
@@ -105,7 +105,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                   <a
                     href="/impact"
                     onClick={(e) => handleNavigation(e, 'impact')}
-                    className="content-stretch flex items-center justify-center relative shrink-0 hover:opacity-70 transition-opacity cursor-pointer"
+                    className="content-stretch flex items-center justify-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     <p className="font-['Spline_Sans',sans-serif] font-semibold leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                       Impact
@@ -126,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                     {/* Email */}
                     <a
                       href="mailto:elisa.vargas@gmail.com"
-                      className="content-stretch flex gap-[10px] items-center relative shrink-0 hover:opacity-70 transition-opacity"
+                      className="content-stretch flex gap-[10px] items-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity"
                     >
                       <p className="font-['Spline_Sans',sans-serif] font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                         Email
@@ -145,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
                       href="https://linkedin.com/in/elisavargas/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="content-stretch flex gap-[10px] items-center relative shrink-0 hover:opacity-70 transition-opacity"
+                      className="content-stretch flex gap-[10px] items-center relative shrink-0 min-h-[24px] hover:opacity-70 transition-opacity"
                     >
                       <p className="font-['Spline_Sans',sans-serif] font-normal leading-[20px] relative shrink-0 text-primary text-[14px] text-nowrap tracking-[0.25px] whitespace-pre">
                         LinkedIn
