@@ -32,6 +32,8 @@ export interface CaseStudyData {
   subtitle: string;
   role: string;
   partners: string;
+  /** One sentence a reader can stop at: what you did and the main result. */
+  glance?: string;
   extra?: { label: string; value: string }[];
   context: string[];
   movesHeading?: string;
@@ -141,6 +143,12 @@ export const CaseStudyTemplate: React.FC<{
               ),
             )}
           </dl>
+          {data.glance && (
+            <p className="mt-8 bg-white rounded-[10px] border-l-4 border-primary px-6 py-4 font-['Spline_Sans'] text-[18px] leading-[28px] text-[#1b1c15]">
+              <strong className="block text-[12px] leading-[16px] tracking-[0.5px] uppercase text-primary mb-1">At a glance</strong>
+              {data.glance}
+            </p>
+          )}
         </div>
       </div>
 

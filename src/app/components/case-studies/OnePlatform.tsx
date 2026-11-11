@@ -11,6 +11,7 @@ const data: CaseStudyData = {
   subtitle: "Moving faculty's teaching workflows without losing them",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Research, Marketing, Visual Resources Association librarians',
+  glance: "Guided senior design leads moving Artstor's images, audio and video onto JSTOR, finished ahead of the retirement date. Artstor use rose about 35% in its first full year on JSTOR.",
   context: [
     "When JSTOR merged with Artstor, faculty teaching workflows hung in the balance. Instructors had built their courses around Artstor's tools for organizing images, and if the move went badly, they could take their teaching to competing image databases. In 2023 and 2024, JSTOR set out to bring Artstor fully onto the JSTOR platform before the legacy Artstor site retired on August 1, 2024.",
   ],

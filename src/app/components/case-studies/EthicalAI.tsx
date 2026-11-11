@@ -17,40 +17,14 @@ const data: CaseStudyData = {
   subtitle: "The JSTOR Research Tool: ask, discover and validate every answer",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, institutional partners',
-  context: [
-    "When generative AI arrived in 2023, students and faculty quickly began using consumer chatbots for research. Those tools could fabricate information and often didn't show where an answer came from, which runs against everything academic work depends on. JSTOR needed an AI tool that met scholarly standards; otherwise it risked becoming a place people skipped on the way to a chatbot. The tool was also costly to run, so it had to earn its place in a sustainable business model, not just exist as a feature.",
-  ],
+  glance: "Led design of JSTOR's LLM research tool from beta to about 11,400 institutions, with every answer linked to the passage it came from.",
+  context: ["When generative AI arrived in 2023, students and faculty began using consumer chatbots that could fabricate information and often didn't show where an answer came from. JSTOR needed an AI tool that met scholarly standards and earned its cost in a sustainable business model, not just a feature."],
   moves: [
-    {
-      title: 'Grounded every answer in the source',
-      paragraphs: [
-        "I don't usually hand my designers hard requirements; I'd rather bring examples and help them find their own answer. Here, I shared examples from STEM research tools on the open web that were already grounding AI answers in their sources. The team's lead designer, the only designer on the team, did her own research and convinced the team to build it: every AI answer links to the exact passage it came from, so a researcher can validate a claim instead of taking it on faith. The model reads only the item in view, never the open web.",
-      ],
-    },
-    {
-      title: 'Designed a guide, not a ghostwriter',
-      paragraphs: [
-        'The tool helps people frame questions, weigh sources and build arguments, and it declines requests like "write my essay." That choice came straight from "Be the guide, not the hero," one of five ITHAKA design principles I co-developed in 2022 with Liza Pagano, Director of Brand + Creative. We later mapped the principle to the ACRL Framework for Information Literacy, which treats research as a set of habits, such as framing a question, evaluating a source and building an argument, rather than a single search for an answer.',
-      ],
-    },
-    {
-      title: 'Launched small, on purpose',
-      paragraphs: [
-        'The market was rushing to put AI into everything at once. Our agile team, with product management and design deciding together, chose to launch a focused chat with three additions (Save, Download and Cite) and let research tell us what to build next. Weekly design reviews with User Insights made sure findings set our priorities instead of just informing them.',
-      ],
-    },
-    {
-      title: 'Gave institutions control',
-      paragraphs: [
-        'Libraries have their own policies on AI, and they needed to decide for themselves how the tool would be used on their campuses. My team designed admin controls that let each institution turn the research tool on or off, for everyone or for specific users.',
-      ],
-    },
-    {
-      title: 'Grew a designer into a leader',
-      paragraphs: [
-        'The lead designer has built real trust with her team and now helps shape its strategy. I coached her toward setting standards for the whole team, beyond her own projects.',
-      ],
-    },
+    { title: "Grounded every answer in the source", paragraphs: ["I shared examples of research tools that already grounded AI answers in their sources. The team's lead designer did her own research and convinced the team to build it: every answer links to the exact passage it came from, so a researcher can validate a claim instead of taking it on faith. The model reads only the item in view, never the open web."] },
+    { title: "Designed a guide, not a ghostwriter", paragraphs: ["The tool helps people frame questions and weigh sources, and it declines requests like \"write my essay.\" That choice came from \"Be the guide, not the hero,\" one of five ITHAKA design principles I co-developed in 2022."] },
+    { title: "Launched small, on purpose", paragraphs: ["While the market rushed to put AI into everything, product management and design chose to launch a focused chat with Save, Download and Cite, and let weekly research reviews decide what came next."] },
+    { title: "Gave institutions control", paragraphs: ["Libraries have their own policies on AI, so my team designed admin controls that let each institution turn the research tool on or off, for everyone or for specific users."] },
+    { title: "Grew a designer into a leader", paragraphs: ["The lead designer has built real trust with her team and now helps shape its strategy. I coached her toward setting standards for the whole team, beyond her own projects."] },
   ],
   figures: [
     {
@@ -75,16 +49,8 @@ const data: CaseStudyData = {
       width: 'wide',
     },
   ],
-  results: [
-    'Adoption grew from a limited beta in August 2023 to 272 early-access institutions by the end of 2024, about 1,500 by March 2025 and about 11,400 by July 2025. Only 39 institutions opted out.',
-    'We measured honestly. Research tool users searched far more than other JSTOR users, but a matched before-and-after study showed much of that gap came from who chose the tool. We reported it plainly and focused on what the tool could own: trust, adoption and helping people reach the right content.',
-    'The same grounded approach now shapes search. My team led the design of Dynamic Search, a hybrid of LLM query interpretation, semantic retrieval and keyword search. From Oct. 7 to Nov. 5, 2026, 52% of Dynamic Search queries led people to open, read or save content, versus 39% for keyword search, with fewer searches per session (2.69 vs. 3.11).',
-    'Recommendations follow the same logic. After we found that 80% of users never saw them, moving recommendations inline and above the fold raised primary source use 80%, book use 48% and journal use 15% year over year (Q1 2023).',
-    'Institutional partners called it the "most impressive and polished integration of AI for libraries" on the market.',
-  ],
-  why: [
-    'In research, trust is the product. We know that friction aids learning, so we designed to protect the work students need to do themselves, and to use AI in ways that support that work rather than replace it.',
-  ],
+  results: ["Adoption grew from a limited beta in August 2023 to about 11,400 institutions by July 2025. Only 39 institutions opted out.", "We measured honestly. A matched before-and-after study showed much of the tool's search lift came from who chose it, so we reported that plainly and focused on trust, adoption and helping people reach the right content.", "The same grounded approach now shapes Dynamic Search, a hybrid of LLM, semantic and keyword search. From Oct. 7 to Nov. 5, 2026, 52% of its queries led people to open, read or save content, versus 39% for keyword search.", "Institutional partners called it the \"most impressive and polished integration of AI for libraries\" on the market."],
+  why: ["In research, trust is the product. We know that friction aids learning, so we designed to protect the work students need to do themselves, and to use AI in ways that support that work rather than replace it."],
 };
 
 interface Props {

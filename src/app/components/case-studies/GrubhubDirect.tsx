@@ -21,35 +21,13 @@ const data: CaseStudyData = {
   subtitle: "Grubhub Direct: commission-free ordering for local restaurants",
   role: 'Director, Product Design, Grubhub',
   partners: 'Product Management, Engineering, Research, restaurant operators',
-  context: [
-    "During the pandemic, independent restaurants were fighting to stay open, and the delivery apps they relied on charged commissions that could top 40% of revenue. The apps also kept the customer data, so a restaurant couldn't build its own relationship with the people who ordered from it most. Grubhub set out to give independent restaurants and small chains (up to about 25 locations) the kind of branded, commission-free ordering site that only large chains with dedicated technology budgets had been able to build.",
-    'A big part of the plan was meeting diners where they already look for a place to eat: Google Search and Maps. A restaurant\'s own site only works if people can find it, so connecting Direct easily to Google was part of how restaurants would get started.',
-  ],
+  glance: "Led design for Grubhub Direct, commission-free ordering for local restaurants, launched six months after kickoff. In testing, restaurants that listed it on Google Business Profile saw nearly 20x the orders.",
+  context: ["During the pandemic, independent restaurants were fighting to stay open, while the delivery apps they relied on charged commissions that could top 40% of revenue and kept the customer data. Grubhub set out to give independent restaurants and small chains the branded, commission-free ordering site that only large chains had been able to build.", "A big part of the plan was meeting diners where they already look for a place to eat: Google Search and Maps."],
   moves: [
-    {
-      title: 'Built the team for the moment',
-      paragraphs: [
-        'In the year leading up to the $7.3B Just Eat Takeaway acquisition, I directed design for Restaurant and Driver products while the organization changed around us. I hired 5 people in one year (a design manager, 3 senior designers and a content strategist) so the team could carry the platform through the transition.',
-      ],
-    },
-    {
-      title: 'Designed for two kinds of owners',
-      paragraphs: [
-        "Grubhub had acquired LevelUp's enterprise technology, and I directed the vision for bringing it into Grubhub's self-service platform. A restaurant owner with no technical help could set up a branded site in minutes, choosing fonts, colors and images. A chain with its own developers got APIs, SDKs and a developer portal to plug ordering into the tools it already used.",
-      ],
-    },
-    {
-      title: 'Started with operators',
-      paragraphs: [
-        'Our product definition came from research with restaurant operators. A first-time owner who wanted to change a logo in minutes needed something very different from a chain with an engineering team, and we designed for both.',
-      ],
-    },
-    {
-      title: 'Made running a restaurant simpler',
-      paragraphs: [
-        'Menus imported and updated automatically, and one Merchant Portal let owners manage menus, hours, finances and orders in one place.',
-      ],
-    },
+    { title: "Built the team for the moment", paragraphs: ["In the year leading up to the $7.3B Just Eat Takeaway acquisition, I hired 5 people (a design manager, 3 senior designers and a content strategist) so the team could carry the platform through the transition."] },
+    { title: "Designed for two kinds of owners", paragraphs: ["I directed the vision for bringing LevelUp's enterprise technology into Grubhub's self-service platform. An owner with no technical help could set up a branded site in minutes; a chain with its own developers got APIs, SDKs and a developer portal."] },
+    { title: "Started with operators", paragraphs: ["Our product definition came from research with restaurant operators, from a first-time owner who wanted to change a logo in minutes to a chain with an engineering team."] },
+    { title: "Made running a restaurant simpler", paragraphs: ["Menus imported and updated automatically, and one Merchant Portal let owners manage menus, hours, finances and orders in one place."] },
   ],
   figures: [
     {
@@ -70,15 +48,8 @@ const data: CaseStudyData = {
       ],
     },
   ],
-  results: [
-    "In testing, restaurants that listed their Direct site on their Google Business Profile, so it appeared on Search and Maps, received, on average, nearly 20x the orders of those that didn't.",
-    'Grubhub Direct launched in May 2021, six months after kickoff.',
-    'Restaurants kept 100% of their direct sales: no commission, platform or maintenance fees, only order processing and delivery fees.',
-    'Restaurants owned their customer data, including names, email addresses, order history and lifetime spend, which they could use for loyalty and promotions.',
-  ],
-  why: [
-    'I love hunting for the next great local restaurant. Helping those restaurants keep their customers, at a time when many were at risk of closing, was work I cared about.',
-  ],
+  results: ["In testing, restaurants that listed their Direct site on their Google Business Profile, so it appeared on Search and Maps, received on average nearly 20x the orders of those that didn't.", "Grubhub Direct launched in May 2021, six months after kickoff.", "Restaurants kept 100% of their direct sales and owned their customer data, which they could use for loyalty and promotions."],
+  why: ["I love hunting for the next great local restaurant. Helping those restaurants keep their customers, at a time when many were at risk of closing, was work I cared about."],
   videos: [
     {
       src: 'https://www.youtube-nocookie.com/embed/ig7eN5xzPos',
