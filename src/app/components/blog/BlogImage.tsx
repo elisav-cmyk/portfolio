@@ -57,7 +57,7 @@ export const BlogImage: React.FC<BlogImageProps> = ({
         />
         
         {caption && (
-          <figcaption className="blog-grid font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-[#6a7282] text-center">
+          <figcaption className="blog-grid font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282] text-center">
             {caption}
           </figcaption>
         )}
@@ -81,7 +81,7 @@ export const BlogImage: React.FC<BlogImageProps> = ({
       />
       
       {caption && (
-        <figcaption className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-[#6a7282] text-center">
+        <figcaption className="font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282] text-center">
           {caption}
         </figcaption>
       )}

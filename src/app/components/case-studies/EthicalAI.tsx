@@ -11,7 +11,7 @@ const data: CaseStudyData = {
     src: heroImage,
     alt: 'A student working with the JSTOR research tool on a laptop and phone in a library',
   },
-  tag: 'AI Ethics',
+  tag: 'AI Search',
   years: '2023-2026',
   title: 'AI That Shows Its Sources',
   subtitle: "The JSTOR Research Tool: ask, discover and validate every answer",

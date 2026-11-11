@@ -34,9 +34,9 @@ export const BlogText: React.FC<BlogTextProps> = ({
   className = '',
 }) => {
   const variantClass = {
-    body: "font-['Spline_Sans'] text-[1rem] leading-[1.5rem] text-[#1b1c15]",
-    lead: "font-['Spline_Sans'] text-[1.25rem] leading-[1.75rem] text-[#1b1c15]",
-    small: "font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-[#6a7282]",
+    body: "font-body text-[1rem] leading-[1.5rem] text-[#1b1c15]",
+    lead: "font-body text-[1.25rem] leading-[1.75rem] text-[#1b1c15]",
+    small: "font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282]",
   }[variant];
 
   return (

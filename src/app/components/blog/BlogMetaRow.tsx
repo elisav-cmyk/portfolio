@@ -51,7 +51,7 @@ export const BlogMetaRow: React.FC<BlogMetaRowProps> = ({
 }) => {
   return (
     <div 
-      className={`flex flex-wrap items-center gap-[var(--space-8)] font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-[#6a7282] ${className}`}
+      className={`flex flex-wrap items-center gap-[var(--space-8)] font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282] ${className}`}
       style={{
         fontVariantNumeric: 'oldstyle-nums', // Oldstyle numerals for dates and read time
       }}

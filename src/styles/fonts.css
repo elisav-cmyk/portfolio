@@ -1,1 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap');
+/* Fonts are self-hosted from npm (@fontsource), not loaded from Google Fonts.
+   To add or drop a weight, add or remove a line here.
+   To change which font the site uses, edit the tokens in globals.css. */
+@import '@fontsource/eb-garamond/400.css';
+@import '@fontsource/eb-garamond/400-italic.css';
+@import '@fontsource/eb-garamond/500.css';
+@import '@fontsource/eb-garamond/600.css';
+@import '@fontsource/spline-sans/400.css';
+@import '@fontsource/spline-sans/500.css';
+@import '@fontsource/spline-sans/600.css';
+@import '@fontsource/spline-sans/700.css';

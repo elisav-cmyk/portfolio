@@ -34,12 +34,12 @@ export const BlogQuote: React.FC<BlogQuoteProps> = ({
     <blockquote 
       className={`flex flex-col gap-[var(--stack-base)] border-l-4 border-primary pl-[var(--space-24)] py-[var(--space-8)] ${className}`}
     >
-      <p className="font-['EB_Garamond'] text-[1.25rem] leading-[1.75rem] text-[#1b1c15] italic">
+      <p className="font-heading text-[1.25rem] leading-[1.75rem] text-[#1b1c15] italic">
         {children}
       </p>
       
       {author && (
-        <cite className="font-['Spline_Sans'] text-[0.875rem] leading-[1.25rem] text-[#6a7282] not-italic">
+        <cite className="font-body text-[0.875rem] leading-[1.25rem] text-[#6a7282] not-italic">
           — {author}
         </cite>
       )}

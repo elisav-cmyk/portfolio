@@ -9,7 +9,7 @@ const data: CaseStudyData = {
     alt: 'Screens from the redesigned Moto app, with its illustrated welcome screen, Moto Actions and tips',
     position: 'object-top',
   },
-  tag: 'Brand & Craft',
+  tag: 'Devices',
   years: '2016-2020',
   title: 'Turning Hidden Features into Daily Habits',
   subtitle: "The Moto app: from a list of settings to a reason to explore",

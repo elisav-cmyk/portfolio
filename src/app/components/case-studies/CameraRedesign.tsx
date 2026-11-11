@@ -5,7 +5,7 @@ import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 const data: CaseStudyData = {
   id: 'camera-redesign',
   hero: { src: cameraIntroImage, alt: 'Camera app redesign at Motorola' },
-  tag: 'Hardware/Software',
+  tag: 'Camera',
   years: '2019-2020',
   title: 'Starting the Camera Over',
   subtitle: "Motorola's Camera app, rebuilt so it could grow",

@@ -44,7 +44,7 @@ export const TypographyExample: React.FC = () => {
         <h2 className="mb-4">Method 3: Inline Styles with JSX</h2>
         <h1 
           style={{
-            fontFamily: "'EB Garamond'",
+            fontFamily: 'var(--font-heading)',
             fontSize: getResponsiveFontSize(typographyTokens.displayLg),
             lineHeight: '110%',
             fontWeight: '400',
@@ -56,7 +56,7 @@ export const TypographyExample: React.FC = () => {
         
         <p 
           style={{
-            fontFamily: "'Spline Sans'",
+            fontFamily: 'var(--font-body)',
             fontSize: getResponsiveFontSize(typographyTokens.bodyMd),
             lineHeight: '150%',
             fontWeight: '400'
