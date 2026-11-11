@@ -1,5 +1,7 @@
 import React from 'react';
 import motoHeroImage from '../../../assets/moto-app.jpg';
+import motoDesignSystem from '../../../assets/moto-design-system.jpg';
+import motoIllustrations from '../../../assets/moto-illustration-system.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
@@ -22,6 +24,21 @@ const data: CaseStudyData = {
     { title: "Gave writing a bigger role", paragraphs: ["I encouraged my copywriter to set the content strategy and a roadmap for new categories, such as Tips and Personalize, which gave people more reasons to come back and explore their phones."] },
     { title: "Built a shared illustration system", paragraphs: ["My creative lead and a senior designer in Chicago created a mix-and-match illustration library, so designers in any studio could build new illustrations quickly."] },
     { title: "Made animation work everywhere", paragraphs: ["Earlier attempts to use Lottie animations had run into technical conflicts. I set up a proof of concept with developers in Brazil, drove security approval with legal, and negotiated Lottie's integration into Motorola's framework, which fixed problems with different screen shapes and saved significant space."] },
+  ],
+  figures: [
+    {
+      after: 0,
+      src: motoDesignSystem,
+      alt: 'Two phones showing the Moto app welcome screen and the Peek Display tip, beside the title Moto App 3.0 Design System',
+      caption: 'The Moto app 3.0 design system: an editorial app in place of a list of settings.',
+      width: 'wide',
+    },
+    {
+      after: 2,
+      src: motoIllustrations,
+      alt: 'A grid of illustrated people shown in a range of skin tones',
+      caption: 'The shared illustration library: mix-and-match people in a full range of skin tones, so any studio could build new scenes.',
+    },
   ],
   results: [
     "Two 2019 Brazil Design Awards: People's Choice and Application Design.",
