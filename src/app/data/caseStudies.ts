@@ -1,7 +1,8 @@
 // Single source of truth for case study order, titles and URLs.
 // The Work page, the sticky case study nav, the case study footer and
 // the build step that creates /work/<id>/index.html all read this list.
-// Order: strongest to weakest for the Director, UX, Real World Journeys role.
+// Order: strongest to weakest for Google director roles such as Real World Journeys.
+// Moto app is 4th because it shows help in the moment; platform and design system stories are last.
 export interface CaseStudyMeta {
   id: string;
   title: string;
@@ -12,12 +13,12 @@ export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "ethical-ai", title: "AI That Shows Its Sources", company: "JSTOR" },
   { id: "grubhub-direct", title: "Restaurants Own Their Orders", company: "Grubhub" },
   { id: "razr-foldable", title: "Bringing Back the RAZR", company: "Motorola" },
+  { id: "moto-app", title: "Turning Hidden Features into Daily Habits", company: "Motorola" },
   { id: "mobile-parity", title: "Research on the Go", company: "JSTOR" },
   { id: "ai-library", title: "Unlocking Hidden Archives", company: "JSTOR" },
   { id: "camera-redesign", title: "Starting the Camera Over", company: "Motorola" },
   { id: "one-platform", title: "Integrating Artstor into JSTOR", company: "JSTOR" },
   { id: "ecosystem-infrastructure", title: "One System, Many Products", company: "JSTOR" },
-  { id: "moto-app", title: "Turning Hidden Features into Daily Habits", company: "Motorola" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;
