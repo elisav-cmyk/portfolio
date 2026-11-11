@@ -713,7 +713,7 @@ const PortfolioWireframes = () => {
               {
                 title: "Bringing Back the RAZR",
                 subtitle: "The Android RAZR: reimagining an icon for the smartphone age",
-                metric: "Hardware + software leadership",
+                metric: "Shaped Google's foldable cover-screen patterns",
                 company: "Motorola",
                 id: "razr-foldable",
                 image: razrHeroImage,

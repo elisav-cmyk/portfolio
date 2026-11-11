@@ -17,7 +17,7 @@ const data: CaseStudyData = {
   subtitle: "The JSTOR Research Tool: ask, discover and validate every answer",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, User Insights Research, Accessibility, institutional partners',
-  glance: "Led design of JSTOR's LLM research tool from beta to about 11,400 institutions, with every answer linked to the passage it came from.",
+  glance: "Led design of JSTOR's LLM research tool from beta to about 11,400 institutions, with every answer linked to the passage it came from, so people can check what AI tells them before they rely on it.",
   context: ["When generative AI arrived in 2023, students and faculty began using consumer chatbots that could fabricate information and often didn't show where an answer came from. JSTOR needed an AI tool that met scholarly standards and earned its cost in a sustainable business model, not just a feature."],
   moves: [
     { title: "Grounded every answer in the source", paragraphs: ["I shared examples of research tools that already grounded AI answers in their sources. The team's lead designer did her own research and convinced the team to build it: every answer links to the exact passage it came from, so a researcher can validate a claim instead of taking it on faith. The model reads only the item in view, never the open web."] },
