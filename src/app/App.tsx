@@ -717,8 +717,7 @@ const PortfolioWireframes = () => {
             Results
           </h2>
           {/* Outcomes my teams drove, each explained in a case study or on Leadership */}
-          {/* The first result leads: larger number, wider column. */}
-          <div className="grid md:grid-cols-[1.4fr_1fr_1fr] gap-12 items-end">
+          <div className="grid md:grid-cols-3 gap-12">
             {[
               {
                 value: "52% vs 39%",
@@ -735,9 +734,9 @@ const PortfolioWireframes = () => {
                 label: "Accessibility",
                 detail: "JSTOR in the WebAIM Million, with a 98% drop in accessibility errors",
               },
-            ].map((r, i) => (
+            ].map((r) => (
               <div key={r.label} className="flex flex-col gap-2 items-center">
-                <p className={`font-heading font-normal text-white mb-2 ${i === 0 ? "text-stat-lg" : "text-stat"}`}>
+                <p className="font-heading font-normal text-white mb-2 text-stat">
                   {r.value}
                 </p>
                 <p className="font-body font-normal text-primary-foreground text-body">
