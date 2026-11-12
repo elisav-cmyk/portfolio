@@ -38,7 +38,7 @@ export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, on
   return (
     <nav
       aria-label="Case studies"
-      className="sticky z-40 bg-white/95 backdrop-blur border-b-2 border-border"
+      className="sticky z-40 bg-white/95 backdrop-blur border-b border-border"
       style={{ top }}
     >
       <div className="blog-grid py-3 flex items-center justify-between gap-6 font-body text-small">
@@ -55,7 +55,7 @@ export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, on
       </div>
       <motion.div
         aria-hidden="true"
-        className="absolute left-0 right-0 -bottom-[2px] h-[2px] bg-primary origin-left"
+        className="absolute left-0 right-0 -bottom-px h-[2px] bg-primary origin-left"
         style={{ scaleX: scrollYProgress }}
       />
     </nav>
