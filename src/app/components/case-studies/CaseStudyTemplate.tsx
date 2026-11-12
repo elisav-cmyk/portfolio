@@ -88,7 +88,7 @@ const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: stri
     </button>
   );
   return (
-    <figure className="marketing-grid">
+    <figure className="marketing-grid my-16 md:my-20">
       <div className="relative">
         <div
           ref={row}
@@ -126,7 +126,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
   }
   const wide = figure.width === 'wide';
   return (
-    <figure className={wide ? 'marketing-grid' : 'blog-grid'}>
+    <figure className={`${wide ? 'marketing-grid' : 'blog-grid'} my-16 md:my-20`}>
       <img
         src={figure.src}
         alt={figure.alt}
@@ -201,83 +201,88 @@ export const CaseStudyTemplate: React.FC<{
         </div>
       </div>
 
-      <div className="w-full py-12">
-        <div className="flex flex-col gap-12">
-          <section className="blog-grid flex flex-col gap-4">
-            <h2 className={h2}>Context</h2>
-            {data.context.map((p, i) => (
-              <p key={i} className={body}>
-                {p}
-              </p>
-            ))}
-          </section>
-          {figuresAfter(-1)}
+      {/* Spacing follows the Figma blog's rhythm: 120px from the header to the
+          body (80px on phones), 80px around images and between sections, 40px
+          between moves, and 24px between paragraphs. This is block layout, so
+          the larger margin wins where two meet (an image after a move is 80px,
+          not 120px). */}
+      <div className="w-full pt-20 md:pt-[120px] pb-16 md:pb-20">
+        <section className="blog-grid flex flex-col gap-5 md:gap-6">
+          <h2 className={h2}>Context</h2>
+          {data.context.map((p, i) => (
+            <p key={i} className={body}>
+              {p}
+            </p>
+          ))}
+        </section>
+        {figuresAfter(-1)}
 
-          {data.moves.map((move, i) => (
-            <React.Fragment key={move.title}>
-              <section className={`blog-grid flex flex-col gap-3 ${i > 0 ? '-mt-6' : ''}`}>
-                {i === 0 && <h2 className={`${h2} mb-3`}>{data.movesHeading || 'What we did'}</h2>}
-                <h3 className="font-heading text-[#1b1c15] text-h3">{move.title}</h3>
+        {data.moves.map((move, i) => (
+          <React.Fragment key={move.title}>
+            <section className={`blog-grid ${i === 0 ? 'mt-16 md:mt-20' : 'mt-10'}`}>
+              {i === 0 && <h2 className={`${h2} mb-6`}>{data.movesHeading || 'What we did'}</h2>}
+              <h3 className="font-heading text-[#1b1c15] text-h3 mb-3">{move.title}</h3>
+              <div className="flex flex-col gap-5 md:gap-6">
                 {move.paragraphs.map((p, k) => (
                   <p key={k} className={body}>
                     {p}
                   </p>
                 ))}
-              </section>
-              {figuresAfter(i)}
-            </React.Fragment>
-          ))}
-
-          <section className="blog-grid flex flex-col gap-4">
-            <h2 className={h2}>Results</h2>
-            <ul className="list-disc pl-6 space-y-3">
-              {data.results.map((r, i) => (
-                <li key={i} className={body}>
-                  {r}
-                </li>
-              ))}
-            </ul>
-            {data.resultsFigure && (
-              <img src={data.resultsFigure.src} alt={data.resultsFigure.alt} className="h-auto w-full max-w-[280px] mt-4" />
-            )}
-          </section>
-
-          <section className="blog-grid">
-            <div className="bg-accent border-l-4 border-primary rounded-[2px] p-6 sm:p-8">
-              <h2 className="font-body uppercase text-primary mb-3 text-small">
-                Why it mattered to me
-              </h2>
-              {data.why.map((p, i) => (
-                <p
-                  key={i}
-                  className="font-heading text-[#1b1c15] mb-2 last:mb-0 text-h3"
-                >
-                  {p}
-                </p>
-              ))}
-            </div>
-          </section>
-          {data.videos?.map((v) => (
-            <figure key={v.src} className="blog-grid w-full">
-              <div className="relative w-full aspect-video rounded-[2px] overflow-hidden bg-black">
-                <iframe
-                  src={v.src}
-                  title={v.title}
-                  className="absolute inset-0 w-full h-full"
-                  loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  allowFullScreen
-                />
               </div>
-              {v.caption && (
-                <figcaption className="font-body text-muted-foreground mt-2 text-small">
-                  {v.caption}
-                </figcaption>
-              )}
-            </figure>
-          ))}
-        </div>
+            </section>
+            {figuresAfter(i)}
+          </React.Fragment>
+        ))}
+
+        <section className="blog-grid flex flex-col gap-5 md:gap-6 mt-16 md:mt-20">
+          <h2 className={h2}>Results</h2>
+          <ul className="list-disc pl-6 space-y-4">
+            {data.results.map((r, i) => (
+              <li key={i} className={body}>
+                {r}
+              </li>
+            ))}
+          </ul>
+          {data.resultsFigure && (
+            <img src={data.resultsFigure.src} alt={data.resultsFigure.alt} className="h-auto w-full max-w-[280px] mt-4" />
+          )}
+        </section>
+
+        <section className="blog-grid mt-16 md:mt-20">
+          <div className="bg-accent border-l-4 border-primary rounded-[2px] p-6 sm:p-8">
+            <h2 className="font-body uppercase text-primary mb-3 text-small">
+              Why it mattered to me
+            </h2>
+            {data.why.map((p, i) => (
+              <p
+                key={i}
+                className="font-heading text-[#1b1c15] mb-2 last:mb-0 text-h3"
+              >
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+        {data.videos?.map((v) => (
+          <figure key={v.src} className="blog-grid w-full mt-16 md:mt-20">
+            <div className="relative w-full aspect-video rounded-[2px] overflow-hidden bg-black">
+              <iframe
+                src={v.src}
+                title={v.title}
+                className="absolute inset-0 w-full h-full"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowFullScreen
+              />
+            </div>
+            {v.caption && (
+              <figcaption className="font-body text-muted-foreground mt-2 text-small">
+                {v.caption}
+              </figcaption>
+            )}
+          </figure>
+        ))}
       </div>
 
       <CaseStudyFooter currentProjectId={data.id} onNavigate={onNavigate} />
