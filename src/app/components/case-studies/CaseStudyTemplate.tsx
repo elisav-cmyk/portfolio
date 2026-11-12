@@ -169,7 +169,7 @@ export const CaseStudyTemplate: React.FC<{
       <div className="w-full bg-secondary">
         <div className="blog-grid py-12 sm:py-16">
           <div className="flex items-center gap-3 mb-6">
-            <span className="pill bg-white/70">
+            <span className="pill">
               {data.tag}
             </span>
             <span className="font-body text-[#1b1c15] text-label">

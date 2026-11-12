@@ -1,21 +1,26 @@
-/* Pills: product-area tags and quote tags. A soft tint, close to the
-   surface it sits on, with green text (5.4:1 contrast). */
+/* Tags: product areas and quote strengths. Modeled on the Figma blog's
+   tags: no fill, a 1px outline at 40% of the text color, small uppercase
+   letters with a little extra spacing, and near-square corners that match
+   the site's 2px cards. Green text on white or cream passes 5:1 contrast. */
 @layer components {
   .pill {
     display: inline-block;
     align-self: flex-start;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    background-color: #ecede2;
+    padding: 0.3125rem 0.5rem;
+    border: 1px solid rgb(84 101 36 / 0.4);
+    border-radius: 2px;
+    background-color: transparent;
     color: var(--secondary-foreground);
     font-family: var(--font-body);
     font-weight: 500;
-    font-size: 0.8125rem;
-    line-height: 1.38;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
   /* On the dark green cards */
   .pill-dark {
-    background-color: rgb(255 255 255 / 0.1);
+    border-color: rgb(255 255 255 / 0.4);
     color: #ffffff;
   }
 }
