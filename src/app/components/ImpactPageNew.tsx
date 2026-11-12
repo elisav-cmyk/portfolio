@@ -157,7 +157,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
 
           <section className="mb-12">
             <SectionHeading id="by-the-numbers">By the Numbers</SectionHeading>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {numbers.map((s) => (
                 <BentoTile key={s.label} {...s} />
               ))}
