@@ -697,10 +697,10 @@ const PortfolioWireframes = () => {
                   <div className="text-xl mb-2">
                     {project.title}
                   </div>
-                  <div className={`text-foreground mb-4 ${lead ? "text-body" : "text-sm"}`}>
+                  <div className="text-foreground mb-4 text-sm">
                     {project.subtitle}
                   </div>
-                  <div className={`text-primary flex items-center gap-1 ${lead ? "text-body font-medium" : "text-sm"}`}>
+                  <div className="text-primary flex items-center gap-1 text-sm">
                     {project.metric}
                     <span aria-hidden="true" className="inline-block transition-transform duration-150 group-hover:translate-x-0.5">→</span>
                   </div>
