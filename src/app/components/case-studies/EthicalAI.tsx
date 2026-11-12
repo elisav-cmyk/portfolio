@@ -29,6 +29,7 @@ const data: CaseStudyData = {
   figures: [
     {
       after: 0,
+      bordered: true,
       src: traceableImage,
       alt: 'An article open in JSTOR beside the research tool. The answer cites page numbers, and hovering over p. 53 shows the exact passage it came from.',
       caption: 'Every answer cites its pages. Hovering over a citation shows the exact passage.',
@@ -36,6 +37,7 @@ const data: CaseStudyData = {
     },
     {
       after: 3,
+      bordered: true,
       src: governanceImage,
       alt: 'Governance layers around the research tool: institutional control through admin toggles, a publisher opt-out, data protections with no third-party training, and the underlying language model',
       caption: 'Institutional controls sit at the top of the governance model.',
@@ -43,6 +45,7 @@ const data: CaseStudyData = {
     },
     {
       after: 4,
+      bordered: true,
       src: dynamicSearchImage,
       alt: 'JSTOR search results in Dynamic mode, with AI search suggestions, an explanation of why each result matches, and a results overview with themes',
       caption: 'Dynamic Search: AI suggestions, a reason each result matches, and an overview of themes.',

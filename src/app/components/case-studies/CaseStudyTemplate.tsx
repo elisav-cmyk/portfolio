@@ -15,6 +15,8 @@ export interface CaseStudyFigure {
   caption?: string;
   /** "body" matches the text column; "wide" spans more of the page. */
   width?: 'body' | 'wide';
+  /** Draw a 1px hairline around the image, for screenshots on a white page. */
+  bordered?: boolean;
   /** A row of screenshots that scrolls sideways. */
   gallery?: { src: string; alt: string }[];
 }
@@ -56,11 +58,15 @@ const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: stri
   const row = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  // When every image fits, center the row and hide the arrows; when it
+  // doesn't, it scrolls sideways as a carousel.
+  const [fits, setFits] = useState(false);
   const update = () => {
     const el = row.current;
     if (!el) return;
     setAtStart(el.scrollLeft <= 4);
     setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+    setFits(el.scrollWidth <= el.clientWidth + 1);
   };
   useEffect(() => {
     update();
@@ -93,26 +99,34 @@ const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: stri
         <div
           ref={row}
           onScroll={update}
-          className="flex gap-4 overflow-x-auto pb-4 snap-x"
+          className={`flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory touch-manipulation ${fits ? 'justify-center' : ''}`}
           tabIndex={0}
           role="region"
+          aria-roledescription="carousel"
           aria-label={caption || 'Screenshots'}
         >
-          {images.map((img) => (
-            <img
+          {images.map((img, i) => (
+            <div
               key={img.src}
-              src={img.src}
-              alt={img.alt}
-              onLoad={update}
-              className="h-64 sm:h-80 w-auto rounded-[2px] border border-border snap-start shrink-0"
-            />
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${i + 1} of ${images.length}`}
+              className="snap-start shrink-0"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                onLoad={update}
+                className="h-64 sm:h-80 w-auto rounded-[2px] border border-border"
+              />
+            </div>
           ))}
         </div>
-        {arrow(-1, atStart)}
-        {arrow(1, atEnd)}
+        {arrow(-1, fits || atStart)}
+        {arrow(1, fits || atEnd)}
       </div>
       {caption && (
-        <figcaption className="font-body text-muted-foreground mt-2 text-small">
+        <figcaption className={`font-body text-muted-foreground mt-2 text-small ${fits ? 'text-center' : ''}`}>
           {caption}
         </figcaption>
       )}
@@ -130,7 +144,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
       <img
         src={figure.src}
         alt={figure.alt}
-        className={`h-auto rounded-[2px] ${wide ? 'w-full max-w-[80ch] mx-auto' : 'w-full sm:w-4/5'}`}
+        className={`h-auto rounded-[2px] ${figure.bordered ? 'border border-border' : ''} ${wide ? 'w-full max-w-[80ch] mx-auto' : 'w-full sm:w-4/5'}`}
       />
       {figure.caption && (
         <figcaption
