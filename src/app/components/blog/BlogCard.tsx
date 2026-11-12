@@ -60,7 +60,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
     <div 
-      className={`flex flex-col gap-[var(--space-8)] p-[var(--inset-square)] bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] ${onClick ? 'cursor-pointer hover:shadow-lg transition-shadow' : ''} ${className}`}
+      className={`flex flex-col gap-[var(--space-8)] p-[var(--inset-square)] bg-white rounded-[2px] border border-border ${onClick ? 'cursor-pointer hover:border-primary transition-colors' : ''} ${className}`}
       onClick={onClick}
     >
       {/* Title - Blog/H2 */}

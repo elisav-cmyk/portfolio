@@ -40,10 +40,10 @@ export const MarketingPageExample: React.FC<ExamplePageProps> = ({
           className="bg-secondary"
         >
           {/* CTA Buttons */}
-          <button className="px-6 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors">
+          <button className="px-6 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition-colors">
             Get Started
           </button>
-          <button className="px-6 py-3 bg-white text-foreground rounded-[10px] hover:bg-muted transition-colors border-2 border-border">
+          <button className="px-6 py-3 bg-white text-foreground rounded-[2px] hover:bg-muted transition-colors border-2 border-border">
             Learn More
           </button>
         </MarketingHeroSection>
@@ -118,7 +118,7 @@ export const MarketingPageExample: React.FC<ExamplePageProps> = ({
             <p className="marketing-body mb-8">
               Use these components to build professional marketing pages that follow your design system.
             </p>
-            <button className="px-8 py-4 bg-white text-primary rounded-[10px] hover:bg-white/90 transition-colors shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]">
+            <button className="px-8 py-4 bg-white text-primary rounded-[2px] hover:bg-white/90 transition-colors border border-border">
               View Documentation
             </button>
           </div>
@@ -157,7 +157,7 @@ export const MarketingPageExample: React.FC<ExamplePageProps> = ({
  * - 12 columns: <MarketingGrid columns={12} columnSpans={[6, 6]}>
  * 
  * 5. CARD VARIANTS:
- * - Default: variant="default" - Shadow and rounded corners
+ * - Default: variant="default" - Shadow and rounded-[2px] corners
  * - Outlined: variant="outlined" - Border only
  * - Flat: variant="flat" - No shadow or border
  * 

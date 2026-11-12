@@ -82,7 +82,7 @@ export const BlogMetaRow: React.FC<BlogMetaRowProps> = ({
           {tags.map((tag, index) => (
             <span 
               key={index}
-              className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-label"
+              className="px-2 py-1 bg-secondary text-secondary-foreground rounded-[2px] text-label"
             >
               {tag}
             </span>

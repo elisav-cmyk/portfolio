@@ -1,5 +1,5 @@
 import React from 'react';
-import cameraIntroImage from 'figma:asset/camera-intro.png';
+import cameraIntroImage from 'figma:asset/camera-intro.webp';
 import cameraResearch from '../../../assets/camera-research-zoom.jpg';
 import cameraFinal from '../../../assets/camera-final.jpg';
 import cameraPanel from '../../../assets/camera-panel.jpg';

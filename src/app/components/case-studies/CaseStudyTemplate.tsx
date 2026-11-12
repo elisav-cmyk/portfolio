@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { CaseStudyFooter } from '../CaseStudyFooter';
 
@@ -49,31 +50,79 @@ export interface CaseStudyData {
 const body = "font-body text-[#1b1c15] text-body";
 const h2 = "font-heading text-[#1b1c15] text-h2";
 
-const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
-  if (figure.gallery) {
-    return (
-      <figure className="marketing-grid">
+// A row of screenshots you can scroll sideways. Arrow buttons move one image
+// at a time, and each one fades out when there is nothing more that way.
+const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: string }> = ({ images, caption }) => {
+  const row = useRef<HTMLDivElement>(null);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
+  const update = () => {
+    const el = row.current;
+    if (!el) return;
+    setAtStart(el.scrollLeft <= 4);
+    setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+  };
+  useEffect(() => {
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+  const step = (dir: 1 | -1) => {
+    const el = row.current;
+    if (!el) return;
+    const first = el.querySelector('img');
+    const by = first ? first.getBoundingClientRect().width + 16 : el.clientWidth * 0.8;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollBy({ left: dir * by, behavior: smooth ? 'smooth' : 'auto' });
+  };
+  const arrow = (dir: 1 | -1, hidden: boolean) => (
+    <button
+      type="button"
+      onClick={() => step(dir)}
+      aria-label={dir === 1 ? 'Next screenshot' : 'Previous screenshot'}
+      aria-hidden={hidden}
+      tabIndex={hidden ? -1 : 0}
+      className={`absolute top-1/2 -translate-y-1/2 ${dir === 1 ? 'right-2' : 'left-2'} w-11 h-11 flex items-center justify-center bg-white border border-border rounded-[2px] text-primary hover:border-primary transition-[opacity,border-color] duration-150 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary ${hidden ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+    >
+      {dir === 1 ? <ChevronRight size={20} aria-hidden="true" /> : <ChevronLeft size={20} aria-hidden="true" />}
+    </button>
+  );
+  return (
+    <figure className="marketing-grid">
+      <div className="relative">
         <div
+          ref={row}
+          onScroll={update}
           className="flex gap-4 overflow-x-auto pb-4 snap-x"
           tabIndex={0}
-          aria-label={figure.caption || 'Screenshots'}
+          role="region"
+          aria-label={caption || 'Screenshots'}
         >
-          {figure.gallery.map((img) => (
+          {images.map((img) => (
             <img
               key={img.src}
               src={img.src}
               alt={img.alt}
-              className="h-64 sm:h-80 w-auto rounded-lg border border-border snap-start shrink-0"
+              onLoad={update}
+              className="h-64 sm:h-80 w-auto rounded-[2px] border border-border snap-start shrink-0"
             />
           ))}
         </div>
-        {figure.caption && (
-          <figcaption className="font-body text-muted-foreground mt-2 text-small">
-            {figure.caption}
-          </figcaption>
-        )}
-      </figure>
-    );
+        {arrow(-1, atStart)}
+        {arrow(1, atEnd)}
+      </div>
+      {caption && (
+        <figcaption className="font-body text-muted-foreground mt-2 text-small">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
+
+const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
+  if (figure.gallery) {
+    return <Gallery images={figure.gallery} caption={figure.caption} />;
   }
   const wide = figure.width === 'wide';
   return (
@@ -81,7 +130,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
       <img
         src={figure.src}
         alt={figure.alt}
-        className={`h-auto rounded-lg ${wide ? 'w-full max-w-[80ch] mx-auto' : 'w-full sm:w-4/5'}`}
+        className={`h-auto rounded-[2px] ${wide ? 'w-full max-w-[80ch] mx-auto' : 'w-full sm:w-4/5'}`}
       />
       {figure.caption && (
         <figcaption
@@ -103,10 +152,10 @@ export const CaseStudyTemplate: React.FC<{
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.15, ease: "easeOut" }}
       className="bg-white"
     >
       <div className="w-full">
@@ -144,7 +193,7 @@ export const CaseStudyTemplate: React.FC<{
             )}
           </dl>
           {data.glance && (
-            <p className="mt-8 bg-white rounded-[10px] border-l-4 border-primary px-6 py-4 font-body text-[#1b1c15] text-lead">
+            <p className="mt-8 bg-white rounded-[2px] border-l-4 border-primary px-6 py-4 font-body text-[#1b1c15] text-lead">
               <strong className="block uppercase text-primary mb-1 text-label">At a glance</strong>
               {data.glance}
             </p>
@@ -194,7 +243,7 @@ export const CaseStudyTemplate: React.FC<{
           </section>
 
           <section className="blog-grid">
-            <div className="bg-accent border-l-4 border-primary rounded-[10px] p-6 sm:p-8">
+            <div className="bg-accent border-l-4 border-primary rounded-[2px] p-6 sm:p-8">
               <h2 className="font-body uppercase text-primary mb-3 text-small">
                 Why it mattered to me
               </h2>
@@ -210,7 +259,7 @@ export const CaseStudyTemplate: React.FC<{
           </section>
           {data.videos?.map((v) => (
             <figure key={v.src} className="blog-grid w-full">
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
+              <div className="relative w-full aspect-video rounded-[2px] overflow-hidden bg-black">
                 <iframe
                   src={v.src}
                   title={v.title}

@@ -1,5 +1,5 @@
 import React from 'react';
-import onePlatformImage from 'figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png';
+import onePlatformImage from 'figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.webp';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
@@ -7,7 +7,7 @@ const data: CaseStudyData = {
   hero: { src: onePlatformImage, alt: 'JSTOR platform integration' },
   tag: 'Platform',
   years: '2023-2024',
-  title: 'Integrating Artstor into JSTOR',
+  title: 'When the Gallery Met the Library',
   subtitle: "Moving faculty's teaching workflows without losing them",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Research, Marketing, Visual Resources Association librarians',
@@ -29,7 +29,7 @@ const data: CaseStudyData = {
       ],
     },
     {
-      title: 'Made new content feel native',
+      title: 'Aligned every content type',
       paragraphs: [
         'The team designed JSTOR item pages for images, audio and video, and worked with Visual Resources Association librarians to agree on one metadata pattern for every new content type. A new Browse Images page, launched in February 2024, began showcasing Artstor collections to everyone on JSTOR.',
       ],

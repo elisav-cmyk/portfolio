@@ -10,7 +10,7 @@ export const LEADERSHIP_SECTIONS = [
 ];
 
 const card =
-  "bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8";
+  "bg-white rounded-[2px] border border-border p-8";
 const body = "font-body text-foreground text-body max-w-[68ch]";
 const cardTitle = "font-body font-medium text-foreground mb-3 text-body";
 
@@ -72,7 +72,8 @@ const career = [
   },
 ];
 
-// Grouped by strength: Strategic, Connector, Catalyst.
+// Grouped by strength: Strategic, Connector, Catalyst. On the page, the first
+// Catalyst quote leads as the pull quote.
 const quotes = [
   {
     tag: 'Strategic',
@@ -115,7 +116,7 @@ export const LeadershipPageContent = () => {
           <div className="max-w-[75ch] mx-auto">
             <h1 className="font-heading text-foreground mb-12 text-display uppercase tracking-caps">Leadership</h1>
 
-            <div className="bg-white rounded-[10px] p-8">
+            <div className="bg-white rounded-[2px] p-8">
               <p className={`${body} mb-4`}>
                 I build design teams and take on hard problems at scale: the Android RAZR foldable, which earned a Red
                 Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400 institutions; and
@@ -165,7 +166,7 @@ export const LeadershipPageContent = () => {
         intro="My work with Android started before Android did. Over 18.5 years at Motorola, I worked with Google's platform teams as a partner and across a negotiating table."
       >
         <div className="space-y-6">
-          <div className="bg-primary rounded-[10px] p-8">
+          <div className="bg-primary rounded-[2px] p-8">
             <h3 className="font-body font-medium text-white mb-3 text-body">
               Strategic Subtraction: the &quot;One Nav&quot; Decision
             </h3>
@@ -237,7 +238,7 @@ export const LeadershipPageContent = () => {
               From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
             </p>
           {(() => {
-            const [feature, connectorA, connectorB, catalystA, catalystB] = quotes;
+            const [strategic, connectorA, connectorB, feature, catalystB] = quotes;
             const Tag = ({ text, dark, onAccent }: { text: string; dark?: boolean; onAccent?: boolean }) => (
               <div className={`${dark ? 'bg-white/15' : onAccent ? 'bg-white' : 'bg-secondary'} rounded-full px-3 py-1 inline-block self-start mb-4`}>
                 <span className={`font-body ${dark ? 'text-white' : 'text-secondary-foreground'} text-label`}>
@@ -252,7 +253,7 @@ export const LeadershipPageContent = () => {
             );
             return (
               <div className="space-y-8">
-                {/* Featured pull quote: large type, no card */}
+                {/* Featured pull quote: the "super power" quote leads, in large type with no card */}
                 <figure className="border-l-4 border-primary pl-6 py-2">
                   <Tag text={feature.tag} onAccent />
                   <blockquote className="font-heading text-foreground mb-4 text-quote-lg">
@@ -261,10 +262,28 @@ export const LeadershipPageContent = () => {
                   <Caption q={feature} />
                 </figure>
 
+                {/* The direct report's quote on a green card, beside the Strategic quote */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <figure className="on-dark bg-primary rounded-[2px] border-2 border-primary p-6 flex flex-col">
+                    <Tag text={catalystB.tag} dark />
+                    <blockquote className="font-heading text-white mb-4 flex-1 text-quote">
+                      &ldquo;{catalystB.text}&rdquo;
+                    </blockquote>
+                    <Caption q={catalystB} dark />
+                  </figure>
+                  <figure className="bg-white rounded-[2px] border-2 border-border p-6 flex flex-col">
+                    <Tag text={strategic.tag} />
+                    <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
+                      &ldquo;{strategic.text}&rdquo;
+                    </blockquote>
+                    <Caption q={strategic} />
+                  </figure>
+                </div>
+
                 {/* Connector: two cards side by side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[connectorA, connectorB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[10px] border-2 border-border p-6 flex flex-col">
+                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[2px] border-2 border-border p-6 flex flex-col">
                       <Tag text={q.tag} />
                       <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
                         &ldquo;{q.text}&rdquo;
@@ -274,18 +293,6 @@ export const LeadershipPageContent = () => {
                   ))}
                 </div>
 
-                {/* Catalyst: two green cards side by side */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[catalystA, catalystB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="on-dark bg-primary rounded-[10px] border-2 border-primary p-6 flex flex-col">
-                      <Tag text={q.tag} dark />
-                      <blockquote className="font-heading text-white mb-4 flex-1 text-quote">
-                        &ldquo;{q.text}&rdquo;
-                      </blockquote>
-                      <Caption q={q} dark />
-                    </figure>
-                  ))}
-                </div>
               </div>
             );
           })()}

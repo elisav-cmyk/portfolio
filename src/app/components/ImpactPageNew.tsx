@@ -12,16 +12,46 @@ interface Stat {
   detail: string;
 }
 
-const numbers: Stat[] = [
-  { value: "20+", label: "Years Experience", detail: "Leading design teams since 2006" },
-  { value: "111M+", label: "Annual Users", detail: "JSTOR, across 194 countries" },
-  { value: "14,000", label: "Libraries", detail: "Supported by JSTOR" },
-  { value: "~11,400", label: "Institutions", detail: "Where JSTOR's AI research tool rolled out" },
-  { value: "33", label: "Designers Led", detail: "6 studios in the US, China and Brazil, within $9.78B operations" },
-  { value: "20+", label: "Designers Hired", detail: "Across my Director roles" },
-  { value: "~1B", label: "Devices", detail: "Motorola phones from 2002–2020 that my work touched, as a researcher, carrier negotiator, designer and design leader" },
-  { value: "23M+", label: "Moto App Active Users", detail: "Motorola" },
+// "By the Numbers" is a bento grid: the most important number gets the
+// largest tile, so the eye has somewhere to start. DOM order is reading
+// order, so phones and screen readers get the same sequence.
+interface Tile extends Stat {
+  size: "lead" | "wide" | "small";
+  kicker?: string;
+  tint?: boolean;
+}
+
+const numbers: Tile[] = [
+  { size: "lead", kicker: "Reach", tint: true, value: "111M+", label: "Annual Users", detail: "JSTOR, across 194 countries" },
+  { size: "wide", kicker: "Teams", value: "33", label: "Designers Led", detail: "6 studios in the US, China and Brazil, within $9.78B operations. Leading design teams since 2006." },
+  { size: "small", value: "~11,400", label: "Institutions", detail: "Where JSTOR's AI research tool rolled out" },
+  { size: "small", value: "14,000", label: "Libraries", detail: "Supported by JSTOR" },
+  { size: "wide", kicker: "Devices", tint: true, value: "~1B", label: "Devices", detail: "Motorola phones from 2002–2020 that my work touched, as a researcher, carrier negotiator, designer and design leader" },
+  { size: "small", value: "23M+", label: "Moto App Active Users", detail: "Motorola" },
+  { size: "small", value: "20+", label: "Designers Hired", detail: "Across my Director roles" },
 ];
+
+const tileLayout = {
+  lead: "col-span-2 md:row-span-2 min-h-[14rem]",
+  wide: "col-span-2",
+  small: "col-span-1",
+};
+const valueSize = { lead: "text-stat-lg", wide: "text-stat", small: "text-h2" };
+
+const BentoTile: React.FC<Tile> = ({ size, kicker, tint, value, label, detail }) => (
+  <div
+    className={`${tileLayout[size]} ${tint ? "bg-secondary" : "bg-white"} rounded-[2px] p-5 flex flex-col justify-end gap-1`}
+  >
+    {kicker && (
+      <div className="font-body font-medium text-secondary-foreground text-label uppercase tracking-caps mb-auto pb-4">
+        {kicker}
+      </div>
+    )}
+    <div className={`font-heading text-secondary-foreground leading-none ${valueSize[size]}`}>{value}</div>
+    <div className="font-body font-medium text-foreground text-body mt-1">{label}</div>
+    <div className="font-body text-foreground text-small">{detail}</div>
+  </div>
+);
 
 const results: Stat[] = [
   {
@@ -78,7 +108,7 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 );
 
 const StatCard: React.FC<Stat & { large?: boolean }> = ({ value, label, detail, large }) => (
-  <div className="bg-secondary border-2 border-border rounded-[10px] p-6 text-center flex flex-col gap-2">
+  <div className="bg-secondary border-2 border-border rounded-[2px] p-6 text-center flex flex-col gap-2">
     <div
       className="font-heading text-secondary-foreground text-stat"
     >
@@ -127,9 +157,9 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
 
           <section className="mb-12">
             <SectionHeading id="by-the-numbers">By the Numbers</SectionHeading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {numbers.map((s) => (
-                <StatCard key={s.label} {...s} />
+                <BentoTile key={s.label} {...s} />
               ))}
             </div>
           </section>
@@ -138,7 +168,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
             <SectionHeading id="industry-recognition">Recognition</SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               {recognition.map((r) => (
-                <div key={r.title} className="bg-white rounded-[10px] p-6">
+                <div key={r.title} className="bg-white rounded-[2px] p-6">
                   <h3 className="font-body text-primary mb-2 text-body">
                     {r.title}
                   </h3>

@@ -23,7 +23,7 @@ export const CaseStudyFooter: React.FC<CaseStudyFooterProps> = ({ currentProject
           <a
             href={caseStudyPath(previous.id)}
             onClick={go(previous.id)}
-            className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors rounded-[10px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors rounded-[2px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           >
             <ChevronLeft size={20} aria-hidden="true" />
             <div className="text-left">
@@ -34,7 +34,7 @@ export const CaseStudyFooter: React.FC<CaseStudyFooterProps> = ({ currentProject
           <a
             href={caseStudyPath(next.id)}
             onClick={go(next.id)}
-            className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors rounded-[10px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors rounded-[2px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           >
             <div className="text-right">
               <div className="text-sm">Next</div>

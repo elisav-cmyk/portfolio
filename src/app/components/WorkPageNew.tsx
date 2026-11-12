@@ -3,13 +3,13 @@ import { ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
 import imgImageEthicalAiResearchTool from "../../assets/jstor-research-card.jpg";
 import imgImageAndroidRazrFoldable from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
-import imgImageOnePlatformIntegration from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
+import imgImageOnePlatformIntegration from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.webp";
 import imgImageAILibrary from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
-import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
-import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.png";
-import imgCameraIntro from "figma:asset/camera-intro.png";
+import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.webp";
+import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.webp";
+import imgCameraIntro from "figma:asset/camera-intro.webp";
 import imgMotoCard from "../../assets/moto-app.jpg";
-import imgMobileParity from "../../assets/jstor-mobile.png";
+import imgMobileParity from "../../assets/jstor-mobile.webp";
 import { CASE_STUDIES, caseStudyPath, isPlainClick } from "../data/caseStudies";
 
 interface WorkPageProps {
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       e.preventDefault();
       onCaseStudyClick(caseStudyId);
     }}
-    className="bg-card rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] overflow-hidden flex flex-col cursor-pointer hover:shadow-lg transition-shadow focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
+    className="group bg-card rounded-[2px] border border-border overflow-hidden flex flex-col cursor-pointer hover:border-primary transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
   >
     {/* Image */}
     <div className="h-[192px] overflow-hidden">
@@ -85,13 +85,41 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </p>
 
       {/* View Case Study Link */}
-      <div className="flex items-center justify-between w-full group">
+      <div className="flex items-center justify-between w-full">
         <span className="font-body text-primary group-hover:underline text-small">
           View Case Study
         </span>
-        <ChevronRight className="text-primary" size={16} aria-hidden="true" />
+        <ChevronRight className="text-primary transition-transform duration-150 group-hover:translate-x-0.5" size={16} aria-hidden="true" />
       </div>
     </div>
+  </a>
+);
+
+// The last projects are a compact list: same links, less visual weight,
+// so the stronger stories above lead.
+const ProjectRow: React.FC<ProjectCardProps> = ({
+  title,
+  tag,
+  year,
+  company,
+  caseStudyId,
+  onCaseStudyClick,
+}) => (
+  <a
+    href={caseStudyPath(caseStudyId)}
+    data-case-card
+    onClick={(e) => {
+      if (!isPlainClick(e)) return;
+      e.preventDefault();
+      onCaseStudyClick(caseStudyId);
+    }}
+    className="group flex flex-wrap items-center gap-x-6 gap-y-1 py-4 border-t border-border last:border-b hover:bg-secondary/40 transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
+  >
+    <h2 className="font-body font-medium text-foreground text-title flex-1 min-w-[16rem]">{title}</h2>
+    <span className="font-body text-muted-foreground text-small">
+      {tag} · {company} · {year}
+    </span>
+    <ChevronRight className="text-primary transition-transform duration-150 group-hover:translate-x-0.5" size={16} aria-hidden="true" />
   </a>
 );
 
@@ -144,7 +172,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       image: imgImageAILibrary,
       tag: "AI Tools",
       year: "2022-Present",
-      title: "Unlocking Hidden Archives",
+      title: "Archives in Hours, Not Weeks",
       company: "JSTOR Seeklight: describing archives in hours, not weeks",
       caseStudyId: "ai-library",
     },
@@ -160,7 +188,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       image: imgMobileParity,
       tag: "Mobile",
       year: "2021-2025",
-      title: "Research on the Go",
+      title: "Taking JSTOR Mobile",
       company: "JSTOR on phones, as someone's main screen or a second one",
       caseStudyId: "mobile-parity",
     },
@@ -168,7 +196,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       image: imgImageEcosystemInfrastructure,
       tag: "Design Systems",
       year: "2022-2025",
-      title: "One System, Many Products",
+      title: "Reactivating Pharos",
       company: "Pharos, One Admin and accessibility across JSTOR",
       caseStudyId: "ecosystem-infrastructure",
       imagePosition: "object-top",
@@ -177,7 +205,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       image: imgImageOnePlatformIntegration,
       tag: "Platform",
       year: "2023-2024",
-      title: "Integrating Artstor into JSTOR",
+      title: "When the Gallery Met the Library",
       company: "Moving faculty's teaching workflows without losing them",
       caseStudyId: "one-platform",
     },
@@ -212,7 +240,8 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
     (c) => projectDetails.find((p) => p.caseStudyId === c.id)!,
   ).filter(Boolean);
   const featuredProjects = orderedProjects.slice(0, 3);
-  const additionalProjects = orderedProjects.slice(3);
+  const additionalProjects = orderedProjects.slice(3, 6);
+  const listedProjects = orderedProjects.slice(6);
 
   return (
     <motion.div
@@ -253,6 +282,22 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
           <div className="grid md:grid-cols-3 gap-8">
             {additionalProjects.map((project, index) => (
               <ProjectCard
+                key={project.caseStudyId}
+                {...project}
+                onCaseStudyClick={onCaseStudyClick}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* More projects, as a compact list */}
+        <div className="mt-16">
+          <p className="mb-2 font-body font-medium text-muted-foreground text-label uppercase tracking-caps">
+            More projects
+          </p>
+          <div>
+            {listedProjects.map((project) => (
+              <ProjectRow
                 key={project.caseStudyId}
                 {...project}
                 onCaseStudyClick={onCaseStudyClick}

@@ -70,13 +70,13 @@ export const MarketingCard: React.FC<MarketingCardProps> = ({
 
   // Determine variant styles
   const variantClass = {
-    default: 'bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]',
-    outlined: 'bg-white rounded-[10px] border-2 border-border',
-    flat: 'bg-white rounded-[10px]',
+    default: 'bg-white rounded-[2px] border border-border',
+    outlined: 'bg-white rounded-[2px] border-2 border-border',
+    flat: 'bg-white rounded-[2px]',
   }[variant];
 
   // Hover effect
-  const hoverClass = hoverable ? 'hover:shadow-lg transition-shadow cursor-pointer' : '';
+  const hoverClass = hoverable ? 'hover:border-primary transition-colors cursor-pointer' : '';
 
   const cardContent = (
     <div 

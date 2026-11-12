@@ -80,7 +80,7 @@ export const BlogImage: React.FC<BlogImageProps> = ({
       <img 
         src={src} 
         alt={alt}
-        className={`${sizeClass} rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)]`}
+        className={`${sizeClass} rounded-[2px] border border-border`}
       />
       
       {caption && (

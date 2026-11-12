@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, useScroll } from 'motion/react';
 import { caseStudyPath, isPlainClick, neighbors } from '../data/caseStudies';
 
 interface CaseStudyNavProps {
@@ -12,6 +13,8 @@ interface CaseStudyNavProps {
 export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, onNavigate }) => {
   const { previous, next } = neighbors(currentProjectId);
   const [top, setTop] = useState(0);
+  // A thin line under the bar shows how far through the case study you are.
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const measure = () => {
@@ -30,7 +33,7 @@ export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, on
   };
 
   const linkClass =
-    "flex items-center gap-2 min-w-0 py-1 text-primary hover:text-primary/80 transition-colors rounded-[10px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
+    "flex items-center gap-2 min-w-0 py-1 text-primary hover:text-primary/80 transition-colors rounded-[2px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
   return (
     <nav
@@ -50,6 +53,11 @@ export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, on
           <ChevronRight size={18} className="shrink-0" aria-hidden="true" />
         </a>
       </div>
+      <motion.div
+        aria-hidden="true"
+        className="absolute left-0 right-0 -bottom-[2px] h-[2px] bg-primary origin-left"
+        style={{ scaleX: scrollYProgress }}
+      />
     </nav>
   );
 };

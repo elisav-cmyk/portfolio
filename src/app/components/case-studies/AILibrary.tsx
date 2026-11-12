@@ -10,7 +10,7 @@ const data: CaseStudyData = {
   },
   tag: 'AI Tools',
   years: '2022-Present',
-  title: 'Unlocking Hidden Archives',
+  title: 'Archives in Hours, Not Weeks',
   subtitle: "JSTOR Seeklight: describing archives in hours, not weeks",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Management, Engineering, Research, Outreach, Legal, Insights, Portico',
