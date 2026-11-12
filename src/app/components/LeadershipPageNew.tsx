@@ -36,8 +36,12 @@ const Section: React.FC<{ id: string; title: string; intro?: string; last?: bool
   </section>
 );
 
-const Card: React.FC<{ title?: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className={card}>
+const Card: React.FC<{ title?: string; className?: string; children: React.ReactNode }> = ({
+  title,
+  className = '',
+  children,
+}) => (
+  <div className={`${card} ${className}`}>
     <div className={cardInner}>
       {title && <h3 className={cardTitle}>{title}</h3>}
       {children}
@@ -240,13 +244,17 @@ export const LeadershipPageContent = () => {
         title="Working With Google"
         intro="My work with Android started before Android did. Over 18.5 years at Motorola, I worked with Google's platform teams as a partner and across a negotiating table."
       >
-        <div className="space-y-6">
-          <div className="bg-primary rounded-[2px] p-8">
-            <div className={cardInner}>
-              <h3 className="font-body font-medium text-white mb-3 text-body">
+        {/* Bento from 1024px: the lead story takes the tall left tile, the two shorter cards stack on the right. */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <div className="bg-primary rounded-[2px] p-8 lg:col-span-3 lg:row-span-2 lg:p-10 lg:flex lg:flex-col lg:justify-between lg:gap-10">
+            <div aria-hidden="true" className="hidden lg:block font-body font-medium text-white/80 text-label uppercase tracking-caps">
+              Android 10
+            </div>
+            <div className={`${cardInner} lg:mx-0`}>
+              <h3 className="font-body font-medium text-white mb-3 text-body lg:font-heading lg:font-normal lg:text-h3 lg:mb-4">
                 Strategic Subtraction: the &quot;One Nav&quot; Decision
               </h3>
-              <p className="font-body text-white text-body max-w-[68ch]">
+              <p className="font-body text-white text-body lg:text-quote max-w-[68ch]">
                 When Android 10 introduced native gestures that competed with our own navigation, I brought my lead
                 designer into the negotiations with the Android team. We ran a trade-off analysis, retired our popular
                 feature for ecosystem compatibility, moved the effort to the RAZR launch, and shared our gesture research
@@ -255,14 +263,14 @@ export const LeadershipPageContent = () => {
             </div>
           </div>
 
-          <Card title="Foldables and the Android Framework">
+          <Card title="Foldables and the Android Framework" className="lg:col-span-2">
             <p className={body}>
               I directed the UX for the Android RAZR foldable as a partner to the Android team. Our three-part
               cover-screen model shaped Google&apos;s patterns for small foldable screens.
             </p>
           </Card>
 
-          <Card title="Platform Foundations">
+          <Card title="Platform Foundations" className="lg:col-span-2">
             <p className={body}>
               From 2002 to 2005, I was part of the teams that built Motorola&apos;s own mobile platforms. I later led
               the team whose work became the foundation for Motorola&apos;s first Android device, the CLIQ.
