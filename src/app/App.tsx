@@ -694,7 +694,7 @@ const PortfolioWireframes = () => {
                   <div className="text-xs text-primary mb-2">
                     {project.company}
                   </div>
-                  <div className={lead ? "font-heading text-h2 mb-3" : "text-xl mb-2"}>
+                  <div className="text-xl mb-2">
                     {project.title}
                   </div>
                   <div className={`text-foreground mb-4 ${lead ? "text-body" : "text-sm"}`}>
