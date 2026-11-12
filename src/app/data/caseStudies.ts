@@ -14,11 +14,11 @@ export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "grubhub-direct", title: "Restaurants Own Their Orders", company: "Grubhub" },
   { id: "razr-foldable", title: "Bringing Back the RAZR", company: "Motorola" },
   { id: "moto-app", title: "Turning Hidden Features into Daily Habits", company: "Motorola" },
-  { id: "mobile-parity", title: "Research on the Go", company: "JSTOR" },
-  { id: "ai-library", title: "Unlocking Hidden Archives", company: "JSTOR" },
+  { id: "mobile-parity", title: "Taking JSTOR Mobile", company: "JSTOR" },
+  { id: "ai-library", title: "Archives in Hours, Not Weeks", company: "JSTOR" },
   { id: "camera-redesign", title: "Starting the Camera Over", company: "Motorola" },
-  { id: "one-platform", title: "Integrating Artstor into JSTOR", company: "JSTOR" },
-  { id: "ecosystem-infrastructure", title: "One System, Many Products", company: "JSTOR" },
+  { id: "one-platform", title: "When the Gallery Met the Library", company: "JSTOR" },
+  { id: "ecosystem-infrastructure", title: "Reactivating Pharos: A Federated Design System Team", company: "JSTOR" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;

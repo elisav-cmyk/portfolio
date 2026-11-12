@@ -353,41 +353,21 @@ const PortfolioWireframes = () => {
   };
 
   // Page transition variants
+  // Page changes cross-fade quickly, to show that the view changed.
+  // Nothing else fades in: content is there when the page is.
   const pageVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
   };
 
   const pageTransition = {
     type: "tween",
-    ease: "easeInOut",
-    duration: 0.3,
+    ease: "easeOut",
+    duration: 0.15,
   };
 
-  // Stagger children animation
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "tween",
-        ease: "easeOut",
-        duration: 0.4,
-      },
-    },
-  };
 
   // Page links are real links: plain clicks stay in the app, while
   // middle-click or Cmd-click opens the page in a new tab.
@@ -446,13 +426,22 @@ const PortfolioWireframes = () => {
                 href={pathFor(page.id, null)}
                 aria-current={activePage === page.id ? "page" : undefined}
                 onClick={(e) => goToPage(e, page.id)}
-                className={`font-body text-body font-medium transition-colors ${
+                className={`relative font-body text-body font-medium transition-colors duration-150 ${
                   activePage === page.id
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
                 }`}
               >
                 {page.label}
+                {/* The underline slides to the page you just opened. */}
+                {activePage === page.id && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    aria-hidden="true"
+                    className="absolute left-0 right-0 -bottom-1.5 h-0.5 bg-primary"
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                  />
+                )}
               </a>
             ))}
           </nav>
@@ -591,16 +580,10 @@ const PortfolioWireframes = () => {
           {/* Stats Bar - Responsive */}
           <motion.div
             className="bg-secondary border-2 border-secondary rounded-[2px] p-4 sm:p-6 lg:p-7 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
           >
             {/* Four scope numbers, each with a plain line saying what it means */}
             <motion.div
               className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 sm:gap-6 text-center"
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
             >
               {[
                 { value: "20+", label: "Years in design", detail: "Leading teams since 2006" },
@@ -610,7 +593,6 @@ const PortfolioWireframes = () => {
               ].map((stat) => (
                 <motion.div
                   key={stat.label}
-                  variants={itemVariants}
                   className="flex flex-col gap-1"
                 >
                   <div className="font-heading text-stat text-primary">
@@ -633,28 +615,14 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("work", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "work")}
-              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 17,
-              }}
+              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition duration-150 active:translate-y-px"
             >
               View Case Studies
             </motion.a>
             <motion.a
               href={pathFor("leadership", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
-              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-white border border-border rounded-[2px] hover:bg-muted transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 17,
-              }}
+              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-white border border-border rounded-[2px] hover:bg-muted transition duration-150 active:translate-y-px"
             >
               Leadership Approach
             </motion.a>
@@ -667,18 +635,12 @@ const PortfolioWireframes = () => {
         <div className="marketing-grid py-16">
           <motion.h2
             className="text-center mb-12 font-heading font-normal text-foreground text-h2 uppercase tracking-caps"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
           >
-            Signature Work
+            Work I’m Proudest Of
           </motion.h2>
-          <motion.div
-            className="grid md:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
+          {/* The lead project gets a wide card of its own; the next two sit below it.
+              Different sizes tell the reader where to start. */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {[
               {
                 title: "AI That Shows Its Sources",
@@ -706,7 +668,9 @@ const PortfolioWireframes = () => {
                 id: "razr-foldable",
                 image: razrHeroImage,
               },
-            ].map((project, i) => (
+            ].map((project, i) => {
+              const lead = i === 0;
+              return (
               <motion.a
                 key={project.id}
                 href={caseStudyPath(project.id)}
@@ -715,37 +679,34 @@ const PortfolioWireframes = () => {
                   e.preventDefault();
                   handleCaseStudyClick(project.id);
                 }}
-                className="block bg-white border border-border rounded-[2px] overflow-hidden hover:border-primary transition-colors cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
-                variants={itemVariants}
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.2 },
-                }}
+                className={`group bg-white border border-border rounded-[2px] overflow-hidden hover:border-primary transition-colors duration-150 cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary ${lead ? "md:col-span-2 md:grid md:grid-cols-[3fr_2fr]" : "block"}`}
               >
-                <div className="h-48 overflow-hidden">
+                <div className={`overflow-hidden ${lead ? "h-56 md:h-full md:min-h-[18rem]" : "h-48"}`}>
                   <img
                     src={project.image || heroImage}
                     alt=""
                     className={`w-full h-full object-cover ${"position" in project ? project.position : "object-center"}`}
                   />
                 </div>
-                <div className="p-6">
+                <div className={lead ? "p-6 md:p-8 flex flex-col justify-center" : "p-6"}>
                   <div className="text-xs text-primary mb-2">
                     {project.company}
                   </div>
-                  <div className="text-xl mb-2">
+                  <div className={lead ? "font-heading text-h2 mb-3" : "text-xl mb-2"}>
                     {project.title}
                   </div>
-                  <div className="text-foreground text-sm mb-4">
+                  <div className={`text-foreground mb-4 ${lead ? "text-body" : "text-sm"}`}>
                     {project.subtitle}
                   </div>
-                  <div className="text-primary text-sm">
+                  <div className={`text-primary flex items-center gap-1 ${lead ? "text-body font-medium" : "text-sm"}`}>
                     {project.metric}
+                    <span aria-hidden="true" className="inline-block transition-transform duration-150 group-hover:translate-x-0.5">→</span>
                   </div>
                 </div>
               </motion.a>
-            ))}
-          </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -756,7 +717,8 @@ const PortfolioWireframes = () => {
             Results
           </h2>
           {/* Outcomes my teams drove, each explained in a case study or on Leadership */}
-          <div className="grid md:grid-cols-3 gap-12">
+          {/* The first result leads: larger number, wider column. */}
+          <div className="grid md:grid-cols-[1.4fr_1fr_1fr] gap-12 items-end">
             {[
               {
                 value: "52% vs 39%",
@@ -773,9 +735,9 @@ const PortfolioWireframes = () => {
                 label: "Accessibility",
                 detail: "JSTOR in the WebAIM Million, with a 98% drop in accessibility errors",
               },
-            ].map((r) => (
+            ].map((r, i) => (
               <div key={r.label} className="flex flex-col gap-2 items-center">
-                <p className="font-heading font-normal text-white mb-2 text-stat">
+                <p className={`font-heading font-normal text-white mb-2 ${i === 0 ? "text-stat-lg" : "text-stat"}`}>
                   {r.value}
                 </p>
                 <p className="font-body font-normal text-primary-foreground text-body">
@@ -790,14 +752,7 @@ const PortfolioWireframes = () => {
           <motion.a
             href={pathFor("impact", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "impact")}
-            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[2px] font-body font-medium text-primary hover:bg-white/90 text-small"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{
-              type: "spring",
-              stiffness: 400,
-              damping: 17,
-            }}
+            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[2px] font-body font-medium text-primary hover:bg-white/90 text-small transition duration-150 active:translate-y-px"
           >
             View All Results
           </motion.a>
@@ -841,14 +796,7 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("leadership", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
-              className="inline-block text-center px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 17,
-              }}
+              className="inline-block text-center px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition duration-150 active:translate-y-px"
             >
               Read Full Leadership Philosophy
             </motion.a>
@@ -927,14 +875,7 @@ const PortfolioWireframes = () => {
                 e.preventDefault();
                 navigateToLeadershipSection("partners-say");
               }}
-              className="inline-block bg-white px-7 py-3 rounded-[2px] font-body font-medium text-foreground hover:bg-gray-50 cursor-pointer text-small"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 17,
-              }}
+              className="inline-block bg-white px-7 py-3 rounded-[2px] font-body font-medium text-foreground hover:bg-gray-50 cursor-pointer text-small transition duration-150 active:translate-y-px"
             >
               Read All Testimonials
             </motion.a>
