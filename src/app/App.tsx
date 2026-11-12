@@ -659,6 +659,8 @@ const PortfolioWireframes = () => {
                 image: grubhubImage,
                 // Show the top of the dashboard; crop from the bottom.
                 position: "object-top",
+                // The screenshot has a transparent background; a cream fill sets it off from the white card.
+                imageBg: "bg-secondary",
               },
               {
                 title: "Bringing Back the RAZR",
@@ -681,7 +683,7 @@ const PortfolioWireframes = () => {
                 }}
                 className={`group bg-white border border-border rounded-[2px] overflow-hidden hover:border-primary transition-colors duration-150 cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary ${lead ? "md:col-span-2 md:grid md:grid-cols-[3fr_2fr]" : "block"}`}
               >
-                <div className={`overflow-hidden ${lead ? "h-56 md:h-full md:min-h-[18rem]" : "h-48"}`}>
+                <div className={`overflow-hidden ${lead ? "h-56 md:h-full md:min-h-[18rem]" : "h-48"} ${"imageBg" in project ? project.imageBg : ""}`}>
                   <img
                     src={project.image || heroImage}
                     alt=""
@@ -828,11 +830,7 @@ const PortfolioWireframes = () => {
               className="bg-white border border-border rounded-[2px] px-8 py-6 flex flex-col gap-3"
             >
               <div className="flex items-start">
-                <div className="bg-secondary px-3 py-1 rounded-full">
-                  <p className="font-body font-medium text-secondary-foreground text-label">
-                    Strategic
-                  </p>
-                </div>
+                <span className="pill">Strategic</span>
               </div>
               <div>
                 <p className="font-heading font-normal italic text-muted-foreground text-quote">
@@ -849,11 +847,7 @@ const PortfolioWireframes = () => {
               className="bg-white border border-border rounded-[2px] px-8 py-6 flex flex-col gap-3"
             >
               <div className="flex items-start">
-                <div className="bg-secondary px-3 py-1 rounded-full">
-                  <p className="font-body font-medium text-secondary-foreground text-label">
-                    Catalyst
-                  </p>
-                </div>
+                <span className="pill">Catalyst</span>
               </div>
               <div>
                 <p className="font-heading font-normal italic text-muted-foreground text-quote">

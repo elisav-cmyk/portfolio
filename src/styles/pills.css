@@ -1,0 +1,21 @@
+/* Pills: product-area tags and quote tags. A soft tint, close to the
+   surface it sits on, with green text (5.4:1 contrast). */
+@layer components {
+  .pill {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: #ecede2;
+    color: var(--secondary-foreground);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.38;
+  }
+  /* On the dark green cards */
+  .pill-dark {
+    background-color: rgb(255 255 255 / 0.1);
+    color: #ffffff;
+  }
+}

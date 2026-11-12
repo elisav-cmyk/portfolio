@@ -28,6 +28,8 @@ interface ProjectCardProps {
   company: string;
   caseStudyId: string;
   imagePosition?: string;
+  /** Fill behind the image, for screenshots with a transparent or white background. */
+  imageBg?: string;
   onCaseStudyClick: (id: string) => void;
 }
 
@@ -39,6 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   company,
   caseStudyId,
   imagePosition,
+  imageBg,
   onCaseStudyClick,
 }) => (
   <a
@@ -52,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     className="group bg-card rounded-[2px] border border-border overflow-hidden flex flex-col cursor-pointer hover:border-primary transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
   >
     {/* Image */}
-    <div className="h-[192px] overflow-hidden">
+    <div className={`h-[192px] overflow-hidden ${imageBg || ""}`}>
       <img
         src={image}
         alt=""
@@ -64,11 +67,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="p-6 flex flex-col gap-3">
       {/* Tag and Year */}
       <div className="flex items-center justify-between">
-        <div className="bg-secondary px-3 py-1 rounded-full">
-          <span className="font-body font-medium text-secondary-foreground text-label">
-            {tag}
-          </span>
-        </div>
+        <span className="pill">{tag}</span>
         <span className="font-body text-muted-foreground text-label">
           {year}
         </span>
@@ -116,8 +115,9 @@ const ProjectRow: React.FC<ProjectCardProps> = ({
     className="group flex flex-wrap items-center gap-x-6 gap-y-1 py-4 border-t border-border last:border-b hover:bg-secondary/40 transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
   >
     <h2 className="font-body font-medium text-foreground text-title flex-1 min-w-[16rem]">{title}</h2>
+    <span className="pill">{tag}</span>
     <span className="font-body text-muted-foreground text-small">
-      {tag} · {company} · {year}
+      {company} · {year}
     </span>
     <ChevronRight className="text-primary transition-transform duration-150 group-hover:translate-x-0.5" size={16} aria-hidden="true" />
   </a>
@@ -231,6 +231,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       title: "Restaurants Own Their Orders",
       company: "Grubhub Direct: commission-free ordering for local restaurants",
       caseStudyId: "grubhub-direct",
+      imageBg: "bg-secondary",
       imagePosition: "object-top",
     },
   ];
