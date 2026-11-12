@@ -253,16 +253,17 @@ export const LeadershipPageContent = () => {
                 <strong>{q.source}</strong>, {q.detail}
               </figcaption>
             );
-            // A bento grid: three columns, with each box sized to its quote.
-            // The lead quote is wide, the direct report's quote is tall, and
-            // the longest quote runs the full width. DOM order is reading order.
+            // A bento grid modeled on literal.club: three columns, rows of equal
+            // height, and boxes one or two columns wide. Each box is a flat white
+            // panel with generous padding; the quote sits at the top and the
+            // credit at the bottom. On phones the boxes stack in reading order.
             const Box = ({ q, className, dark, lead }: { q: typeof quotes[number]; className: string; dark?: boolean; lead?: boolean }) => (
               <figure
-                className={`${className} ${dark ? 'on-dark bg-primary border-primary' : 'bg-white border-border'} rounded-[2px] border flex flex-col ${lead ? 'p-8 lg:p-10' : 'p-6'}`}
+                className={`${className} ${dark ? 'on-dark bg-primary' : 'bg-white'} rounded-[2px] flex flex-col p-6 md:p-8 lg:p-10`}
               >
-                <span className={`pill mb-4 ${dark ? 'pill-dark' : ''}`}>{q.tag}</span>
+                <span className={`pill mb-6 ${dark ? 'pill-dark' : ''}`}>{q.tag}</span>
                 <blockquote
-                  className={`font-heading mb-4 flex-1 ${dark ? 'text-white' : lead ? 'text-foreground' : 'text-secondary-foreground'} ${lead ? 'text-quote-lg' : 'text-quote'}`}
+                  className={`font-heading mb-6 flex-1 ${dark ? 'text-white' : lead ? 'text-foreground' : 'text-secondary-foreground'} ${lead ? 'text-quote-lg max-w-[40ch]' : 'text-quote'}`}
                 >
                   &ldquo;{q.text}&rdquo;
                 </blockquote>
@@ -271,11 +272,13 @@ export const LeadershipPageContent = () => {
             );
             return (
               <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+                {/* Row 1: the lead quote, two columns wide, beside the direct report's quote */}
                 <Box q={feature} lead className="md:col-span-2" />
-                <Box q={catalystB} dark lead className="md:row-span-2" />
+                <Box q={catalystB} dark className="" />
+                {/* Row 2: three single-column quotes */}
                 <Box q={strategic} className="" />
                 <Box q={connectorA} className="" />
-                <Box q={connectorB} className="md:col-span-3 [&_blockquote]:max-w-[70ch]" />
+                <Box q={connectorB} className="" />
               </div>
             );
           })()}
