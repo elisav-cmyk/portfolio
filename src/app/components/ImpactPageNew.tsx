@@ -136,12 +136,12 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
   >
     <div className="w-full bg-secondary-foreground">
       <div className="marketing-grid py-16">
-        <div className="max-w-[75ch] mx-auto">
+        <div className="max-w-(--page-width) mx-auto">
           <div className="mb-12">
             <h1 className="mb-4 font-heading text-white text-display uppercase tracking-caps">
               Impact
             </h1>
-            <p className="font-body text-white text-lead">
+            <p className="font-body text-white text-lead max-w-[60ch]">
               Results from AI search, local commerce, mobile platforms and the teams behind them
             </p>
           </div>

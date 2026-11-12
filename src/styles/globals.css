@@ -90,6 +90,7 @@
   /* Responsive Spacing Aliases - adapt to viewport */
   --section-gap: var(--space-3xl); /* 64px desktop → 32px mobile */
   --component-gap: var(--space-md); /* 16px desktop → 8px mobile */
+  --page-width: 60rem; /* 960px: shared content width for Work, Leadership, Impact */
   --container-inset: var(--space-lg); /* 24px desktop → 16px mobile */
   --card-spacing: var(--space-xl); /* 32px desktop → 16px mobile */
   

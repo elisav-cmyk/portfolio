@@ -152,7 +152,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
           src={figure.video.src}
           poster={figure.video.poster}
           aria-label={figure.alt}
-          className="h-auto w-full max-w-[360px] rounded-[2px]"
+          className="mx-auto block h-auto w-full max-w-[360px] rounded-[2px]"
           muted
           loop
           playsInline
@@ -161,7 +161,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
           preload="metadata"
         />
         {figure.caption && (
-          <figcaption className="font-body text-muted-foreground mt-2 text-small">{figure.caption}</figcaption>
+          <figcaption className="font-body text-muted-foreground mt-2 text-small text-center">{figure.caption}</figcaption>
         )}
       </figure>
     );
