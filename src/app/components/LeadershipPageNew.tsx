@@ -195,29 +195,35 @@ export const LeadershipPageContent = () => {
           <div className="max-w-(--page-width) mx-auto">
             <h1 className="font-heading text-foreground mb-12 text-display uppercase tracking-caps">Leadership</h1>
 
-            <div className="bg-white rounded-[2px] p-8">
-              <div className={cardInner}>
-                <p className={`${body} mb-4`}>
-                  I build design teams and take on hard problems at scale: the Android RAZR foldable, which earned a Red
-                  Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400 institutions; and
-                  hybrid AI search for a platform that serves 111M+ people a year.
-                </p>
-                <p className={`${body} mb-6`}>
-                  My job is to connect what customers need with what engineering can build, make the call clearly, and
-                  give senior leads room to do their best work. I&apos;ve led teams on three continents, including two and
-                  a half years living in São Paulo and running studios in China across a 13-hour time difference.
-                </p>
+            {/* Intro card: text on the left, jump links in a sidebar that stacks below on narrow screens */}
+            <div className="bg-white rounded-[2px] p-6 md:p-10">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
+                <div className="flex-1 space-y-5">
+                  <p className={body}>
+                    I build design teams and take on hard problems at scale: the Android RAZR foldable, which earned a
+                    Red Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400 institutions;
+                    and hybrid AI search for a platform that serves 111M+ people a year.
+                  </p>
+                  <p className={body}>
+                    My job is to connect what customers need with what engineering can build, make the call clearly, and
+                    give senior leads room to do their best work. I&apos;ve led teams on three continents, including two
+                    and a half years living in São Paulo and running studios in China across a 13-hour time difference.
+                  </p>
+                </div>
 
-                <nav aria-label="On this page" className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                  {LEADERSHIP_SECTIONS.map((s) => (
-                    <a
-                      key={s.id}
-                      href={`#${s.id}`}
-                      className="font-body text-primary hover:underline text-body"
-                    >
-                      → {s.label}
-                    </a>
-                  ))}
+                <nav
+                  aria-label="On this page"
+                  className="w-full lg:w-72 shrink-0 border-t lg:border-t-0 lg:border-l border-border pt-5 lg:pt-0 lg:pl-8"
+                >
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+                    {LEADERSHIP_SECTIONS.map((s) => (
+                      <li key={s.id}>
+                        <a href={`#${s.id}`} className="font-body text-primary hover:underline text-body">
+                          → {s.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </nav>
               </div>
             </div>
