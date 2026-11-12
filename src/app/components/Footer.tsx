@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
   };
 
   return (
-    <footer className="bg-white content-stretch flex flex-col items-center pb-0 pt-[2px] px-0 relative w-full border-t-2 border-border">
+    <footer className="bg-white content-stretch flex flex-col items-center pb-0 pt-[2px] px-0 relative w-full border-t border-border">
       <div className="h-auto relative shrink-0 w-full">
         <div className="flex flex-col items-center size-full">
           <div className="content-stretch flex flex-col gap-[16px] items-center px-[36px] py-[27px] relative w-full">

@@ -264,14 +264,14 @@ export const LeadershipPageContent = () => {
 
                 {/* The direct report's quote on a green card, beside the Strategic quote */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <figure className="on-dark bg-primary rounded-[2px] border-2 border-primary p-6 flex flex-col">
+                  <figure className="on-dark bg-primary rounded-[2px] border border-primary p-6 flex flex-col">
                     <Tag text={catalystB.tag} dark />
                     <blockquote className="font-heading text-white mb-4 flex-1 text-quote">
                       &ldquo;{catalystB.text}&rdquo;
                     </blockquote>
                     <Caption q={catalystB} dark />
                   </figure>
-                  <figure className="bg-white rounded-[2px] border-2 border-border p-6 flex flex-col">
+                  <figure className="bg-white rounded-[2px] border border-border p-6 flex flex-col">
                     <Tag text={strategic.tag} />
                     <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
                       &ldquo;{strategic.text}&rdquo;
@@ -283,7 +283,7 @@ export const LeadershipPageContent = () => {
                 {/* Connector: two cards side by side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[connectorA, connectorB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[2px] border-2 border-border p-6 flex flex-col">
+                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[2px] border border-border p-6 flex flex-col">
                       <Tag text={q.tag} />
                       <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
                         &ldquo;{q.text}&rdquo;

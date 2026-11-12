@@ -389,7 +389,7 @@ const PortfolioWireframes = () => {
   const Navigation = () => (
     <header
       id="site-nav"
-      className="border-b-2 border-border bg-white sticky top-0 z-50"
+      className="border-b border-border bg-white sticky top-0 z-50"
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -452,7 +452,7 @@ const PortfolioWireframes = () => {
               href="https://linkedin.com/in/elisavargas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-2 font-body font-medium border-2 border-border rounded-[2px] hover:bg-muted transition-colors text-small"
+              className="flex items-center gap-2 px-3 py-2 font-body font-medium border border-border rounded-[2px] hover:bg-muted transition-colors text-small"
             >
               <LinkedinFilled size={16} />
               LinkedIn
@@ -499,7 +499,7 @@ const PortfolioWireframes = () => {
                 href="https://linkedin.com/in/elisavargas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm border-2 border-border rounded-[2px]"
+                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm border border-border rounded-[2px]"
               >
                 <LinkedinFilled size={16} />
                 LinkedIn
@@ -527,7 +527,7 @@ const PortfolioWireframes = () => {
       {/* Hero Section */}
       <div
         ref={heroSectionRef}
-        className="bg-white border-b-2 border-border"
+        className="bg-white border-b border-border"
       >
         <div className="marketing-grid py-12 sm:py-16 lg:py-20 text-center">
           <div className="max-w-[75ch] mx-auto">
@@ -579,7 +579,7 @@ const PortfolioWireframes = () => {
 
           {/* Stats Bar - Responsive */}
           <motion.div
-            className="bg-secondary border-2 border-secondary rounded-[2px] p-4 sm:p-6 lg:p-7 max-w-4xl mx-auto mb-8"
+            className="bg-secondary border border-secondary rounded-[2px] p-4 sm:p-6 lg:p-7 max-w-4xl mx-auto mb-8"
           >
             {/* Four scope numbers, each with a plain line saying what it means */}
             <motion.div
@@ -711,7 +711,7 @@ const PortfolioWireframes = () => {
       </div>
 
       {/* Impact Highlight */}
-      <div className="on-dark bg-primary border-t-2 border-ring border-b-2 border-ring">
+      <div className="on-dark bg-primary border-t border-ring border-b border-ring">
         <div className="marketing-grid py-16 text-center">
           <h2 className="mb-12 text-white font-heading font-normal text-h2 uppercase tracking-caps">
             Results
@@ -809,7 +809,7 @@ const PortfolioWireframes = () => {
         <h2 className="text-center mb-8 font-heading font-normal text-foreground text-h2 uppercase tracking-caps">
           What I&rsquo;m Looking For
         </h2>
-        <div className="bg-secondary border-2 border-border rounded-[2px] p-8 text-center">
+        <div className="bg-secondary border border-border rounded-[2px] p-8 text-center">
           <div className="text-foreground leading-relaxed max-w-3xl mx-auto">
             Director and Senior Director design leadership roles in AI, search and consumer platforms, where grounded AI, recommendations and assistive experiences help people find what matters and act on it, online and in the real world.
           </div>
@@ -817,7 +817,7 @@ const PortfolioWireframes = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="bg-secondary border-t-2 border-secondary">
+      <div className="bg-secondary border-t border-secondary">
         <div className="max-w-5xl mx-auto px-6 py-16">
           <h2 className="text-center mb-12 font-heading font-normal text-foreground text-h2 uppercase tracking-caps">
             What Partners Say
