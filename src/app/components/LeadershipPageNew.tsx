@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
+import { motion, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from 'motion/react';
 
 // Leadership and About combined. Each story appears once.
 // Section ids are used by the "How I Lead" links on the Home page.
@@ -107,6 +108,79 @@ const quotes = [
   },
 ];
 
+// Career timeline. As the reader scrolls through it, a green line draws down
+// from the current role to the first one, and each dot fills when the line
+// reaches it: the motion traces the career in reading order. The current
+// role's dot is a little larger, so it stays marked once every dot is filled.
+// With reduce motion on, the timeline is still: full line, current dot filled.
+const CareerTimeline: React.FC = () => {
+  const list = useRef<HTMLOListElement>(null);
+  const reduce = useReducedMotion();
+  const [dotTops, setDotTops] = useState<number[]>([]);
+  const [reached, setReached] = useState(1);
+  const { scrollYProgress } = useScroll({ target: list, offset: ['start 75%', 'end 55%'] });
+  const span = dotTops.length ? dotTops[dotTops.length - 1] - dotTops[0] : 0;
+  const fill = useTransform(scrollYProgress, [0, 1], [0, span]);
+
+  useLayoutEffect(() => {
+    const measure = () => {
+      const el = list.current;
+      if (!el) return;
+      const base = el.getBoundingClientRect().top;
+      setDotTops(
+        Array.from(el.querySelectorAll<HTMLElement>('[data-dot]')).map((d) => {
+          const r = d.getBoundingClientRect();
+          return r.top - base + r.height / 2;
+        }),
+      );
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, []);
+
+  useMotionValueEvent(fill, 'change', (h) => {
+    const n = dotTops.filter((t) => t - dotTops[0] <= h + 1).length;
+    if (n !== reached) setReached(n);
+  });
+
+  const still = reduce || !dotTops.length;
+  return (
+    <ol ref={list} className="relative max-w-[68ch]">
+      {dotTops.length > 1 && (
+        <>
+          <span aria-hidden="true" className="absolute left-[5px] w-0.5 bg-primary/25" style={{ top: dotTops[0], height: span }} />
+          <motion.span
+            aria-hidden="true"
+            className="absolute left-[5px] w-0.5 bg-primary"
+            style={{ top: dotTops[0], height: still ? span : fill }}
+          />
+        </>
+      )}
+      {career.map((c, i) => {
+        const current = i === 0;
+        const filled = current || (!still && i < reached);
+        return (
+          <li key={c.role} className="relative pl-10 pb-10 last:pb-0">
+            <span
+              data-dot
+              aria-hidden="true"
+              className={`absolute rounded-full border-2 border-primary transition-colors duration-200 ease-out ${current ? 'left-[-2px] -top-[3px] size-4' : 'left-0 -top-px size-3'} ${filled ? 'bg-primary' : 'bg-white'}`}
+            />
+            <p className="font-body font-medium text-secondary-foreground text-label uppercase tracking-[0.08em] [text-box:trim-start_cap_alphabetic] mb-2">
+              {c.years}
+            </p>
+            <h3 className="font-body font-medium text-foreground text-body mb-1">
+              {c.role}, {c.org}
+            </h3>
+            <p className={body}>{c.text}</p>
+          </li>
+        );
+      })}
+    </ol>
+  );
+};
+
 export const LeadershipPageContent = () => {
   return (
     <div className="w-full bg-background">
@@ -145,27 +219,7 @@ export const LeadershipPageContent = () => {
       </section>
 
       <Section id="career" title="Career at a Glance">
-        {/* A timeline: one line, one dot per role. The current role's dot is filled. */}
-        <ol className="max-w-[68ch]">
-          {career.map((c, i) => (
-            <li
-              key={c.role}
-              className="relative pl-10 pb-10 last:pb-0 before:absolute before:left-[5px] before:top-2.5 before:-bottom-1 before:w-0.5 before:bg-primary/35 last:before:hidden"
-            >
-              <span
-                aria-hidden="true"
-                className={`absolute left-0 -top-px size-3 rounded-full border-2 border-primary ${i === 0 ? 'bg-primary' : 'bg-white'}`}
-              />
-              <p className="font-body font-medium text-secondary-foreground text-label uppercase tracking-[0.08em] [text-box:trim-start_cap_alphabetic] mb-2">
-                {c.years}
-              </p>
-              <h3 className="font-body font-medium text-foreground text-body mb-1">
-                {c.role}, {c.org}
-              </h3>
-              <p className={body}>{c.text}</p>
-            </li>
-          ))}
-        </ol>
+        <CareerTimeline />
       </Section>
 
       <Section
