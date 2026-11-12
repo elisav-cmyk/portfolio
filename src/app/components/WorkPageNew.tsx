@@ -112,14 +112,23 @@ const ProjectRow: React.FC<ProjectCardProps> = ({
       e.preventDefault();
       onCaseStudyClick(caseStudyId);
     }}
-    className="group flex flex-wrap items-center gap-x-6 gap-y-1 py-4 border-t border-border last:border-b hover:bg-secondary/40 transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
+    className="group grid grid-cols-[1fr_auto] items-start gap-x-4 gap-y-1 py-4 border-t border-border last:border-b hover:bg-secondary/40 transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
   >
-    <h2 className="font-body font-medium text-foreground text-title flex-1 min-w-[16rem]">{title}</h2>
-    <span className="pill">{tag}</span>
-    <span className="font-body text-muted-foreground text-small">
-      {company} · {year}
-    </span>
-    <ChevronRight className="text-primary transition-transform duration-150 group-hover:translate-x-0.5" size={16} aria-hidden="true" />
+    {/* Row 1: title and pill always share a line; a long title wraps beside the pill. */}
+    <h2 className="font-body font-medium text-foreground text-title min-w-0">{title}</h2>
+    <span className="pill shrink-0">{tag}</span>
+    {/* Row 2: the year and chevron are kept together so the chevron never wraps alone. */}
+    <p className="col-span-2 font-body text-muted-foreground text-small">
+      {company} ·{" "}
+      <span className="whitespace-nowrap">
+        {year}
+        <ChevronRight
+          className="inline-block align-[-0.15em] ml-2 text-primary transition-transform duration-150 group-hover:translate-x-0.5"
+          size={16}
+          aria-hidden="true"
+        />
+      </span>
+    </p>
   </a>
 );
 
