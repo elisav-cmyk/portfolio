@@ -37,7 +37,6 @@ const data: CaseStudyData = {
     },
     {
       after: 3,
-      bordered: true,
       src: governanceImage,
       alt: 'Governance layers around the research tool: institutional control through admin toggles, a publisher opt-out, data protections with no third-party training, and the underlying language model',
       caption: 'Institutional controls sit at the top of the governance model.',
