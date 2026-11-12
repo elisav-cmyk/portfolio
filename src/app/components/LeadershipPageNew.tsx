@@ -14,6 +14,9 @@ const card =
   "bg-white rounded-[2px] border border-border p-8";
 const body = "font-body text-foreground text-body max-w-[68ch]";
 const cardTitle = "font-body font-medium text-foreground mb-3 text-body";
+// Card content sits in one reading column, centered in the card, so headings,
+// paragraphs and links share the same left and right edges.
+const cardInner = "max-w-[68ch] mx-auto";
 
 const Section: React.FC<{ id: string; title: string; intro?: string; last?: boolean; children: React.ReactNode }> = ({
   id,
@@ -35,8 +38,10 @@ const Section: React.FC<{ id: string; title: string; intro?: string; last?: bool
 
 const Card: React.FC<{ title?: string; children: React.ReactNode }> = ({ title, children }) => (
   <div className={card}>
-    {title && <h3 className={cardTitle}>{title}</h3>}
-    {children}
+    <div className={cardInner}>
+      {title && <h3 className={cardTitle}>{title}</h3>}
+      {children}
+    </div>
   </div>
 );
 
@@ -191,28 +196,30 @@ export const LeadershipPageContent = () => {
             <h1 className="font-heading text-foreground mb-12 text-display uppercase tracking-caps">Leadership</h1>
 
             <div className="bg-white rounded-[2px] p-8">
-              <p className={`${body} mb-4`}>
-                I build design teams and take on hard problems at scale: the Android RAZR foldable, which earned a Red
-                Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400 institutions; and
-                hybrid AI search for a platform that serves 111M+ people a year.
-              </p>
-              <p className={`${body} mb-6`}>
-                My job is to connect what customers need with what engineering can build, make the call clearly, and
-                give senior leads room to do their best work. I&apos;ve led teams on three continents, including two and
-                a half years living in São Paulo and running studios in China across a 13-hour time difference.
-              </p>
+              <div className={cardInner}>
+                <p className={`${body} mb-4`}>
+                  I build design teams and take on hard problems at scale: the Android RAZR foldable, which earned a Red
+                  Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400 institutions; and
+                  hybrid AI search for a platform that serves 111M+ people a year.
+                </p>
+                <p className={`${body} mb-6`}>
+                  My job is to connect what customers need with what engineering can build, make the call clearly, and
+                  give senior leads room to do their best work. I&apos;ve led teams on three continents, including two and
+                  a half years living in São Paulo and running studios in China across a 13-hour time difference.
+                </p>
 
-              <nav aria-label="On this page" className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                {LEADERSHIP_SECTIONS.map((s) => (
-                  <a
-                    key={s.id}
-                    href={`#${s.id}`}
-                    className="font-body text-primary hover:underline text-body"
-                  >
-                    → {s.label}
-                  </a>
-                ))}
-              </nav>
+                <nav aria-label="On this page" className="grid grid-cols-1 md:grid-cols-2 gap-1">
+                  {LEADERSHIP_SECTIONS.map((s) => (
+                    <a
+                      key={s.id}
+                      href={`#${s.id}`}
+                      className="font-body text-primary hover:underline text-body"
+                    >
+                      → {s.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -229,15 +236,17 @@ export const LeadershipPageContent = () => {
       >
         <div className="space-y-6">
           <div className="bg-primary rounded-[2px] p-8">
-            <h3 className="font-body font-medium text-white mb-3 text-body">
-              Strategic Subtraction: the &quot;One Nav&quot; Decision
-            </h3>
-            <p className="font-body text-white text-body max-w-[68ch]">
-              When Android 10 introduced native gestures that competed with our own navigation, I brought my lead
-              designer into the negotiations with the Android team. We ran a trade-off analysis, retired our popular
-              feature for ecosystem compatibility, moved the effort to the RAZR launch, and shared our gesture research
-              with Google as it finalized Android 10.
-            </p>
+            <div className={cardInner}>
+              <h3 className="font-body font-medium text-white mb-3 text-body">
+                Strategic Subtraction: the &quot;One Nav&quot; Decision
+              </h3>
+              <p className="font-body text-white text-body max-w-[68ch]">
+                When Android 10 introduced native gestures that competed with our own navigation, I brought my lead
+                designer into the negotiations with the Android team. We ran a trade-off analysis, retired our popular
+                feature for ecosystem compatibility, moved the effort to the RAZR launch, and shared our gesture research
+                with Google as it finalized Android 10.
+              </p>
+            </div>
           </div>
 
           <Card title="Foldables and the Android Framework">
