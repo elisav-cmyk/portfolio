@@ -2,6 +2,8 @@ import React from 'react';
 import motoHeroImage from '../../../assets/moto-app.jpg';
 import motoDesignSystem from '../../../assets/moto-design-system.jpg';
 import motoIllustrations from '../../../assets/moto-illustration-system.jpg';
+import motoProportions from '../../../assets/moto-illustration-proportions.webp';
+import motoExpressions from '../../../assets/moto-illustration-expressions.webp';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
@@ -35,9 +37,12 @@ const data: CaseStudyData = {
     },
     {
       after: 2,
-      src: motoIllustrations,
-      alt: 'A grid of illustrated people shown in a range of skin tones',
-      caption: 'The shared illustration library: mix-and-match people in a full range of skin tones, so any studio could build new scenes.',
+      caption: 'The shared illustration library: mix-and-match people in a full range of skin tones, with rules for proportions and expressions, so any studio could build new scenes.',
+      gallery: [
+        { src: motoIllustrations, alt: 'A grid of illustrated people shown in a range of skin tones' },
+        { src: motoProportions, alt: 'People proportions guide: an adult figure is seven heads tall and a child figure has a head 90% of adult size, shown with stacked circles' },
+        { src: motoExpressions, alt: 'People expressions guide: 18 illustrated faces showing different expressions, with a tip to vary the position, shape and angle of the face elements' },
+      ],
     },
   ],
   results: [

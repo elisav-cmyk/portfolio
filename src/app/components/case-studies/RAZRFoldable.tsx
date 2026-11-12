@@ -3,6 +3,9 @@ import razrHeroImage from 'figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.
 import redDotImage from 'figma:asset/d7aeea6eaf3a1140e04f16b7913fb2ec289f2aea.webp';
 import razrCoverVideo from '../../../assets/razr-cover.mp4';
 import razrCoverPoster from '../../../assets/razr-cover-poster.jpg';
+import razrExternalPov from '../../../assets/razr-external-display-pov.webp';
+import razrMapPie from '../../../assets/razr-cardinal-map-pie.webp';
+import razrMapAndroid10 from '../../../assets/razr-cardinal-map-android10.webp';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
@@ -30,6 +33,23 @@ const data: CaseStudyData = {
       video: { src: razrCoverVideo, poster: razrCoverPoster },
       alt: 'The closed razr cover screen: the time and date, then notification icons, shown at a glance without opening the phone',
       caption: 'The cover screen: glanceable time and notifications you can peek at without opening the phone.',
+    },
+    {
+      after: 3,
+      src: razrExternalPov,
+      bordered: true,
+      alt: 'External Display point of view: three ways people use the outside screen. 3-Foot, critical info at a glance. Closed In Hand, quick, discreet one-handed use. Transitions, open the phone for deeper interaction, with the same task continuing inside.',
+      caption: 'The framework for the outside screen: what people need from three feet away, closed in the hand, and when they open the phone.',
+      width: 'wide',
+    },
+    {
+      after: 4,
+      caption: 'Cardinal maps of the cover screen: at launch on Android Pie, swipes lead to the camera, quick settings and media, and a press opens notifications. The Android 10 update added panels for contacts and apps.',
+      galleryTall: true,
+      gallery: [
+        { src: razrMapPie, alt: 'Android Pie cardinal map: from the cover screen home, swipe right for the camera, swipe down for quick settings, swipe up for the media player, and tap and hold to peek at notifications' },
+        { src: razrMapAndroid10, alt: 'Android 10 cardinal map: when locked, the cover screen shows the time; when unlocked, it leads to the camera, notifications with reply, a contact shortcuts panel with the dial pad, and an app shortcuts panel' },
+      ],
     },
   ],
   results: ["The razr won a 2020 Red Dot \"Best of the Best,\" the top distinction in Red Dot product design, among more than 6,500 products from 60 countries.", "I presented the razr experience to Verizon's senior leadership when they visited Chicago to plan the launch.", "The industrial designer was promoted to Senior Designer. She and the UI designer both became Design Managers after I left Motorola.", "\"The cover display makes much better use of its small size than the Galaxy Fold.\" (Android Central, December 2019)"],

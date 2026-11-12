@@ -22,6 +22,8 @@ export interface CaseStudyFigure {
   video?: { src: string; poster: string };
   /** A row of screenshots that scrolls sideways. */
   gallery?: { src: string; alt: string }[];
+  /** Taller gallery images, for slides with small text. */
+  galleryTall?: boolean;
 }
 
 export interface CaseStudyMove {
@@ -57,7 +59,7 @@ const h2 = "font-heading text-[#1b1c15] text-h2";
 
 // A row of screenshots you can scroll sideways. Arrow buttons move one image
 // at a time, and each one fades out when there is nothing more that way.
-const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: string }> = ({ images, caption }) => {
+const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: string; tall?: boolean }> = ({ images, caption, tall }) => {
   const row = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
@@ -120,7 +122,7 @@ const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: stri
                 src={img.src}
                 alt={img.alt}
                 onLoad={update}
-                className="h-64 sm:h-80 w-auto rounded-[2px] border border-border"
+                className={`${tall ? 'h-56 sm:h-[26rem]' : 'h-64 sm:h-80'} w-auto rounded-[2px] border border-border`}
               />
             </div>
           ))}
@@ -139,7 +141,7 @@ const Gallery: React.FC<{ images: { src: string; alt: string }[]; caption?: stri
 
 const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
   if (figure.gallery) {
-    return <Gallery images={figure.gallery} caption={figure.caption} />;
+    return <Gallery images={figure.gallery} caption={figure.caption} tall={figure.galleryTall} />;
   }
   const wide = figure.width === 'wide';
   if (figure.video) {
