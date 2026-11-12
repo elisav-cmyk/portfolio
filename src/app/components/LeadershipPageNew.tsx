@@ -237,70 +237,51 @@ export const LeadershipPageContent = () => {
 
       <section id="partners-say" className="bg-accent w-full scroll-mt-24">
         <div className="marketing-grid pt-12 lg:pt-16 pb-12 lg:pb-16">
-          <div className="max-w-[75ch] mx-auto">
+          <div className="max-w-6xl mx-auto mb-8">
             <h2 className="font-heading text-foreground mb-4 text-h2 uppercase tracking-caps">What Partners Say</h2>
             <p className="font-body text-foreground mb-1 text-body">
               What direct reports, peers and managers say when I don&apos;t know who&apos;s speaking.
             </p>
-            <p className="font-body text-muted-foreground mb-8 text-small">
+            <p className="font-body text-muted-foreground text-small">
               From anonymous 360 assessments by Leadership Circle (2024) and the Linkage Institute (2019).
             </p>
+          </div>
           {(() => {
             const [strategic, connectorA, connectorB, feature, catalystB] = quotes;
-            const Tag = ({ text, dark }: { text: string; dark?: boolean; onAccent?: boolean }) => (
-              <span className={`pill mb-4 ${dark ? 'pill-dark' : ''}`}>{text}</span>
-            );
             const Caption = ({ q, dark }: { q: typeof quotes[number]; dark?: boolean }) => (
               <figcaption className={`font-body ${dark ? 'text-white/85' : 'text-secondary-foreground'} text-small`}>
                 <strong>{q.source}</strong>, {q.detail}
               </figcaption>
             );
+            // A bento grid modeled on literal.club: three columns, rows of equal
+            // height, and boxes one or two columns wide. Each box is a flat white
+            // panel with generous padding; the quote sits at the top and the
+            // credit at the bottom. On phones the boxes stack in reading order.
+            const Box = ({ q, className, dark, lead }: { q: typeof quotes[number]; className: string; dark?: boolean; lead?: boolean }) => (
+              <figure
+                className={`${className} ${dark ? 'on-dark bg-primary' : 'bg-white'} rounded-[2px] flex flex-col p-6 md:p-8 lg:p-10`}
+              >
+                <span className={`pill mb-6 ${dark ? 'pill-dark' : ''}`}>{q.tag}</span>
+                <blockquote
+                  className={`font-heading mb-6 flex-1 ${dark ? 'text-white' : lead ? 'text-foreground' : 'text-secondary-foreground'} ${lead ? 'text-quote-lg max-w-[40ch]' : 'text-quote'}`}
+                >
+                  &ldquo;{q.text}&rdquo;
+                </blockquote>
+                <Caption q={q} dark={dark} />
+              </figure>
+            );
             return (
-              <div className="space-y-8">
-                {/* Featured pull quote: the "super power" quote leads, in large type with no card */}
-                <figure className="border-l-4 border-primary pl-6 py-2">
-                  <Tag text={feature.tag} onAccent />
-                  <blockquote className="font-heading text-foreground mb-4 text-quote-lg">
-                    &ldquo;{feature.text}&rdquo;
-                  </blockquote>
-                  <Caption q={feature} />
-                </figure>
-
-                {/* The direct report's quote on a green card, beside the Strategic quote */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <figure className="on-dark bg-primary rounded-[2px] border border-primary p-6 flex flex-col">
-                    <Tag text={catalystB.tag} dark />
-                    <blockquote className="font-heading text-white mb-4 flex-1 text-quote">
-                      &ldquo;{catalystB.text}&rdquo;
-                    </blockquote>
-                    <Caption q={catalystB} dark />
-                  </figure>
-                  <figure className="bg-white rounded-[2px] border border-border p-6 flex flex-col">
-                    <Tag text={strategic.tag} />
-                    <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
-                      &ldquo;{strategic.text}&rdquo;
-                    </blockquote>
-                    <Caption q={strategic} />
-                  </figure>
-                </div>
-
-                {/* Connector: two cards side by side */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[connectorA, connectorB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[2px] border border-border p-6 flex flex-col">
-                      <Tag text={q.tag} />
-                      <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
-                        &ldquo;{q.text}&rdquo;
-                      </blockquote>
-                      <Caption q={q} />
-                    </figure>
-                  ))}
-                </div>
-
+              <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+                {/* Row 1: the lead quote, two columns wide, beside the direct report's quote */}
+                <Box q={feature} lead className="md:col-span-2" />
+                <Box q={catalystB} dark className="" />
+                {/* Row 2: three single-column quotes */}
+                <Box q={strategic} className="" />
+                <Box q={connectorA} className="" />
+                <Box q={connectorB} className="" />
               </div>
             );
           })()}
-          </div>
         </div>
       </section>
     </div>
