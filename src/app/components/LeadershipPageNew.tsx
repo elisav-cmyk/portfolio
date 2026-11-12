@@ -145,15 +145,23 @@ export const LeadershipPageContent = () => {
       </section>
 
       <Section id="career" title="Career at a Glance">
-        <ol className="space-y-4">
-          {career.map((c) => (
-            <li key={c.role} className={card}>
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-2">
-                <h3 className="font-body font-medium text-foreground text-body">
-                  {c.role}, {c.org}
-                </h3>
-                <span className="font-body text-muted-foreground text-small">{c.years}</span>
-              </div>
+        {/* A timeline: one line, one dot per role. The current role's dot is filled. */}
+        <ol className="max-w-[68ch]">
+          {career.map((c, i) => (
+            <li
+              key={c.role}
+              className="relative pl-10 pb-10 last:pb-0 before:absolute before:left-[5px] before:top-2.5 before:-bottom-1 before:w-0.5 before:bg-primary/35 last:before:hidden"
+            >
+              <span
+                aria-hidden="true"
+                className={`absolute left-0 -top-px size-3 rounded-full border-2 border-primary ${i === 0 ? 'bg-primary' : 'bg-white'}`}
+              />
+              <p className="font-body font-medium text-secondary-foreground text-label uppercase tracking-[0.08em] [text-box:trim-start_cap_alphabetic] mb-2">
+                {c.years}
+              </p>
+              <h3 className="font-body font-medium text-foreground text-body mb-1">
+                {c.role}, {c.org}
+              </h3>
               <p className={body}>{c.text}</p>
             </li>
           ))}
