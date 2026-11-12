@@ -1,7 +1,8 @@
 import React from 'react';
 import razrHeroImage from 'figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png';
 import redDotImage from 'figma:asset/d7aeea6eaf3a1140e04f16b7913fb2ec289f2aea.webp';
-import razrCoverScreen from '../../../assets/razr-cover-screen.jpg';
+import razrCoverVideo from '../../../assets/razr-cover.mp4';
+import razrCoverPoster from '../../../assets/razr-cover-poster.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {
@@ -26,8 +27,8 @@ const data: CaseStudyData = {
   figures: [
     {
       after: 2,
-      src: razrCoverScreen,
-      alt: 'The closed razr showing the time, date and notification icons on its small cover screen',
+      video: { src: razrCoverVideo, poster: razrCoverPoster },
+      alt: 'The closed razr cover screen: the time and date, then notification icons, shown at a glance without opening the phone',
       caption: 'The cover screen: glanceable time and notifications you can peek at without opening the phone.',
     },
   ],
