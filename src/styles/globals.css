@@ -659,3 +659,49 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+/* Buttons: tall, with a serif label, so they read as actions rather than
+   flat boxes. 2px corners match the cards. Use .btn with one variant:
+   .btn-primary  green, the main action in a section
+   .btn-tint     cream with green text, the second action on white or green
+   .btn-white    white with green text, for actions on cream sections */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    padding: 0 2.25rem;
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    border-radius: 2px;
+    transition: background-color 150ms ease-out, transform 150ms ease-out;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background-color: #46551e;
+  }
+  .btn-tint {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  .btn-tint:hover {
+    background-color: #d6d8c2;
+  }
+  .btn-white {
+    background-color: #ffffff;
+    color: var(--secondary-foreground);
+  }
+  .btn-white:hover {
+    background-color: #f5f5f0;
+  }
+}

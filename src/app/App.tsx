@@ -615,14 +615,14 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("work", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "work")}
-              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition duration-150 active:translate-y-px"
+              className="btn btn-primary w-full"
             >
               View Case Studies
             </motion.a>
             <motion.a
               href={pathFor("leadership", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
-              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-white border border-border rounded-[2px] hover:bg-muted transition duration-150 active:translate-y-px"
+              className="btn btn-tint w-full"
             >
               Leadership Approach
             </motion.a>
@@ -752,7 +752,7 @@ const PortfolioWireframes = () => {
           <motion.a
             href={pathFor("impact", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "impact")}
-            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[2px] font-body font-medium text-primary hover:bg-white/90 text-small transition duration-150 active:translate-y-px"
+            className="btn btn-tint mt-12"
           >
             View All Results
           </motion.a>
@@ -796,7 +796,7 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("leadership", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
-              className="inline-block text-center px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition duration-150 active:translate-y-px"
+              className="btn btn-primary"
             >
               Read Full Leadership Philosophy
             </motion.a>
@@ -875,7 +875,7 @@ const PortfolioWireframes = () => {
                 e.preventDefault();
                 navigateToLeadershipSection("partners-say");
               }}
-              className="inline-block bg-white px-7 py-3 rounded-[2px] font-body font-medium text-foreground hover:bg-gray-50 cursor-pointer text-small transition duration-150 active:translate-y-px"
+              className="btn btn-white"
             >
               Read All Testimonials
             </motion.a>
