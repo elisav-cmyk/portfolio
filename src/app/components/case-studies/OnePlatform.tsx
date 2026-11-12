@@ -29,7 +29,7 @@ const data: CaseStudyData = {
       ],
     },
     {
-      title: 'Alignment through all content types',
+      title: 'Aligned every content type',
       paragraphs: [
         'The team designed JSTOR item pages for images, audio and video, and worked with Visual Resources Association librarians to agree on one metadata pattern for every new content type. A new Browse Images page, launched in February 2024, began showcasing Artstor collections to everyone on JSTOR.',
       ],

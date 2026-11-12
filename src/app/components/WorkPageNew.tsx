@@ -196,7 +196,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       image: imgImageEcosystemInfrastructure,
       tag: "Design Systems",
       year: "2022-2025",
-      title: "Reactivating Pharos: A Federated Design System Team",
+      title: "Reactivating Pharos",
       company: "Pharos, One Admin and accessibility across JSTOR",
       caseStudyId: "ecosystem-infrastructure",
       imagePosition: "object-top",

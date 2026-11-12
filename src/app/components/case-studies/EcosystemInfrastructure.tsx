@@ -7,7 +7,7 @@ const data: CaseStudyData = {
   hero: { src: ecosystemHeroImage, alt: 'Design system and infrastructure', position: 'object-top' },
   tag: 'Design Systems',
   years: '2022-2025',
-  title: 'Reactivating Pharos: A Federated Design System Team',
+  title: 'Reactivating Pharos',
   subtitle: "Pharos, One Admin and accessibility across JSTOR",
   role: 'Director, Product Design, JSTOR',
   partners: 'Product Design, Engineering, Product Management',

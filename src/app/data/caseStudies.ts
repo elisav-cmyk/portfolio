@@ -18,7 +18,7 @@ export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "ai-library", title: "Archives in Hours, Not Weeks", company: "JSTOR" },
   { id: "camera-redesign", title: "Starting the Camera Over", company: "Motorola" },
   { id: "one-platform", title: "When the Gallery Met the Library", company: "JSTOR" },
-  { id: "ecosystem-infrastructure", title: "Reactivating Pharos: A Federated Design System Team", company: "JSTOR" },
+  { id: "ecosystem-infrastructure", title: "Reactivating Pharos", company: "JSTOR" },
 ];
 
 export const PAGES = ["home", "work", "leadership", "impact"] as const;
