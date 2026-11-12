@@ -63,7 +63,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
               key={img.src}
               src={img.src}
               alt={img.alt}
-              className="h-64 sm:h-80 w-auto rounded-lg border border-border snap-start shrink-0"
+              className="h-64 sm:h-80 w-auto rounded-[2px] border border-border snap-start shrink-0"
             />
           ))}
         </div>
@@ -81,7 +81,7 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
       <img
         src={figure.src}
         alt={figure.alt}
-        className={`h-auto rounded-lg ${wide ? 'w-full max-w-[80ch] mx-auto' : 'w-full sm:w-4/5'}`}
+        className={`h-auto rounded-[2px] ${wide ? 'w-full max-w-[80ch] mx-auto' : 'w-full sm:w-4/5'}`}
       />
       {figure.caption && (
         <figcaption
@@ -144,7 +144,7 @@ export const CaseStudyTemplate: React.FC<{
             )}
           </dl>
           {data.glance && (
-            <p className="mt-8 bg-white rounded-[10px] border-l-4 border-primary px-6 py-4 font-body text-[#1b1c15] text-lead">
+            <p className="mt-8 bg-white rounded-[2px] border-l-4 border-primary px-6 py-4 font-body text-[#1b1c15] text-lead">
               <strong className="block uppercase text-primary mb-1 text-label">At a glance</strong>
               {data.glance}
             </p>
@@ -194,7 +194,7 @@ export const CaseStudyTemplate: React.FC<{
           </section>
 
           <section className="blog-grid">
-            <div className="bg-accent border-l-4 border-primary rounded-[10px] p-6 sm:p-8">
+            <div className="bg-accent border-l-4 border-primary rounded-[2px] p-6 sm:p-8">
               <h2 className="font-body uppercase text-primary mb-3 text-small">
                 Why it mattered to me
               </h2>
@@ -210,7 +210,7 @@ export const CaseStudyTemplate: React.FC<{
           </section>
           {data.videos?.map((v) => (
             <figure key={v.src} className="blog-grid w-full">
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
+              <div className="relative w-full aspect-video rounded-[2px] overflow-hidden bg-black">
                 <iframe
                   src={v.src}
                   title={v.title}

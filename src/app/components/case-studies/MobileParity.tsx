@@ -1,5 +1,5 @@
 import React from 'react';
-import imgMobileParity from '../../../assets/jstor-mobile.png';
+import imgMobileParity from '../../../assets/jstor-mobile.webp';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {

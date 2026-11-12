@@ -78,7 +78,7 @@ const SectionHeading: React.FC<{ id: string; children: React.ReactNode }> = ({
 );
 
 const StatCard: React.FC<Stat & { large?: boolean }> = ({ value, label, detail, large }) => (
-  <div className="bg-secondary border-2 border-border rounded-[10px] p-6 text-center flex flex-col gap-2">
+  <div className="bg-secondary border-2 border-border rounded-[2px] p-6 text-center flex flex-col gap-2">
     <div
       className="font-heading text-secondary-foreground text-stat"
     >
@@ -138,7 +138,7 @@ export const ImpactPageContent: React.FC<ImpactPageProps> = ({
             <SectionHeading id="industry-recognition">Recognition</SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               {recognition.map((r) => (
-                <div key={r.title} className="bg-white rounded-[10px] p-6">
+                <div key={r.title} className="bg-white rounded-[2px] p-6">
                   <h3 className="font-body text-primary mb-2 text-body">
                     {r.title}
                   </h3>

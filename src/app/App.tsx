@@ -41,11 +41,11 @@ import { EcosystemInfrastructure } from "./components/case-studies/EcosystemInfr
 import { MotoApp } from "./components/case-studies/MotoApp";
 import { MobileParity } from "./components/case-studies/MobileParity";
 import { CameraRedesign } from "./components/case-studies/CameraRedesign";
-import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.png";
+import heroImage from "figma:asset/6d077c109b68cf2442c73aa8e6bea3bec069e4df.webp";
 import researchCardImage from "../assets/jstor-research-card.jpg";
-import onePlatformImage from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
+import onePlatformImage from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.webp";
 import razrHeroImage from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
-import grubhubImage from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
+import grubhubImage from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.webp";
 
 const PortfolioWireframes = () => {
   // The 404.html fallback sends unknown paths here as "/?/path".
@@ -463,7 +463,7 @@ const PortfolioWireframes = () => {
               href="https://linkedin.com/in/elisavargas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-2 font-body font-medium border-2 border-border rounded-[10px] hover:bg-muted transition-colors text-small"
+              className="flex items-center gap-2 px-3 py-2 font-body font-medium border-2 border-border rounded-[2px] hover:bg-muted transition-colors text-small"
             >
               <LinkedinFilled size={16} />
               LinkedIn
@@ -496,7 +496,7 @@ const PortfolioWireframes = () => {
                 href={pathFor(page.id, null)}
                 aria-current={activePage === page.id ? "page" : undefined}
                 onClick={(e) => goToPage(e, page.id)}
-                className={`block w-full text-left px-3 py-2 rounded-[10px] ${
+                className={`block w-full text-left px-3 py-2 rounded-[2px] ${
                   activePage === page.id
                     ? "bg-secondary text-primary"
                     : "text-foreground"
@@ -510,7 +510,7 @@ const PortfolioWireframes = () => {
                 href="https://linkedin.com/in/elisavargas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm border-2 border-border rounded-[10px]"
+                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm border-2 border-border rounded-[2px]"
               >
                 <LinkedinFilled size={16} />
                 LinkedIn
@@ -590,11 +590,7 @@ const PortfolioWireframes = () => {
 
           {/* Stats Bar - Responsive */}
           <motion.div
-            className="bg-secondary border-2 border-secondary rounded-[10px] p-4 sm:p-6 lg:p-7 max-w-4xl mx-auto mb-8"
-            style={{
-              boxShadow:
-                "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-            }}
+            className="bg-secondary border-2 border-secondary rounded-[2px] p-4 sm:p-6 lg:p-7 max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -637,11 +633,7 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("work", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "work")}
-              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
-              style={{
-                boxShadow:
-                  "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-              }}
+              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{
@@ -655,11 +647,7 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("leadership", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
-              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-white rounded-[10px] hover:bg-muted transition-colors"
-              style={{
-                boxShadow:
-                  "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-              }}
+              className="inline-block text-center w-full px-6 sm:px-8 py-3 bg-white border border-border rounded-[2px] hover:bg-muted transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{
@@ -727,11 +715,7 @@ const PortfolioWireframes = () => {
                   e.preventDefault();
                   handleCaseStudyClick(project.id);
                 }}
-                className="block bg-white rounded-[10px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
-                style={{
-                  boxShadow:
-                    "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-                }}
+                className="block bg-white border border-border rounded-[2px] overflow-hidden hover:border-primary transition-colors cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
                 variants={itemVariants}
                 whileHover={{
                   scale: 1.02,
@@ -806,11 +790,7 @@ const PortfolioWireframes = () => {
           <motion.a
             href={pathFor("impact", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "impact")}
-            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[10px] font-body font-medium text-primary hover:bg-white/90 text-small"
-            style={{
-              boxShadow:
-                "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-            }}
+            className="inline-block text-center mt-12 px-8 py-3 bg-white rounded-[2px] font-body font-medium text-primary hover:bg-white/90 text-small"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{
@@ -831,11 +811,7 @@ const PortfolioWireframes = () => {
             How I Lead
           </h2>
           <div
-            className="bg-white rounded-[10px] p-8 mb-8 max-w-[75ch] mx-auto"
-            style={{
-              boxShadow:
-                "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-            }}
+            className="bg-white border border-border rounded-[2px] p-8 mb-8 max-w-[75ch] mx-auto"
           >
             <div className="mb-6">
               <span className="font-body text-foreground text-body">
@@ -865,7 +841,7 @@ const PortfolioWireframes = () => {
             <motion.a
               href={pathFor("leadership", null)}
               onClick={(e: React.MouseEvent) => goToPage(e, "leadership")}
-              className="inline-block text-center px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90 transition-colors"
+              className="inline-block text-center px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-[2px] hover:bg-primary/90 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{
@@ -885,7 +861,7 @@ const PortfolioWireframes = () => {
         <h2 className="text-center mb-8 font-heading font-normal text-foreground text-h2 uppercase tracking-caps">
           What I&rsquo;m Looking For
         </h2>
-        <div className="bg-secondary border-2 border-border rounded-[10px] p-8 text-center">
+        <div className="bg-secondary border-2 border-border rounded-[2px] p-8 text-center">
           <div className="text-foreground leading-relaxed max-w-3xl mx-auto">
             Director and Senior Director design leadership roles in AI, search and consumer platforms, where grounded AI, recommendations and assistive experiences help people find what matters and act on it, online and in the real world.
           </div>
@@ -901,11 +877,7 @@ const PortfolioWireframes = () => {
           {/* One Strategic and one Catalyst quote; Leadership shows all five. */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div
-              className="bg-white rounded-[10px] px-8 py-6 flex flex-col gap-3"
-              style={{
-                boxShadow:
-                  "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-              }}
+              className="bg-white border border-border rounded-[2px] px-8 py-6 flex flex-col gap-3"
             >
               <div className="flex items-start">
                 <div className="bg-secondary px-3 py-1 rounded-full">
@@ -926,11 +898,7 @@ const PortfolioWireframes = () => {
               </div>
             </div>
             <div
-              className="bg-white rounded-[10px] px-8 py-6 flex flex-col gap-3"
-              style={{
-                boxShadow:
-                  "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-              }}
+              className="bg-white border border-border rounded-[2px] px-8 py-6 flex flex-col gap-3"
             >
               <div className="flex items-start">
                 <div className="bg-secondary px-3 py-1 rounded-full">
@@ -959,11 +927,7 @@ const PortfolioWireframes = () => {
                 e.preventDefault();
                 navigateToLeadershipSection("partners-say");
               }}
-              className="inline-block bg-white px-7 py-3 rounded-[10px] font-body font-medium text-foreground hover:bg-gray-50 cursor-pointer text-small"
-              style={{
-                boxShadow:
-                  "0px 1px 2px 0px rgba(18, 18, 18, 0.3), 0px 1px 3px 1px rgba(18, 18, 18, 0.15)",
-              }}
+              className="inline-block bg-white px-7 py-3 rounded-[2px] font-body font-medium text-foreground hover:bg-gray-50 cursor-pointer text-small"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{

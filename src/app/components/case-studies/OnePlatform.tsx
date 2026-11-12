@@ -1,5 +1,5 @@
 import React from 'react';
-import onePlatformImage from 'figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png';
+import onePlatformImage from 'figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.webp';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {

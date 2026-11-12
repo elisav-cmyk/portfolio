@@ -3,13 +3,13 @@ import { ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
 import imgImageEthicalAiResearchTool from "../../assets/jstor-research-card.jpg";
 import imgImageAndroidRazrFoldable from "figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png";
-import imgImageOnePlatformIntegration from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.png";
+import imgImageOnePlatformIntegration from "figma:asset/40bf45078ad84575a1178136d73d285002fdf9bc.webp";
 import imgImageAILibrary from "figma:asset/8cf3e6ec6a19346c1adefa9bf4dfc6e4967bbb2c.png";
-import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png";
-import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.png";
-import imgCameraIntro from "figma:asset/camera-intro.png";
+import imgImageGrubhubDirect from "figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.webp";
+import imgImageEcosystemInfrastructure from "figma:asset/774fe7984e90b868f7bef781139dec0d74a4f332.webp";
+import imgCameraIntro from "figma:asset/camera-intro.webp";
 import imgMotoCard from "../../assets/moto-app.jpg";
-import imgMobileParity from "../../assets/jstor-mobile.png";
+import imgMobileParity from "../../assets/jstor-mobile.webp";
 import { CASE_STUDIES, caseStudyPath, isPlainClick } from "../data/caseStudies";
 
 interface WorkPageProps {
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       e.preventDefault();
       onCaseStudyClick(caseStudyId);
     }}
-    className="bg-card rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] overflow-hidden flex flex-col cursor-pointer hover:shadow-lg transition-shadow focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
+    className="bg-card rounded-[2px] border border-border overflow-hidden flex flex-col cursor-pointer hover:border-primary transition-colors focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary"
   >
     {/* Image */}
     <div className="h-[192px] overflow-hidden">

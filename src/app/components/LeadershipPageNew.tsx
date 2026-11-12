@@ -10,7 +10,7 @@ export const LEADERSHIP_SECTIONS = [
 ];
 
 const card =
-  "bg-white rounded-[10px] shadow-[0px_1px_2px_0px_rgba(18,18,18,0.3),0px_1px_3px_1px_rgba(18,18,18,0.15)] p-8";
+  "bg-white rounded-[2px] border border-border p-8";
 const body = "font-body text-foreground text-body max-w-[68ch]";
 const cardTitle = "font-body font-medium text-foreground mb-3 text-body";
 
@@ -115,7 +115,7 @@ export const LeadershipPageContent = () => {
           <div className="max-w-[75ch] mx-auto">
             <h1 className="font-heading text-foreground mb-12 text-display uppercase tracking-caps">Leadership</h1>
 
-            <div className="bg-white rounded-[10px] p-8">
+            <div className="bg-white rounded-[2px] p-8">
               <p className={`${body} mb-4`}>
                 I build design teams and take on hard problems at scale: the Android RAZR foldable, which earned a Red
                 Dot &quot;Best of the Best&quot;; an LLM research tool rolled out to about 11,400 institutions; and
@@ -165,7 +165,7 @@ export const LeadershipPageContent = () => {
         intro="My work with Android started before Android did. Over 18.5 years at Motorola, I worked with Google's platform teams as a partner and across a negotiating table."
       >
         <div className="space-y-6">
-          <div className="bg-primary rounded-[10px] p-8">
+          <div className="bg-primary rounded-[2px] p-8">
             <h3 className="font-body font-medium text-white mb-3 text-body">
               Strategic Subtraction: the &quot;One Nav&quot; Decision
             </h3>
@@ -264,7 +264,7 @@ export const LeadershipPageContent = () => {
                 {/* Connector: two cards side by side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[connectorA, connectorB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[10px] border-2 border-border p-6 flex flex-col">
+                    <figure key={q.text.slice(0, 24)} className="bg-white rounded-[2px] border-2 border-border p-6 flex flex-col">
                       <Tag text={q.tag} />
                       <blockquote className="font-heading text-secondary-foreground mb-4 flex-1 text-quote">
                         &ldquo;{q.text}&rdquo;
@@ -277,7 +277,7 @@ export const LeadershipPageContent = () => {
                 {/* Catalyst: two green cards side by side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[catalystA, catalystB].map((q) => (
-                    <figure key={q.text.slice(0, 24)} className="on-dark bg-primary rounded-[10px] border-2 border-primary p-6 flex flex-col">
+                    <figure key={q.text.slice(0, 24)} className="on-dark bg-primary rounded-[2px] border-2 border-primary p-6 flex flex-col">
                       <Tag text={q.tag} dark />
                       <blockquote className="font-heading text-white mb-4 flex-1 text-quote">
                         &ldquo;{q.text}&rdquo;

@@ -1,6 +1,6 @@
 import React from 'react';
 import razrHeroImage from 'figma:asset/a9d3a2304cfdb51608b897fa52985cf480028150.png';
-import redDotImage from 'figma:asset/d7aeea6eaf3a1140e04f16b7913fb2ec289f2aea.png';
+import redDotImage from 'figma:asset/d7aeea6eaf3a1140e04f16b7913fb2ec289f2aea.webp';
 import razrCoverScreen from '../../../assets/razr-cover-screen.jpg';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 

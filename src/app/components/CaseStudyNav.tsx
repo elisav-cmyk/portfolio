@@ -30,7 +30,7 @@ export const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ currentProjectId, on
   };
 
   const linkClass =
-    "flex items-center gap-2 min-w-0 py-1 text-primary hover:text-primary/80 transition-colors rounded-[10px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
+    "flex items-center gap-2 min-w-0 py-1 text-primary hover:text-primary/80 transition-colors rounded-[2px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
   return (
     <nav

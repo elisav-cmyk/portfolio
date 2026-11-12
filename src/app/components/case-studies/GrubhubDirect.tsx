@@ -1,11 +1,11 @@
 import React from 'react';
-import grubhubHeroImage from 'figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.png';
-import grubhubCarousel1 from 'figma:asset/ce9b0d482bf14a0dec7f8fef052693906d15e2cd.png';
-import grubhubCarousel2 from 'figma:asset/5bc2dd241a4208ad2c76d2e2ddd0f71cbd604975.png';
-import grubhubCarousel3 from 'figma:asset/05d26cd3f98f6f53a1adfe77e2a403c8c32f53bf.png';
-import grubhubCarousel4 from 'figma:asset/041fafbc2cefccb465f6133dea1ba426671155f0.png';
-import grubhubCarouselFirst from 'figma:asset/f5a674b320e452309440ef67cd02f49e10b181fc.png';
-import grubhubSpectrum from 'figma:asset/f7419de451c9c826e143901fd7f37974104a6de2.png';
+import grubhubHeroImage from 'figma:asset/e1e956d921c735f672569fc508b766a5bbeb7877.webp';
+import grubhubCarousel1 from 'figma:asset/ce9b0d482bf14a0dec7f8fef052693906d15e2cd.webp';
+import grubhubCarousel2 from 'figma:asset/5bc2dd241a4208ad2c76d2e2ddd0f71cbd604975.webp';
+import grubhubCarousel3 from 'figma:asset/05d26cd3f98f6f53a1adfe77e2a403c8c32f53bf.webp';
+import grubhubCarousel4 from 'figma:asset/041fafbc2cefccb465f6133dea1ba426671155f0.webp';
+import grubhubCarouselFirst from 'figma:asset/f5a674b320e452309440ef67cd02f49e10b181fc.webp';
+import grubhubSpectrum from 'figma:asset/f7419de451c9c826e143901fd7f37974104a6de2.webp';
 import { CaseStudyTemplate, CaseStudyData } from './CaseStudyTemplate';
 
 const data: CaseStudyData = {

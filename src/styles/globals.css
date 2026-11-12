@@ -651,3 +651,9 @@ html {
   white-space: nowrap;
   border-width: 0;
 }
+/* When someone has turned on "reduce motion", jump instead of smooth-scrolling. */
+@media (prefers-reduced-motion: reduce) {
+  html, body, * {
+    scroll-behavior: auto !important;
+  }
+}
