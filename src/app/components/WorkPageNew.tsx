@@ -253,7 +253,7 @@ export const WorkPageContent: React.FC<WorkPageProps> = ({
       variants={pageVariants}
       transition={pageTransition}
     >
-      <div className="py-16">
+      <div className="py-16 max-w-(--page-width) mx-auto">
         {/* Header */}
         <div className="mb-12 max-w-[75ch]">
           <h1 className="mb-2 font-heading text-foreground text-display uppercase tracking-caps">

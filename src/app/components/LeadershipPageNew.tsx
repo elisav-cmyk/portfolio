@@ -24,7 +24,7 @@ const Section: React.FC<{ id: string; title: string; intro?: string; last?: bool
 }) => (
   <section id={id} className="bg-accent w-full scroll-mt-24">
     <div className={`marketing-grid pt-12 lg:pt-16 ${last ? 'pb-12 lg:pb-16' : 'pb-0'}`}>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-(--page-width) mx-auto">
         <h2 className="font-heading text-foreground mb-8 text-h2 uppercase tracking-caps">{title}</h2>
         {intro && <p className={`${body} mb-8`}>{intro}</p>}
         {children}
@@ -187,7 +187,7 @@ export const LeadershipPageContent = () => {
       {/* Intro */}
       <section className="bg-accent w-full">
         <div className="marketing-grid pt-12 lg:pt-16 pb-0">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-(--page-width) mx-auto">
             <h1 className="font-heading text-foreground mb-12 text-display uppercase tracking-caps">Leadership</h1>
 
             <div className="bg-white rounded-[2px] p-8">
@@ -291,7 +291,7 @@ export const LeadershipPageContent = () => {
 
       <section id="partners-say" className="bg-accent w-full scroll-mt-24">
         <div className="marketing-grid pt-12 lg:pt-16 pb-12 lg:pb-16">
-          <div className="max-w-5xl mx-auto mb-8">
+          <div className="max-w-(--page-width) mx-auto mb-8">
             <h2 className="font-heading text-foreground mb-4 text-h2 uppercase tracking-caps">What Partners Say</h2>
             <p className="font-body text-foreground mb-1 text-body">
               What direct reports, peers and managers say when I don&apos;t know who&apos;s speaking.
@@ -328,7 +328,7 @@ export const LeadershipPageContent = () => {
             // the other four in a 2 x 2 grid. Desktop: three columns, with the
             // lead two columns wide beside one quote, then three below.
             return (
-              <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+              <div className="max-w-(--page-width) mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                 <Box q={feature} lead dark className="md:col-span-2" />
                 <Box q={catalystB} className="" />
                 <Box q={strategic} className="" />
