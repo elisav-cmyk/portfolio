@@ -4,6 +4,7 @@
 @import 'tw-animate-css';
 @import './default_theme.css';
 @import './globals.css';
+@import './pills.css';
 
 /* Keyboard focus: one clear ring on every link, button and control. */
 :where(a, button, [tabindex]:not([tabindex="-1"]), iframe):focus-visible {

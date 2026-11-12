@@ -247,12 +247,8 @@ export const LeadershipPageContent = () => {
             </p>
           {(() => {
             const [strategic, connectorA, connectorB, feature, catalystB] = quotes;
-            const Tag = ({ text, dark, onAccent }: { text: string; dark?: boolean; onAccent?: boolean }) => (
-              <div className={`${dark ? 'bg-white/15' : onAccent ? 'bg-white' : 'bg-secondary'} rounded-full px-3 py-1 inline-block self-start mb-4`}>
-                <span className={`font-body ${dark ? 'text-white' : 'text-secondary-foreground'} text-label`}>
-                  {text}
-                </span>
-              </div>
+            const Tag = ({ text, dark }: { text: string; dark?: boolean; onAccent?: boolean }) => (
+              <span className={`pill mb-4 ${dark ? 'pill-dark' : ''}`}>{text}</span>
             );
             const Caption = ({ q, dark }: { q: typeof quotes[number]; dark?: boolean }) => (
               <figcaption className={`font-body ${dark ? 'text-white/85' : 'text-secondary-foreground'} text-small`}>
