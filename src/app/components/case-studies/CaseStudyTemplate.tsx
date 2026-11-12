@@ -17,6 +17,9 @@ export interface CaseStudyFigure {
   width?: 'body' | 'wide';
   /** Draw a 1px hairline around the image, for screenshots on a white page. */
   bordered?: boolean;
+  /** A short silent clip in place of an image: plays muted on a loop (only
+      when reduce motion is off), with controls so it can be paused. */
+  video?: { src: string; poster: string };
   /** A row of screenshots that scrolls sideways. */
   gallery?: { src: string; alt: string }[];
 }
@@ -139,6 +142,28 @@ const Figure: React.FC<{ figure: CaseStudyFigure }> = ({ figure }) => {
     return <Gallery images={figure.gallery} caption={figure.caption} />;
   }
   const wide = figure.width === 'wide';
+  if (figure.video) {
+    const still = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return (
+      <figure className="blog-grid my-16 md:my-20">
+        <video
+          src={figure.video.src}
+          poster={figure.video.poster}
+          aria-label={figure.alt}
+          className="h-auto w-full max-w-[360px] rounded-[2px]"
+          muted
+          loop
+          playsInline
+          autoPlay={!still}
+          controls
+          preload="metadata"
+        />
+        {figure.caption && (
+          <figcaption className="font-body text-muted-foreground mt-2 text-small">{figure.caption}</figcaption>
+        )}
+      </figure>
+    );
+  }
   return (
     <figure className={`${wide ? 'marketing-grid' : 'blog-grid'} my-16 md:my-20`}>
       <img
